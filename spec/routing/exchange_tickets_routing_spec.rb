@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe ExchangeTicketsController do
   describe "route generation" do
@@ -15,7 +15,7 @@ describe ExchangeTicketsController do
 
     it "should map #index" do
       route_for(:controller => "exchange_tickets", :action => "index"
-        ).should == "/exchange_tickets/"
+        ).should == "/exchange_tickets"
     end
   end
 

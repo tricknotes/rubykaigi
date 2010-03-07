@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe TalksController do
   before do
@@ -16,6 +16,7 @@ describe TalksController do
     before do
       stub(@talk = Talk.new) {
         title { "a talk title" }
+        nicovideo_links { "[\"http://test.local/\"]" }
       }
       mock(Talk).year("2009").stub!.find_by_code("37") { @talk }
       get :show, :year => "2009", :locale => "ja", :id => "37"

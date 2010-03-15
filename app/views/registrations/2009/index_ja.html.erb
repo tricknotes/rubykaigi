@@ -1,6 +1,6 @@
 <%# coding: utf-8 -%>
 <% content_for :css do -%>
-<%= stylesheet_link_tag '2009_registration' %>
+<%= stylesheet_link_tag '/2009/stylesheets/2009_registration' %>
 <% end -%>
 <div class="item">
 <h2>RubyKaigi2009への参加登録</h2>
@@ -24,7 +24,7 @@
 3日通し券です。日割による払い戻しはいたしかねます。
   </td>
   <td class="paypal_form">
-    <%= render_paypal_buynow_form(configatron.paypal.hosted_button_id.rubykaigi2009.conference, :rubykaigi2009) %>
+&nbsp;
   </td>
   </tr>
   </table>
@@ -46,7 +46,7 @@
 開場・開宴時刻については予定時刻です。
   </td>
   <td class="paypal_form">
-    <%= render_paypal_buynow_form(configatron.paypal.hosted_button_id.rubykaigi2009.party, :rubykaigi2009party) %>
+&nbsp;
   </td>
   </tr>
   </table>

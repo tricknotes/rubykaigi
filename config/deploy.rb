@@ -18,10 +18,10 @@ set :use_sudo, false
 set :runner, "rubykaigi"
 ssh_options[:username] = application
 
-set :production_server, "rubykaigi.org"
-role :app, production_server
-role :web, production_server
-role :db,  production_server, :primary => true
+set :deploy_server, "rubykaigi.org"
+role :app, deploy_server
+role :web, deploy_server
+role :db,  deploy_server, :primary => true
 
 set :rake, "/home/#{application}/gem.repos/bin/rake"
 

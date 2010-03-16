@@ -15,3 +15,4 @@ coverage
 coverage.features
 tmp/*.*
 mkmf.log
+rerun.txt

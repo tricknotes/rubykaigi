@@ -1,3 +1,4 @@
+# language: ja
 フィーチャ: トップページには直近のRubyKaigiのトップページであること
 
   シナリオテンプレート: rubykaigi.orgにアクセスする

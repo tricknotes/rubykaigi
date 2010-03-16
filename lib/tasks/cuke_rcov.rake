@@ -3,7 +3,7 @@ begin
 
   namespace :features do
   	Cucumber::Rake::Task.new(:rcov, "Run features w/ rcov") do |t|
-  		t.cucumber_opts = "--format progress --language ja"
+  		t.cucumber_opts = "--format progress"
   		t.rcov = true
   		t.rcov_opts = IO.readlines(File.join('spec', 'rcov.opts')).map {|line| line.chomp.split(" ") }.flatten
   		rcov_dir = File.expand_path("coverage.features", Rails.root)

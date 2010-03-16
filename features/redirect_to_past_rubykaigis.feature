@@ -1,3 +1,4 @@
+# language: ja
 フィーチャ RubyKaigi2008以前の公式サイトへのリダイレクト
   RubyKaigi2008以前のURLは覚えづらいようなので、
   rubykaigi.orgを手掛りにそれっぽいURLは過去開催の公式サイトにリダイレクトするようにしたい

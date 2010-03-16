@@ -1,3 +1,4 @@
+# language: ja
 フィーチャ: RubyKaigi2009への参加登録
   参加者として、
   rubykaigi.orgのページからPayPal経由でチケットを購入したい。

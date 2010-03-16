@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 set :application, "rubykaigi"
 set :repository,  "git://github.com/ruby-no-kai/rubykaigi.git"
-set :branch, "2009"
+set :branch, "production"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location

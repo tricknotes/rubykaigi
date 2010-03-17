@@ -4,7 +4,8 @@ html, body {
   text-align: center;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #c0c0c0;
+  color: #dfdfdf;
+  line-height: 1.5;
   background: #000;
 }
 #content {

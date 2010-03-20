@@ -46,6 +46,18 @@ dependencies:
     group: 
     - :test
     version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+  webrat: 
+    group: 
+    - :test
+    version: ">= 0"
+  cucumber-rails: 
+    group: 
+    - :test
+    version: ">= 0"
   capistrano-ext: 
     group: 
     - :development
@@ -97,27 +109,31 @@ dependencies:
     require: []
 
 specs: 
+- nokogiri: 
+    version: 1.4.1
+- builder: 
+    version: 2.1.2
 - activesupport: 
     version: 2.3.5
 - yamler: 
     version: 0.1.0
-- builder: 
-    version: 2.1.2
-- json_pure: 
-    version: 1.2.3
-- actionmailer: 
-    version: 2.3.5
-- daemons: 
-    version: 1.0.10
-- moro-miso: 
-    version: 0.0.6
 - email_spec: 
     version: 0.6.1
-- capistrano-ext: 
-    version: 1.2.1
+- moro-miso: 
+    version: 0.0.6
+- daemons: 
+    version: 1.0.10
+- json_pure: 
+    version: 1.2.3
+- cucumber-rails: 
+    version: 0.3.0
 - smtp-tls: 
     version: 1.1.2
     source: 0
+- capistrano-ext: 
+    version: 1.2.1
+- factory_girl: 
+    version: 1.2.3
 - configatron: 
     version: 2.6.0
 - net-ssh: 
@@ -132,28 +148,34 @@ specs:
     version: 1.0.6
 - haml: 
     version: 2.2.21
-- ruby-openid: 
-    version: 2.1.7
-- rack: 
-    version: 1.0.1
-- actionpack: 
-    version: 2.3.5
-- mysql: 
-    version: 2.8.1
-- rake: 
-    version: 0.8.7
-- diff-lcs: 
-    version: 1.1.2
-- rspec: 
-    version: 1.3.0
-- warden: 
-    version: 0.9.7
-- rspec-rails: 
-    version: 1.3.2
 - polyglot: 
     version: 0.3.0
 - treetop: 
     version: 1.4.4
+- diff-lcs: 
+    version: 1.1.2
+- rspec: 
+    version: 1.3.0
+- rake: 
+    version: 0.8.7
+- mysql: 
+    version: 2.8.1
+- ruby-openid: 
+    version: 2.1.7
+- rack: 
+    version: 1.0.1
+- warden: 
+    version: 0.9.7
+- actionpack: 
+    version: 2.3.5
+- actionmailer: 
+    version: 2.3.5
+- rack-test: 
+    version: 0.5.3
+- webrat: 
+    version: 0.7.0
+- rspec-rails: 
+    version: 1.3.2
 - highline: 
     version: 1.5.2
 - ZenTest: 
@@ -164,27 +186,27 @@ specs:
     version: 2.3.5
 - hoptoad_notifier: 
     version: 2.2.2
-- rr: 
-    version: 0.10.10
-- spork: 
-    version: 0.8.1
 - fastercsv: 
     version: 1.5.3
-- faker: 
-    version: 0.3.1
-- activeresource: 
-    version: 2.3.5
-- rails: 
-    version: 2.3.5
+- spork: 
+    version: 0.8.1
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
     version: 0.6.3
+- activeresource: 
+    version: 2.3.5
+- rails: 
+    version: 2.3.5
+- faker: 
+    version: 0.3.1
 - net-sftp: 
     version: 2.0.4
 - capistrano: 
     version: 2.5.18
-hash: 77b75653efa2b7c7a574a2863b36beb31cfa0a37
+- rr: 
+    version: 0.10.10
+hash: 01f51de1383c2238cc291ce7e545deb8150f5bce
 sources: 
 - Git: 
     uri: git://github.com/ambethia/smtp-tls.git

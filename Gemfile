@@ -31,6 +31,9 @@ group :test do
   gem 'daemons'
   gem 'spork'
   gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'webrat'
   gem 'moro-miso'
   gem 'database_cleaner'
+  gem 'factory_girl'
 end

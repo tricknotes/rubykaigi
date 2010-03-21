@@ -139,12 +139,12 @@ strong {
   font-size: 12px;
   font-weight: bold;
   color: #666;
-  background: transparent url(/images/sponsor-header.png) no-repeat top center;
+  background: transparent url(/2009/images/sponsor-header.png) no-repeat top center;
 }
 #sponsors dd {
   margin: 0 0 20px;
   padding: 10px 0px;
-  background: #fff url(/images/sponsor-footer.png) no-repeat bottom center;
+  background: #fff url(/2009/images/sponsor-footer.png) no-repeat bottom center;
 }
 #sponsors li {
   margin: 16px 0px;

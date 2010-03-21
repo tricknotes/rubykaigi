@@ -88,7 +88,7 @@ Finally, components of Rails 3 will be available, in an unprecedented way, as li
       <ul>
 		    <li><a href="../talks">Timetable</a></li>
         <li><a href="../registrations">Registration</a></li>
-		    <li><a href="/exchange_tickets">Exchange Ticket (Reissue)</a></li>
+		    <li>Exchange Ticket (Reissue)</li>
         <li>Lightning Talk Submission</li>
         <li><a href="../Sponsors">Sponsors</a></li>
         <li><a href="../Team">Staff</a></li>

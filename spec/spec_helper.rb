@@ -2,20 +2,20 @@ require 'rubygems'
 require 'spork'
 
 Spork.prefork do
-  # Loading more in this block will cause your specs to run faster. However, 
+  # Loading more in this block will cause your specs to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
-  
+
 end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-  
+
 end
 
 # --- Instructions ---
-# - Sort through your spec_helper file. Place as much environment loading 
-#   code that you don't normally modify during development in the 
+# - Sort through your spec_helper file. Place as much environment loading
+#   code that you don't normally modify during development in the
 #   Spork.prefork block.
 # - Place the rest under Spork.each_run block
 # - Any code that is left outside of the blocks will be ran during preforking
@@ -33,9 +33,8 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','config','environment'))
 require 'spec/autorun'
 require 'spec/rails'
+require 'email_spec'
 
-require 'email_spec/helpers'
-require 'email_spec/matchers'
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
 

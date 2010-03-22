@@ -1,6 +1,6 @@
 <%# coding: utf-8 -%>
 <% content_for :css do -%>
-<%= stylesheet_link_tag '2009_registration' %>
+<%= stylesheet_link_tag '/2009/stylesheets/2009_registration' %>
 <% end -%>
 <div class="item">
 <h2>RubyKaigi2009 Registration</h2>
@@ -22,7 +22,7 @@ Venue: Hitotsubashi Conference Hall in Chiyoda-ku, Tokyo (<a href="http://maps.g
 Fee: 6,000 JPY (3 days pass)
   </td>
   <td class="paypal_form">
-    <%= render_paypal_buynow_form(configatron.paypal.hosted_button_id.rubykaigi2009.conference, :rubykaigi2009) %>
+&nbsp;
   </td>
   </tr>
   </table>
@@ -38,7 +38,7 @@ Venue: Kizan Club(<a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geoc
 Fee: 5,000 JPY<br />
   </td>
   <td class="paypal_form">
-    <%= render_paypal_buynow_form(configatron.paypal.hosted_button_id.rubykaigi2009.party, :rubykaigi2009party) %>
+&nbsp;
   </td>
   </tr>
   </table>

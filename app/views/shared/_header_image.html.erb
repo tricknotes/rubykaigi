@@ -1,2 +1,2 @@
 <%- image = (controller.params[:page_name] == 'index') ? 'header-top.png' : 'header.png' -%>
-<h1><%= link_to(image_tag(image, :alt => t(:rubykaigi2009), :title => t(:rubykaigi2009)), "/2009/#{I18n.locale}") %></h1>
+<h1><%= link_to(image_tag("/2009/images/#{image}", :alt => t(:rubykaigi2009), :title => t(:rubykaigi2009)), "/2009/#{I18n.locale}") %></h1>

@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
+set :stages, %w(staging production)
+set :default_stage, "staging"
 set :application, "rubykaigi"
 set :repository,  "git://github.com/ruby-no-kai/rubykaigi.git"
 set :branch, "production"
+require "capistrano/ext/multistage"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
@@ -18,12 +21,9 @@ set :use_sudo, false
 set :runner, "rubykaigi"
 ssh_options[:username] = application
 
-set :deploy_server, "rubykaigi.org"
-role :app, deploy_server
-role :web, deploy_server
-role :db,  deploy_server, :primary => true
-
-set :rake, "/home/#{application}/gem.repos/bin/rake"
+role(:app) { [deploy_server] }
+role(:web) { [deploy_server] }
+role(:db) { [deploy_server, {:primary => true}] }
 
 def setup_shared(dir, path)
   src = "#{shared_path}/#{dir}/#{path}"
@@ -36,17 +36,6 @@ def setup_shared_config(path)
 end
 
 namespace :deploy do
-  task :after_update_code do
-    setup_shared_config("database.yml")
-    setup_shared_config("config.yml")
-    setup_shared("db", "production.sqlite3")
-  end
-
-  task :after_symlink do
-    run "mkdir -p #{current_path}/public/tmp"
-    setup_shared("public/tmp", "pamphlet-20090708.zip")
-  end
-
   task :start, :roles => :app do
   end
 
@@ -74,6 +63,23 @@ namespace :deploy do
     end
   end
 end
+
+after("deploy:update_code") do
+  setup_shared_config("database.yml")
+  setup_shared_config("config.yml")
+end
+
+after("deploy:symlink") do
+  run "mkdir -p #{current_path}/public/tmp"
+  setup_shared("public/tmp", "pamphlet-20090708.zip")
+end
+
+namespace :bundler do
+  task :bundle do
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development,test && bundle lock")
+  end
+end
+
 
 
 Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-*')].each do |vendored_notifier|

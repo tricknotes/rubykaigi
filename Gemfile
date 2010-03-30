@@ -34,5 +34,4 @@ group :test, :cucumber do
   gem 'webrat'
   gem 'moro-miso'
   gem 'database_cleaner'
-  gem 'factory_girl'
 end

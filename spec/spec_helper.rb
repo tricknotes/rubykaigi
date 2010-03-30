@@ -38,9 +38,6 @@ require 'email_spec'
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
 
-require 'factory_girl'
-require File.dirname(__FILE__) + '/factories/rubykaigi2009.rb'
-require File.dirname(__FILE__) + '/paypal_spec_helper.rb'
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].each {|f| require f}

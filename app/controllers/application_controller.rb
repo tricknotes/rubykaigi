@@ -1,10 +1,8 @@
-require 'authenticated_system'
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
 #  helper :all # include all helpers, all the time
-  include AuthenticatedSystem
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
@@ -30,19 +28,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def registration_open_at
-    @registration_open_at = Time.parse(configatron.paypal.open_at)
-  end
-
-  def registration_open?(now = Time.now)
-    registration_open_at <= now
-  end
-
-  def lt_submission_close_at
-    Time.parse(configatron.lt_submission.close_at)
-  end
-
-  def lt_submission_open?(now = Time.now)
-    lt_submission_close_at >= now
-  end
 end

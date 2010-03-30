@@ -8,7 +8,7 @@ development:
   timeout: 5000
   socket: /opt/local/var/run/mysql5/mysqld.sock
 
-test:
+test: &TEST
   adapter: mysql
   encoding: utf8
   database: rubykaigi_test

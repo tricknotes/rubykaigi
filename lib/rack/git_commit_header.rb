@@ -1,5 +1,4 @@
 # Rack middleware to insert git commit id into http response header
-# For Rails, put this script under RAILS_ROOT/config/initializers
 
 require 'open3'
 module Rack
@@ -32,4 +31,3 @@ module Rack
     end
   end
 end
-ActionController::Dispatcher.middleware.use Rack::GitCommitHeader rescue nil

@@ -10,8 +10,10 @@ gem "fastercsv"
 gem "hoptoad_notifier"
 
 gem 'haml'
-gem 'warden'
 gem 'fastercsv'
+
+gem 'rails_warden'
+gem 'warden_oauth'
 
 # remove it later
 gem 'ruby-openid', :require => 'openid'

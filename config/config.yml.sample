@@ -10,6 +10,10 @@ development: &local
     bcc: "RubyKaigi2009 <2009@rubykaigi.org>"
   hoptoad:
     api_key: HOPTOAD_API_KEY
+  twitter:
+    consumer_key: twitter_consumer_key
+    consumer_secret: twitter_consumer_secret
+
 production:
 
 test:

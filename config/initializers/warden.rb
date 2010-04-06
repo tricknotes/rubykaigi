@@ -10,7 +10,9 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
 end
 
 Warden::OAuth.access_token_user_finder(:twitter) do |access_token|
-	Rubyist.find_or_initialize_by_oauth_token_and_oauth_secret(access_token.token, access_token.secret)
+	# TODO 鯨対策
+	twitter_user_id = OAuthRubytter.new(access_token).verify_credentials.id
+	Rubyist.find_or_initialize_by_twitter_user_id(twitter_user_id)
 end
 
 class Warden::SessionSerializer

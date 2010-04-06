@@ -31,20 +31,20 @@ dependencies:
     version: ">= 0"
     require: 
     - openid
-  haml: 
-    group: 
-    - :default
-    version: ">= 0"
-  mysql: 
-    group: 
-    - :default
-    version: ">= 0"
   ambethia-smtp-tls: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - smtp-tls
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
+  haml: 
+    group: 
+    - :default
+    version: ">= 0"
   rails_warden: 
     group: 
     - :default
@@ -104,6 +104,10 @@ dependencies:
     - :cucumber
     version: ">= 0"
   warden_oauth: 
+    group: 
+    - :default
+    version: ">= 0"
+  rubytter: 
     group: 
     - :default
     version: ">= 0"
@@ -187,6 +191,8 @@ specs:
     version: 2.2.22
 - hoptoad_notifier: 
     version: 2.2.2
+- json: 
+    version: 1.2.3
 - machinist: 
     version: 1.0.6
 - moro-miso: 
@@ -213,6 +219,8 @@ specs:
     version: 1.3.2
 - ruby-openid: 
     version: 2.1.7
+- rubytter: 
+    version: 1.2.2
 - spork: 
     version: 0.8.2
 - warden: 
@@ -221,7 +229,7 @@ specs:
     version: 0.1.1
 - webrat: 
     version: 0.7.0
-hash: 07eeed0048d09e995063dfe92cc36dd1e38ecf9e
+hash: 516dc6186a1dbc12879f0de4bad02265a5443b11
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

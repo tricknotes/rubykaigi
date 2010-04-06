@@ -1,3 +1,5 @@
-!= link_to 'Twitter Authentication', url_for(root_path(:warden_oauth_provider => 'twitter'))
-
-!= debug user
+- if authenticated?
+	Welcome #{user.name}
+	!= link_to 'Sign out', :controller => 'account', :action => 'signout'
+- else
+	!= link_to 'Sign in with Twitter', root_path(:warden_oauth_provider => 'twitter')

@@ -1,10 +1,9 @@
 class CreateRubyists < ActiveRecord::Migration
   def self.up
     create_table :rubyists do |t|
-      t.string :name
+      t.string :name, :unique => true
       t.string :email
-      t.string :oauth_token
-      t.string :oauth_secret
+      t.integer :twitter_user_id, :unique => true
 
       t.timestamps
     end

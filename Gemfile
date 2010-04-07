@@ -14,7 +14,6 @@ gem 'fastercsv'
 
 gem 'rails_warden'
 gem 'warden_oauth'
-gem 'rubytter'
 
 # remove it later
 gem 'ruby-openid', :require => 'openid'

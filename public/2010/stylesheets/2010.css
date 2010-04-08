@@ -28,14 +28,49 @@ p,li {
   font-weight: bold;
   font-size: 100%;
 }
+
 #footer {
-  margin-top: 40px;
-  font-size: 60%;
+  font-size: 80%;
   color: #b0b0b0;
+  margin:0 auto;
+  padding: 30px 50px;
+  width:732px;
 }
 
 #footer a {
   color: #afb216;
+}
+
+#footer #contents {
+  width: 100%;
+}
+
+#footer .item {
+  float:left;
+  margin:0;
+  padding:0;
+  width:214px;
+}
+
+#footer .item a {
+  color:#666666;
+}
+
+#footer p {
+  text-align: center;
+  clear: left
+}
+
+#footer h2 {
+  background:none repeat scroll 0 0 transparent;
+  border:medium none;
+  font-size:16px;
+  margin:0;
+  padding:0;
+}
+
+#footer ul, #footer li {
+  list-style:none outside none;
 }
 
 a {

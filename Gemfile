@@ -36,4 +36,5 @@ group :test, :cucumber do
   gem 'webrat'
   gem 'moro-miso'
   gem 'database_cleaner'
+  gem 'nokogiri'
 end

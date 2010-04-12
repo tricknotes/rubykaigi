@@ -21,6 +21,7 @@ gem 'ruby-openid', :require => 'openid'
 group :development do
   gem 'capistrano', :require => nil
   gem 'capistrano-ext', :require => nil
+  gem 'gettext', '<2' # required by i18n_generators
 end
 
 group :test, :cucumber do

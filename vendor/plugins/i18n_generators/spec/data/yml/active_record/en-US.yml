@@ -1,28 +1,28 @@
-ja:
+en-US:
   activerecord:
     errors:
       # The values :model, :attribute and :value are always available for interpolation
       # The value :count is available when applicable. Can be used for pluralization.
       messages:
-        inclusion: "は一覧にありません。"
-        exclusion: "は予約されています。"
-        invalid: "は不正な値です。"
-        confirmation: "が一致しません。"
-        accepted: "を受諾してください。"
-        empty: "を入力してください。"
-        blank: "を入力してください。"
-        too_long: "は{{count}}文字以内で入力してください。"
-        too_short: "は{{count}}文字以上で入力してください。"
-        wrong_length: "は{{count}}文字で入力してください。"
-        taken: "はすでに存在します。"
-        not_a_number: "は数値で入力してください。"
-        greater_than: "は{{count}}より大きい値にしてください。"
-        greater_than_or_equal_to: "は{{count}}以上の値にしてください。"
-        equal_to: "は{{count}}にしてください。"
-        less_than: "は{{count}}より小さい値にしてください。"
-        less_than_or_equal_to: "は{{count}}以下の値にしてください。"
-        odd: "は奇数にしてください。"
-        even: "は偶数にしてください。"
+        inclusion: "is not included in the list"
+        exclusion: "is reserved"
+        invalid: "is invalid"
+        confirmation: "doesn't match confirmation"
+        accepted: "must be accepted"
+        empty: "can't be empty"
+        blank: "can't be blank"
+        too_long: "is too long (maximum is {{count}} characters)"
+        too_short: "is too short (minimum is {{count}} characters)"
+        wrong_length: "is the wrong length (should be {{count}} characters)"
+        taken: "has already been taken"
+        not_a_number: "is not a number"
+        greater_than: "must be greater than {{count}}"
+        greater_than_or_equal_to: "must be greater than or equal to {{count}}"
+        equal_to: "must be equal to {{count}}"
+        less_than: "must be less than {{count}}"
+        less_than_or_equal_to: "must be less than or equal to {{count}}"
+        odd: "must be odd"
+        even: "must be even"
         # Append your own errors here or at the model/attributes scope.
 
       # You can define own errors for models or model attributes.
@@ -51,3 +51,4 @@ ja:
       #   user:
       #     login: "Handle"
       # will translate User attribute "login" as "Handle"
+

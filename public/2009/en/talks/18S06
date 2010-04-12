@@ -29,7 +29,7 @@
 
       <div id="content">
         <div id="header">
-          <h1><a href="../../en"><img alt="RubyKaigi2009" src="../../images/header.png" title="RubyKaigi2009" /></a></h1>
+          <h1><a href="../../en"><img alt="RubyKaigi2009" src="..//2009/images/header.png" title="RubyKaigi2009" /></a></h1>
 
         </div>
 
@@ -101,37 +101,37 @@
     <dt>Ruby Sponsors</dt>
     <dd>
       <ul>
-        <li><a href="http://www.ctc-g.co.jp/"><img alt="伊藤忠テクノソリューションズ株式会社" src="../../images/sponsors/ctc-g.png" /></a></li>
-        <li><a href="http://www.netlab.jp/"><img alt="株式会社ネットワーク応用通信研究所" src="../../images/sponsors/nacl.png" /></a></li>
-        <li><a href="http://www.ricoh.co.jp/"><img alt="株式会社リコー" src="../../images/sponsors/ricoh.png" /></a></li>
+        <li><a href="http://www.ctc-g.co.jp/"><img alt="伊藤忠テクノソリューションズ株式会社" src="..//2009/images/sponsors/ctc-g.png" /></a></li>
+        <li><a href="http://www.netlab.jp/"><img alt="株式会社ネットワーク応用通信研究所" src="..//2009/images/sponsors/nacl.png" /></a></li>
+        <li><a href="http://www.ricoh.co.jp/"><img alt="株式会社リコー" src="..//2009/images/sponsors/ricoh.png" /></a></li>
       </ul>
     </dd>
 
     <dt>Platinum Sponsors</dt>
     <dd>
       <ul>
-        <li><a href="http://ruby.agile.esm.co.jp/"><img alt="株式会社永和システムマネジメント" src="../../images/sponsors/esm.png" /></a></li>
-        <li><a href="http://www.nifty.com/"><img alt="ニフティ株式会社" src="../../images/sponsors/nifty.png" /></a></li>
-        <li><a href="http://raw-hide.co.jp/"><img alt="株式会社RAWHIDE." src="../../images/sponsors/raw-hide.png" /></a></li>
-        <li><a href="http://www.recruit.jp/"><img alt="株式会社リクルート" src="../../images/sponsors/recruit.png" /></a></li>
-        <li><a href="http://www.trans-nt.com/"><img alt="株式会社トランス・ニュー・テクノロジー" src="../../images/sponsors/tnt.png" /></a></li>
-        <li><a href="http://www.contents-one.co.jp/"><img alt="株式会社コンテンツワン" src="../../images/sponsors/contents-one.png" /></a></li>
+        <li><a href="http://ruby.agile.esm.co.jp/"><img alt="株式会社永和システムマネジメント" src="..//2009/images/sponsors/esm.png" /></a></li>
+        <li><a href="http://www.nifty.com/"><img alt="ニフティ株式会社" src="..//2009/images/sponsors/nifty.png" /></a></li>
+        <li><a href="http://raw-hide.co.jp/"><img alt="株式会社RAWHIDE." src="..//2009/images/sponsors/raw-hide.png" /></a></li>
+        <li><a href="http://www.recruit.jp/"><img alt="株式会社リクルート" src="..//2009/images/sponsors/recruit.png" /></a></li>
+        <li><a href="http://www.trans-nt.com/"><img alt="株式会社トランス・ニュー・テクノロジー" src="..//2009/images/sponsors/tnt.png" /></a></li>
+        <li><a href="http://www.contents-one.co.jp/"><img alt="株式会社コンテンツワン" src="..//2009/images/sponsors/contents-one.png" /></a></li>
       </ul>
     </dd>
 
     <dt>Gold Sponsors</dt>
     <dd>
       <ul>
-        <li><a href="http://antas.jp/"><img alt="株式会社アンタス" src="../../images/sponsors/antas.png" /></a></li>
-        <li><a href="http://www.clear-code.com/"><img alt="株式会社クリアコード" src="../../images/sponsors/clear-code.png" /></a></li>
-        <li><a href="http://www.cuon.co.jp/"><img alt="株式会社クオン" src="../../images/sponsors/cuon.png" /></a></li>
-        <li><a href="http://everyleaf.com/"><img alt="株式会社万葉" src="../../images/sponsors/everyleaf.png" /></a></li>
-        <li><a href="http://irubysystems.com/"><img alt="株式会社iRubySystems" src="../../images/sponsors/irubysystems.png" /></a></li>
-        <li><a href="http://www.rabbix.jp/"><img alt="有限会社ラビックス" src="../../images/sponsors/rabbix.png" /></a></li>
-        <li><a href="http://www.rakuten.co.jp/"><img alt="楽天株式会社" src="../../images/sponsors/rakuten.png" /></a></li>
-        <li><a href="http://user.openskip.org/"><img alt="SKIPユーザグループ" src="../../images/sponsors/sug.png" /></a></li>
-        <li><img alt="タワーズ･クエスト株式会社" src="../../images/sponsors/towersquest.png" /></li>
-        <li><a href="http://www.waicrew.com/"><img alt="ワイクル株式会社" src="../../images/sponsors/waicrew.png" /></a></li>
+        <li><a href="http://antas.jp/"><img alt="株式会社アンタス" src="..//2009/images/sponsors/antas.png" /></a></li>
+        <li><a href="http://www.clear-code.com/"><img alt="株式会社クリアコード" src="..//2009/images/sponsors/clear-code.png" /></a></li>
+        <li><a href="http://www.cuon.co.jp/"><img alt="株式会社クオン" src="..//2009/images/sponsors/cuon.png" /></a></li>
+        <li><a href="http://everyleaf.com/"><img alt="株式会社万葉" src="..//2009/images/sponsors/everyleaf.png" /></a></li>
+        <li><a href="http://irubysystems.com/"><img alt="株式会社iRubySystems" src="..//2009/images/sponsors/irubysystems.png" /></a></li>
+        <li><a href="http://www.rabbix.jp/"><img alt="有限会社ラビックス" src="..//2009/images/sponsors/rabbix.png" /></a></li>
+        <li><a href="http://www.rakuten.co.jp/"><img alt="楽天株式会社" src="..//2009/images/sponsors/rakuten.png" /></a></li>
+        <li><a href="http://user.openskip.org/"><img alt="SKIPユーザグループ" src="..//2009/images/sponsors/sug.png" /></a></li>
+        <li><img alt="タワーズ･クエスト株式会社" src="..//2009/images/sponsors/towersquest.png" /></li>
+        <li><a href="http://www.waicrew.com/"><img alt="ワイクル株式会社" src="..//2009/images/sponsors/waicrew.png" /></a></li>
       </ul>
     </dd>
   </dl><!-- sponsors -->

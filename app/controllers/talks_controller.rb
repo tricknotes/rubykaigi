@@ -3,16 +3,7 @@ class TalksController < LocaleBaseController
   before_filter :capture_year
 
   def index
-    respond_to do |wants|
-      wants.html do
-        @title = t(:timetable)
-        render :template => "#{controller_name}/#{params[:year]}/#{action_name}"
-      end
-      wants.json do
-        @talks = Talk.year(@year).sort_by {|t| t.code }
-        render :json => @talks
-      end
-    end
+    redirect_to '/2010/#{params[:locale]/talks'
   end
 
   def show

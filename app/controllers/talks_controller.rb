@@ -7,23 +7,8 @@ class TalksController < LocaleBaseController
   end
 
   def show
-    @year, code = [params[:year], params[:id].upcase]
-    @talk = Talk.year(@year).find_by_code(code)
-    require 'json'
-    @nicovideo_links = JSON.parse(@talk.nicovideo_links) # sm, title
-    unless @talk
-      render :file => "#{Rails.root}/public/404.html", :status => 404
-      return
-    end
-    respond_to do |wants|
-      wants.html do
-        @title = @talk.title
-        render :template => "#{controller_name}/#{@year}/#{action_name}"
-      end
-      wants.json do
-        render :json => @talk.to_json
-      end
-    end
+    @year, code = [params[:year], params[:id]]
+    redirect_to "/#{@year}/#{params[:locale]}/talks/#{code.upcase}"
   end
 
   private

@@ -22,6 +22,7 @@ group :development do
   gem 'capistrano', :require => nil
   gem 'capistrano-ext', :require => nil
   gem 'gettext', '<2' # required by i18n_generators
+  gem 'thin'
 end
 
 group :test, :cucumber do

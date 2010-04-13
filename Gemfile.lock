@@ -1,6 +1,10 @@
 --- 
 dependencies: 
-  spork: 
+  fastercsv: 
+    group: 
+    - :default
+    version: ">= 0"
+  rr: 
     group: 
     - :test
     - :cucumber
@@ -10,14 +14,10 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  rr: 
+  spork: 
     group: 
     - :test
     - :cucumber
-    version: ">= 0"
-  fastercsv: 
-    group: 
-    - :default
     version: ">= 0"
   rails: 
     group: 
@@ -25,49 +25,57 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  ruby-openid: 
-    group: 
-    - :default
-    version: ">= 0"
-    require: 
-    - openid
-  haml: 
-    group: 
-    - :default
-    version: ">= 0"
-  mysql: 
-    group: 
-    - :default
-    version: ">= 0"
   ambethia-smtp-tls: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - smtp-tls
-  rails_warden: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
+  haml: 
+    group: 
+    - :default
+    version: ">= 0"
+  ruby-openid: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - openid
   machinist: 
     group: 
     - :test
     - :cucumber
     version: ">= 0"
-  database_cleaner: 
+  rails_warden: 
     group: 
-    - :test
-    - :cucumber
+    - :default
     version: ">= 0"
   rspec-rails: 
     group: 
     - :test
     - :cucumber
     version: ">= 0"
-  webrat: 
+  thin: 
+    group: 
+    - :development
+    version: ">= 0"
+  database_cleaner: 
     group: 
     - :test
     - :cucumber
+    version: ">= 0"
+  cucumber-rails: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  configatron: 
+    group: 
+    - :default
     version: ">= 0"
   capistrano-ext: 
     group: 
@@ -75,20 +83,16 @@ dependencies:
     version: ">= 0"
     require: []
 
-  configatron: 
-    group: 
-    - :default
-    version: ">= 0"
-  cucumber-rails: 
+  webrat: 
     group: 
     - :test
     - :cucumber
     version: ">= 0"
-  hoptoad_notifier: 
+  gettext: 
     group: 
-    - :default
-    version: ">= 0"
-  email_spec: 
+    - :development
+    version: < 2
+  moro-miso: 
     group: 
     - :test
     - :cucumber
@@ -98,16 +102,20 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  moro-miso: 
+  email_spec: 
     group: 
     - :test
     - :cucumber
+    version: ">= 0"
+  hoptoad_notifier: 
+    group: 
+    - :default
     version: ">= 0"
   warden_oauth: 
     group: 
     - :default
     version: ">= 0"
-  autotest-rails: 
+  nokogiri: 
     group: 
     - :test
     - :cucumber
@@ -118,6 +126,11 @@ dependencies:
     version: ">= 0"
     require: []
 
+  autotest-rails: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
@@ -162,7 +175,7 @@ specs:
 - diff-lcs: 
     version: 1.1.2
 - json_pure: 
-    version: 1.2.3
+    version: 1.2.4
 - polyglot: 
     version: 0.3.1
 - term-ansicolor: 
@@ -179,12 +192,16 @@ specs:
     version: 0.5.0
 - email_spec: 
     version: 0.6.2
+- eventmachine: 
+    version: 0.12.10
 - faker: 
     version: 0.3.1
 - fastercsv: 
     version: 1.5.3
+- gettext: 
+    version: 1.93.0
 - haml: 
-    version: 2.2.22
+    version: 2.2.23
 - hoptoad_notifier: 
     version: 2.2.2
 - machinist: 
@@ -215,13 +232,15 @@ specs:
     version: 2.1.7
 - spork: 
     version: 0.8.2
+- thin: 
+    version: 1.2.5
 - warden: 
     version: 0.10.3
 - warden_oauth: 
     version: 0.1.1
 - webrat: 
     version: 0.7.0
-hash: 07eeed0048d09e995063dfe92cc36dd1e38ecf9e
+hash: 570df904a0f5c8553e441cb08b6235349006551f
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

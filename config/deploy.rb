@@ -76,7 +76,7 @@ end
 
 namespace :bundler do
   task :bundle do
-    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development,test && bundle lock")
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cuke && bundle lock")
   end
 end
 

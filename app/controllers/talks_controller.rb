@@ -3,7 +3,7 @@ class TalksController < LocaleBaseController
   before_filter :capture_year
 
   def index
-    redirect_to '/2010/#{params[:locale]}/talks'
+    redirect_to '/2009/#{params[:locale]}/talks'
   end
 
   def show

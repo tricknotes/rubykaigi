@@ -1,4 +1,4 @@
-set :branch, "master"
+set :branch, "2010-prototype"
 set :deploy_server, "rubykaigi.kakutani.com"
 
 set :rake, "/usr/local/bin/rake"

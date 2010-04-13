@@ -189,7 +189,7 @@ specs:
 - daemons: 
     version: 1.0.10
 - database_cleaner: 
-    version: 0.5.0
+    version: 0.5.1
 - email_spec: 
     version: 0.6.2
 - eventmachine: 
@@ -233,7 +233,7 @@ specs:
 - spork: 
     version: 0.8.2
 - thin: 
-    version: 1.2.5
+    version: 1.2.7
 - warden: 
     version: 0.10.3
 - warden_oauth: 

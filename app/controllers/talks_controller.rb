@@ -7,7 +7,7 @@ class TalksController < LocaleBaseController
   end
 
   def show
-    @year, code = [params[:year], params[:id]]
+    @year, code = [params[:year], params[:id].upcase]
     @talk = Talk.year(@year).find_by_code(code)
     require 'json'
     @nicovideo_links = JSON.parse(@talk.nicovideo_links) # sm, title

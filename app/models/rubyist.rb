@@ -4,4 +4,8 @@ class Rubyist < ActiveRecord::Base
 
   validates_uniqueness_of :twitter_user_id
   validates_presence_of :twitter_user_id
+
+  def to_param
+    name
+  end
 end

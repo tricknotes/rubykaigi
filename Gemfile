@@ -28,7 +28,7 @@ end
 group :test, :cucumber do
   gem 'rspec-rails'
   gem 'rr'
-  gem 'machinist'
+  gem 'machinist', :require => 'machinist/active_record'
   gem 'faker'
   gem 'email_spec'
   gem 'autotest-rails'

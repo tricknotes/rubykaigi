@@ -50,6 +50,8 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
+    require: 
+    - machinist/active_record
   rails_warden: 
     group: 
     - :default
@@ -240,7 +242,7 @@ specs:
     version: 0.1.1
 - webrat: 
     version: 0.7.0
-hash: 570df904a0f5c8553e441cb08b6235349006551f
+hash: feec9f85d85d6e5afd4bbb841110e22654562c48
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

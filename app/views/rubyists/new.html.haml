@@ -1,0 +1,11 @@
+- form_for @rubyist do |form|
+  != form.error_messages
+
+  %dl
+    %dt!= form.label :name
+    %dd!= form.text_field :name
+
+    %dt!= form.label :email
+    %dd!= form.text_field :email
+
+  != form.submit 'Sign up'

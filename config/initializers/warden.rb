@@ -6,7 +6,7 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
   end
 
   manager.default_strategies :twitter_oauth
-  manager.failure_app = AccountController
+  manager.failure_app = SessionsController
 end
 
 Warden::OAuth.access_token_user_finder(:twitter) do |access_token|
@@ -22,5 +22,12 @@ class Warden::SessionSerializer
   def deserialize(keys)
     klass, id = keys
     klass.find_by_id(id)
+  end
+end
+
+# monkey patch for rewrite callback URI.
+class Warden::OAuth::Strategy
+  def request_token
+    @request_token ||= consumer.get_request_token(:oauth_callback => request.url.split('?', 2).first)
   end
 end

@@ -11,6 +11,34 @@ describe RubyistsController do
     it { assigns[:rubyist].should == @ursm }
   end
 
+  describe 'GET /new' do
+    context 'with Twitter credentials' do
+      before do
+        session[:credentials] = {:twitter_user_id => 4567}
+        get :new
+      end
+
+      it { response.should be_success }
+    end
+
+    context 'with OpenID credentials' do
+      before do
+        session[:credentials] = {:identity_url => 'http://ursm.jp/'}
+        get :new
+      end
+
+      it { response.should be_success }
+    end
+
+    context 'no credentials' do
+      before do
+        get :new
+      end
+
+      it { response.should redirect_to(new_sessions_path) }
+    end
+  end
+
   describe 'POST /create' do
     context 'with Twitter credentials' do
       before do

@@ -4,7 +4,7 @@ class Rubyist < ActiveRecord::Base
   validates_exclusion_of :name, :in => %w(new)
 
   validates_uniqueness_of :twitter_user_id
-  validates_presence_of :twitter_user_id
+  validates_uniqueness_of :identity_url
 
   def to_param
     name

@@ -14,9 +14,7 @@ gem 'fastercsv'
 
 gem 'rails_warden'
 gem 'warden_oauth'
-
-# remove it later
-gem 'ruby-openid', :require => 'openid'
+gem 'warden-openid'
 
 group :development do
   gem 'capistrano', :require => nil

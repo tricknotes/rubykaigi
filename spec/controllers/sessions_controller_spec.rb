@@ -14,21 +14,36 @@ describe SessionsController do
       end
 
       it { response.should redirect_to(new_rubyist_path) }
-      it { session[:twitter_user_id].should == 1234 }
+      it { session[:credentials][:twitter_user_id].should == 1234 }
     end
 
-    context 'failed in authentication' do
+    context 'redirect back from OpenID provider with credentials' do
+      before do
+        stub(res = Object.new).identity_url { 'http://ursm.jp/' }
+
+        stub(controller).warden.stub!.env {
+          {'warden.options' => {:openid => {:response => res}}}
+        }
+
+        get :unauthenticated
+      end
+
+      it { response.should redirect_to(new_rubyist_path) }
+      it { session[:credentials][:identity_url].should == 'http://ursm.jp/' }
+    end
+
+    context 'authentication failed' do
       before do
         stub(controller).warden.stub! {
           env { {'warden.options' => {}} }
-          errors.stub!.full_messages { ['error 1', 'error 2'] }
+          message { 'something' }
         }
 
         get :unauthenticated
       end
 
       it { response.should redirect_to(new_sessions_path) }
-      it { flash[:errors].should == ['error 1', 'error 2'] }
+      it { flash[:error].should == 'something' }
     end
   end
 end

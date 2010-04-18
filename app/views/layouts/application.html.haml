@@ -1,10 +1,17 @@
 !!!
 
 %html
-	%head
-		%meta(charset='utf-8')
-		%title= [@title, t('RubyKaigi2010')].compact.join(' - ')
-		%link(rel='icon' href='/favicon.ico')
+  %head
+    %meta(charset='utf-8')
+    %title= [@title, 'RubyKaigi 2010'].compact.join(' - ')
+    %link(rel='icon' href='/favicon.ico')
+    != yield :head
 
-	%body
-		!= yield
+  %body
+    - if n = flash[:notice]
+      %p.notice= n
+
+    - if e = flash[:error]
+      %p.error= e
+
+    != yield

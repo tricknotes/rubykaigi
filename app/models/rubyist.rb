@@ -6,6 +6,8 @@ class Rubyist < ActiveRecord::Base
   validates_uniqueness_of :twitter_user_id
   validates_uniqueness_of :identity_url
 
+  attr_protected :twitter_user_id, :identity_url
+
   def to_param
     name
   end

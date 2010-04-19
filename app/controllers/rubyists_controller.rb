@@ -10,7 +10,10 @@ class RubyistsController < ApplicationController
   end
 
   def create
-    @rubyist = Rubyist.new(params[:rubyist].merge(session[:credentials]))
+    @rubyist = Rubyist.new(params[:rubyist]) do |r|
+      r.twitter_user_id, r.identity_url = session[:credentials].values_at(:twitter_user_id, :identity_url)
+    end
+
 
     if @rubyist.save
       self.user = @rubyist

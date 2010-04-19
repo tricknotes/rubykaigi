@@ -42,27 +42,25 @@ describe RubyistsController do
   describe 'POST /create' do
     context 'with Twitter credentials' do
       before do
-        @rubyist = Rubyist.new
-        mock(Rubyist).new('name' => 'ursm', 'twitter_user_id' => 4567) { @rubyist }
-
         session[:credentials] = {:twitter_user_id => 4567}
       end
 
       context 'saved' do
         before do
-          mock(@rubyist).save { true }
-          mock(controller).user = @rubyist
+          mock.instance_of(Rubyist).save { true }
+          mock(controller).user = is_a(Rubyist)
 
           post :create, :rubyist => {:name => 'ursm'}
         end
 
         it { response.should redirect_to(root_path) }
+        it { assigns[:rubyist].twitter_user_id.should == 4567 }
         it { session[:credentials].should be_nil }
       end
 
       context 'failed' do
         before do
-          mock(@rubyist).save { false }
+          mock.instance_of(Rubyist).save { false }
           dont_allow(controller).user = anything
 
           post :create, :rubyist => {:name => 'ursm'}
@@ -76,27 +74,25 @@ describe RubyistsController do
 
     context 'with OpenID credentials' do
       before do
-        @rubyist = Rubyist.new
-        mock(Rubyist).new('name' => 'ursm', 'identity_url' => 'http://ursm.jp/') { @rubyist }
-
         session[:credentials] = {:identity_url => 'http://ursm.jp/'}
       end
 
       context 'saved' do
         before do
-          mock(@rubyist).save { true }
-          mock(controller).user = @rubyist
+          mock.instance_of(Rubyist).save { true }
+          mock(controller).user = is_a(Rubyist)
 
           post :create, :rubyist => {:name => 'ursm'}
         end
 
         it { response.should redirect_to(root_path) }
+        it { assigns[:rubyist].identity_url.should == 'http://ursm.jp/' }
         it { session[:credentials].should be_nil }
       end
 
       context 'failed' do
         before do
-          mock(@rubyist).save { false }
+          mock.instance_of(Rubyist).save { false }
           dont_allow(controller).user = anything
 
           post :create, :rubyist => {:name => 'ursm'}

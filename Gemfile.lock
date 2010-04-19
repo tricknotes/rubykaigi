@@ -25,20 +25,20 @@ dependencies:
     version: = 2.3.5
     require: []
 
+  haml: 
+    group: 
+    - :default
+    version: ">= 0"
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
   ambethia-smtp-tls: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - smtp-tls
-  mysql: 
-    group: 
-    - :default
-    version: ">= 0"
-  haml: 
-    group: 
-    - :default
-    version: ">= 0"
   machinist: 
     group: 
     - :test
@@ -47,6 +47,10 @@ dependencies:
     require: 
     - machinist/active_record
   rails_warden: 
+    group: 
+    - :default
+    version: ">= 0"
+  whenever: 
     group: 
     - :default
     version: ">= 0"
@@ -168,14 +172,20 @@ specs:
     version: 2.5.18
 - capistrano-ext: 
     version: 1.2.1
+- json_pure: 
+    version: 1.2.4
+- rubyforge: 
+    version: 2.0.4
+- hoe: 
+    version: 2.6.0
+- chronic: 
+    version: 0.2.3
 - yamler: 
     version: 0.1.0
 - configatron: 
     version: 2.6.0
 - diff-lcs: 
     version: 1.1.2
-- json_pure: 
-    version: 1.2.4
 - polyglot: 
     version: 0.3.1
 - term-ansicolor: 
@@ -244,7 +254,9 @@ specs:
     version: 0.1.1
 - webrat: 
     version: 0.7.0
-hash: 85876a837fbef07161c911ae6af60e00e4be0928
+- whenever: 
+    version: 0.4.1
+hash: f6726bac53d9e63721975192db1246ed3457b681
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -3,6 +3,9 @@
 # AR error messages are basically taken from Ruby-GetText-Package. Thanks to Masao Mutoh.
 
 ja:
+  rubykaigi2010: 日本Ruby会議2010
+  whats_new: 新着情報
+
   date:
     formats:
       default: "%Y/%m/%d"

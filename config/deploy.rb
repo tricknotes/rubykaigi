@@ -72,11 +72,12 @@ end
 after("deploy:symlink") do
   run "mkdir -p #{current_path}/public/tmp"
   setup_shared("public/tmp", "pamphlet-20090708.zip")
+  run "cd #{current_path} && bundle exec whenever --update-crontab #{application}"
 end
 
 namespace :bundler do
   task :bundle do
-    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cuke && bundle lock")
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cucumber && bundle lock")
   end
 end
 

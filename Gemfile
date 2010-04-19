@@ -8,9 +8,9 @@ gem 'configatron'
 gem "ambethia-smtp-tls", :require => "smtp-tls"
 gem "fastercsv"
 gem "hoptoad_notifier"
-
 gem 'haml'
 gem 'fastercsv'
+gem 'whenever'
 
 gem 'rails_warden'
 gem 'warden_oauth'

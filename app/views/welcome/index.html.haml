@@ -3,3 +3,11 @@
   != link_to 'Sign out', sessions_path, :method => :delete
 - else
   != link_to 'Sign in / Sign up', new_sessions_path
+
+.whats_new
+  %h2= t :whats_new
+
+  %dl
+    - @headlines.each do |h|
+      %dt= l h.time.to_date, :format => :long
+      %dd!= link_to h(h.title), h.link

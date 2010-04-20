@@ -92,3 +92,10 @@ Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-
 end
 
 require 'hoptoad_notifier/capistrano'
+require 'capistrano-notification'
+
+notification.irc do |irc|
+  irc.host    'chat.freenode.net'
+  irc.channel '#rubykaigi.org'
+  irc.message "#{local_user} deployed #{application} to #{deploy_target} from #{current_revision}"
+end

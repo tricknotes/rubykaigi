@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -46,11 +46,11 @@ dependencies:
     version: ">= 0"
     require: 
     - machinist/active_record
-  i18n_generators: 
+  rails_warden: 
     group: 
     - :default
     version: ">= 0"
-  rails_warden: 
+  i18n_generators: 
     group: 
     - :default
     version: ">= 0"
@@ -77,20 +77,20 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  configatron: 
-    group: 
-    - :default
-    version: ">= 0"
-  warden-openid: 
-    group: 
-    - :default
-    version: ">= 0"
   capistrano-ext: 
     group: 
     - :development
     version: ">= 0"
     require: []
 
+  warden-openid: 
+    group: 
+    - :default
+    version: ">= 0"
+  configatron: 
+    group: 
+    - :default
+    version: ">= 0"
   webrat: 
     group: 
     - :test
@@ -123,6 +123,12 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  capistrano-notification: 
+    group: 
+    - :development
+    version: ">= 0"
+    require: []
+
   nokogiri: 
     group: 
     - :test
@@ -156,6 +162,8 @@ specs:
     version: 2.3.5
 - activeresource: 
     version: 2.3.5
+- addressable: 
+    version: 2.1.1
 - ambethia-smtp-tls: 
     version: 1.1.2
 - autotest-rails: 
@@ -176,6 +184,12 @@ specs:
     version: 2.5.18
 - capistrano-ext: 
     version: 1.2.1
+- shout-bot: 
+    version: 0.0.4
+- validatable: 
+    version: 1.6.7
+- capistrano-notification: 
+    version: 0.0.2
 - json_pure: 
     version: 1.2.4
 - rubyforge: 
@@ -263,7 +277,7 @@ specs:
     version: 0.7.0
 - whenever: 
     version: 0.4.1
-hash: b2cb0b3ff15a26320e32bd3a5eeb4afb8b7610a9
+hash: 416a375f2d6c2001d8843362317c633c36affb48
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

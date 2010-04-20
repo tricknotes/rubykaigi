@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe RubyKaigi do
+describe OrderItem do
 end

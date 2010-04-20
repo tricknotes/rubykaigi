@@ -1,0 +1,22 @@
+%h1 Carts#index
+
+- unless @cart.empty?
+  %ul
+  - @cart.items.each do |item|
+    %li
+      #{t(item.label)}, #{item.quantity}, #{item.price}
+      != link_to('delete this', remove_item_carts_path(:product_item_code => item.item_code), :method => :delete)
+- else
+  (your cart is empty!)
+
+- unless @cart.empty?
+  != link_to('Proceed to checkout', orders_path, :method => :post)
+%hr
+
+!= link_to 'registrations', registrations_path
+<br />
+- if authenticated?
+  Welcome #{user.name}
+  != link_to 'Sign out', :controller => 'account', :action => 'signout'
+- else
+  != link_to 'Sign in with Twitter', root_path(:warden_oauth_provider => 'twitter')

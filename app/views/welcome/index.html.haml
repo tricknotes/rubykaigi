@@ -1,3 +1,5 @@
+%h1 rubykaigi.org
+
 - if authenticated?
   Welcome #{user.name}
   != link_to 'Sign out', sessions_path, :method => :delete
@@ -11,3 +13,6 @@
     - @headlines.each do |h|
       %dt= l h.time.to_date, :format => :long
       %dd!= link_to h(h.title), h.link
+
+%h2 yeah! why don't you join us?
+!= link_to 'registrations', registrations_path

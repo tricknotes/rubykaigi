@@ -1,0 +1,17 @@
+- if authenticated?
+  Welcome #{user.name}
+  != link_to 'Sign out', :controller => 'account', :action => 'signout'
+- else
+  != link_to 'Sign in with Twitter', root_path(:warden_oauth_provider => 'twitter')
+
+%h2 registrations
+
+this is registration page for rubykaigi.
+
+%h3 #{t('individual_sponsor')}
+
+.price
+  #{number_with_delimiter(@individual_sponsor.price)} JPY
+
+.add_to_cart
+  != link_to('Add to Cart', add_item_carts_path(:product_item_code => @individual_sponsor.item_code), :method => :post)

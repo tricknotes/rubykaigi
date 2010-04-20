@@ -29,16 +29,16 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  mysql: 
-    group: 
-    - :default
-    version: ">= 0"
   ambethia-smtp-tls: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - smtp-tls
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
   machinist: 
     group: 
     - :test
@@ -46,6 +46,10 @@ dependencies:
     version: ">= 0"
     require: 
     - machinist/active_record
+  i18n_generators: 
+    group: 
+    - :default
+    version: ">= 0"
   rails_warden: 
     group: 
     - :default
@@ -214,6 +218,9 @@ specs:
     version: 2.2.23
 - hoptoad_notifier: 
     version: 2.2.2
+- i18n_generators: 
+    version: 0.6.0
+    source: 0
 - machinist: 
     version: 1.0.6
 - moro-miso: 
@@ -243,7 +250,7 @@ specs:
 - rspec-rails: 
     version: 1.3.2
 - spork: 
-    version: 0.8.2
+    version: 0.8.3
 - thin: 
     version: 1.2.7
 - warden: 
@@ -256,8 +263,12 @@ specs:
     version: 0.7.0
 - whenever: 
     version: 0.4.1
-hash: f6726bac53d9e63721975192db1246ed3457b681
+hash: b2cb0b3ff15a26320e32bd3a5eeb4afb8b7610a9
 sources: 
+- Git: 
+    uri: git://github.com/amatsuda/i18n_generators.git
+    git: git://github.com/amatsuda/i18n_generators.git
+    ref: 2bdc9ac4ffe2ca04603d2cd9c0bc026b2faf59e6
 - Rubygems: 
     uri: http://gemcutter.org
 - Rubygems: 

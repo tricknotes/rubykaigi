@@ -7,7 +7,7 @@ describe Rubyist do
     its(:to_param) { should == 'ursm' }
   end
 
-  %w(new).each do |reserved|
+  %w(new edit).each do |reserved|
     context "name is #{reserved}" do
       subject { Rubyist.make_unsaved(:name => reserved).tap(&:valid?) }
       its(:errors) { should be_invalid(:name) }

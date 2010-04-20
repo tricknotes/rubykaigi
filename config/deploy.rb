@@ -72,6 +72,10 @@ end
 after("deploy:symlink") do
   run "mkdir -p #{current_path}/public/tmp"
   setup_shared("public/tmp", "pamphlet-20090708.zip")
+  setup_shared("certs","app_cert.pem")
+  setup_shared("certs","app_key.pem")
+  setup_shared("certs","paypal_cert_sandbox.pem")
+#  setup_shared("certs","paypal_cert_live.pem")
   run "cd #{current_path} && bundle exec whenever --update-crontab #{application}"
 end
 

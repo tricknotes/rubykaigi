@@ -16,7 +16,8 @@ module Paypal
         :return => return_url,
         :invoice => order.id,
         :notify_url => notify_url,
-        :cert_id => cert_id
+        :cert_id => cert_id,
+        :currency_code => 'JPY'
       }
       order.line_items.each_with_index do |item, index|
         values.merge!({

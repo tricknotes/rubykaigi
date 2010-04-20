@@ -6,7 +6,7 @@ OpenID::Util.logger = Rails.logger
 Rails.configuration.middleware.use RailsWarden::Manager do |manager|
   manager.oauth :twitter do |twitter|
     twitter.options :site => 'http://twitter.com'
-    twitter.consumer_key  = configatron.twitter.consumer_key
+    twitter.consumer_key    = configatron.twitter.consumer_key
     twitter.consumer_secret = configatron.twitter.consumer_secret
   end
 

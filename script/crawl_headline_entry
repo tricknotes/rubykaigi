@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require File.expand_path('../../config/environment', __FILE__)
-
-HeadlineEntry.crawl('http://rubykaigi.tdiary.net/index.rdf', 'rubykaigi2010').each do |e|
-  puts "#{e.time.to_date.to_s(:db)} #{e.title} (#{e.language})"
-end

@@ -3,5 +3,5 @@
 set :output, :standard => Rails.root + 'log/cron.log'
 
 every 1.hour do
-  command Rails.root + 'script/crawl_headline_entry'
+  rake 'headline:fetch'
 end

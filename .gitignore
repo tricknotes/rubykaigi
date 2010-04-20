@@ -15,6 +15,6 @@ backup/*.*
 coverage.aggregate
 coverage
 coverage.features
-tmp/*.*
+tmp/*
 mkmf.log
 rerun.txt

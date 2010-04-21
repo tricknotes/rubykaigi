@@ -97,5 +97,5 @@ require 'capistrano-notification'
 notification.irc do |irc|
   irc.host    'chat.freenode.net'
   irc.channel '#rubykaigi.org'
-  irc.message "#{local_user} deployed #{application} to #{deploy_target} from #{current_revision}"
+  irc.message "#{local_user} deployed #{application} to #{deploy_target}"
 end

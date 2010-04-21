@@ -9,8 +9,15 @@ class PublicReleasesController < LocaleBaseController
   layout proc{|c| "ruby_kaigi#{c.params[:year]}" }
 
   def show
-    if (params[:year] == "2010") || (params[:year] == "2009")
+    case params[:year]
+    when "2009"
       render :file => "public/#{params[:year]}/#{params[:locale]}/index.html"
+      return
+    when "2010"
+      page = params[:page_name].blank? ? 'index' : params[:page_name]
+      respond_to do |f|
+        f.html { render :template => "public_releases/#{params[:year]}/#{params[:locale]}/#{page}" }
+      end
       return
     end
 

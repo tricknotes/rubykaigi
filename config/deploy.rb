@@ -6,14 +6,9 @@ set :repository,  "git://github.com/ruby-no-kai/rubykaigi.git"
 set :branch, "production"
 require "capistrano/ext/multistage"
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
 set :deploy_to, "/home/#{application}/railsapp"
 set :ssh_options, { :forward_agent => true }
 
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
 set :scm, :git
 set :git_shallow_clone, 1
 
@@ -84,8 +79,6 @@ namespace :bundler do
     run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cucumber && bundle lock")
   end
 end
-
-
 
 Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-*')].each do |vendored_notifier|
   $: << File.join(vendored_notifier, 'lib')

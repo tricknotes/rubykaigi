@@ -5,7 +5,6 @@ trigger :start
 
 set :application, "rubykaigi"
 set :repository,  "git://github.com/ruby-no-kai/rubykaigi.git"
-set :branch, "production"
 
 set :deploy_to, "/home/#{application}/railsapp"
 set :ssh_options, { :forward_agent => true }
@@ -16,10 +15,6 @@ set :git_shallow_clone, 1
 set :use_sudo, false
 set :runner, "rubykaigi"
 ssh_options[:username] = application
-
-role(:app) { [deploy_server] }
-role(:web) { [deploy_server] }
-role(:db) { [deploy_server, {:primary => true}] }
 
 def setup_shared(dir, path)
   src = "#{shared_path}/#{dir}/#{path}"

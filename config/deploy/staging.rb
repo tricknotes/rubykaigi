@@ -1,5 +1,5 @@
 set :branch, "2010-prototype"
-set :deploy_server, "rubykaigi.kakutani.com"
+server 'rubykaigi.kakutani.com', :app, :web, :db, :primary => true
 
 set :rake, "/usr/local/bin/rake"
 

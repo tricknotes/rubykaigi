@@ -28,4 +28,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  private
+
+  def login_required
+    unless authenticated?
+      session[:return_to] = request.request_uri
+      redirect_to new_sessions_path
+    end
+  end
 end

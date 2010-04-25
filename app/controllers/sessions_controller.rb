@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def show
     authenticate!
     flash[:notice] = 'You have signed in successfully'
-    redirect_to root_path
+    redirect_to session.delete(:return_to) || root_path
   end
 
   def destroy

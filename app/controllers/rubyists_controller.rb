@@ -19,7 +19,7 @@ class RubyistsController < ApplicationController
       self.user = @rubyist
       session.delete(:credentials)
 
-      redirect_to root_path
+      redirect_to session.delete(:return_to) || root_path
     else
       render :new
     end

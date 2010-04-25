@@ -1,6 +1,29 @@
 require 'spec_helper'
 
 describe SessionsController do
+  describe 'GET /show' do
+    before do
+      stub(controller).authenticate!
+    end
+
+    context 'signed in successfully' do
+      before do
+        get :show
+      end
+
+      it { response.should redirect_to(root_path) }
+    end
+
+    context 'signed in successfully with return_to' do
+      before do
+        session[:return_to] = 'http://example.com/return_to'
+        get :show
+      end
+
+      it { response.should redirect_to('http://example.com/return_to') }
+    end
+  end
+
   describe 'GET /unauthenticated' do
     context 'redirect back from Twitter with credentials' do
       before do

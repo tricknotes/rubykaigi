@@ -23,7 +23,7 @@ module Paypal
         :cmd => '_cart',
         :charset => 'utf-8',
         :lc => 'JP',
-        :currency_code => 'JPY'
+        :currency_code => 'JPY',
         :upload => 1,
         :business => business_email,
         :return => return_url,

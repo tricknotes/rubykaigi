@@ -12,6 +12,7 @@ gem 'i18n_generators', :git => 'git://github.com/amatsuda/i18n_generators.git'
 gem 'haml'
 gem 'fastercsv'
 gem 'whenever'
+gem 'delayed_job'
 
 gem 'rails_warden'
 gem 'warden_oauth'

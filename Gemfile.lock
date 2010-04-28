@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -55,6 +55,10 @@ dependencies:
     - :default
     version: ">= 0"
   whenever: 
+    group: 
+    - :default
+    version: ">= 0"
+  delayed_job: 
     group: 
     - :default
     version: ">= 0"
@@ -163,7 +167,7 @@ specs:
 - activeresource: 
     version: 2.3.5
 - addressable: 
-    version: 2.1.1
+    version: 2.1.2
 - ambethia-smtp-tls: 
     version: 1.1.2
 - autotest-rails: 
@@ -173,7 +177,7 @@ specs:
 - highline: 
     version: 1.5.2
 - net-ssh: 
-    version: 2.0.21
+    version: 2.0.22
 - net-scp: 
     version: 1.0.2
 - net-sftp: 
@@ -191,7 +195,7 @@ specs:
 - capistrano-notification: 
     version: 0.0.2
 - json_pure: 
-    version: 1.2.4
+    version: 1.4.1
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -218,6 +222,8 @@ specs:
     version: 1.0.10
 - database_cleaner: 
     version: 0.5.2
+- delayed_job: 
+    version: 2.0.3
 - email_spec: 
     version: 0.6.2
 - eventmachine: 
@@ -243,10 +249,8 @@ specs:
     version: 2.8.1
 - nokogiri: 
     version: 1.4.1
-- ruby-hmac: 
-    version: 0.4.0
 - oauth: 
-    version: 0.3.6
+    version: 0.4.0
 - ruby-openid: 
     version: 2.1.7
 - rack-openid: 
@@ -256,7 +260,7 @@ specs:
 - rails: 
     version: 2.3.5
 - rails_warden: 
-    version: 0.5.0
+    version: 0.5.1
 - rr: 
     version: 0.10.11
 - rspec: 
@@ -277,7 +281,7 @@ specs:
     version: 0.7.0
 - whenever: 
     version: 0.4.1
-hash: 416a375f2d6c2001d8843362317c633c36affb48
+hash: 6c87e11fc0e57f44c376904b0899a77ca59654b2
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

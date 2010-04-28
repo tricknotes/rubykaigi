@@ -7,7 +7,7 @@ class OrderItem < ActiveRecord::Base
       li = new
       li.product_item = cart_item.product_item
       li.quantity = cart_item.quantity
-      li.subtotal_price = cart_item.price
+      li.price = cart_item.price
       li
     end
   end

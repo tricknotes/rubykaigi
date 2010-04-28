@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe Order do
+describe Contribution do
 end

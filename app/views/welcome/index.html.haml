@@ -1,11 +1,3 @@
-%h1 rubykaigi.org
-
-- if authenticated?
-  Welcome #{user.name}
-  != link_to 'Sign out', sessions_path, :method => :delete
-- else
-  != link_to 'Sign in / Sign up', new_sessions_path
-
 .whats_new
   %h2= t :whats_new
 

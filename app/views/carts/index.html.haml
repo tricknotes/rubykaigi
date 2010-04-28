@@ -14,9 +14,3 @@
 %hr
 
 != link_to 'registrations', registrations_path
-<br />
-- if authenticated?
-  Welcome #{user.name}
-  != link_to 'Sign out', :controller => 'account', :action => 'signout'
-- else
-  != link_to 'Sign in with Twitter', root_path(:warden_oauth_provider => 'twitter')

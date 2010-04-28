@@ -8,6 +8,14 @@
     != yield :head
 
   %body
+    %h1 rubykaigi.org
+
+    - if authenticated?
+      Welcome #{user.name}
+      != link_to 'Sign out', sessions_path, :method => :delete
+    - else
+      != link_to 'Sign in / Sign up', new_sessions_path
+
     - if n = flash[:notice]
       %p.notice= n
 

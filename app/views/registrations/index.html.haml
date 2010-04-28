@@ -1,9 +1,3 @@
-- if authenticated?
-  Welcome #{user.name}
-  != link_to 'Sign out', :controller => 'account', :action => 'signout'
-- else
-  != link_to 'Sign in with Twitter', root_path(:warden_oauth_provider => 'twitter')
-
 %h2 registrations
 
 this is registration page for rubykaigi.

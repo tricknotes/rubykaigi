@@ -2,11 +2,11 @@ require 'machinist/active_record'
 require 'sham'
 require 'faker'
 
-Sham.name { Faker::Internet.user_name }
+Sham.username { Faker::Internet.user_name }
 Sham.year {|i| 2010 + i }
 
 Rubyist.blueprint do
-  name
+  username
 end
 
 RubyKaigi.blueprint do

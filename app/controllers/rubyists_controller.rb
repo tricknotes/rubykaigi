@@ -1,6 +1,6 @@
 class RubyistsController < ApplicationController
   def show
-    @rubyist = Rubyist.find_by_name(params[:id])
+    @rubyist = Rubyist.find_by_username(params[:id])
   end
 
   verify :session => :credentials, :only => %w(new create), :redirect_to => :new_sessions_path

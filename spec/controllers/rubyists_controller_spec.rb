@@ -3,7 +3,7 @@ require 'spec_helper'
 describe RubyistsController do
   describe 'GET /show' do
     before do
-      @ursm = Rubyist.make(:name => 'ursm')
+      @ursm = Rubyist.make(:username => 'ursm')
       get :show, :id => 'ursm'
     end
 
@@ -45,7 +45,7 @@ describe RubyistsController do
         mock.instance_of(Rubyist).save { true }
         mock(controller).user = is_a(Rubyist)
 
-        post :create, :rubyist => {:name => 'ursm'}
+        post :create, :rubyist => {:username => 'ursm'}
       end
 
       it { session[:credentials].should be_nil }
@@ -71,7 +71,7 @@ describe RubyistsController do
         mock.instance_of(Rubyist).save { false }
         dont_allow(controller).user = anything
 
-        post :create, :rubyist => {:name => 'ursm'}
+        post :create, :rubyist => {:username => 'ursm'}
       end
 
       it { response.should be_success }
@@ -122,7 +122,7 @@ describe RubyistsController do
 
     context 'no credentials' do
       before do
-        post :create, :rubyist => {:name => 'ursm'}
+        post :create, :rubyist => {:username => 'ursm'}
       end
 
       it { response.should redirect_to(new_sessions_path) }

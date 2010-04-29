@@ -2,6 +2,11 @@ development: &local
   paypal:
     base_url: https://www.sandbox.paypal.com
     request_uri: /cgi-bin/webscr
+    post_url: https://www.sandbox.paypal.com/cgi-bin/webscr
+    business_email: paypal_1271051243_biz@rubykaigi.org
+    cert_id: PAYPAL_CERT_ID
+    cert_filename: paypal_cert_sandbox.pem
+    ipn_secret: takahashimasayoshi
   gmail:
     user_name: gmail_user_name
     password: gmail_password

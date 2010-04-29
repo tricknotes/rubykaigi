@@ -36,5 +36,6 @@ class PaypalController < ApplicationController
     end
 
     Delayed::Job.enqueue Paypal::HandlePaymentNotificationJob.new(order.id)
+    render :nothing => true, :status => 200
   end
 end

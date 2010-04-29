@@ -25,7 +25,7 @@ module Paypal
         :lc => 'JP',
         :currency_code => 'JPY',
         :upload => 1,
-        :business => business_email,
+        :business => Paypal::EncryptedForm.business_email,
         :return => return_url,
         :invoice => order.id,
         :notify_url => notify_url,

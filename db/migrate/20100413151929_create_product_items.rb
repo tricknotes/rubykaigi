@@ -1,7 +1,7 @@
 class CreateProductItems < ActiveRecord::Migration
   def self.up
     create_table :product_items do |t|
-      t.string :item_code, :null => false, :unique => true
+      t.string :item_code, :null => false
       t.integer :price, :null => false
       t.integer :stock, :null => false, :default => 0
       t.references :ruby_kaigi, :null => false

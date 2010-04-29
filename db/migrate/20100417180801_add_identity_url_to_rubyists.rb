@@ -1,6 +1,6 @@
 class AddIdentityUrlToRubyists < ActiveRecord::Migration
   def self.up
-    add_column :rubyists, :identity_url, :string, :unique => true
+    add_column :rubyists, :identity_url, :string
   end
 
   def self.down

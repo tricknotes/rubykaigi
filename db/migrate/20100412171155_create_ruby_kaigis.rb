@@ -1,7 +1,7 @@
 class CreateRubyKaigis < ActiveRecord::Migration
   def self.up
     create_table :ruby_kaigis do |t|
-      t.integer :year, :unique => true, :null => false
+      t.integer :year, :null => false
 
       t.timestamps
     end

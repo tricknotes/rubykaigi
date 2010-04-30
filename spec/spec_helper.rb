@@ -47,14 +47,14 @@ Spork.prefork do
     # do so right here. Just uncomment the next line and replace the fixture
     # names with your fixtures.
     #
-    # config.global_fixtures = :table_a, :table_b
+    config.global_fixtures = :ruby_kaigis
     #
     # If you declare global fixtures, be aware that they will be declared
     # for all of your examples, even those that don't use them.
     #
     # You can also declare which fixtures to use (for example fixtures for test/fixtures):
     #
-    # config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+    config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
     #
     # == Mock Framework
     #
@@ -69,7 +69,7 @@ Spork.prefork do
     #
     # For more information take a look at Spec::Runner::Configuration and Spec::Runner
     config.before(:suite) do
-      DatabaseCleaner.strategy = :truncation
+      DatabaseCleaner.strategy = :truncation, { :except => %w[ruby_kaigis] }
       DatabaseCleaner.clean_with(:truncation)
     end
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class OrderItem < ActiveRecord::Base
   belongs_to :product_item
   belongs_to :order
@@ -10,5 +11,9 @@ class OrderItem < ActiveRecord::Base
       li.price = cart_item.price
       li
     end
+  end
+
+  def item_code
+    product_item.item_code
   end
 end

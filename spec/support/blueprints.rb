@@ -27,4 +27,14 @@ end
 
 Order.blueprint do
   rubyist { Rubyist.make }
+  ruby_kaigi { RubyKaigi._2010 }
+  return_from_paypal { false }
+  price { 0 }
+end
+
+OrderItem.blueprint do
+  order { Order.make }
+  product_item { ProductItem.make }
+  quantity { 1 }
+  price { 0 }
 end

@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 class Order < ActiveRecord::Base
   belongs_to :rubyist
+  belongs_to :ruby_kaigi
   has_many :line_items, :class_name => OrderItem.name
 
   belongs_to :paypal_payment_notification, :class_name => Paypal::PaymentNotification.name

@@ -11,6 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   }
   map.paypal_ipn "/paypal/instant_payment_notification",
     :controller => 'paypal', :action => 'instant_payment_notification'
+  map.dashboard("/dashboard",
+    :controller => 'dashboard', :action => 'index')
 
   map.with_options( :controller => "public_releases", :action => "show",
                     :defaults => {:page_name => "index"} ) do |pr|

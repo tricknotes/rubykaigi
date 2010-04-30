@@ -1,0 +1,14 @@
+.whats_new
+  %h2= t :whats_new
+
+  %dl
+    - @headlines.each do |h|
+      %dt= l h.time.to_date, :format => :long
+      %dd!= link_to h(h.title), h.link
+
+%h2 yeah! why don't you join us?
+!= link_to 'registrations', registrations_path
+<br />
+!= link_to 'cart', carts_path
+<br />
+

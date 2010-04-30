@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class CartItem
   attr_reader :product_item, :quantity
 
@@ -10,7 +11,12 @@ class CartItem
     @quantity += 1
   end
 
-  def price
+  def unit_price
+    @product_item.price
+  end
+  alias :price :unit_price
+
+  def subtotal_price
     @product_item.price * @quantity
   end
 

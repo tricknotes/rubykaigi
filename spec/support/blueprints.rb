@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
 require 'machinist/active_record'
 require 'sham'
 require 'faker'
 
 Sham.username { Faker::Internet.user_name }
-Sham.year {|i| 2010 + i }
+Sham.year(:unique => true) {|i| 2010 + i }
+Sham.item_code(:unique => true) {|i| "item_#{i}" }
 
 Rubyist.blueprint do
   username
@@ -19,15 +21,15 @@ HeadlineEntry.blueprint do
 end
 
 ProductItem.blueprint do
-  item_code {|i| "item_#{i}" }
+  item_code
   price { 123 }
   stock { 10 }
-  ruby_kaigi { RubyKaigi.make }
+  ruby_kaigi_id { 5 }
 end
 
 Order.blueprint do
   rubyist { Rubyist.make }
-  ruby_kaigi { RubyKaigi._2010 }
+  ruby_kaigi_id { 5 }
   return_from_paypal { false }
   price { 0 }
 end

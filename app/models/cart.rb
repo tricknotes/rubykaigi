@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Cart
   attr_reader :items
 
@@ -25,7 +26,7 @@ class Cart
   end
 
   def total_price
-    @items.sum { |item| item.price }
+    @items.sum { |item| item.subtotal_price }
   end
 
   def total_items

@@ -34,10 +34,14 @@ class ProductItem < ActiveRecord::Base
   def label
     "product_item.#{item_code}"
   end
+
+  def individual_sponsor?
+    item_code =~ /individual_sponsor/
+  end
 end
 
 %w[rk10 rk10_party rk10_individual_sponsor].each do |_type|
-  ProductItem::Type.class_eval do
+  (class << ProductItem::Type; self; end).class_eval do
     define_method(_type) { _type }
   end
   ProductItem::Proxy.class_eval do

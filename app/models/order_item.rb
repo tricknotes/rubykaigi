@@ -22,6 +22,6 @@ class OrderItem < ActiveRecord::Base
   end
 
   def subtotal_price
-    price * quantity
+    unit_price * quantity
   end
 end

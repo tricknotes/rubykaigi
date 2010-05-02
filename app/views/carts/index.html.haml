@@ -4,7 +4,7 @@
   %ul
   - @cart.items.each do |item|
     %li
-      #{t(item.label)}, #{item.quantity}, #{number_with_delimiter(item.price)}
+      #{t(item.label)}, #{item.quantity}, #{number_with_delimiter(item.subtotal_price)}
       != link_to('delete this', remove_item_carts_path(:product_item_code => item.item_code), :method => :delete)
 - else
   (your cart is empty!)

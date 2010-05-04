@@ -18,13 +18,13 @@ class Contribution < ActiveRecord::Base
     def create
       if individual_sponsor_included?
         # TODO なんかこのへん年ごとに依存してるなあ。年毎のオブジェクトにdouble dispatchしたほうがいいんかな。
-        individual_sponsor = build_contribution_for(order, Contribution::Type.individual_sponsor)
+        individual_sponsor = build_contribution_for(Contribution::Type.individual_sponsor)
         rk10_individual_sponsor = ProductItem.kaigi(2010).rk10_individual_sponsor
         rk10_individual_sponsor.stock -= 1
 
         rk10_party = ProductItem.kaigi(2010).rk10_party
         unless rk10_party.sold_out?
-          party_attendee = build_contribution_for(order, Contribution::Type.party_attendee)
+          party_attendee = build_contribution_for(Contribution::Type.party_attendee)
           rk10_party.stock -= 1
         end
 
@@ -38,20 +38,26 @@ class Contribution < ActiveRecord::Base
 
     private
     def individual_sponsor_included?
+      !!extract_individual_sponsor_order_item
+    end
+
+    def extract_individual_sponsor_order_item
       order.line_items.detect {|o| o.item_code =~ /individual_sponsor/ }
     end
 
-    def build_contribution_for(order, contribution_type)
+    def build_contribution_for(contribution_type)
       Contribution.new(
-          :contribution_type => contribution_type,
-          :rubyist => order.rubyist,
-          :ruby_kaigi => order.ruby_kaigi)
+        :contribution_type => contribution_type,
+        :rubyist => order.rubyist,
+        :ruby_kaigi => order.ruby_kaigi,
+        :order_item => extract_individual_sponsor_order_item)
     end
 
   end # FromOrder
 
   belongs_to :rubyist
   belongs_to :ruby_kaigi
+  belongs_to :order_item
   class << self
     def from_order(order)
       Contribution::FromOrder.new(order).create

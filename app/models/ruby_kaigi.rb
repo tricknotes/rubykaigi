@@ -7,5 +7,9 @@ class RubyKaigi < ActiveRecord::Base
       end
     end
     alias :latest :_2010
+
+    def latest_year
+      latest.year
+    end
   end
 end

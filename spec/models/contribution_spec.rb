@@ -11,7 +11,9 @@ describe Contribution do
           :ruby_kaigi => RubyKaigi._2010,
           :stock => 5)
         line_item = OrderItem.make(
-          :product_item => @individual_sponsor)
+          :product_item => @individual_sponsor,
+          :price => 25000,
+          :quantity => 1)
         @order = Order.make(
           :rubyist => @kakutani,
           :ruby_kaigi => RubyKaigi._2010,
@@ -73,6 +75,17 @@ describe Contribution do
         specify "懇親会チケットの在庫は0のままであること" do
           ProductItem.kaigi(2010).rk10_party.stock.should == 0
         end
+      end
+
+      describe "個人スポンサーの金額を取得できる" do
+        before do
+          @rk10_party.update_attributes(:stock => 10)
+          Contribution.from_order(@order)
+        end
+
+        subject { @kakutani.individual_sponsor(2010) }
+
+        its(:amount) { should == 25000 }
       end
     end
   end

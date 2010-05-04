@@ -16,19 +16,29 @@ class Rubyist < ActiveRecord::Base
     username
   end
 
-  def contributions_on(kaigi_year = RubyKaigi.latest.year)
-    contributions.select{|c| c.kaigi.year == kaigi_year}
+  def individual_sponsor(kaigi_year = RubyKaigi.latest_year)
+    contrib = contributions_on(kaigi_year).detect{|c|
+      c.contribution_type =~ /individual_sponsor/
+    }
+    def contrib.amount
+      order_item.price
+    end
+    contrib
   end
 
-  def individual_sponsor?(kaigi_year = RubyKaigi.latest.year)
+  def contributions_on(kaigi_year = RubyKaigi.latest_year)
+    contributions.select{|c| c.ruby_kaigi.year == kaigi_year}
+  end
+
+  def individual_sponsor?(kaigi_year = RubyKaigi.latest_year)
     contribution_types_of(kaigi_year).include?('individual_sponsor')
   end
 
-  def attendee?(kaigi_year = RubyKaigi.latest.year)
+  def attendee?(kaigi_year = RubyKaigi.latest_year)
     __attendee?(kaigi_year) || individual_sponsor?(kaigi_year)
   end
 
-  def party_attendee?(kaigi_year = RubyKaigi.latest.year)
+  def party_attendee?(kaigi_year = RubyKaigi.latest_year)
     contribution_types_of(kaigi_year).include?('party_attendee')
   end
 

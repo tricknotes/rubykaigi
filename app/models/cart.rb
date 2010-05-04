@@ -9,7 +9,7 @@ class Cart
   def add_product(product)
     current_item = @items.find {|item| item.product_item == product }
     if current_item
-      current_item.increment_quantity
+      current_item.increment_quantity unless product.individual_sponsor?
     else
       current_item = CartItem.new(product)
       @items << current_item
@@ -35,5 +35,9 @@ class Cart
 
   def empty?
     !!@items.empty?
+  end
+
+  def individual_sponsor
+    @items.detect {|item| item.individual_sponsor? }
   end
 end

@@ -20,10 +20,10 @@ class SessionsController < ApplicationController
 
     if oauth = opts[:oauth]
       session[:credentials] = {:twitter_user_id => oauth[:twitter][:access_token].params[:user_id]}
-      redirect_to new_rubyist_path
+      redirect_to new_account_path
     elsif openid = opts[:openid]
       session[:credentials] = {:identity_url => openid[:response].identity_url}
-      redirect_to new_rubyist_path
+      redirect_to new_account_path
     else
       flash[:error] = warden.message
       redirect_to new_sessions_path

@@ -13,7 +13,9 @@ describe Contribution do
         line_item = OrderItem.make(
           :product_item => @individual_sponsor,
           :price => 25000,
-          :quantity => 1)
+          :quantity => 1,
+          :link_label => 'kakutani',
+          :link_url => 'http://kakutani.com')
         @order = Order.make(
           :rubyist => @kakutani,
           :ruby_kaigi => RubyKaigi._2010,
@@ -77,7 +79,7 @@ describe Contribution do
         end
       end
 
-      describe "個人スポンサーの金額を取得できる" do
+      describe "個人スポンサーに関する情報を取得できる" do
         before do
           @rk10_party.update_attributes(:stock => 10)
           Contribution.from_order(@order)
@@ -86,6 +88,8 @@ describe Contribution do
         subject { @kakutani.individual_sponsor(2010) }
 
         its(:amount) { should == 25000 }
+        its(:link_label) { should == 'kakutani' }
+        its(:link_url) { should == 'http://kakutani.com' }
       end
     end
   end

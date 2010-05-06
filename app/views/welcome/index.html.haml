@@ -17,3 +17,12 @@
 <br />
 != link_to 'cart', carts_path
 <br />
+
+%h2 Individual Sponsors
+- sponsors = Contribution.individual_sponsors_of(2010)
+- unless sponsors.empty?
+  %ul
+    - sponsors.each do |sponsor|
+      %li!= link_to h("#{sponsor.link_label}(#{sponsor.amount}JPY)"), sponsor.link_url
+- else
+  (Not Yet)

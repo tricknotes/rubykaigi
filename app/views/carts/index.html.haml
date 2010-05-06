@@ -1,4 +1,4 @@
-%h1 Carts#index
+%h1 #{user.username}'s cart
 
 - if @cart.empty?
   (your cart is empty!)
@@ -8,21 +8,22 @@
     - @cart.items.each do |item|
       - if item.individual_sponsor?
         %li
-<<<<<<< HEAD
-          #{t(item.label)} #{number_with_delimiter(item.price)}
-=======
           #{t(item.label)}
           != link_to('delete this', remove_item_carts_path(:product_item_code => item.item_code), :method => :delete)
           <br />
           Amount:<br />
           #{number_with_delimiter(item.unit_price)}
->>>>>>> b1c74ba... price is not unit_price
           - f.fields_for item do |field|
             +
             != field.text_field :additional_amount, :size => 7
-            JPY
-            != link_to('delete this', remove_item_carts_path(:product_item_code => item.item_code), :method => :delete)
-            <br />(Your Preferred Amount to Support RubyKaigi)
+            JPY (Your Preferred Amount to Support RubyKaigi)<br />
+            Link Label:<br />
+            != field.text_field :link_label
+            <br /> (to be listed on the individual sponsors)<br />
+            Link URL:<br />
+            != field.text_field :link_url
+            <br /> (to be listed on the individual sponsors)<br />
+            <br />
     != f.submit 'Update Cart'
 
   <br/>

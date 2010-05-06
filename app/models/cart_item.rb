@@ -2,6 +2,8 @@
 class CartItem
   attr_reader :product_item, :quantity
   attr_accessor :additional_amount
+  attr_accessor :link_label
+  attr_accessor :link_url
 
   def initialize(product_item)
     @product_item = product_item

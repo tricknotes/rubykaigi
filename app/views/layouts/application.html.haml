@@ -13,6 +13,8 @@
     - if authenticated?
       Welcome #{user.username}
       != link_to 'Your Dashboard', dashboard_path
+      ,
+      != link_to 'Your Cart', carts_path
       or
       != link_to 'Sign out', sessions_path, :method => :delete
     - else

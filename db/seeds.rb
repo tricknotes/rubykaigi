@@ -1,5 +1,6 @@
 %w(ruby_kaigis product_items).each do |t|
-  ActiveRecord::Base.connection.execute("truncate #{t}")
+  klass = t.singular.constantize
+  klass.delete_all
   ActiveRecord::Base.connection.reset_sequence!(t, 'id')
 end
 

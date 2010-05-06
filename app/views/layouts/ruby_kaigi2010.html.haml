@@ -4,15 +4,19 @@
   %head
     %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
     %title RubyKaigi2010
-    %script{ :src => "/2010/javascripts/jquery.js", :type => "text/javascript" }
-    %link{ :href => "/stylesheets/project-page.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
-    %script{ :src => "/2010/javascripts/jquery.droppy.js", :type => "text/javascript" }
-    %link{ :href => "/stylesheets/droppy.css", :media => "screen", :rel => "stylesheet", :type => "text/css" } 
     %link{ :href => "/stylesheets/common.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/stylesheets/superfish.css", :media => "screen", :rel => "stylesheet", :type => "text/css" } 
+    %script{ :src => "/2010/javascripts/jquery-1.2.6.min.js", :type => "text/javascript" }
+    %script{ :src => "/2010/javascripts/hoverIntent.js", :type => "text/javascript" }
+    %script{ :src => "/2010/javascripts/superfish.js", :type => "text/javascript" } 
+    :javascript          
+      jQuery(function(){
+      jQuery('ul.sf-menu').superfish();
+      });
   %body
     %div#header
-      %ul#nav
-        %li
+      %ul.sf-menu
+        %li.current
           %a{ :href => "#" } 
             イベントについて
           %ul
@@ -21,14 +25,16 @@
                 日本Ruby会議について
             %li
               %a{ :href => "#" }
-                Ruby会議日記(新着情報)
+                Ruby会議日記
+                %br
+                (新着情報)
             %li
               %a{ :href => "#" }
                 実行委員とスタッフ
             %li
               %a{ :href => "#" }
                 関連リンク
-        %li
+        %li.current
           %a{ :href => "#" }
             お申し込み
           %ul
@@ -50,7 +56,7 @@
                 スポンサーお申込み
                 %br
                 (個人様用) 
-        %li
+        %li.current
           %a{ :href => "#" }
             参加される方へ
           %ul
@@ -60,7 +66,7 @@
             %li
               %a{ :href => "#" }
                 アクセス
-            %li
+            %li.current
               %a{ :href => "#" }
                 ソーシャルリンク
               %ul
@@ -73,7 +79,7 @@
                 %li
                   %a{ :href => "#" }
                     Flickr
-            %li
+            %li.current
               %a{ :href => "#" }
                 当日動画中継 
               %ul
@@ -102,7 +108,7 @@
             %li
               %a{ :href => "#" }
                 おまけ
-        %li
+        %li.current
           %a{ :href => "#" }
             企業様へ 
           %ul
@@ -114,7 +120,7 @@
                 スポンサー募集について
                 %br
                 (企業様用)
-        %li
+        %li.current
           %a{ :href => "#" }            
             アーカイヴ
           %ul
@@ -130,15 +136,7 @@
             %li
               %a{ :href => "#" }
                 日本Ruby会議2006
-      :javascript          
-        $(function() {
-        $("#nav").droppy({speed:100});
-        });
-    - if (params[:page_name] == "index") && (params[:year] == "2010")
-      - langnav_id = "langnav_top"
-    - else
-      - langnav_id = "langnav"
-    %div{ :id => langnav_id } 
+    %div#langnav
       %p
         %a.noborder{ :href => "/" }
           %img{ :alt => "HOME", :src => "/2010/images/home_btn.png" }

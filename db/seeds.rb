@@ -1,5 +1,5 @@
 %w(ruby_kaigis product_items).each do |t|
-  klass = t.singular.constantize
+  klass = t.classify.constantize
   klass.delete_all
   ActiveRecord::Base.connection.reset_sequence!(t, 'id')
 end

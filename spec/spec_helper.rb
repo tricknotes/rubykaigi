@@ -36,6 +36,7 @@ Spork.prefork do
     config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
     config.include EmailSpec::Helpers
     config.include EmailSpec::Matchers
+    config.include WardenHelperMethods
 
     # == Fixtures
     #
@@ -85,8 +86,7 @@ Spork.prefork do
     config.after(:each) do
       DatabaseCleaner.clean
     end
-end
-
+  end
 end
 
 Spork.each_run do

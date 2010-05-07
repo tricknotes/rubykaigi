@@ -19,4 +19,20 @@ class AccountsController < ApplicationController
       render :new
     end
   end
+
+  before_filter :login_required, :only => %w(edit update)
+
+  def edit
+    @rubyist = user
+  end
+
+  def update
+    if user.update_attributes(params[:rubyist])
+      flash[:notice] = 'Your settings have been saved.'
+      redirect_to edit_account_path
+    else
+      @rubyist = user
+      render :edit
+    end
+  end
 end

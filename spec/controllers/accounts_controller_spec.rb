@@ -118,4 +118,25 @@ describe AccountsController do
       it { response.should redirect_to(new_sessions_path) }
     end
   end
+
+  describe 'GET /edit' do
+    context 'signed in' do
+      before do
+        @ursm = Rubyist.make
+        sign_in_as @ursm
+        get :edit
+      end
+
+      it { response.should be_success }
+    end
+
+    context 'not signed in' do
+      before do
+        not_signed_in
+        get :edit
+      end
+
+      it { response.should redirect_to(new_sessions_path) }
+    end
+  end
 end

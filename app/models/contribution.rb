@@ -55,6 +55,18 @@ class Contribution < ActiveRecord::Base
 
   end # FromOrder
 
+  module IndividualSponsorInstanceMethods
+    def amount
+      order_item.price
+    end
+    def link_label
+      order_item.link_label
+    end
+    def link_url
+      order_item.link_url
+    end
+  end # IndividualSponsorInstanceMethods
+
   belongs_to :rubyist
   belongs_to :ruby_kaigi
   belongs_to :order_item
@@ -62,5 +74,16 @@ class Contribution < ActiveRecord::Base
     def from_order(order)
       Contribution::FromOrder.new(order).create
     end
+
+    def individual_sponsors_of(kaigi_year = RubyKaigi.latest_year)
+      Contribution.all(:include => [:order_item, :ruby_kaigi],
+        :conditions => ["contribution_type = ? AND ruby_kaigis.year = ? ", "individual_sponsor", kaigi_year],
+        :order => 'order_items.price DESC, order_items.created_at').
+        map(&:as_individual_sponsor)
+    end
+  end
+
+  def as_individual_sponsor
+    self.extend(IndividualSponsorInstanceMethods)
   end
 end

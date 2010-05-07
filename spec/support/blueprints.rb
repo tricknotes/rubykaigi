@@ -22,7 +22,7 @@ end
 
 ProductItem.blueprint do
   item_code
-  price { 123 }
+  unit_price { 123 }
   stock { 10 }
   ruby_kaigi_id { 5 }
 end

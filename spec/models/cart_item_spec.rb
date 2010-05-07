@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe CartItem do
   before(:all) do
-    @product = ProductItem.make(:price => 1000)
+    @product = ProductItem.make(:unit_price => 1000)
   end
 
   context "when single item" do
@@ -38,11 +38,12 @@ describe CartItem do
 
     subject { @cart_item }
     its(:subtotal_price) { should == 3000 }
-    its(:unit_price) { should == 3000 }
+    its(:unit_price) { should == 1000 }
+    its(:price) { should == 3000 }
     its(:quantity) { should == 1 }
 
     specify "商品の価格には影響していないこと" do
-      @product.price.should == 1000
+      @product.unit_price.should == 1000
     end
   end
 end

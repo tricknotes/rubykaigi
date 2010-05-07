@@ -3,10 +3,8 @@ require 'spec_helper'
 describe Order do
   describe "#price" do
     before(:all) do
-      stub(item = CartItem.new(ProductItem.make)).price { 123 }
-      stub(@cart = Cart.new).items {
-        [item]
-      }
+      stub(item = CartItem.new(ProductItem.make)).unit_price { 123 }
+      @cart = Cart.new; @cart.items << item
       @order = Order.make
     end
 
@@ -34,12 +32,13 @@ describe Order do
 
     context "Cart with additonal amounted product item" do
       before(:all) do
-        stub(@cart.items.first).additional_amount { 2000 }
+        @cart.items.first.additional_amount = 2000
         @order.add_line_item_from_cart(@cart)
         @order.save!
       end
 
       subject { @order }
+
       its(:price) { should == 2123 }
     end
   end

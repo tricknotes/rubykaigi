@@ -20,10 +20,7 @@ class Rubyist < ActiveRecord::Base
     contrib = contributions_on(kaigi_year).detect{|c|
       c.contribution_type =~ /individual_sponsor/
     }
-    def contrib.amount
-      order_item.price
-    end
-    contrib
+    contrib.as_individual_sponsor
   end
 
   def contributions_on(kaigi_year = RubyKaigi.latest_year)

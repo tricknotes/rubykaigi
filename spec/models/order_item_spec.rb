@@ -4,7 +4,7 @@ require 'spec_helper'
 describe OrderItem do
   context "multiple item" do
     before do
-      @product_item = ProductItem.make(:price => 123)
+      @product_item = ProductItem.make(:unit_price => 123)
       cart = Cart.new
       2.times do
         cart.add_product(@product_item)

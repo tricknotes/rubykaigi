@@ -14,12 +14,15 @@ class CartItem
   end
 
   def unit_price
-    @product_item.price + additional_amount
+    @product_item.unit_price
   end
-  alias :price :unit_price
+
+  def price
+     unit_price + additional_amount
+  end
 
   def subtotal_price
-     unit_price * quantity
+     price * quantity
   end
 
   def label

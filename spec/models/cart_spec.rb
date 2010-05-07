@@ -18,8 +18,8 @@ describe Cart do
   describe "#total_price" do
     before(:all) do
       @cart = Cart.new
-      @product1 = ProductItem.make(:price => 1000)
-      @product2 = ProductItem.make(:price => 200)
+      @product1 = ProductItem.make(:unit_price => 1000)
+      @product2 = ProductItem.make(:unit_price => 200)
     end
 
     context "when single item" do

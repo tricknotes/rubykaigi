@@ -14,6 +14,15 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
 
+  private
+
+  def login_required
+    unless authenticated?
+      session[:return_to] = request.request_uri
+      redirect_to new_sessions_path
+    end
+  end
+
   def basic_auth_required_by_admin
     authenticate_or_request_with_http_basic("restricted ared: username is rubykaigi, password is itsumono.") do |username, password|
       username == configatron.basic_auth.admin.username &&
@@ -25,15 +34,6 @@ class ApplicationController < ActionController::Base
     authenticate_or_request_with_http_basic("restricted ared: sonsors only.") do |username, password|
       username == configatron.basic_auth.sponsor.username &&
         password == configatron.basic_auth.sponsor.password
-    end
-  end
-
-  private
-
-  def login_required
-    unless authenticated?
-      session[:return_to] = request.request_uri
-      redirect_to new_sessions_path
     end
   end
 end

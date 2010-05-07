@@ -23,7 +23,6 @@ class PublicReleasesController < LocaleBaseController
 
     # params[:page_name] pass white list at `page_name_is_valid'
     begin
-      @headline_entries = HeadlineEntry.recent
       render :template => "ruby_kaigi2009/#{params[:page_name]}_#{I18n.locale}"
     rescue Errno::ENOENT, ActionView::MissingTemplate => e
       alternative = Dir.glob(Rails.root + "app/views/ruby_kaigi2009/#{params[:page_name]}*").first

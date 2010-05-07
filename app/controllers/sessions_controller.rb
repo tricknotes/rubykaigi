@@ -1,45 +1,32 @@
 class SessionsController < ApplicationController
   def new
-    @openid_identifier = ""
   end
 
-  def create
-    logout_keeping_session!
-    open_id_authentication
+  # redirect to authenticator, and callback here
+  def show
+    authenticate!
+    flash[:notice] = 'You have signed in successfully'
+    redirect_to session.delete(:return_to) || root_path
   end
 
   def destroy
-    logout_killing_session!
-    add_notice("You have been signed out.", :fade => true)
-    redirect_back_or_default('/')
+    logout
+    flash[:notice] = 'You have signed out successfully'
+    redirect_to :back
   end
 
-  private
-  # Track failed login attempts
-  def note_failed_signin
-    add_error("Couldn't sign in via '#{session[:openid_identifier]}'")
-    logger.warn "Failed signin for '#{session[:openid_identifier]}' from #{request.remote_ip} at #{Time.now.utc}"
-  end
+  def unauthenticated
+    opts = warden.env['warden.options']
 
-  def open_id_authentication
-    authenticate_with_open_id do |result, identity_url|
-      unless result.successful?
-        session[:openid_identifier] = identity_url
-        note_failed_signin
-        redirect_back_or_default(signin_path)
-        return
-      end
-      account = (Account.find_by_identity_url(identity_url) rescue nil)
-      if account
-        self.current_user = account
-        add_notice("Sign in successfully", :fade => true)
-        redirect_back_or_default('/')
-        return
-      end
-      # success but account doesn't exist
-      add_notice("Create new account", :fade => true)
-      session[:openid_identifier] = identity_url
-      redirect_to new_account_path
+    if oauth = opts[:oauth]
+      session[:credentials] = {:twitter_user_id => oauth[:twitter][:access_token].params[:user_id]}
+      redirect_to new_rubyist_path
+    elsif openid = opts[:openid]
+      session[:credentials] = {:identity_url => openid[:response].identity_url}
+      redirect_to new_rubyist_path
+    else
+      flash[:error] = warden.message
+      redirect_to new_sessions_path
     end
   end
 end

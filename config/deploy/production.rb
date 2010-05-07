@@ -1,4 +1,4 @@
 set :branch, "production"
-set :deploy_server, "rubykaigi.org"
+server 'rubykaigi.org', :app, :web, :db, :primary => true
 
 set :rake, "/home/#{application}/gem.repos/bin/rake"

@@ -1,0 +1,25 @@
+%h1 Carts#index
+
+- if @cart.empty?
+  (your cart is empty!)
+- else
+  %ul
+  - form_for @cart do |f|
+    - @cart.items.each do |item|
+      - if item.individual_sponsor?
+        %li
+          #{t(item.label)} #{number_with_delimiter(item.price)}
+          - f.fields_for item do |field|
+            +
+            != field.text_field :additional_amount, :size => 7
+            JPY
+            != link_to('delete this', remove_item_carts_path(:product_item_code => item.item_code), :method => :delete)
+            <br />(Your Preferred Amount to Support RubyKaigi)
+    != f.submit 'Update Cart'
+
+  <br/>
+  <br/>
+  != link_to('Proceed to checkout', orders_path, :method => :post)
+%hr
+
+!= link_to 'registrations', registrations_path

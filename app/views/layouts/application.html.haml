@@ -1,0 +1,27 @@
+!!!
+
+%html
+  %head
+    %meta(charset='utf-8')
+    %title= [@title, t(:rubykaigi2010)].compact.join(' - ')
+    %link(rel='icon' href='/favicon.ico')
+    != yield :head
+
+  %body
+    %h1 rubykaigi.org
+
+    - if authenticated?
+      Welcome #{user.username}
+      != link_to 'Your Dashboard', dashboard_path
+      or
+      != link_to 'Sign out', sessions_path, :method => :delete
+    - else
+      != link_to 'Sign in / Sign up', new_sessions_path
+
+    - if n = flash[:notice]
+      %p.notice= n
+
+    - if e = flash[:error]
+      %p.error= e
+
+    != yield

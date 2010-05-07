@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="rss.css" type="text/css"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+	<channel rdf:about="http://rubykaigi.tdiary.net/index.rdf">
+	<title>RubyKaigi日記</title>
+	<link>http://rubykaigi.tdiary.net/</link>
+	<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/" />
+	<description>RubyKaigiの新着情報など</description>
+	<dc:creator>日本Rubyの会</dc:creator>
+	<dc:rights>Copyright 2010 日本Rubyの会 &lt;rubykaigi2008@jp.rubyist.net&gt;, copyright of comments by respective authors</dc:rights>
+	<items><rdf:Seq>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100412.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100409.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100321.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100319.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100305.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100303.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100225.html#p03"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100225.html#p02"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100225.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100213.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100201.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20100117.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20091225.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20091220.html#p01"/>
+<rdf:li rdf:resource="http://rubykaigi.tdiary.net/20091206.html#p01"/>
+</rdf:Seq></items>
+</channel>
+<item rdf:about="http://rubykaigi.tdiary.net/20100412.html#p01">
+<link>http://rubykaigi.tdiary.net/20100412.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100412.html#p01" />
+<dc:date>2010-04-12T12:13:15+09:00</dc:date>
+<title>RubyKaigi 2010 is open for talk and sub-event organizers, conference sponsors and illustrations!</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>english</dc:subject>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>RubyKaigi 2010 is the premiere Ruby conference in Japan.This year's RubyKaigi will be from August 27-29 at Tsukuba International Conference Centre (the venue of RubyKaigi 2008&quot;), just outside of Tokyo proper. RubyKaigi 2010 is now open for :  Talk proposals and &quot;sub-event&quot; organizers. On any topic related to Ruby are welcome (until April 28th). Sponsors the conference (until April 28th if you'd like to submit talk proposals). Illustrations for novelty items including staff T-Shirts (until May ..</description>
+<content:encoded><![CDATA[<h3>RubyKaigi 2010 is open for talk and sub-event organizers, conference sponsors and illustrations!</h3><p><a href="http://rubykaigi.org/2010/en">RubyKaigi 2010</a> is the premiere Ruby conference in Japan.This year's RubyKaigi will be from August 27-29 at Tsukuba International Conference Centre (the venue of <a href="http://jp.rubyist.net/RubyKaigi2008/?english">RubyKaigi 2008</a>"), just outside of Tokyo proper.</p>
+<p>RubyKaigi 2010 is now open for :</p>
+<ul>
+<li><a href="http://rubykaigi.org/2010/en/CallForPresentationProposals.html">Talk proposals</a> and <a href="http://rubykaigi.org/2010/en/CallForSubEventProposals.html">"sub-event" organizers</a>. On any topic related to Ruby are welcome (until April 28th).</li>
+<li><a href="http://rubykaigi.org/2010/en/CallForSponsors.html">Sponsors the conference</a> (until April 28th if you'd like to submit talk proposals).</li>
+<li><a href="http://rubykaigi.org/2010/en/CallForIllustrations.html">Illustrations for novelty items including staff T-Shirts</a> (until May 16th).</li>
+</ul>
+<p>RubyKaigi is a highly international conference, attracting participants and speakers from many countries, including Japan, the United States, China, Australia, Germany, Canada, South Africa, Egypt, France and many others. RubyKaigi is a fantastic opportunity to promote your product, service and organization!</p>
+<h4>Related announces</h4>
+<ul>
+<li><a href="http://www.rubyflow.com/items/3712">http://www.rubyflow.com/items/3712</a></li>
+<li><a href="http://www.rubyflow.com/items/3658">http://www.rubyflow.com/items/3658</a></li>
+<li><a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/359289">http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/359289</a></li>
+<li><a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/359290">http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/359290</a></li>
+</ul>
+<p><a href="http://rubykaigi.tdiary.net/20100412.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100409.html#p01">
+<link>http://rubykaigi.tdiary.net/20100409.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100409.html#p01" />
+<dc:date>2010-04-09T12:08:15+09:00</dc:date>
+<title>日本Ruby会議2010のメインイメージイラストを募集します</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>日本Ruby会議2010実行委員のおおわだです。 日本Ruby会議2010では、今期のスタッフTシャツをはじめ、ノベルティグッズ等に使用するイラストを募集しています！これまでの開催でも、イラストは、スタッフや参加者の皆さんをうきうきとさせてくれました。あなたのイラストで日本Ruby会議の会場を飾ってみませんか！ 詳細は、公式サイトの案内ページにてご確認ください�..</description>
+<content:encoded><![CDATA[<h3>日本Ruby会議2010のメインイメージイラストを募集します</h3><p>日本Ruby会議2010実行委員のおおわだです。</p>
+<p>日本Ruby会議2010では、今期のスタッフTシャツをはじめ、ノベルティグッズ等に使用するイラストを募集しています！これまでの開催でも、イラストは、スタッフや参加者の皆さんをうきうきとさせてくれました。あなたのイラストで日本Ruby会議の会場を飾ってみませんか！</p>
+<p>詳細は、公式サイトの案内ページにてご確認ください。</p>
+<ul>
+<li>日本語: <a href="http://rubykaigi.org/2010/ja/CallForIllustrations.html">http://rubykaigi.org/2010/ja/CallForIllustrations.html</a></li>
+<li>英語:   <a href="http://rubykaigi.org/2010/en/CallForIllustrations.html">http://rubykaigi.org/2010/en/CallForIllustrations.html</a></li>
+</ul>
+<p>素敵なイラストが届くことを願って。たくさんのご応募、お待ちしております！</p>
+<p><a href="http://rubykaigi.tdiary.net/20100409.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100321.html#p01">
+<link>http://rubykaigi.tdiary.net/20100321.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100321.html#p01" />
+<dc:date>2010-03-21T21:08:13+09:00</dc:date>
+<title>日本Ruby会議2010のスポンサーを募集します</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>日本Ruby会議2010実行委員のかくたにです。 仙台Ruby会議02のライトニングトークでも告知しましたが、日本Ruby会議2010のスポンサー募集を開始しました。日本Ruby会議2010には国内はもとより、世界中からRubyプログラマが参加します。絶好の露出の機会としても、ぜひご利用ください。 詳細は、公式サイトの募集ページにある「日本Ruby会議2010  スポンサーシップのご案内(PDF)..</description>
+<content:encoded><![CDATA[<h3>日本Ruby会議2010のスポンサーを募集します</h3><p>日本Ruby会議2010実行委員のかくたにです。</p>
+<p><a href="http://regional.rubykaigi.org/sendai02">仙台Ruby会議02</a>のライトニングトークでも告知しましたが、日本Ruby会議2010のスポンサー募集を開始しました。日本Ruby会議2010には国内はもとより、世界中からRubyプログラマが参加します。絶好の露出の機会としても、ぜひご利用ください。</p>
+<p>詳細は、<a href="http://rubykaigi.org/2010/ja/CallForSponsors.html">公式サイトの募集ページ</a>にある「<a href="http://rubykaigi.org/2010/files/rubykaigi2010_prospectus_ja.pdf">日本Ruby会議2010  スポンサーシップのご案内(PDF)</a>」にお目を通していただいたうえで、2010 at rubykaigi dot org までメールにてお気軽にお問い合わせください。</p>
+<p>日本最大規模のRubyのカンファレンスを一緒につくっていただける皆さまからの応募を心よりお待ちしております。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100321.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100319.html#p01">
+<link>http://rubykaigi.tdiary.net/20100319.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100319.html#p01" />
+<dc:date>2010-03-19T21:46:08+09:00</dc:date>
+<title>RubyKaigi2010の発表と「企画」の応募フォームをオープンしました</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>日本Ruby会議2010実行委員のかくたにです。 お待たせしました。RubyKaigi2010の発表と「企画」の応募フォームが準備できましたので、お知らせします。 日本Ruby会議2010での発表を募集します  日本語: http://rubykaigi.org/2010/ja/CallForPresentationProposals.html 英語: http://rubykaigi.org/2010/en/CallForPresentationProposals.html  日本Ruby会議2010での「企画」を募集します  日本語: http://rubykaigi.org/2010/ja/Ca..</description>
+<content:encoded><![CDATA[<h3>RubyKaigi2010の発表と「企画」の応募フォームをオープンしました</h3><p>日本Ruby会議2010実行委員のかくたにです。</p>
+<p>お待たせしました。RubyKaigi2010の発表と「企画」の応募フォームが準備できましたので、お知らせします。</p>
+<h4>日本Ruby会議2010での発表を募集します</h4>
+<ul>
+<li>日本語: <a href="http://rubykaigi.org/2010/ja/CallForPresentationProposals.html">http://rubykaigi.org/2010/ja/CallForPresentationProposals.html</a></li>
+<li>英語: <a href="http://rubykaigi.org/2010/en/CallForPresentationProposals.html">http://rubykaigi.org/2010/en/CallForPresentationProposals.html</a></li>
+</ul>
+<h4>日本Ruby会議2010での「企画」を募集します</h4>
+<ul>
+<li>日本語: <a href="http://rubykaigi.org/2010/ja/CallForSubEventProposals.html">http://rubykaigi.org/2010/ja/CallForSubEventProposals.html</a></li>
+<li>英語: <a href="http://rubykaigi.org/2010/en/CallForSubEventProposals.html">http://rubykaigi.org/2010/en/CallForSubEventProposals.html</a></li>
+</ul>
+<p>リンク先の応募要項をお読みたいだいたうえで、
+Google Spreadsheetsを利用したフォームからご応募ください。
+英語版も用意していますので、皆さんのお近くの日本語が得意ではないRubyistにも教えてあげてください :)</p>
+<p>多くの日本人以外のRubyistがRubyKaigiに参加するようになってきたので、今年から応募フォームを用意して、日本語と英語で共用することにしました。
+そのため、フォームラベルの記述が英語になっていたり、英語必須の項目もありますが、英語での発表情報提供にご協力ください。英語に自信が無い方は応募時にその旨をお伝えください。
+スタッフができる範囲でお手伝いします。</p>
+<p>発表、「企画」のいずれも締め切りは<strong>2010/4/28(水)</strong>です。</p>
+<p>不明点や質問は、お気軽に 2010 at rubykaigi dot org までメールでお問い合わせください。</p>
+<p>皆さまからのたくさんのご応募をお待ちしております。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100319.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100305.html#p01">
+<link>http://rubykaigi.tdiary.net/20100305.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100305.html#p01" />
+<dc:date>2010-03-05T05:37:40+09:00</dc:date>
+<title>仙台Ruby会議02「懇親会と各種応募など」</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>sendairubykaigi</dc:subject>
+<description>仙台Ruby会議02実行委員長の片平です。 仙台Ruby会議02の懇親会について申し込みを開始しました。 詳しくはこちらを参照ください。 当日、るびまへのレポートに添付する写真を撮影し、提供していただけるプロ写真家を募集しております(名乗り出ていただいた人数だけ)。 るびまへのレポートを書いていただける方を募集いたします。(担当したいセッションを添えてご�..</description>
+<content:encoded><![CDATA[<h3>仙台Ruby会議02「懇親会と各種応募など」</h3><p>仙台Ruby会議02実行委員長の片平です。</p>
+<p>仙台Ruby会議02の懇親会について申し込みを開始しました。</p>
+<p>詳しくは<a href="http://kokucheese.com/event/index/1723/">こちら</a>を参照ください。</p>
+<p>当日、るびまへのレポートに添付する写真を撮影し、提供していただけるプロ写真家を募集しております(名乗り出ていただいた人数だけ)。</p>
+<p>るびまへのレポートを書いていただける方を募集いたします。(担当したいセッションを添えてご応募願います)
+セッション分類(基調講演、セッション1、LT,討論会)</p>
+<p>定員を増やすため、スタッフ数は少ないです。そのため当日、参加者の皆様に、色々手伝いをお願いさせていただきます。ご協力宜しくお願いします。</p>
+<p>LTセッションは、飲食自由といたします。みんなでおやつを持ち寄って、ゆるい感じにLTしたいと思いますので、ぜひおやつを持ち寄り下さい。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100305.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100303.html#p01">
+<link>http://rubykaigi.tdiary.net/20100303.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100303.html#p01" />
+<dc:date>2010-03-03T07:34:11+09:00</dc:date>
+<title>「仙台Ruby会議02」を開催します</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>sendairubykaigi</dc:subject>
+<description>仙台Ruby会議02実行委員長の片平です。 2010年3月20日(土)に「仙台Ruby会議02」を開催します。 今回は、「Rubyとビジネス」というコンテクストを、仙台の地で考えるような場にしたいと思っています。  日時:3月20日13時30分～18時 会場:AER28階エル・ ソーラ仙台研修室1 参加費用: 500円 定員:30名  詳細と申し込みは以下のページよりご確認ください。 http://regional.rubykaigi.org/sendai02..</description>
+<content:encoded><![CDATA[<h3>「仙台Ruby会議02」を開催します</h3><p>仙台Ruby会議02実行委員長の片平です。</p>
+<p>2010年3月20日(土)に「仙台Ruby会議02」を開催します。
+今回は、「Rubyとビジネス」というコンテクストを、仙台の地で考えるような場にしたいと思っています。</p>
+<ul>
+<li>日時:3月20日13時30分～18時</li>
+<li>会場:AER28階エル・ ソーラ仙台研修室1</li>
+<li>参加費用: 500円</li>
+<li>定員:30名</li>
+</ul>
+<p>詳細と申し込みは以下のページよりご確認ください。</p>
+<p><a href="http://regional.rubykaigi.org/sendai02">http://regional.rubykaigi.org/sendai02</a></p>
+<p>皆様の参加をお待ちしております</p>
+<p>また、仙台Ruby会議02で、発表時間５分のライトニングトークを行っていただける方を募集いたします。
+発表を希望される方は、下記募集要領にしたがってご応募ください。</p>
+<h4>仙台Ruby会議02 Lightning Talks募集</h4>
+<p>発表時間５分のRubyに関連するライトニングトークスを募集します。
+応募は下記の宛先と題名のメールでお願いします。</p>
+<p>To: sendairubykaigi _at_ gmail.com
+Subject: LT発表応募:発表者氏名</p>
+<p>メール本文には下記の情報を含めてください。</p>
+<p>- 発表者氏名・所属(あれば)
+- 発表タイトル
+- 発表の概要
+- 連絡事項など</p>
+<p>日程等</p>
+<p>募集人数:8人</p>
+<p>募集締切: 2010/3/12(金)</p>
+<p>結果発表: 2010/3/14(日)までにメールで連絡いたします</p>
+<p>当日: 2010/3/20(土)</p>
+<p>応募多数の場合は、締切を早めることがあります。</p>
+<p>発表を検討されている方は、お早めに応募お願いいたします。</p>
+<p>また、応募多数の場合は選考となります。</p>
+<p>選考は、仙台Ruby会議02実行委員が行います。</p>
+<p>お問い合わせ</p>
+<p>何か不明な点があれば、sendairubykaigi _at_ gmail.com
+仙台Ruby会議実行委員会までお気軽にお問い合わせください。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100303.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100225.html#p03">
+<link>http://rubykaigi.tdiary.net/20100225.html#p03</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100225.html#p03" />
+<dc:date>2010-02-25T08:58:34+09:00</dc:date>
+<title>Ruby会議2010の発表と企画の募集が開始されました</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>発表と企画の募集を行います。といっても、まだ応募用のシステムが出来ていないんですが。4月末までの募集なので、早めにネタを考えておいて下さい。 とくに、今年は新しく「企画」を前もって募集します。地域コミュニティとか（Asakusa.rb in Tsukuba とか）、テーマに沿ったものとか（Rubyでゲーム会議，とか）、いろいろ考えられると思いますが、多分出すには事前�..</description>
+<content:encoded><![CDATA[<h3>Ruby会議2010の発表と企画の募集が開始されました</h3><p>発表と企画の募集を行います。といっても、まだ応募用のシステムが出来ていないんですが。4月末までの募集なので、早めにネタを考えておいて下さい。</p>
+<p>とくに、今年は新しく「企画」を前もって募集します。地域コミュニティとか（Asakusa.rb in Tsukuba とか）、テーマに沿ったものとか（Rubyでゲーム会議，とか）、いろいろ考えられると思いますが、多分出すには事前のネゴが必要になるかと思います。その辺、今から初めておいて頂けると良いかと思います。一緒に楽しい RubyKaigi2010 にしたいですね。</p>
+<h4>[ANN] RubyKaigi 2010 Call for Presentation Proposals</h4>
+<p>RubyKaigi2010 <a href="http://rubykaigi.org/2010/">http://rubykaigi.org/2010/</a> で発表を希望さ
+れる方を 4/28 まで募集いたします。募集するプレゼンテーション
+のテーマは以下のとおりです。</p>
+<pre>   * Ruby について、なんでも</pre>
+<p>応募はウェブシステムを利用してお申し込み頂く予定です。システ
+ムが完成し、ご応募頂けるようになりましたら再度ご連絡いたしま
+す。とりあえず、今の内から考えておいて下さい。</p>
+<p>応募には次のような項目が必要になる予定です。</p>
+<pre>   * 発表者氏名（ニックネームでも可）、所属、メールアドレス
+      * 英語必須
+   * タイトル
+     * 英語必須
+   * 発表概要（Webサイト・プログラムなどに掲載する公開用のもの）
+     * 英語必須（英語に自信がなければ「翻訳希望」と書いておいて下さい）
+   * 発表詳細（発表選考に使います。公開はしません）
+     * 記述言語は自由です
+   * 希望するプレゼン時間（30 分くらい・60 分くらい・それ以上）
+     * 質疑応答込みの時間です。
+     * 基本的に、1 発表 60 分くらいを目安に考えています。
+   * 発表で利用予定の自然言語（日本語、英語）
+   * パスポート上の国籍（ビザが必要な人について、発給手続円滑化のため）
+   * 希望する発表曜日（金、土、日、どれでも）
+   * その他、連絡事項</pre>
+<p>発表に応募すると、写真撮影・講演動画の中継、録画の配信、発表
+資料の公開に同意したものと見做されます。同意されない方のご応
+募はご遠慮下さい。</p>
+<p>タイトル、発表概要は原則としてパンフレットに掲載できるクオリ
+ティであることを期待しています。「あとで書く」はご遠慮下さい。</p>
+<p>多くの日本人以外の Rubyist が RubyKaigi に参加するため、英語
+での発表情報提供にご協力ください。英語に自信が無い方は応募時
+にその旨お伝えください。スタッフができる範囲でお手伝いします。</p>
+<p>今年は 2 トラック同時進行を予定しています。去年よりも発表件
+数が少なくなる予定です。ただ、発表応募とは別に企画応募もして
+いますので、そちらも是非検討して下さい。</p>
+<p>日程</p>
+<pre> 募集締切
+ 2010 年 4 月 28 日(水)
+
+ 募集結果発表
+ 2010 年 5 月
+
+ RubyKaigi2010
+ 2010 年 8 月 27 日(金)、28 日(土)、29日(日)</pre>
+<p>選考方法</p>
+<p>RubyKaigi2010 スタッフにより選考いたします。</p>
+<p>お問い合わせ</p>
+<p>何か不明な点があれば、2010 at rubykaigi.org までお気軽にお問
+い合わせください。</p>
+<h4>[ANN] RubyKaigi 2010 Call for Sub-event Proposals</h4>
+<p>RubyKaigi2010 <a href="http://rubykaigi.org/2010/">http://rubykaigi.org/2010/</a> では通常発表だ
+けでなく、企画の募集を 4/28 まで行います。企画の内容はRuby
+に関連していればどのようなものでも構いません。</p>
+<p>企画の例:</p>
+<ul>
+<li>JRubyConf: RubyConf2009 と時期を合わせて行われた、JRuby に関するイベント</li>
+<li>5krun: RubyConf2009 の会場周辺でおこなわれた早朝のジョギング</li>
+<li>地域Ruby会議会議: RubyKaigi2009 で行われた、地域 Ruby 会議を今後どうやっていくかを話し合うイベント</li>
+<li>tDiary会議: RubyKaigi2009 で行われた、tDiary の開発者と利用者が交流するイベント</li>
+<li>田舎Ruby親方会議: RubyKaigi2009 で行われた、東京以外で Ruby をビジネスに活用している経営者の親睦を深める会</li>
+<li>Termtter会議: RubyKaigi2009 で行われた、Termtter のハッカソン</li>
+<li>toRuby出張版: RubyKaigi2009 で行われた、toRuby の勉強会</li>
+<li>jpmobile会議: RubyKaigi2008 で行われた、jpmobile 開発者の悩みを聞いてあげる会合</li>
+<li>Ruby開発者会議: RubyKaigi2008 などで行われた、Ruby 開発者が今後の Ruby 開発に関する議論を行うイベント</li>
+<li>ワークショップ企画: 東京RubyKaigi03 で行われる予定の、Rails のハンズオンや、折り紙のチュートリアル</li>
+</ul>
+<p>応募はウェブシステムを利用してお申し込み頂く予定です。システ
+ムが完成し、ご応募頂けるようになりましたら再度ご連絡いたしま
+す。今の内に考えておいて下さい。とくに、「企画」募集は我々に
+しても新しい試みなので、どんなことになるのか、どんなことがで
+きるのか、さっぱりわからない状況です。一緒に素敵な RubyKaigi
+を作って行ければと思います。</p>
+<p>企画応募では、次のような項目が必要になる予定です。</p>
+<pre>   * 企画名（～会議で終わる必要はありません）
+     * 英語必須
+   * 企画責任者（名前, 所属, メールアドレス）
+   * 企画概要
+     * 英語必須。サポートします
+   * 参加人数見積り（部屋割りの参考にします）
+     * 2F 中会議室をあてる予定です
+     * フロアガイド http://www.epochal.or.jp/floor_guide/index.html
+   * 必要な設備
+   * 希望する開催曜日
+   * 必要な時間（1時間単位。最大6時間）
+   * その他、連絡事項</pre>
+<p>楽しい企画のご応募を期待しています。</p>
+<p>注意事項</p>
+<ul>
+<li>多くの日本人以外の Rubyist が RubyKaigi に参加するため、英語での発表情報提供にご協力ください。英語に自信が無い方は応募時にその旨お伝えください。スタッフができる範囲でお手伝いします。企画自体は日本語だけの進行でも OK です。</li>
+<li>設備は、机、プロジェクタは必ず用意する予定です。ネットワーク（無線Lan接続）は、多分用意する予定ですが、確約はできません。その他、必要な設備があれば準備できるものなら準備します。</li>
+<li>当日の机の配置などの準備、および後始末は、基本的に企画責任者に責任をもって行ってもらいます。RubyKaigi2010 のスタッフは、基本的にはお手伝いしませんのでご了承下さい。</li>
+<li>事前にRuby会議会議（企画責任者会議）を開催するかもしれません（開催地は東京の予定です）。その場合には、可能な範囲で出席していただけると助かります。</li>
+</ul>
+<p>日程</p>
+<pre> 募集締切
+ 2010 年 4 月 28 日(水)
+
+ 募集結果発表
+ 2010 年 5 月
+
+ RubyKaigi2010
+ 2010 年 8 月 27 日(金)、28 日(土)、29日(日)</pre>
+<p>選考方法</p>
+<p>RubyKaigi2010 スタッフにより選考いたします。</p>
+<p>お問い合わせ</p>
+<p>何か不明な点があれば、2010 at rubykaigi.org までお気軽にお問
+い合わせください。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100225.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100225.html#p02">
+<link>http://rubykaigi.tdiary.net/20100225.html#p02</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100225.html#p02" />
+<dc:date>2010-02-25T08:58:34+09:00</dc:date>
+<title>日本Ruby会議2010の趣意書が公開されました</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>日本Ruby会議2010 のサイトに趣意書が公開されました。今年のテーマは「Conflicts and Resolutions(衝突と解決)」です。いい衝突と解決を。</description>
+<content:encoded><![CDATA[<h3>日本Ruby会議2010の趣意書が公開されました</h3><p><a href="http://rubykaigi.org/2010/ja">日本Ruby会議2010</a> のサイトに趣意書が公開されました。今年のテーマは「Conflicts and Resolutions(衝突と解決)」です。いい衝突と解決を。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100225.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100225.html#p01">
+<link>http://rubykaigi.tdiary.net/20100225.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100225.html#p01" />
+<dc:date>2010-02-25T08:58:34+09:00</dc:date>
+<title>Ruby会議2010がそろそろ動き出したようです</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi2010</dc:subject>
+<description>日本Ruby会議2010実行委員のささだです。 Ruby会議2010がそろそろ対外的にも動き出しましたので情報をお送りします。 ちなみに、今年はこんな感じでやるそうです（これらの情報は既報だと思いますが、Ruby会議日記にはまだ出ていないかもしれないので一応書いておきます）。またつくばですが、今回は凄い規模でやるそうで、チケットの売り切れは気にすることは無さ�..</description>
+<content:encoded><![CDATA[<h3>Ruby会議2010がそろそろ動き出したようです</h3><p>日本Ruby会議2010実行委員のささだです。</p>
+<p><a href="http://rubykaigi.org/2010/ja">Ruby会議2010</a>がそろそろ対外的にも動き出しましたので情報をお送りします。</p>
+<p>ちなみに、今年はこんな感じでやるそうです（これらの情報は既報だと思いますが、Ruby会議日記にはまだ出ていないかもしれないので一応書いておきます）。またつくばですが、今回は凄い規模でやるそうで、チケットの売り切れは気にすることは無さそうです。多分。</p>
+<ul>
+<li>名称: 日本Ruby会議2010 (RubyKaigi2010)</li>
+<li>会期: 2010 年 8 月 27 日(金)・28 日(土)・29 日(日)</li>
+<li>会場: つくば国際会議場 (茨城県つくば市)</li>
+<li>料金: 決定次第お知らせします</li>
+<li>会期中はKaigiFreaksによるUstream.tv経由でのストリーミング配信を予定しています。配信品質はベストエフォートです。</li>
+<li>公式タグ: rubykaigi2010</li>
+<li>公式ハッシュタグ: #rubykaigi</li>
+<li>主催: 日本Ruby会議2010実行委員会, Rubyアソシエーション, 日本Rubyの会</li>
+</ul>
+<p><a href="http://rubykaigi.tdiary.net/20100225.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100213.html#p01">
+<link>http://rubykaigi.tdiary.net/20100213.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100213.html#p01" />
+<dc:date>2010-02-13T14:18:01+09:00</dc:date>
+<title>東京Ruby会議03の講演とワークショップの詳細が公開されています</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>regionalrubykaigi</dc:subject>
+<dc:subject>tokyorubykaigi03</dc:subject>
+<description>Regional RubyKaigiとりまとめのかくたにです。 東京Ruby会議03の講演とワークショップの詳細が公開されています: http://regional.rubykaigi.org/tokyo03 豪華講師陣と一緒に有意義な時間を過ごせそうで楽しみですね。参加登録がすでに締め切られてしまっているのが残念です。</description>
+<content:encoded><![CDATA[<h3>東京Ruby会議03の講演とワークショップの詳細が公開されています</h3><p>Regional RubyKaigiとりまとめのかくたにです。</p>
+<p>東京Ruby会議03の講演とワークショップの詳細が公開されています:</p>
+<p><a href="http://regional.rubykaigi.org/tokyo03">http://regional.rubykaigi.org/tokyo03</a></p>
+<p>豪華講師陣と一緒に有意義な時間を過ごせそうで楽しみですね。参加登録がすでに締め切られてしまっているのが残念です。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100213.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100201.html#p01">
+<link>http://rubykaigi.tdiary.net/20100201.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100201.html#p01" />
+<dc:date>2010-02-01T15:15:09+09:00</dc:date>
+<title>2010年2月・3月の地域Ruby会議(Regional RubyKaigi)</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>regionalrubykaigi</dc:subject>
+<description>Regional RubyKaigi取りまとめのかくたにです。 w.r.oのニュースにも書きましたが、2010年2月・3月はあわせて3つの地域Ruby会議(Regional RubyKaigi)が開催されます:  2/13(土): 松江Ruby会議02 2/28(日): 東京Ruby会議03 3/20(土): 仙台Ruby会議02  松江Ruby会議02 地域Ruby会議としては初の「基調講演: まつもとひろゆき」や「まつもとさんに聞いてみよう（仮）」に加えて、プログラミングコンテス..</description>
+<content:encoded><![CDATA[<h3>2010年2月・3月の地域Ruby会議(Regional RubyKaigi)</h3><p>Regional RubyKaigi取りまとめのかくたにです。</p>
+<p><a href="http://www.ruby-lang.org/ja/news/2010/02/01/201023rubyregional-rubykaigi/">w.r.oのニュース</a>にも書きましたが、2010年2月・3月はあわせて3つの地域Ruby会議(Regional RubyKaigi)が開催されます:</p>
+<ul>
+<li>2/13(土): <a href="http://regional.rubykaigi.org/matsue02">松江Ruby会議02</a></li>
+<li>2/28(日): <a href="http://regional.rubykaigi.org/tokyo03">東京Ruby会議03</a></li>
+<li>3/20(土): <a href="http://regional.rubykaigi.org/sendai02">仙台Ruby会議02</a></li>
+</ul>
+<h4>松江Ruby会議02</h4>
+<p>地域Ruby会議としては初の「基調講演: まつもとひろゆき」や「まつもとさんに聞いてみよう（仮）」に加えて、<a href="http://regional.rubykaigi.org/matsue02">プログラミングコンテスト</a>も開催される予定です。ふるってご参加ください。</p>
+<h4>東京Ruby会議03</h4>
+<p>実行委員長の<a href="http://recompile.net/archives/51329326.html">高井さんからのアナウンス</a>や、今回のサイト用に手を入れてくれた<a href="http://ukstudio.jp/2010/01/31/tork03/">ukstudio</a>のエントリをどうぞ。デザインは札幌02の壁紙に続いて@mayucoです。はやばやと残席僅少……というか満員御礼のようです。</p>
+<h4>仙台Ruby会議02</h4>
+<p>詳細は確定次第、随時更新していきます。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100201.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20100117.html#p01">
+<link>http://rubykaigi.tdiary.net/20100117.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20100117.html#p01" />
+<dc:date>2010-01-17T08:31:51+09:00</dc:date>
+<title>東京Ruby会議03ワークショップ講師募集</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<description>東京Ruby会議03実行委員の高井です。 2月28日（日）に開催される東京Ruby会議03のワークショップ講師の募集を開始しました。Rubyにかかわるテーマであれば、どんなテーマでもかまいません。多彩なセッション案の応募をお待ちしています。 応募方法は、「東京Ruby会議03 - Regional RubyKaigi」をご確認ください。</description>
+<content:encoded><![CDATA[<h3>東京Ruby会議03ワークショップ講師募集</h3><p>東京Ruby会議03実行委員の高井です。</p>
+<p>2月28日（日）に開催される東京Ruby会議03のワークショップ講師の募集を開始しました。Rubyにかかわるテーマであれば、どんなテーマでもかまいません。多彩なセッション案の応募をお待ちしています。</p>
+<p>応募方法は、「<a href="http://regional.rubykaigi.org/tokyo03">東京Ruby会議03 - Regional RubyKaigi</a>」をご確認ください。</p>
+<p><a href="http://rubykaigi.tdiary.net/20100117.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20091225.html#p01">
+<link>http://rubykaigi.tdiary.net/20091225.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20091225.html#p01" />
+<dc:date>2009-12-25T01:39:38+09:00</dc:date>
+<title>札幌Ruby会議02の動画を公開しました</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>sappororubykaigi02</dc:subject>
+<dc:subject>regionalrubykaigi</dc:subject>
+<description>札幌Ruby会議02実行委員長のしまだです。 12月5日に開催しました札幌Ruby会議02の公式動画を公開致しましたのでお知らせいたします。  札幌Ruby会議02 (2009-12-05)  ご自宅で、あるいは通勤通学のお供に、あるいは勉強会などで集まって、 札幌Ruby会議02を隅々までご堪能ください :-)</description>
+<content:encoded><![CDATA[<h3>札幌Ruby会議02の動画を公開しました</h3><p>札幌Ruby会議02実行委員長のしまだです。</p>
+<p>12月5日に開催しました<a href="http://regional.rubykaigi.org/sapporo02">札幌Ruby会議02</a>の公式動画を公開致しましたのでお知らせいたします。</p>
+<ul>
+<li><a href="http://www.nicovideo.jp/mylist/16614060">札幌Ruby会議02 (2009-12-05)</a></li>
+</ul>
+<p>ご自宅で、あるいは通勤通学のお供に、あるいは勉強会などで集まって、 札幌Ruby会議02を隅々までご堪能ください :-)</p>
+<p><a href="http://rubykaigi.tdiary.net/20091225.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20091220.html#p01">
+<link>http://rubykaigi.tdiary.net/20091220.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20091220.html#p01" />
+<dc:date>2009-12-20T09:44:32+09:00</dc:date>
+<title>RubyKaigi2009 動画の全ての動画を公開いたしました</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>rubykaigi</dc:subject>
+<dc:subject>rubykaigi2009</dc:subject>
+<dc:subject>movie</dc:subject>
+<description>KaigiFreaksチーフのしまだです。 RubyKaigi2009 の公式動画につきまして、全ての動画を公開致しましたのでお知らせいたします。  RubyKaigi 2009 Sessions（1st day） RubyKaigi 2009 Sessions（2nd day） RubyKaigi 2009 Sessions（3rd day） RejectKaigi 2009 Sessions（1st day） RejectKaigi 2009 Sessions（2nd day）  お待たせしてしまって大変申し訳ありませんでした。 ご自宅で、あるいは通勤通学のお供に、あるいは..</description>
+<content:encoded><![CDATA[<h3>RubyKaigi2009 動画の全ての動画を公開いたしました</h3><p>KaigiFreaksチーフのしまだです。</p>
+<p>RubyKaigi2009 の公式動画につきまして、全ての動画を公開致しましたのでお知らせいたします。</p>
+<ul>
+<li><a href="http://www.nicovideo.jp/mylist/14722636">RubyKaigi 2009 Sessions（1st day）</a></li>
+<li><a href="http://www.nicovideo.jp/mylist/14733712">RubyKaigi 2009 Sessions（2nd day）</a></li>
+<li><a href="http://www.nicovideo.jp/mylist/14960098">RubyKaigi 2009 Sessions（3rd day）</a></li>
+<li><a href="http://www.nicovideo.jp/mylist/16489092">RejectKaigi 2009 Sessions（1st day）</a></li>
+<li><a href="http://www.nicovideo.jp/mylist/16489581">RejectKaigi 2009 Sessions（2nd day）</a></li>
+</ul>
+<p>お待たせしてしまって大変申し訳ありませんでした。
+ご自宅で、あるいは通勤通学のお供に、あるいは勉強会で集まって、 RubyKaigi2009 を隅々までご堪能ください。</p>
+<p><a href="http://rubykaigi.tdiary.net/20091220.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+<item rdf:about="http://rubykaigi.tdiary.net/20091206.html#p01">
+<link>http://rubykaigi.tdiary.net/20091206.html#p01</link>
+<xhtml:link xhtml:rel="alternate" xhtml:media="handheld" xhtml:type="text/html" xhtml:href="http://rubykaigi.tdiary.net/20091206.html#p01" />
+<dc:date>2009-12-06T22:44:24+09:00</dc:date>
+<title>札幌Ruby会議02 終了しました</title>
+<dc:creator>日本Rubyの会</dc:creator>
+<dc:subject>sappororubykaigi02</dc:subject>
+<dc:subject>regionalrubykaigi</dc:subject>
+<description>札幌Ruby会議02実行委員長のしまだです。 12月5日に開催されました札幌Ruby会議02は盛況のうちに開催を無事終了いたしました。講演していただいた皆さま、参加者の皆さま、開催にご協力いただいた全ての皆さまに感謝いたします。どうもありがとうございました。 Web上で見かけた感想などは是非、公式タグである sappororubykaigi02 でソーシャルブックマークしていただけ�..</description>
+<content:encoded><![CDATA[<h3>札幌Ruby会議02 終了しました</h3><p>札幌Ruby会議02実行委員長のしまだです。</p>
+<p>12月5日に開催されました<a href="http://regional.rubykaigi.org/sapporo02">札幌Ruby会議02</a>は盛況のうちに開催を無事終了いたしました。講演していただいた皆さま、参加者の皆さま、開催にご協力いただいた全ての皆さまに感謝いたします。どうもありがとうございました。</p>
+<p>Web上で見かけた感想などは是非、公式タグである sappororubykaigi02 でソーシャルブックマークしていただけると嬉しいです。</p>
+<p>公式タグ： sappororubykaigi02</p>
+<p>次回の札幌Ruby会議で、また皆さまにお会いできることをスタッフ一同、心から楽しみにしております。今後ともよろしくお願いいたします。</p>
+<p><a href="http://rubykaigi.tdiary.net/20091206.html#c">Add a TSUKKOMI</a></p>]]></content:encoded>
+</item>
+</rdf:RDF>

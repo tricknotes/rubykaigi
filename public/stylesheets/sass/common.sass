@@ -119,9 +119,15 @@ a
     color: #555
     text-decoration: none
     background: none
+   
+  &:focus
+    color: #555
+    text-decoration: none
+    background: none 
+    border: 1px dotted #666
 
   img, &:visited img, &:hover img
-    background: none
+
 
 
 h1, h2
@@ -223,13 +229,16 @@ h4
 
 
 #header
-  background: #000
+  background: #111
+  border-top: 1px solid #222
   border-bottom: 1px solid #222
+  margin-top: 50px
+  font-size: 100%
 
 
 #langnav
   margin: 0 auto
-  margin-top: 70px
+  margin-top: 310px
   width: 980px
   text-align: right
   height: 20px
@@ -238,24 +247,12 @@ h4
   padding-right: 12px
 
 
-#langnav_top
-  margin: 0 auto
-  margin-top: 70px
-  width: 980px
-  text-align: right
-  height: 20px
-  background: url(/2010/images/langnav_bg.png) top center no-repeat
-  padding-top: 9px
-  padding-right: 12px
-  margin-top: 480px
-
-
-#langnav p, #langnav_top p
+#langnav p
   display: inline
   padding-top: 7px
 
 
-#langnav p img, #langnav_top p img
+#langnav p img
   float: right
 
 
@@ -273,7 +270,7 @@ h4
 #sidebar
   float: left
   width: 290px
-  margin: 20px
+  margin: 10px 10px 10px 20px
   position: relative
 
   ul li
@@ -315,8 +312,8 @@ h4
 
 #content
   float: right
-  width: 620px
-  margin: 20px 20px 0px 0px
+  width: 640px
+  margin: 10px 10px 0px 0px
 
   a
     &:link, &:visited
@@ -344,22 +341,21 @@ h4
     margin-bottom: 20px
 
   p
-    line-height: 130%
+    line-height: 150%
+    margin: 10px
 
   h1
-    color: #ff0831
     margin-top: 30px 0px 0px 0px
     background: url(/2010/images/head_bg.png) no-repeat top left
     height: 50px
-    padding: 6px 10px 0px 0px
+    padding: 6px 10px 0px 10px
     border: none
 
   h2
-    color: #ff0831
-    margin-top: 30px 0px 0px 0px
     background: url(/2010/images/head_sub_bg.png) no-repeat bottom left
     height: 30px
-    padding: 6px 10px 0px 0px
+    padding: 6px 10px 0px 10px
+    margin: 30px 0px 20px 0px
 
   h3
     border-bottom: 1px solid #8d8882
@@ -367,7 +363,7 @@ h4
     color: #8d8882
 
   li
-    margin-bottom: 5px
+    margin-bottom: 10px
 
 
 #footer

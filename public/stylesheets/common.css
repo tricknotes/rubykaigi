@@ -93,8 +93,11 @@ a {
     color: #555;
     text-decoration: none;
     background: none; }
-  a img, a:visited img, a:hover img {
-    background: none; }
+  a:focus {
+    color: #555;
+    text-decoration: none;
+    background: none;
+    border: 1px dotted #666; }
 
 h1, h2 {
   margin: 10px 0px 0px 0px;
@@ -175,12 +178,15 @@ h4 {
   vertical-align: bottom; }
 
 #header {
-  background: #000;
-  border-bottom: 1px solid #222; }
+  background: #111;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  margin-top: 50px;
+  font-size: 100%; }
 
 #langnav {
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 310px;
   width: 980px;
   text-align: right;
   height: 20px;
@@ -188,22 +194,11 @@ h4 {
   padding-top: 9px;
   padding-right: 12px; }
 
-#langnav_top {
-  margin: 0 auto;
-  margin-top: 70px;
-  width: 980px;
-  text-align: right;
-  height: 20px;
-  background: url(/2010/images/langnav_bg.png) top center no-repeat;
-  padding-top: 9px;
-  padding-right: 12px;
-  margin-top: 480px; }
-
-#langnav p, #langnav_top p {
+#langnav p {
   display: inline;
   padding-top: 7px; }
 
-#langnav p img, #langnav_top p img {
+#langnav p img {
   float: right; }
 
 #container {
@@ -218,7 +213,7 @@ h4 {
 #sidebar {
   float: left;
   width: 290px;
-  margin: 20px;
+  margin: 10px 10px 10px 20px;
   position: relative; }
   #sidebar ul li {
     background: url(/2010/images/list_bg.gif) no-repeat top left;
@@ -250,8 +245,8 @@ h4 {
 
 #content {
   float: right;
-  width: 620px;
-  margin: 20px 20px 0px 0px; }
+  width: 640px;
+  margin: 10px 10px 0px 0px; }
   #content a:link, #content a:visited {
     text-decoration: none;
     border-bottom: 1px dotted #666; }
@@ -270,26 +265,25 @@ h4 {
 #content div {
   margin-bottom: 20px; }
 #content p {
-  line-height: 130%; }
+  line-height: 150%;
+  margin: 10px; }
 #content h1 {
-  color: #ff0831;
   margin-top: 30px 0px 0px 0px;
   background: url(/2010/images/head_bg.png) no-repeat top left;
   height: 50px;
-  padding: 6px 10px 0px 0px;
+  padding: 6px 10px 0px 10px;
   border: none; }
 #content h2 {
-  color: #ff0831;
-  margin-top: 30px 0px 0px 0px;
   background: url(/2010/images/head_sub_bg.png) no-repeat bottom left;
   height: 30px;
-  padding: 6px 10px 0px 0px; }
+  padding: 6px 10px 0px 10px;
+  margin: 30px 0px 20px 0px; }
 #content h3 {
   border-bottom: 1px solid #8d8882;
   margin: 20px 0px 10px 0px;
   color: #8d8882; }
 #content li {
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 #footer {
   margin-top: 10px;

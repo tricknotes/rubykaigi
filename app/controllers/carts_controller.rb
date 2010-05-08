@@ -9,9 +9,11 @@ class CartsController < ApplicationController
       amount = params[:cart][:cart_item][:additional_amount].to_i
       link_label = params[:cart][:cart_item][:link_label]
       link_url = params[:cart][:cart_item][:link_url]
+      attend_party = (params[:cart][:cart_item][:attend_party] == "1")
       sponsor_item.additional_amount = amount
       sponsor_item.link_label = link_label unless link_label.blank?
       sponsor_item.link_url = link_url unless link_url.blank?
+      sponsor_item.attend_party = attend_party
     end
     redirect_to carts_path
   end

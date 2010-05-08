@@ -39,4 +39,5 @@ OrderItem.blueprint do
   product_item { ProductItem.make }
   quantity { 1 }
   price { 0 }
+  attend_party { false }
 end

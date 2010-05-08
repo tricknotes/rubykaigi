@@ -5,7 +5,7 @@ this is registration page for rubykaigi.
 %h3 #{t('individual_sponsor')}
 
 .price
-  #{number_with_delimiter(@individual_sponsor.price)} JPY + Your Preferred Amount to Support RubyKaigi!
+  #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + Your Preferred Amount to Support RubyKaigi!
 
 .add_to_cart
   != link_to('Add to Cart', add_item_carts_path(:product_item_code => @individual_sponsor.item_code), :method => :post)

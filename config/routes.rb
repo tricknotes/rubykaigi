@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resource :sessions, :collection => {:unauthenticated => :get}
+  map.resource :account
   map.resources :rubyists
 
   map.resources :registrations

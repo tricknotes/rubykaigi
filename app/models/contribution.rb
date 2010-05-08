@@ -18,12 +18,12 @@ class Contribution < ActiveRecord::Base
     def create
       if individual_sponsor_included?
         # TODO なんかこのへん年ごとに依存してるなあ。年毎のオブジェクトにdouble dispatchしたほうがいいんかな。
-        individual_sponsor = build_contribution_for(Contribution::Type.individual_sponsor)
+        individual_sponsor = build_contribution_for(Contribution::Type.individual_sponsor).as_individual_sponsor
         rk10_individual_sponsor = ProductItem.kaigi(2010).rk10_individual_sponsor
         rk10_individual_sponsor.stock -= 1
 
         rk10_party = ProductItem.kaigi(2010).rk10_party
-        unless rk10_party.sold_out?
+        if individual_sponsor.attend_party? && !rk10_party.sold_out?
           party_attendee = build_contribution_for(Contribution::Type.party_attendee)
           rk10_party.stock -= 1
         end
@@ -50,10 +50,29 @@ class Contribution < ActiveRecord::Base
         :contribution_type => contribution_type,
         :rubyist => order.rubyist,
         :ruby_kaigi => order.ruby_kaigi,
+        # FIXME これは↓バグりそう。本編と懇親会のを扱うときに直す
         :order_item => extract_individual_sponsor_order_item)
     end
 
   end # FromOrder
+
+  module IndividualSponsorInstanceMethods
+    def amount
+      order_item.price
+    end
+
+    def link_label
+      order_item.link_label
+    end
+
+    def link_url
+      order_item.link_url
+    end
+
+    def attend_party?
+      order_item.attend_party?
+    end
+  end # IndividualSponsorInstanceMethods
 
   belongs_to :rubyist
   belongs_to :ruby_kaigi
@@ -62,5 +81,16 @@ class Contribution < ActiveRecord::Base
     def from_order(order)
       Contribution::FromOrder.new(order).create
     end
+
+    def individual_sponsors_of(kaigi_year = RubyKaigi.latest_year)
+      Contribution.all(:include => [:order_item, :ruby_kaigi],
+        :conditions => ["contribution_type = ? AND ruby_kaigis.year = ? ", "individual_sponsor", kaigi_year],
+        :order => 'order_items.price DESC, order_items.created_at').
+        map(&:as_individual_sponsor)
+    end
+  end
+
+  def as_individual_sponsor
+    self.extend(IndividualSponsorInstanceMethods)
   end
 end

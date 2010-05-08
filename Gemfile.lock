@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -54,11 +54,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  whenever: 
+  delayed_job: 
     group: 
     - :default
     version: ">= 0"
-  delayed_job: 
+  whenever: 
     group: 
     - :default
     version: ">= 0"
@@ -130,13 +130,17 @@ dependencies:
   capistrano-notification: 
     group: 
     - :development
-    version: ">= 0"
+    version: = 0.0.2
     require: []
 
   nokogiri: 
     group: 
     - :test
     - :cucumber
+    version: ">= 0"
+  rack-google-analytics: 
+    group: 
+    - :default
     version: ">= 0"
   capistrano: 
     group: 
@@ -195,7 +199,7 @@ specs:
 - capistrano-notification: 
     version: 0.0.2
 - json_pure: 
-    version: 1.4.1
+    version: 1.4.3
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -205,19 +209,19 @@ specs:
 - yamler: 
     version: 0.1.0
 - configatron: 
-    version: 2.6.0
+    version: 2.6.3
 - diff-lcs: 
     version: 1.1.2
-- polyglot: 
-    version: 0.3.1
+- trollop: 
+    version: 1.16.2
+- gherkin: 
+    version: 1.0.24
 - term-ansicolor: 
     version: 1.0.5
-- treetop: 
-    version: 1.4.5
 - cucumber: 
-    version: 0.6.4
+    version: 0.7.2
 - cucumber-rails: 
-    version: 0.3.0
+    version: 0.3.1
 - daemons: 
     version: 1.0.10
 - database_cleaner: 
@@ -235,7 +239,7 @@ specs:
 - gettext: 
     version: 1.93.0
 - haml: 
-    version: 2.2.23
+    version: 2.2.24
 - hoptoad_notifier: 
     version: 2.2.2
 - i18n_generators: 
@@ -250,6 +254,8 @@ specs:
 - nokogiri: 
     version: 1.4.1
 - oauth: 
+    version: 0.4.0
+- rack-google-analytics: 
     version: 0.4.0
 - ruby-openid: 
     version: 2.1.7
@@ -278,10 +284,10 @@ specs:
 - warden_oauth: 
     version: 0.1.1
 - webrat: 
-    version: 0.7.0
+    version: 0.7.1
 - whenever: 
-    version: 0.4.1
-hash: 6c87e11fc0e57f44c376904b0899a77ca59654b2
+    version: 0.4.2
+hash: a5d2b050e7c507a2c12cc4e0cdc262e3f94ad3c3
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

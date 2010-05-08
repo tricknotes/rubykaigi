@@ -38,6 +38,7 @@ class ProductItem < ActiveRecord::Base
   def individual_sponsor?
     item_code =~ /individual_sponsor/
   end
+
 end
 
 %w[rk10 rk10_party rk10_individual_sponsor].each do |_type|

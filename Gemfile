@@ -13,6 +13,7 @@ gem 'haml'
 gem 'fastercsv'
 gem 'whenever'
 gem 'delayed_job'
+gem 'rack-google-analytics'
 
 gem 'rails_warden'
 gem 'warden_oauth'
@@ -21,7 +22,7 @@ gem 'warden-openid'
 group :development do
   gem 'capistrano', :require => nil
   gem 'capistrano-ext', :require => nil
-  gem 'capistrano-notification', :require => nil
+  gem 'capistrano-notification', '0.0.2', :require => nil
   gem 'gettext', '<2' # required by i18n_generators
   gem 'thin'
 end

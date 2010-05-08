@@ -12,6 +12,11 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
 
   manager.default_strategies :twitter_oauth, :openid
   manager.failure_app = SessionsController
+
+  manager.serialize_from_session do |keys|
+    klass, id = keys
+    klass.find_by_id(id)
+  end
 end
 
 Warden::OAuth.access_token_user_finder(:twitter) do |access_token|

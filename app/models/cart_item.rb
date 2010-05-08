@@ -2,11 +2,17 @@
 class CartItem
   attr_reader :product_item, :quantity
   attr_accessor :additional_amount
+  attr_accessor :link_label
+  attr_accessor :link_url
+  attr_accessor :attend_party
 
   def initialize(product_item)
     @product_item = product_item
     @quantity = 1
     @additional_amount = 0
+    @link_label = ""
+    @link_url = ""
+    @attend_party = false
   end
 
   def increment_quantity
@@ -14,12 +20,15 @@ class CartItem
   end
 
   def unit_price
-    @product_item.price + additional_amount
+    @product_item.unit_price
   end
-  alias :price :unit_price
+
+  def price
+     unit_price + additional_amount
+  end
 
   def subtotal_price
-     unit_price * quantity
+     price * quantity
   end
 
   def label
@@ -33,4 +42,6 @@ class CartItem
   def individual_sponsor?
     @product_item.individual_sponsor?
   end
+
+  alias :attend_party? :attend_party
 end

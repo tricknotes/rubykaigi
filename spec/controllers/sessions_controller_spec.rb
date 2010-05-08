@@ -36,7 +36,7 @@ describe SessionsController do
         get :unauthenticated
       end
 
-      it { response.should redirect_to(new_rubyist_path) }
+      it { response.should redirect_to(new_account_path) }
       it { session[:credentials][:twitter_user_id].should == 1234 }
     end
 
@@ -51,7 +51,7 @@ describe SessionsController do
         get :unauthenticated
       end
 
-      it { response.should redirect_to(new_rubyist_path) }
+      it { response.should redirect_to(new_account_path) }
       it { session[:credentials][:identity_url].should == 'http://ursm.jp/' }
     end
 

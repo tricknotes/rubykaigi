@@ -7,6 +7,8 @@ class Rubyist < ActiveRecord::Base
   validates_format_of :username, :with => /[\w-]+/
   validates_exclusion_of :username, :in => %w(new edit)
 
+  validates_format_of :website, :with => URI.regexp(%w(http https)), :allow_blank => true
+
   validates_uniqueness_of :twitter_user_id, :allow_nil => true
   validates_uniqueness_of :identity_url, :allow_nil => true
 
@@ -20,10 +22,7 @@ class Rubyist < ActiveRecord::Base
     contrib = contributions_on(kaigi_year).detect{|c|
       c.contribution_type =~ /individual_sponsor/
     }
-    def contrib.amount
-      order_item.price
-    end
-    contrib
+    contrib.as_individual_sponsor
   end
 
   def contributions_on(kaigi_year = RubyKaigi.latest_year)

@@ -8,7 +8,10 @@ class OrderItem < ActiveRecord::Base
       li = new
       li.product_item = cart_item.product_item
       li.quantity = cart_item.quantity
-      li.price = cart_item.unit_price
+      li.price = cart_item.price
+      li.link_label = cart_item.link_label
+      li.link_url = cart_item.link_url
+      li.attend_party = cart_item.attend_party
       li
     end
   end
@@ -22,6 +25,6 @@ class OrderItem < ActiveRecord::Base
   end
 
   def subtotal_price
-    unit_price * quantity
+    price * quantity
   end
 end

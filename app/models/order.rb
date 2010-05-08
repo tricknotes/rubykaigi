@@ -13,8 +13,8 @@ class Order < ActiveRecord::Base
     end
   end
 
-   def before_save
-     self.price = line_items.inject(0){|r,sum| r += sum.price}
-   end
+  def before_save
+    self.price = line_items.inject(0){|r,sum| r += sum.price}
+  end
 
 end

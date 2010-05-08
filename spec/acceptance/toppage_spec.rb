@@ -17,7 +17,7 @@ feature 'トップページ' do
     end
 
     %w(2010).each do |year|
-      scenario "/#{year} にアクセスする (言語: #{lang})" do
+      scenario "/#{year}/ にアクセスする (言語: #{lang})" do
         header 'Accept-Language', lang
         visit "/#{year}/"
         page.should have_content(event_name)

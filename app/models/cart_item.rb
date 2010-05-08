@@ -4,11 +4,15 @@ class CartItem
   attr_accessor :additional_amount
   attr_accessor :link_label
   attr_accessor :link_url
+  attr_accessor :attend_party
 
   def initialize(product_item)
     @product_item = product_item
     @quantity = 1
     @additional_amount = 0
+    @link_label = ""
+    @link_url = ""
+    @attend_party = false
   end
 
   def increment_quantity
@@ -38,4 +42,6 @@ class CartItem
   def individual_sponsor?
     @product_item.individual_sponsor?
   end
+
+  alias :attend_party? :attend_party
 end

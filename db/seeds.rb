@@ -1,7 +1,7 @@
 %w(ruby_kaigis product_items).each do |t|
-  klass = t.classify.constantize
-  klass.delete_all
-  ActiveRecord::Base.connection.reset_sequence!(t, 'id')
+  conn = ActiveRecord::Base.connection
+  conn.execute("truncate #{t};")
+  conn.execute("alter table #{t} auto_increment = 1;")
 end
 
 (2006..2009).to_a.each do |year|

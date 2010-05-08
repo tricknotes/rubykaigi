@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe AccountsController do
-  describe 'GET /new' do
+  describe 'GET /account/new' do
     context 'with Twitter credentials' do
       before do
         session[:credentials] = {:twitter_user_id => 4567}
@@ -29,13 +29,12 @@ describe AccountsController do
     end
   end
 
-  describe 'POST /create' do
+  describe 'POST /account' do
     shared_examples_for 'Signed up successfully' do
       before do
-        mock.instance_of(Rubyist).save { true }
         mock(controller).user = is_a(Rubyist)
 
-        post :create, :rubyist => {:username => 'ursm'}
+        post :create, :rubyist => Rubyist.plan
       end
 
       it { session[:credentials].should be_nil }
@@ -58,10 +57,9 @@ describe AccountsController do
 
     shared_examples_for 'Signed up failed' do
       before do
-        mock.instance_of(Rubyist).save { false }
         dont_allow(controller).user = anything
 
-        post :create, :rubyist => {:username => 'ursm'}
+        post :create, :rubyist => Rubyist.plan(:invalid)
       end
 
       it { response.should be_success }
@@ -119,7 +117,7 @@ describe AccountsController do
     end
   end
 
-  describe 'GET /edit' do
+  describe 'GET /account/edit' do
     context 'signed in' do
       before do
         @ursm = Rubyist.make
@@ -128,6 +126,43 @@ describe AccountsController do
       end
 
       it { response.should be_success }
+      it { assigns[:rubyist].should == @ursm }
+    end
+
+    context 'not signed in' do
+      before do
+        not_signed_in
+        get :edit
+      end
+
+      it { response.should redirect_to(new_sessions_path) }
+    end
+  end
+
+  describe 'POST /account' do
+    context 'signed in' do
+      before do
+        @ursm = Rubyist.make
+        sign_in_as @ursm
+      end
+
+      context 'with valid params' do
+        before do
+          post :update, :rubyist => Rubyist.plan
+        end
+
+        it { response.should redirect_to(edit_account_path) }
+      end
+
+      context 'with invalid params' do
+        before do
+          post :update, :rubyist => Rubyist.plan(:invalid)
+        end
+
+        it { response.should be_success }
+        it { response.should render_template(:edit) }
+        it { assigns[:rubyist].should == @ursm }
+      end
     end
 
     context 'not signed in' do

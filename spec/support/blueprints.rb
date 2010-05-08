@@ -3,12 +3,16 @@ require 'machinist/active_record'
 require 'sham'
 require 'faker'
 
-Sham.username { Faker::Internet.user_name }
+Sham.username { Faker::Internet.user_name.gsub('.', '-') }
 Sham.year(:unique => true) {|i| 2010 + i }
 Sham.item_code(:unique => true) {|i| "item_#{i}" }
 
 Rubyist.blueprint do
   username
+end
+
+Rubyist.blueprint :invalid do
+  username { '' }
 end
 
 RubyKaigi.blueprint do

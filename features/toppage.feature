@@ -7,12 +7,12 @@
     ならば "<イベント名>"が表示されていること
 
     例:
-      |言語   |イベント名       |
-      |ja-JP  |日本Ruby会議2010 |
-      |en-US  |RubyKaigi 2010    |
-      |ja     |日本Ruby会議2010 |
-      |en     |RubyKaigi 2010    |
-      |zh-TW  |RubyKaigi 2010    |
+      |言語   |イベント名      |
+      |ja-JP  |日本Ruby会議2010|
+      |en-US  |RubyKaigi 2010  |
+      |ja     |日本Ruby会議2010|
+      |en     |RubyKaigi 2010  |
+      |zh-TW  |RubyKaigi 2010  |
 
   テンプレ: 西暦だけでアクセスする
     前提 言語は"<言語>"

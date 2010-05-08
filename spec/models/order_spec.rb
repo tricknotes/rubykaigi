@@ -8,7 +8,9 @@ describe Order do
       @order = Order.make
     end
 
-    specify { @order.invoice_code.should_not be_nil }
+    subject { @order }
+
+    its(:invoice_code) { should_not be_nil }
 
     context "Cart has an item" do
       before(:all) do

@@ -37,6 +37,14 @@ class Rubyist < ActiveRecord::Base
     __attendee?(kaigi_year) || individual_sponsor?(kaigi_year)
   end
 
+  def staff?(kaigi_year = RubyKaigi.latest_year)
+    true
+  end
+
+  def ruby_committer?(kaigi_year = RubyKaigi.latest_year)
+    true
+  end
+
   def party_attendee?(kaigi_year = RubyKaigi.latest_year)
     contribution_types_of(kaigi_year).include?('party_attendee')
   end

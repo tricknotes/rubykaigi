@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -54,11 +54,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  delayed_job: 
+  whenever: 
     group: 
     - :default
     version: ">= 0"
-  whenever: 
+  delayed_job: 
     group: 
     - :default
     version: ">= 0"
@@ -92,6 +92,10 @@ dependencies:
     - :default
     version: ">= 0"
   configatron: 
+    group: 
+    - :default
+    version: ">= 0"
+  will_paginate: 
     group: 
     - :default
     version: ">= 0"
@@ -309,7 +313,9 @@ specs:
     version: 0.7.1
 - whenever: 
     version: 0.4.2
-hash: 92771a0047a3be3696ee9920bc6e75bb2a468cad
+- will_paginate: 
+    version: 2.3.12
+hash: 39c2071e3bf57647f79044199d0d24ed62baeb92
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

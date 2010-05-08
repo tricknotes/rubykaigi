@@ -14,6 +14,7 @@ gem 'fastercsv'
 gem 'whenever'
 gem 'delayed_job'
 gem 'rack-google-analytics'
+gem 'will_paginate'
 
 gem 'rails_warden'
 gem 'warden_oauth'

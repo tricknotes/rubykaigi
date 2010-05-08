@@ -4,7 +4,17 @@
 
 %ul
   - @order.line_items.each do |item|
-    %li #{t(item.product_item.label)}, #{number_with_delimiter(item.quantity)}, #{number_with_delimiter(item.subtotal_price)}
+    %li
+      #{t(item.product_item.label)},
+      #{number_with_delimiter(item.quantity)},
+      #{number_with_delimiter(item.subtotal_price)}
+      - if item.individual_sponsor?
+        <br />
+        Individual Sponsor Link Label: <strong>#{item.link_label}</strong>
+        <br />
+        Individual Sponsor Link URL: <strong>#{item.link_url}</strong>
+        <br />
+        I <strong>#{ item.attend_party? ? "will " : "will not" }</strong> attend offician conference party on 28th Aug.
 
 - form_tag(url_of_paypal_checkout) do
   != hidden_field_tag :cmd, @paypal_form.cmd

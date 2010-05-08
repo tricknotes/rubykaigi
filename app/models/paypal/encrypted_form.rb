@@ -27,7 +27,7 @@ module Paypal
         :upload => 1,
         :business => Paypal::EncryptedForm.business_email,
         :return => return_url,
-        :invoice => order.id,
+        :invoice => order.invoice_code,
         :notify_url => notify_url,
         :cert_id => cert_id,
       }

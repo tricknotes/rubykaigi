@@ -13,4 +13,4 @@ ProductItem.create(:item_code => 'rk10', :price => 6000, :stock => 700, :ruby_ka
 ProductItem.create(:item_code => 'rk10_party', :price => 5000, :stock => 150, :ruby_kaigi => rk10,
   :open_sale_at => DateTime.parse('2010-06-15 19:00:00'), :ready_for_sale => true)
 ProductItem.create(:item_code => 'rk10_individual_sponsor', :price => 20000, :stock => 100, :ruby_kaigi => rk10,
-  :open_sale_at => DateTime.parse('2010-05-14 19:00:00'), :ready_for_sale => true)
+  :open_sale_at => DateTime.parse('2010-05-07 19:00:00'), :ready_for_sale => true)

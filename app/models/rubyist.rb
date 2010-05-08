@@ -7,6 +7,8 @@ class Rubyist < ActiveRecord::Base
   validates_format_of :username, :with => /[\w-]+/
   validates_exclusion_of :username, :in => %w(new edit)
 
+  validates_format_of :website, :with => URI.regexp(%w(http https)), :allow_blank => true
+
   validates_uniqueness_of :twitter_user_id, :allow_nil => true
   validates_uniqueness_of :identity_url, :allow_nil => true
 

@@ -24,4 +24,16 @@ describe Rubyist do
     it { @ursm.should be_valid }
     it { @kakutani.should be_valid }
   end
+
+  describe '#website' do
+    context 'valid URI' do
+      subject { Rubyist.make_unsaved(:website => 'http://ursm.jp').tap(&:valid?) }
+      it { should be_valid }
+    end
+
+    context 'invalid URI' do
+      subject { Rubyist.make_unsaved(:website => 'javascript:alert("hello!")').tap(&:valid?) }
+      its(:errors) { should be_invalid(:website) }
+    end
+  end
 end

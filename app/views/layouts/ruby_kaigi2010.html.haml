@@ -146,18 +146,21 @@
       %p
         %a.noborder{ :href => "/" }
           %img{ :alt => "HOME", :src => "/2010/images/home_btn.png" }
-        %a{ :href => "#" }
+        %a{ :href => "/2010/en/" }
           English
         |
-        %a{ :href => "#" }
+        %a{ :href => "/2010/ja/" }
           日本語
     %div#container.whitebox_alpha.main
       %div#sidebar
         %h2
           %img{ :alt => "REGISTRATION", :src => "/2010/images/registration_head.png" }
           %p#registration_btn
-            %a{ :href => "#"}
-              %img{ :alt => "参加登録はこちら", :src => "/2010/images/registration_btn.png" }
+            %a{ :href => "/2010/#{params[:locale]}/registrations/"}
+              - if params[:locale] == "ja"
+                %img{ :alt => "参加登録はこちら", :src => "/2010/images/registration_btn.png" }
+              - else
+                %img{ :alt => "REGISTER NOW", :src => "/2010/images/registration_btn_en.png" }
         %h2
           %img{ :alt => "TAGS", :src => "/2010/images/tags_head.png" }
         %div#tags

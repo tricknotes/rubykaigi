@@ -1,0 +1,242 @@
+!!! XML
+!!! Strict
+%html{ :xmlns=>"http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en" }
+  %head
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    %title RubyKaigi2010
+    %link{ :href => "/2010/stylesheets/common.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/2010/stylesheets/superfish.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %script{ :src => "/2010/javascripts/jquery-1.2.6.min.js", :type => "text/javascript" }
+    %script{ :src => "/2010/javascripts/hoverIntent.js", :type => "text/javascript" }
+    %script{ :src => "/2010/javascripts/superfish.js", :type => "text/javascript" }
+    :javascript
+      jQuery(function(){
+      jQuery('ul.sf-menu').superfish();
+      });
+  %body
+    %div#header
+      %a{ :href => "/2010/#{params[:locale]}/"}
+        %img{ :alt => "RubyKaigi2010", :src => "/2010/images/top_logo.jpg" }
+      %a{ :href => "#"}
+        %img.f_right{ :alt => "SIGN IN", :src => "/2010/images/signin_btn.png" }
+
+    %div#menu
+      %ul.sf-menu
+        %li.current
+          %a{ :href => "#" }
+            イベントについて
+          %ul
+            %li
+              %a{ :href => "#" }
+                日本Ruby会議について
+            %li
+              %a{ :href => "#" }
+                Ruby会議日記
+                %br
+                (新着情報)
+            %li
+              %a{ :href => "#" }
+                実行委員とスタッフ
+            %li
+              %a{ :href => "#" }
+                関連リンク
+        %li.current
+          %a{ :href => "#" }
+            お申し込み
+          %ul
+            %li
+              %a{ :href => "#" }
+                一般参加お申込み
+            %li
+              %a{ :href => "#" }
+                ライトニングトークス
+                %br
+                ご応募
+            %li
+              %a{ :href => "#" }
+                スポンサーお申込み
+                %br
+                (企業様用)
+            %li
+              %a{ :href => "#" }
+                スポンサーお申込み
+                %br
+                (個人様用)
+        %li.current
+          %a{ :href => "#" }
+            参加される方へ
+          %ul
+            %li
+              %a{ :href => "programs" }
+                プログラム
+            %li
+              %a{ :href => "#" }
+                アクセス
+            %li.current
+              %a{ :href => "#" }
+                ソーシャルリンク
+              %ul
+                %li
+                  %a{ :href => "#" }
+                    Twitter
+                %li
+                  %a{ :href => "#" }
+                    IRC
+                %li
+                  %a{ :href => "#" }
+                    Flickr
+            %li.current
+              %a{ :href => "#" }
+                当日動画中継
+              %ul
+                %li
+                  %a{ :href => "#" }
+                    \[1]○○会議室
+                %li
+                  %a{ :href => "#" }
+                    \[2]○○会議室
+                %li
+                  %a{ :href => "#" }
+                    \[3]○○会議室
+            %li
+              %a{ :href => "#" }
+                FAQ
+            %li
+              %a{ :href => "#" }
+                スポンサー募集について
+                %br
+                (個人様用)
+            %li
+              %a{ :href => "#" }
+                ジュンク堂書店
+                %br
+                RubyKaigi店
+            %li
+              %a{ :href => "#" }
+                おまけ
+        %li.current
+          %a{ :href => "#" }
+            企業様へ
+          %ul
+            %li
+              %a{ :href => "#" }
+                取材について
+            %li
+              %a{ :href => "#" }
+                スポンサー募集について
+                %br
+                (企業様用)
+        %li.current
+          %a{ :href => "#" }
+            アーカイヴ
+          %ul
+            %li
+              %a{ :href => "#" }
+                日本Ruby会議2009
+            %li
+              %a{ :href => "#" }
+                日本Ruby会議2008
+            %li
+              %a{ :href => "#" }
+                日本Ruby会議2007
+            %li
+              %a{ :href => "#" }
+                日本Ruby会議2006
+    %div#langnav
+      %p
+        %a.noborder{ :href => "/" }
+          %img{ :alt => "HOME", :src => "/2010/images/home_btn.png" }
+        %a{ :href => "#" }
+          English
+        |
+        %a{ :href => "#" }
+          日本語
+    %div#container.whitebox_alpha.main
+      %div#sidebar
+        %h2
+          %img{ :alt => "REGISTRATION", :src => "/2010/images/registration_head.png" }
+          %p#registration_btn
+            %a{ :href => "#"}
+              %img{ :alt => "参加登録はこちら", :src => "/2010/images/registration_btn.png" }
+        %h2
+          %img{ :alt => "TAGS", :src => "/2010/images/tags_head.png" }
+        %div#tags
+          %h3
+            %img{ :alt => "for twitter", :src => "/2010/images/tags_for_twitter.png" }
+          %p
+            %a{ :href => "http://twitter.com/#search?q=%23rubykaigi", :target => "_blank"}
+              \#rubykaigi
+          %h3
+            %img{ :alt => "for blog", :src => "/2010/images/tags_for_blog.png"}
+          %p
+            %a{ :href => "http://b.hatena.ne.jp/t/rubykaigi2010", :target => "_blank"}
+              \rubykaigi2010
+        %h2
+          %img{ :alt => "SOCIAL LINKS", :src => "/2010/images/sociallinks_head.png" }
+        %div#sociallinks
+          %p
+            %a{ :href => "#"}
+              %img{ :alt => "twitter", :src => "/2010/images/sociallinks_twitter.png" }
+            %a{ :href => "#"}
+              %img{ :alt => "ustream", :src => "/2010/images/sociallinks_ustream.png" }
+            %a{ :href => "#"}
+              %img{ :alt => "flickr", :src => "/2010/images/sociallinks_flickr.png" }
+            %a{ :href => "#"}
+              %img{ :alt => "?", :src => "/2010/images/sociallinks_blank.png" }
+        %h2
+          %img{ :alt => "SPONSORS", :src => "/2010/images/sponsors_head.png" }
+        %div#sponsors.whitebox
+          %h3
+            %img{ :alt => "Ruby", :src => "/2010/images/sponsors_ruby.png" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor.gif" }
+          %h3
+            %img{ :alt => "Platinum", :src => "/2010/images/sponsors_platinum.png" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor.gif" }
+          %h3
+            %img{ :alt => "Gold", :src => "/2010/images/sponsors_gold.png" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+          %a{ :href => "#"}
+            %img{ :alt => "", :src => "/2010/sponsors/sponsor_gold.gif" }
+
+      != yield
+
+      %div#footer
+        %p
+          &copy; 2010 日本Ruby会議2010実行委員

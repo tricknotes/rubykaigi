@@ -9,14 +9,20 @@ class PublicReleasesController < LocaleBaseController
   layout proc{|c| "ruby_kaigi#{c.params[:year]}" }
 
   def show
-    if params[:year] == "2010"
-      render :file => "public/2010/#{params[:locale]}/index.html"
+    case params[:year]
+    when "2009"
+      render :file => "public/#{params[:year]}/#{params[:locale]}/index.html"
+      return
+    when "2010"
+      page = params[:page_name].blank? ? 'index' : params[:page_name]
+      respond_to do |f|
+        f.html { render :template => "public_releases/#{params[:year]}/#{params[:locale]}/#{page}" }
+      end
       return
     end
 
     # params[:page_name] pass white list at `page_name_is_valid'
     begin
-      @headline_entries = HeadlineEntry.recent
       render :template => "ruby_kaigi2009/#{params[:page_name]}_#{I18n.locale}"
     rescue Errno::ENOENT, ActionView::MissingTemplate => e
       alternative = Dir.glob(Rails.root + "app/views/ruby_kaigi2009/#{params[:page_name]}*").first

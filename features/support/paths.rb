@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -9,12 +10,8 @@ module NavigationHelpers
     case page_name
     when /トップページ/
       ""
-    when /^(200[678])$/
+    when /^(200[6789])$/
       "/#{$1}"
-    when /サインイン/
-      signin_path
-    when /新規アカウント作成/
-      new_account_path
     else
       page_name
     end

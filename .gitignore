@@ -7,6 +7,7 @@ config/config_action_controller_session.rb
 config/initializers/site_keys.rb
 config/initializers/app_config.rb
 db/*.sqlite3
+db/development_structure.sql
 db/schema.rb
 db/backup/*.sqlite3
 db/development_structure.sql
@@ -15,6 +16,8 @@ backup/*.*
 coverage.aggregate
 coverage
 coverage.features
-tmp/*.*
+tmp/*
 mkmf.log
 rerun.txt
+public/2010/stylesheets/*.css
+.DS_Store

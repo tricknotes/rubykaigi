@@ -1,19 +1,7 @@
-class RegistrationsController < LocaleBaseController
-  before_filter :registration_open
-
-  caches_page :index
-
-  layout proc{|c| "ruby_kaigi#{c.params[:year]}" }
+class RegistrationsController < ApplicationController
+  before_filter :login_required
 
   def index
-    year = params[:year]
-    render :template => "registrations/#{year}/#{action_name}_#{params[:locale]}"
-  end
-
-  def registration_open
-    unless registration_open?
-      render :template => "registrations/2009/not_yet"
-    end
-    true
+    @individual_sponsor = ProductItem.find_by_item_code('rk10_individual_sponsor')
   end
 end

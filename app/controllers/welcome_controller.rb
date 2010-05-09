@@ -1,6 +1,5 @@
-class WelcomeController < ApplicationController
+class WelcomeController < LocaleBaseController
   def index
-    redirect_to "/2010"
+    @headlines = HeadlineEntry.recent(I18n.locale, 5)
   end
-
 end

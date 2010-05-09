@@ -1,56 +1,41 @@
 class PaypalController < ApplicationController
-  before_filter :configure_ruby_kaigi_year
-  skip_before_filter :verify_authenticity_token
-  caches_page :cancelled, :sold_out
+  skip_before_filter :verify_authenticity_token, :only => [:instant_payment_notification]
 
-  layout "ruby_kaigi2009"
-
-  def index
-    redirect_to(root_path)
-  end
-
-  def thanks
-    if params[:tx].blank?
-      redirect_to root_path
-    else
-      @notified_transaction_id = params[:tx]
-    end
-  end
-
-  def cancelled
-  end
-
-  def sold_out
-  end
-
+  verify :method => :post, :only => [:instant_payment_notification]
   def instant_payment_notification
-    begin
-      @paypal = PaypalTransaction.find_by_txn_id(params[:txn_id])
-      if @paypal
-        logger.info("txn_id is already taken #{@paypal.txn_id}")
-        render :nothing => true, :status => 200
-        return
-      end
-      @paypal = PaypalTransaction.create_for_verify_later!(params)
-      if @paypal.validate_transaction
-        @paypal.notify_exchange_ticket_information_to_payer
-      else
-        logger.error("PaypalTransaction was invalid: '#{@paypal.txn_id}'")
-      end
-      render :nothing => true, :status => 200
-    rescue => e
-      logger.error("Something wrong with processing PaypalTransaction: '#{@paypal.txn_id}'")
-      logger.error(e)
-      render :nothing => true, :status => 500
+    logger.info("==== ipn params ====>")
+    logger.info("{")
+    notified_params = params.dup
+    notified_params.to_a.sort_by{|pair| pair.first}.each do |(k,v)|
+      logger.info("'#{k}' => '#{v}',")
     end
-  end
+    logger.info("}")
+    logger.info("<==== ipn params ====>")
 
-  def payment_data_transfer
-    render :nothing => true
-  end
+    unless (params[:secret] == Paypal::EncryptedForm.ipn_secret ||
+        params[:receiver_email] == Paypal::EncryptedForm.business_email)
+      render :nothing => true, :status => 400
+      return
+    end
 
-  private
-  def configure_ruby_kaigi_year
-    @year = 2009
+    unless (order = Order.find_by_invoice_code(params["invoice"]))
+      render :nothing => true, :status => 404
+      return
+    end
+
+    unless (params[:mc_gross] == order.price.to_s && params[:mc_currency] == "JPY")
+      render :nothing => true, :status => 400
+      return
+    end
+
+    Order.transaction do
+      notification = Paypal::PaymentNotification.from_notified_params(params)
+      order.paypal_payment_notification = notification
+      notification.save!
+      order.save!
+    end
+
+    Delayed::Job.enqueue Paypal::HandlePaymentNotificationJob.new(order.id)
+    render :nothing => true, :status => 200
   end
 end

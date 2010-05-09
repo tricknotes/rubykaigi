@@ -1,10 +1,8 @@
-require 'authenticated_system'
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
 #  helper :all # include all helpers, all the time
-  include AuthenticatedSystem
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
@@ -15,6 +13,15 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password").
   # filter_parameter_logging :password
 
+
+  private
+
+  def login_required
+    unless authenticated?
+      session[:return_to] = request.request_uri
+      redirect_to new_sessions_path
+    end
+  end
 
   def basic_auth_required_by_admin
     authenticate_or_request_with_http_basic("restricted ared: username is rubykaigi, password is itsumono.") do |username, password|
@@ -28,21 +35,5 @@ class ApplicationController < ActionController::Base
       username == configatron.basic_auth.sponsor.username &&
         password == configatron.basic_auth.sponsor.password
     end
-  end
-
-  def registration_open_at
-    @registration_open_at = Time.parse(configatron.paypal.open_at)
-  end
-
-  def registration_open?(now = Time.now)
-    registration_open_at <= now
-  end
-
-  def lt_submission_close_at
-    Time.parse(configatron.lt_submission.close_at)
-  end
-
-  def lt_submission_open?(now = Time.now)
-    lt_submission_close_at >= now
   end
 end

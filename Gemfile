@@ -8,23 +8,29 @@ gem 'configatron'
 gem "ambethia-smtp-tls", :require => "smtp-tls"
 gem "fastercsv"
 gem "hoptoad_notifier"
-
+gem 'i18n_generators', :git => 'git://github.com/amatsuda/i18n_generators.git'
 gem 'haml'
-gem 'warden'
 gem 'fastercsv'
+gem 'whenever'
+gem 'delayed_job'
+gem 'rack-google-analytics'
 
-# remove it later
-gem 'ruby-openid', :require => 'openid'
+gem 'rails_warden'
+gem 'warden_oauth'
+gem 'warden-openid'
 
 group :development do
   gem 'capistrano', :require => nil
   gem 'capistrano-ext', :require => nil
+  gem 'capistrano-notification', '0.0.2', :require => nil
+  gem 'gettext', '<2' # required by i18n_generators
+  gem 'thin'
 end
 
 group :test, :cucumber do
   gem 'rspec-rails'
   gem 'rr'
-  gem 'machinist'
+  gem 'machinist', :require => 'machinist/active_record'
   gem 'faker'
   gem 'email_spec'
   gem 'autotest-rails'
@@ -34,5 +40,7 @@ group :test, :cucumber do
   gem 'webrat'
   gem 'moro-miso'
   gem 'database_cleaner'
-  gem 'factory_girl'
+  gem 'nokogiri'
+  gem 'steak'
+  gem 'capybara'
 end

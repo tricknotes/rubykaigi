@@ -18,7 +18,7 @@ class PaypalController < ApplicationController
       return
     end
 
-    unless (order = Order.find(params["invoice"]))
+    unless (order = Order.find_by_invoice_code(params["invoice"]))
       render :nothing => true, :status => 404
       return
     end

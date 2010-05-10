@@ -41,4 +41,6 @@ group :test, :cucumber do
   gem 'moro-miso'
   gem 'database_cleaner'
   gem 'nokogiri'
+  gem 'steak'
+  gem 'capybara'
 end

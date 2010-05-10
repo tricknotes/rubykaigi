@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def create
-    @order = Order.new(:rubyist => user)
+    @order = Order.new(:rubyist => user, :ruby_kaigi => RubyKaigi.latest)
     @order.add_line_item_from_cart(session[:cart])
     if @order.save
       session[:order_id] = @order.id

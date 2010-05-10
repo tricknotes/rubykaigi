@@ -39,6 +39,9 @@ class ProductItem < ActiveRecord::Base
     item_code =~ /individual_sponsor/
   end
 
+  def now_on_sale?
+    ready_for_sale? && open_sale_at.past?
+  end
 end
 
 %w[rk10 rk10_party rk10_individual_sponsor].each do |_type|

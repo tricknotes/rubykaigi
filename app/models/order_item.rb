@@ -27,4 +27,8 @@ class OrderItem < ActiveRecord::Base
   def subtotal_price
     price * quantity
   end
+
+  def individual_sponsor?
+    product_item.individual_sponsor?
+  end
 end

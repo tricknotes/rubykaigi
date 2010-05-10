@@ -15,10 +15,12 @@ ActionController::Routing::Routes.draw do |map|
   map.dashboard("/dashboard",
     :controller => 'dashboard', :action => 'index')
 
-  map.with_options( :controller => "public_releases", :action => "show",
+  map.spike("/spike", :controller => 'spike', :action => 'index')
+
+  map.with_options( :controller => "pages", :action => "show",
                     :defaults => {:page_name => "index"} ) do |pr|
-    pr.pub_release ":year/:locale/:page_name", :requirements => {:year => /2\d{3}/, :locale => /en|ja/ }
-    pr.pub_release ":year/:locale/:page_name.:format", :requirements => {:year => /2\d{3}/, :locale => /en|ja/ }
+    pr.page ":year/:locale/:page_name", :requirements => {:year => /2\d{3}/, :locale => /en|ja/ }
+    pr.page ":year/:locale/:page_name.:format", :requirements => {:year => /2\d{3}/, :locale => /en|ja/ }
     pr.connect     ":year/:page_name", :requirements => {:year => /2\d{3}/}
   end
 

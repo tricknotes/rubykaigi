@@ -8,7 +8,6 @@ config/initializers/site_keys.rb
 config/initializers/app_config.rb
 db/*.sqlite3
 db/development_structure.sql
-db/schema.rb
 db/backup/*.sqlite3
 db/development_structure.sql
 log/*.log

@@ -1,5 +1,5 @@
 # coding: utf-8
-class PublicReleasesController < LocaleBaseController
+class PagesController < LocaleBaseController
   skip_before_filter :login_required
   before_filter :readonly
   before_filter :page_name_is_valid
@@ -16,7 +16,7 @@ class PublicReleasesController < LocaleBaseController
     when "2010"
       page = params[:page_name].blank? ? 'index' : params[:page_name]
       respond_to do |f|
-        f.html { render :template => "public_releases/#{params[:year]}/#{params[:locale]}/#{page}" }
+        f.html { render :template => "pages/#{params[:year]}/#{params[:locale]}/#{page}" }
       end
       return
     end

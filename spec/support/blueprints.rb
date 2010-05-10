@@ -29,6 +29,8 @@ ProductItem.blueprint do
   unit_price { 123 }
   stock { 10 }
   ruby_kaigi_id { 5 }
+  open_sale_at { Time.now }
+  ready_for_sale { false }
 end
 
 Order.blueprint do

@@ -83,8 +83,6 @@ namespace :god do
     config_path = "#{current_path}/config/rubykaigi.god"
     run("god -c #{config_path} -P #{pid_path} -l #{log_path}")
   end
-
-  task
 end
 
 

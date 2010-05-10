@@ -127,3 +127,36 @@ describe Contribution do
     end
   end
 end
+
+describe Contribution do
+  describe "#authorize_as_staff" do
+    before do
+      @kakutani = Rubyist.make(:username => 'kakutani')
+    end
+    subject { @kakutani }
+
+    it { should_not be_staff(2010) }
+
+    context "Contributionが正常に作成した場合" do
+      before do
+        Contribution.authorize_as_staff(@kakutani, 2010)
+      end
+      it { should be_staff(2010) }
+    end
+
+    context "Contributionを二重に作成した場合" do
+      before do
+        Contribution.authorize_as_staff(@kakutani, 2010)
+      end
+
+      specify {
+        expect {
+          Contribution.authorize_as_staff(@kakutani, 2010)
+        }.to raise_error(Contribution::DuplicationError)
+      }
+
+      it { should be_staff(2010) }
+    end
+
+  end
+end

@@ -19,7 +19,7 @@ class Rubyist < ActiveRecord::Base
   end
 
   def individual_sponsor(kaigi_year = RubyKaigi.latest_year)
-    contrib = contributions_on(kaigi_year).detect{|c|
+    contrib = contributions_on(kaigi_year).detect{ |c|
       c.contribution_type =~ /individual_sponsor/
     }
     contrib.as_individual_sponsor
@@ -38,7 +38,7 @@ class Rubyist < ActiveRecord::Base
   end
 
   def staff?(kaigi_year = RubyKaigi.latest_year)
-    true
+    contribution_types_of(kaigi_year).include?(Contribution::Type.staff)
   end
 
   def ruby_committer?(kaigi_year = RubyKaigi.latest_year)

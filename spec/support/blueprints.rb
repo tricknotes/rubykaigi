@@ -15,6 +15,12 @@ Rubyist.blueprint :invalid do
   username { '' }
 end
 
+def make_rubyist_as_staff(kaigi_year = RubyKaigi.latest_year, attrs = {})
+  returning Rubyist.make(attrs) do |r|
+    Contribution.authorize_as_staff(r, kaigi_year)
+  end
+end
+
 RubyKaigi.blueprint do
   year
   capacity { 0 }

@@ -1,5 +1,5 @@
 class WelcomeController < LocaleBaseController
   def index
-    @headlines = HeadlineEntry.recent(I18n.locale, 5)
+    redirect_to "/#{RubyKaigi.latest_year}"
   end
 end

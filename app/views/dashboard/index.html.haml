@@ -1,2 +1,14 @@
-%h1 Hi, #{user.username}
-(#{user.full_name})
+- @title = t('dashboard')
+#content
+  %h1 Hi, #{user.username}
+
+  %h2 RubyKaigi Related Actions
+  %ul
+    %li!= link_to 'Your Cart', carts_path
+    %li Order History(Coming Soon :-)
+
+  %h2 Account Related Actions
+  %ul
+    %li!= link_to t('account_settings'), edit_account_path
+    %li!= link_to t('sign_out'), sessions_path, :method => :delete
+    %li Delete Your Account(Coming Soon :-)

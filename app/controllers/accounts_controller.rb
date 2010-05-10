@@ -1,6 +1,8 @@
 class AccountsController < ApplicationController
   verify :session => :credentials, :only => %w(new create), :redirect_to => :new_sessions_path
 
+  layout_for_latest_ruby_kaigi
+
   def new
     @rubyist = Rubyist.new
   end

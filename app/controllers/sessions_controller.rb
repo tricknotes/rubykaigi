@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  layout_for_latest_ruby_kaigi
+
   def new
   end
 
@@ -6,7 +8,7 @@ class SessionsController < ApplicationController
   def show
     authenticate!
     flash[:notice] = 'You have signed in successfully'
-    redirect_to session.delete(:return_to) || root_path
+    redirect_to session.delete(:return_to) || dashboard_path
   end
 
   def destroy

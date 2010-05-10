@@ -1,21 +1,7 @@
 %div#content
   %h1
     INFORMATION
-  %h2
-    Latest News
-  %ul#news
-    %li
-      RubyKaigi 2010 is
-      %a{ :href => "/2010/en/CallForSponsors.html" }
-        looking for Sponsors  
-    %li
-      We're calling for
-      %a{ :href => "/2010/en/CallForPresentationProposals.html" }
-        Presentation Proposals
-      and
-      %a{ :href => "/2010/en/CallForSubEventProposals.html" }
-        Sub-Event Proposals
-      on RubyKaigi 2010! (deadline: 2010-04-28(JST))
+  != render :partial => 'shared/headline'
   %h2
     The RubyKaigi 2010 Prospectus
   %p
@@ -27,7 +13,7 @@
   %p
     In 2010, the theme of RubyKaigi is "Conflicts and Resolutions". While we accept the many facets of Ruby as a positive, we also see a risk of diversity splintering into division. If every fork goes its own way and never merges back upstream, perhaps we will lose any reason to share the name "Ruby". It would be a shame if that also entailed losing an opportunity to further the evolution and development of Ruby.
   %p
-    With differing platforms, differing needs, and differing positions, it is hard not for a feeling of distance to develop, or perhaps even an urge to create distance. For the sake of a better future of Ruby, however, we must overcome this distance. Although we may at times face severe conflicts, we must work to close the distance and resolve our differences face on. 
+    With differing platforms, differing needs, and differing positions, it is hard not for a feeling of distance to develop, or perhaps even an urge to create distance. For the sake of a better future of Ruby, however, we must overcome this distance. Although we may at times face severe conflicts, we must work to close the distance and resolve our differences face on.
   %p
     To be a place where, while not denying but accepting our diversity, we can seek friction, cross signals, and be mutually influenced. As one of the largest events to be held under the multi-faceted banner of "Ruby", we see it as the duty of RubyKaigi to be such a place.
   %p
@@ -40,7 +26,7 @@
     %li
       Dates: August 27-29 2010
     %li
-      Venue: 
+      Venue:
       %a{ :href => "http://www.epochal.or.jp/eng/index.html", :target => "_blank" }
         Tsukuba International Congress Center "EPOCHAL TSUKUBA"
       (Tsukuba, Ibaraki, Japan)

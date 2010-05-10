@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  layout_for_latest_ruby_kaigi
+
   def index
     @cart = (session[:cart] ||= Cart.new)
   end

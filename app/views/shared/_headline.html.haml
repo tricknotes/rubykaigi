@@ -1,0 +1,9 @@
+%h2 #{t(:latest_news)}
+%ul#news
+  - unless @headlines.empty?
+    - @headlines.each do |h|
+      %li
+        #{l(h.time.to_date, :format => :long)}
+        != link_to h(h.title), h.link
+  - else
+    %li t(:no_news)

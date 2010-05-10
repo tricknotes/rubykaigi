@@ -1,11 +1,15 @@
-%h2 registrations
+- @title = t(:registration)
+#content
+  %h1 registrations
 
-this is registration page for rubykaigi.
+  %p this is registration page for rubykaigi.
 
-%h3 #{t('individual_sponsor')}
+  %p  <strong>You need to Sign in to register rubykaigi</strong> with Twitter OAuth or OpenID.
 
-.price
-  #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + Your Preferred Amount to Support RubyKaigi!
+  %h2 #{t('individual_sponsor')}
 
-.add_to_cart
-  != link_to('Add to Cart', add_item_carts_path(:product_item_code => @individual_sponsor.item_code), :method => :post)
+  .price
+    #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + Your Preferred Amount to Support RubyKaigi!
+
+  .add_to_cart
+    != link_to('Add to Cart', add_item_carts_path(:product_item_code => @individual_sponsor.item_code), :method => :post)

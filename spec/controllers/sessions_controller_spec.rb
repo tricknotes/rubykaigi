@@ -11,7 +11,7 @@ describe SessionsController do
         get :show
       end
 
-      it { response.should redirect_to(root_path) }
+      it { response.should redirect_to(dashboard_path) }
     end
 
     context 'signed in successfully with return_to' do

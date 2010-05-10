@@ -1,7 +1,17 @@
 en:
-  RubyKaigi2010: 'RubyKaigi 2010'
+  rubykaigi2010: RubyKaigi 2010
   individual_sponsor: 'Individual Sponsor'
   product_item:
     rk10: 'RubyKaigi 2010'
-    rk10_party: 'RubyKaigi 2010 Party'
-    rk10_individual_sponsor: 'RubyKaigi 2010 Individual Sponsor'
+    rk10_party: 'Conference Perty(RubyKaigi 2010)'
+    rk10_individual_sponsor: 'Individual Sponsor(RubyKaigi 2010)'
+  sign_in: 'Sign In'
+  sign_out: 'Sign Out'
+  dashboard: 'Dashboard'
+  account_settings: 'Account Settings'
+  time_table: 'Time Table'
+  registration: 'Registration'
+  order:
+    confirm: "Order Confirmation"
+  latest_news: 'Latest News'
+  no_news: "There's no latest news :)"

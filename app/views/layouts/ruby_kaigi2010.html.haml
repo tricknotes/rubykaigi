@@ -3,7 +3,7 @@
 %html{ :xmlns=>"http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en" }
   %head
     %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
-    %title RubyKaigi2010
+    %title= [@title, t(:rubykaigi2010)].compact.join(' - ')
     %link{ :href => "/2010/stylesheets/common.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "/2010/stylesheets/superfish.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %script{ :src => "/2010/javascripts/jquery-1.2.6.min.js", :type => "text/javascript" }
@@ -15,10 +15,9 @@
       });
   %body
     %div#header
-      %a{ :href => "/2010/#{params[:locale]}/"}
+      %a{ :href => "/2010/#{current_locale}/"}
         %img{ :alt => "RubyKaigi2010", :src => "/2010/images/top_logo.jpg" }
-      %a{ :href => "#"}
-        %img.f_right{ :alt => "SIGN IN", :src => "/2010/images/signin_btn.png" }
+      != link_to(image_tag("/2010/images/signin_btn.png", :alt => 'Sign In', :class => 'f_right'), new_sessions_path)
 
     %div#menu
       %ul.sf-menu
@@ -67,8 +66,7 @@
             参加される方へ
           %ul
             %li
-              %a{ :href => "programs" }
-                プログラム
+              != link_to t(:time_table), "/2010/#{current_locale}/programs"
             %li
               %a{ :href => "#" }
                 アクセス
@@ -156,11 +154,8 @@
         %h2
           %img{ :alt => "REGISTRATION", :src => "/2010/images/registration_head.png" }
           %p#registration_btn
-            %a{ :href => "/2010/#{params[:locale]}/registrations/"}
-              - if params[:locale] == "ja"
-                %img{ :alt => "参加登録はこちら", :src => "/2010/images/registration_btn.png" }
-              - else
-                %img{ :alt => "REGISTER NOW", :src => "/2010/images/registration_btn_en.png" }
+            - button = (current_locale == "ja" ? image_tag("/2010/images/registration_btn.png", :alt => "参加登録はこちら") : image_tag("/2010/images/registration_btn_en.png", :alt => "REGISTER NOW"))
+            != link_to(button, registrations_path)
         %h2
           %img{ :alt => "TAGS", :src => "/2010/images/tags_head.png" }
         %div#tags

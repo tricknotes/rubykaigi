@@ -1,4 +1,8 @@
 class OrdersController < ApplicationController
+  before_filter :login_required
+
+  layout_for_latest_ruby_kaigi
+
   def create
     @order = Order.new(:rubyist => user, :ruby_kaigi => RubyKaigi.latest)
     @order.add_line_item_from_cart(session[:cart])

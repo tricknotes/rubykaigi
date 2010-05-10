@@ -13,6 +13,12 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password").
   # filter_parameter_logging :password
 
+  class << self
+    private
+    def layout_for_latest_ruby_kaigi
+      layout proc{|c| "ruby_kaigi#{RubyKaigi.latest_year}" }
+    end
+  end
 
   private
 

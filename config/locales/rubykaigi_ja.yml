@@ -1,7 +1,17 @@
 ja:
-  RubyKaigi2010: '日本Ruby会議 2010'
+  rubykaigi2010: '日本Ruby会議 2010'
   individual_sponsor: '個人スポンサー'
   product_item:
     rk10: '日本Ruby会議2010'
-    rk10_party: '日本Ruby会議2010 懇親会'
-    rk10_individual_sponsor: '日本Ruby会議2010 個人スポンサー'
+    rk10_party: '懇親会(日本Ruby会議2010)'
+    rk10_individual_sponsor: '個人スポンサー(日本Ruby会議2010)'
+  sign_in: 'Sign In'
+  sign_out: 'Sign Out'
+  dashboard: 'Dashboard'
+  account_settings: 'Account Settings'
+  time_table: 'タイムテーブル'
+  registration: '参加登録'
+  order:
+    confirm: "注文のご確認"
+  latest_news: '新着情報'
+  no_news: "(特にありません)"

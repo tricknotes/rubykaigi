@@ -6,7 +6,7 @@ class PagesController < LocaleBaseController
   before_filter :redirect_to_past_kaigi
 #  before_filter :sponsors_only
 
-  layout proc{|c| "ruby_kaigi#{c.params[:year]}" }
+  layout_for_latest_ruby_kaigi
 
   def show
     case params[:year]
@@ -14,6 +14,7 @@ class PagesController < LocaleBaseController
       render :file => "public/#{params[:year]}/#{params[:locale]}/index.html"
       return
     when "2010"
+      @headlines = HeadlineEntry.recent(I18n.locale, 5)
       page = params[:page_name].blank? ? 'index' : params[:page_name]
       respond_to do |f|
         f.html { render :template => "pages/#{params[:year]}/#{params[:locale]}/#{page}" }

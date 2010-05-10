@@ -1,16 +1,7 @@
 %div#content
   %h1
     お知らせ
-  %h2
-    新着情報
-  %ul#news
-    - unless @headlines.empty?
-      - @headlines.each do |h|
-        %li
-          l(h.time.to_date, :format => :long)
-          != link_to h(h.title), h.link
-    - else
-      %li (お知らせはありません)
+  != render :partial => 'shared/headline'
   %p
     その他、日本Ruby会議2010の最新情報は、
     %a{ :href => "http://rubykaigi.tdiary.net/?category=rubykaigi2010;year=2010" }

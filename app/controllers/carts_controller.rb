@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   layout_for_latest_ruby_kaigi
-  before_filter :login_required
+  before_filter :login_required, :only => :index
 
   def index
     @cart = (session[:cart] ||= Cart.new)

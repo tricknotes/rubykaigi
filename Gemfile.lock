@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -54,11 +54,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  whenever: 
+  delayed_job: 
     group: 
     - :default
     version: ">= 0"
-  delayed_job: 
+  whenever: 
     group: 
     - :default
     version: ">= 0"
@@ -88,6 +88,10 @@ dependencies:
     require: []
 
   god: 
+    group: 
+    - :default
+    version: ">= 0"
+  will_paginate: 
     group: 
     - :default
     version: ">= 0"
@@ -243,7 +247,7 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 1.0.24
+    version: 1.0.26
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
@@ -267,9 +271,9 @@ specs:
 - gettext: 
     version: 1.93.0
 - god: 
-    version: 0.8.0
+    version: 0.9.0
 - haml: 
-    version: 2.2.24
+    version: 3.0.0
 - hoptoad_notifier: 
     version: 2.2.2
 - i18n_generators: 
@@ -315,7 +319,9 @@ specs:
     version: 0.7.1
 - whenever: 
     version: 0.4.2
-hash: d9713eaaae472d3bed25d675472e3a1ecaedc8fd
+- will_paginate: 
+    version: 2.3.12
+hash: cb0d85a8bdcdcd2e795907e19ad558bdade7759c
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

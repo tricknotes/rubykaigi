@@ -76,6 +76,18 @@ namespace :bundler do
   end
 end
 
+namespace :god do
+  task :start do
+    pid_path = "#{current_path}/tmp/pids/god.pid"
+    log_path = "#{current_path}/log/god.log"
+    config_path = "#{current_path}/config/rubykaigi.god"
+    run("god -c #{config_path} -P #{pid_path} -l #{log_path}")
+  end
+
+  task
+end
+
+
 Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-*')].each do |vendored_notifier|
   $: << File.join(vendored_notifier, 'lib')
 end

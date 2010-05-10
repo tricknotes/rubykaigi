@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.5
     require: []
 
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -46,19 +46,19 @@ dependencies:
     version: ">= 0"
     require: 
     - machinist/active_record
-  rails_warden: 
-    group: 
-    - :default
-    version: ">= 0"
   i18n_generators: 
     group: 
     - :default
     version: ">= 0"
-  delayed_job: 
+  rails_warden: 
     group: 
     - :default
     version: ">= 0"
   whenever: 
+    group: 
+    - :default
+    version: ">= 0"
+  delayed_job: 
     group: 
     - :default
     version: ">= 0"
@@ -87,11 +87,15 @@ dependencies:
     version: ">= 0"
     require: []
 
-  warden-openid: 
+  god: 
     group: 
     - :default
     version: ">= 0"
   configatron: 
+    group: 
+    - :default
+    version: ">= 0"
+  warden-openid: 
     group: 
     - :default
     version: ">= 0"
@@ -262,6 +266,8 @@ specs:
     version: 1.5.3
 - gettext: 
     version: 1.93.0
+- god: 
+    version: 0.8.0
 - haml: 
     version: 2.2.24
 - hoptoad_notifier: 
@@ -309,7 +315,7 @@ specs:
     version: 0.7.1
 - whenever: 
     version: 0.4.2
-hash: 92771a0047a3be3696ee9920bc6e75bb2a468cad
+hash: d9713eaaae472d3bed25d675472e3a1ecaedc8fd
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

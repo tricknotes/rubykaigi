@@ -19,6 +19,8 @@ gem 'rails_warden'
 gem 'warden_oauth'
 gem 'warden-openid'
 
+gem 'god'
+
 group :development do
   gem 'capistrano', :require => nil
   gem 'capistrano-ext', :require => nil

@@ -36,7 +36,7 @@ class ProductItem < ActiveRecord::Base
   end
 
   def individual_sponsor?
-    item_code =~ /individual_sponsor/
+    !!(item_code =~ /individual_sponsor/)
   end
 
   def now_on_sale?

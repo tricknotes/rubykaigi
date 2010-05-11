@@ -18,6 +18,9 @@
           <br />
           I <strong>#{ item.attend_party? ? "will " : "will not" }</strong> attend offician conference party on 28th Aug.
 
+  - if @order.individual_sponsor_included?
+    != link_to 'Edit Individual Sponsor Options', individual_sponsor_option_orders_path
+    <br /><br />    <br /><br />
   - form_tag(url_of_paypal_checkout) do
     != hidden_field_tag :cmd, @paypal_form.cmd
     != hidden_field_tag :encrypted, @paypal_form.encrypted

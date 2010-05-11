@@ -33,17 +33,5 @@ describe Order do
 
       its(:price) { should == 246 }
     end
-
-    context "Cart with additonal amounted product item" do
-      before(:all) do
-        @cart.items.first.additional_amount = 2000
-        @order.add_line_item_from_cart(@cart)
-        @order.save!
-      end
-
-      subject { @order }
-
-      its(:price) { should == 2123 }
-    end
   end
 end

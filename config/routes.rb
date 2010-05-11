@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
     :add_item => :post, :remove_item => :delete
   }
   map.resources :orders, :collection => {
-    :confirm => :get, :thanks => :get
+    :confirm => :get, :thanks => :get, :individual_sponsor_option => :get
   }
   map.paypal_ipn "/paypal/instant_payment_notification",
     :controller => 'paypal', :action => 'instant_payment_notification'

@@ -9,7 +9,7 @@
   %h2 #{t('individual_sponsor')}
 
   .price
-    #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + Your Preferred Amount to Support RubyKaigi!
+    #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + #{t('additional_amount_label')}
 
   .add_to_cart
     != link_to('Add to Cart', add_item_carts_path(:product_item_code => @individual_sponsor.item_code), :method => :post)

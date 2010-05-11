@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100508143518) do
+ActiveRecord::Schema.define(:version => 20100512042405) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -48,16 +48,23 @@ ActiveRecord::Schema.define(:version => 20100508143518) do
   add_index "headline_entries", ["language"], :name => "index_headline_entries_on_language"
   add_index "headline_entries", ["time"], :name => "index_headline_entries_on_time"
 
-  create_table "order_items", :force => true do |t|
-    t.integer  "order_id",                           :null => false
-    t.integer  "product_item_id",                    :null => false
-    t.integer  "quantity",        :default => 1,     :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "price",           :default => 0,     :null => false
+  create_table "individual_sponsor_options", :force => true do |t|
+    t.integer  "additional_amount", :default => 0,     :null => false
     t.string   "link_label"
     t.string   "link_url"
-    t.boolean  "attend_party",    :default => false, :null => false
+    t.boolean  "attend_party",      :default => false, :null => false
+    t.integer  "order_item_id",                        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_items", :force => true do |t|
+    t.integer  "order_id",                       :null => false
+    t.integer  "product_item_id",                :null => false
+    t.integer  "quantity",        :default => 1, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "unit_price",      :default => 0, :null => false
   end
 
   create_table "orders", :force => true do |t|

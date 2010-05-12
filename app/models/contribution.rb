@@ -101,11 +101,11 @@ class Contribution < ActiveRecord::Base
     end
 
     def link_label
-      order_item.link_label
+      order_item.link_label || rubyist.full_name
     end
 
     def link_url
-      order_item.link_url
+      order_item.link_url || rubyist.website
     end
 
     def attend_party?
@@ -127,9 +127,8 @@ class Contribution < ActiveRecord::Base
 
     def individual_sponsors_of(kaigi_year = RubyKaigi.latest_year)
       Contribution.all(:include => [:order_item, :ruby_kaigi],
-        :conditions => ["contribution_type = ? AND ruby_kaigis.year = ? ", "individual_sponsor", kaigi_year],
-        :order => 'order_items.price DESC, order_items.created_at').
-        map(&:as_individual_sponsor)
+        :conditions => ["contribution_type = ? AND ruby_kaigis.year = ?", "individual_sponsor", kaigi_year]).
+        map(&:as_individual_sponsor).sort_by { |e| e.amount }.reverse
     end
   end
 

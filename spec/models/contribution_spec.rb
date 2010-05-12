@@ -165,3 +165,12 @@ describe Contribution do
 
   end
 end
+
+describe Contribution do
+  describe "#individual_sponsors_of" do
+    context "when empty" do
+      subject { Contribution.individual_sponsors_of(2010) }
+      it { should be_empty }
+    end
+  end
+end

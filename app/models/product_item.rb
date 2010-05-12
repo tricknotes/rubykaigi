@@ -36,11 +36,11 @@ class ProductItem < ActiveRecord::Base
   end
 
   def individual_sponsor?
-    item_code =~ /individual_sponsor/
+    !!(item_code =~ /individual_sponsor/)
   end
 
   def now_on_sale?
-    ready_for_sale? && open_sale_at.past?
+    ready_for_sale? && open_sale_at.past? && available?
   end
 end
 

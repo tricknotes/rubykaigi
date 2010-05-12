@@ -15,6 +15,12 @@ Rubyist.blueprint :invalid do
   username { '' }
 end
 
+def make_rubyist_as_staff(kaigi_year = RubyKaigi.latest_year, attrs = {})
+  returning Rubyist.make(attrs) do |r|
+    Contribution.authorize_as_staff(r, kaigi_year)
+  end
+end
+
 RubyKaigi.blueprint do
   year
   capacity { 0 }
@@ -44,6 +50,12 @@ OrderItem.blueprint do
   order { Order.make }
   product_item { ProductItem.make }
   quantity { 1 }
-  price { 0 }
-  attend_party { false }
+  unit_price { 0 }
+end
+
+IndividualSponsorOption.blueprint do
+  link_label { "matz" }
+  link_url { "http://www.rubyist.net/~matz/" }
+  additional_amount { 0 }
+  attend_party { true }
 end

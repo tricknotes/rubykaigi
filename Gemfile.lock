@@ -46,11 +46,11 @@ dependencies:
     version: ">= 0"
     require: 
     - machinist/active_record
-  rails_warden: 
+  i18n_generators: 
     group: 
     - :default
     version: ">= 0"
-  i18n_generators: 
+  rails_warden: 
     group: 
     - :default
     version: ">= 0"
@@ -87,11 +87,19 @@ dependencies:
     version: ">= 0"
     require: []
 
-  warden-openid: 
+  god: 
+    group: 
+    - :default
+    version: ">= 0"
+  will_paginate: 
     group: 
     - :default
     version: ">= 0"
   configatron: 
+    group: 
+    - :default
+    version: ">= 0"
+  warden-openid: 
     group: 
     - :default
     version: ">= 0"
@@ -239,7 +247,7 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 1.0.24
+    version: 1.0.26
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
@@ -262,8 +270,10 @@ specs:
     version: 1.5.3
 - gettext: 
     version: 1.93.0
+- god: 
+    version: 0.9.0
 - haml: 
-    version: 2.2.24
+    version: 3.0.0
 - hoptoad_notifier: 
     version: 2.2.2
 - i18n_generators: 
@@ -309,7 +319,9 @@ specs:
     version: 0.7.1
 - whenever: 
     version: 0.4.2
-hash: 92771a0047a3be3696ee9920bc6e75bb2a468cad
+- will_paginate: 
+    version: 2.3.12
+hash: cb0d85a8bdcdcd2e795907e19ad558bdade7759c
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

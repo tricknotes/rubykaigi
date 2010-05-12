@@ -1,0 +1,37 @@
+- @title = t("order.individual_sponsor_option")
+#content
+  %h1 #{@title}
+
+  - form_for @option, :url => order_path(@order), :html => {:method => :put}  do |f|
+    !=f.hidden_field :id
+    !=f.label :additional_amount, t('individual_sponsor_amount_label')
+    <br />
+    = number_with_delimiter(@option.order_item.unit_price)
+    JPY +
+    != f.text_field :additional_amount, :size => 10
+    JPY(#{t('additional_amount_label')})
+    <br />
+    != error_message_on :option, :additional_amount, :prepend_text => t('individual_sponsor_amount_label')
+    <br />
+    != f.label :link_url, t('individual_sponsor_link_url')
+    <br />
+    != f.text_field :link_url
+    <br />
+    != error_message_on :option, :link_url, :prepend_text => t('individual_sponsor_link_url')
+    <br />
+
+    != f.label :link_label, "#{t('individual_sponsor_link_label')}(#{t('recommend_write_in_english')})"
+    <br />
+    != f.text_field :link_label
+    <br />
+    != error_message_on :option, :link_label, :prepend_text => t('individual_sponsor_link_label')
+    <br />
+    - if ProductItem.kaigi(2010).rk10_party.now_on_sale?
+      != f.check_box :attend_party
+      != f.label :attend_party, t('i_will_attend_the_official_party_2010')
+    - else
+      (#{t('individual_sponsor_party_attend_bonus_is_over')})
+    <br />
+    <br />
+    <br />
+    != f.submit 'Submit Individual Sponsor Options'

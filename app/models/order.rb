@@ -14,6 +14,14 @@ class Order < ActiveRecord::Base
     end
   end
 
+  def before_create
+    self.invoice_code = Order.generate_invoice_code
+  end
+
+  def before_save
+    self.price = line_items.inject(0){|r,sum| r += sum.price}
+  end
+
   def add_line_item_from_cart(cart)
     cart.items.each do |item|
       li = OrderItem.from_cart_item(item)
@@ -21,11 +29,7 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def before_create
-    self.invoice_code = Order.generate_invoice_code
-  end
-
-  def before_save
-    self.price = line_items.inject(0){|r,sum| r += sum.price}
+  def individual_sponsor_included?
+    line_items.detect {|item| item.individual_sponsor? }
   end
 end

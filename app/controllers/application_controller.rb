@@ -23,10 +23,20 @@ class ApplicationController < ActionController::Base
   private
 
   def login_required
-    unless authenticated?
-      session[:return_to] = request.request_uri
-      redirect_to new_sessions_path
-    end
+    return true if authenticated?
+
+    session[:return_to] = request.request_uri
+    redirect_to new_sessions_path
+    false
+  end
+
+  def staff_only
+    return false unless login_required
+    return true if user.staff?
+
+    # TODO 403 ページにしたい
+    render :file => Rails.root + 'public/404.html', :status => :forbidden
+    false
   end
 
   def basic_auth_required_by_admin
@@ -41,5 +51,9 @@ class ApplicationController < ActionController::Base
       username == configatron.basic_auth.sponsor.username &&
         password == configatron.basic_auth.sponsor.password
     end
+  end
+
+  def current_cart
+    session[:cart] ||= Cart.new
   end
 end

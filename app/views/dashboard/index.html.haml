@@ -2,13 +2,18 @@
 #content
   %h1 Hi, #{user.username}
 
+  %p
+    != link_to rubyist_url(user), rubyist_path(user)
+
   %h2 RubyKaigi Related Actions
   %ul
+    %li Show Ticket(s) for RubyKaigi 2010 (Coming Soon :-&lt;)
+    %li Order History (Coming Soon :-&lt;)
     %li!= link_to 'Your Cart', carts_path
-    %li Order History(Coming Soon :-)
 
   %h2 Account Related Actions
   %ul
     %li!= link_to t('account_settings'), edit_account_path
+    %li Switch Authenticate Strategy Between Twitter OAuth and OpenID (Coming Soon :-&lt;)
     %li!= link_to t('sign_out'), sessions_path, :method => :delete
-    %li Delete Your Account(Coming Soon :-)
+    %li Delete Your Account(Coming Soon :-&lt;)

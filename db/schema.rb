@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20100512042405) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "purchased_at"
-    t.integer  "price",                          :default => 0,     :null => false
+    t.integer  "price",                                             :null => false
     t.integer  "paypal_payment_notification_id"
     t.integer  "ruby_kaigi_id",                  :default => 5,     :null => false
     t.string   "invoice_code",                                      :null => false
@@ -114,11 +114,11 @@ ActiveRecord::Schema.define(:version => 20100512042405) do
   add_index "product_items", ["item_code"], :name => "index_product_items_on_item_code", :unique => true
 
   create_table "ruby_kaigis", :force => true do |t|
-    t.integer  "year",                          :null => false
+    t.integer  "year",           :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "capacity",       :default => 0, :null => false
-    t.integer  "party_capacity", :default => 0, :null => false
+    t.integer  "capacity",       :null => false
+    t.integer  "party_capacity", :null => false
   end
 
   add_index "ruby_kaigis", ["year"], :name => "index_ruby_kaigis_on_year", :unique => true
@@ -137,15 +137,5 @@ ActiveRecord::Schema.define(:version => 20100512042405) do
   add_index "rubyists", ["identity_url"], :name => "index_rubyists_on_identity_url", :unique => true
   add_index "rubyists", ["twitter_user_id"], :name => "index_rubyists_on_twitter_user_id", :unique => true
   add_index "rubyists", ["username"], :name => "index_rubyists_on_username", :unique => true
-
-  create_table "twitter_accounts", :force => true do |t|
-    t.string   "screen_name"
-    t.string   "profile_image_url"
-    t.integer  "rubyist_id",        :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "twitter_accounts", ["rubyist_id"], :name => "index_twitter_accounts_on_rubyist_id", :unique => true
 
 end

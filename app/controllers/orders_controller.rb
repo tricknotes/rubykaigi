@@ -52,7 +52,6 @@ class OrdersController < ApplicationController
 
   def thanks
     clear_current_cart
-    render :text => 'thanks!'
   end
 
   private

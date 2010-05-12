@@ -46,6 +46,8 @@ class OrdersController < ApplicationController
   def individual_sponsor_option
     @order = Order.find(session[:order_id], :include => [:line_items => [:individual_sponsor_option]])
     @option = @order.line_items.detect {|i| i.individual_sponsor? }.individual_sponsor_option
+    @option.link_url = user.website if @option.link_url.blank?
+    @option.link_label = user.full_name if @option.link_label.blank?
   end
 
   def thanks

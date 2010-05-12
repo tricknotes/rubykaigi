@@ -3,6 +3,7 @@
   %h1 #{@title}
 
   - form_for @option, :url => order_path(@order), :html => {:method => :put}  do |f|
+    != f.error_messages
     !=f.hidden_field :id
     !=f.label :additional_amount, t('individual_sponsor_amount_label')
     <br />

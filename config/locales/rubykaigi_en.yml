@@ -1,6 +1,12 @@
 en:
   rubykaigi2010: RubyKaigi 2010
+  sponsors: 'Sponsors'
+  ruby_sponsor: 'Ruby Sponsor'
+  platinum_sponsor: 'Platinum Sponsor'
+  gold_sponsor: 'Gold Sponsor'
   individual_sponsor: 'Individual Sponsor'
+  link_to_individual_sponsors: 'Individual Sponsor List'
+  coming_soon: 'Coming Soon'
   product_item:
     rk10: 'RubyKaigi 2010'
     rk10_party: 'Conference Perty(RubyKaigi 2010)'

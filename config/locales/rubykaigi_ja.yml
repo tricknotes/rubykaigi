@@ -1,6 +1,12 @@
 ja:
   rubykaigi2010: '日本Ruby会議 2010'
+  sponsors: 'スポンサー'
+  ruby_sponsor: 'Rubyスポンサー'
+  platinum_sponsor: 'Platinumスポンサー'
+  gold_sponsor: 'Goldスポンサー'
   individual_sponsor: '個人スポンサー'
+  link_to_individual_sponsors: '個人スポンサーの一覧'
+  coming_soon: '調整中'
   product_item:
     rk10: '日本Ruby会議2010'
     rk10_party: '懇親会(日本Ruby会議2010)'

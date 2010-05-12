@@ -122,6 +122,14 @@ describe Contribution do
         ProductItem.kaigi(2010).rk10_party.stock.should == 10
       end
     end
+
+    context "同じRubyKaigiの開催で2回個人スポンサーに応募した場合" do
+      specify do
+        expect {
+          2.times { Contribution.from_order(@order) }
+        }.to raise_error Contribution::DuplicationError
+      end
+    end
   end
 end
 

@@ -16,8 +16,14 @@
           <br />
           Individual Sponsor Link URL: <strong>#{item.link_url}</strong>
           <br />
-          I <strong>#{ item.attend_party? ? "will " : "will not" }</strong> attend offician conference party on 28th Aug.
+          - if ProductItem.kaigi(2010).rk10_party.now_on_sale?
+            I <strong>#{ item.attend_party? ? "will " : "will not" }</strong> attend offician conference party on 28th Aug.
+          - else
+            (#{t('individual_sponsor_party_attend_bonus_is_over')})
 
+  - if @order.individual_sponsor_included?
+    != link_to 'Edit Individual Sponsor Options', individual_sponsor_option_orders_path
+    <br /><br /><br /><br />
   - form_tag(url_of_paypal_checkout) do
     != hidden_field_tag :cmd, @paypal_form.cmd
     != hidden_field_tag :encrypted, @paypal_form.encrypted

@@ -17,21 +17,26 @@ describe Contribution do
         :item_code => "rk10_individual_sponsor",
         :ruby_kaigi => RubyKaigi._2010,
         :stock => 5)
+      @sponsor_option = IndividualSponsorOption.make_unsaved(
+        :additional_amount => 0,
+        :link_label => 'kakutani',
+        :link_url => 'http://kakutani.com',
+        :attend_party => true)
+      @line_item = OrderItem.make(
+        :product_item => @individual_sponsor,
+        :unit_price => 25000,
+        :quantity => 1,
+        :individual_sponsor_option => @sponsor_option)
+      @order = Order.make(
+        :rubyist => @kakutani,
+        :ruby_kaigi => RubyKaigi._2010,
+        :line_items => [@line_item])
     end
 
     context "懇親会に参加するチェックをつけている" do
       before do
-        line_item = OrderItem.make(
-          :product_item => @individual_sponsor,
-          :price => 25000,
-          :quantity => 1,
-          :link_label => 'kakutani',
-          :link_url => 'http://kakutani.com',
+        @sponsor_option.update_attributes(
           :attend_party => true)
-        @order = Order.make(
-          :rubyist => @kakutani,
-          :ruby_kaigi => RubyKaigi._2010,
-          :line_items => [line_item])
       end
 
       context "懇親会の在庫がある" do
@@ -104,16 +109,8 @@ describe Contribution do
 
     context "懇親会に参加する、のチェックをつけてない" do
       before do
-        line_item = OrderItem.make(
-          :product_item => @individual_sponsor,
-          :price => 25000,
-          :quantity => 1,
+        @sponsor_option.update_attributes(
           :attend_party => false)
-        @order = Order.make(
-          :rubyist => @kakutani,
-          :ruby_kaigi => RubyKaigi._2010,
-          :line_items => [line_item])
-
         Contribution.from_order(@order)
       end
 
@@ -123,6 +120,14 @@ describe Contribution do
 
       specify "懇親会チケットの在庫は減らないこと" do
         ProductItem.kaigi(2010).rk10_party.stock.should == 10
+      end
+    end
+
+    context "同じRubyKaigiの開催で2回個人スポンサーに応募した場合" do
+      specify do
+        expect {
+          2.times { Contribution.from_order(@order) }
+        }.to raise_error Contribution::DuplicationError
       end
     end
   end

@@ -18,20 +18,41 @@ describe OrderItem do
       its(:unit_price) { should == 123 }
       its(:quantity) { should == 2 }
       its(:subtotal_price) { should == 246 }
+    end
   end
 
-    context "CartItemに付加的な情報が設定されている場合" do
-      before(:all) do
-        @cart_item = CartItem.new(ProductItem.make)
-        @cart_item.link_label = "a label"
-        @cart_item.link_url = "http://example.com"
-        @cart_item.attend_party = true
+  describe "#price" do
+    def make_simple_cart
+      @product_item = ProductItem.make(:unit_price => 123)
+      @cart = Cart.new
+      @cart.add_product(@product_item)
+      @cart
+    end
+
+    context "通常の商品の場合" do
+      before do
+        make_simple_cart
+        @order_item = OrderItem.from_cart_item(@cart.items.first)
+
+        @product_item_unit_price = @order_item.product_item.unit_price
+      end
+      subject { @order_item.price }
+      it { should == @product_item_unit_price }
+    end
+
+    context "個人スポンサーオプションがついている場合" do
+      before do
+        make_simple_cart
+        cart_item = @cart.items.first
+        stub(cart_item).individual_sponsor? { true }
+
+        @order_item = OrderItem.from_cart_item(cart_item)
+
+        @order_item.individual_sponsor_option.additional_amount = 3000
       end
 
-      subject { OrderItem.from_cart_item(@cart_item) }
-      its(:link_label) { should == @cart_item.link_label }
-      its(:link_url) { should == @cart_item.link_url }
-      its(:attend_party) { should be_true }
+      subject { @order_item.price }
+      it { should == 3123 }
     end
   end
 end

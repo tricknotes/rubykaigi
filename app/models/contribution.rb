@@ -48,11 +48,17 @@ class Contribution < ActiveRecord::Base
     end
 
     def build_contribution_for(contribution_type)
+      contrib = Contribution.find(:first,
+        :conditions => ["contribution_type = ? AND rubyist_id = ? AND ruby_kaigi_id = ?",
+          contribution_type, order.rubyist.id, order.ruby_kaigi.id])
+      if contrib
+        raise(DuplicationError,
+          "#{order.rubyist.username}(order_id: #{order.id}) is arleady individual sponsor for rubykaigi #{order.ruby_kaigi.year}")
+      end
       Contribution.new(
         :contribution_type => contribution_type,
         :rubyist => order.rubyist,
         :ruby_kaigi => order.ruby_kaigi,
-        # FIXME これは↓バグりそう。本編と懇親会のを扱うときに直す
         :order_item => extract_individual_sponsor_order_item)
     end
 

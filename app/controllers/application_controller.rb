@@ -52,4 +52,8 @@ class ApplicationController < ActionController::Base
         password == configatron.basic_auth.sponsor.password
     end
   end
+
+  def current_cart
+    session[:cart] ||= Cart.new
+  end
 end

@@ -58,4 +58,5 @@ if defined?(ActiveRecord::Base)
 end
 
 Before do
+  RubyKaigi.create(:year => 2010, :capacity => 900, :party_capacity => 310)
 end

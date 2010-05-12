@@ -108,15 +108,14 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
+  steak: 
+    group: 
+    - :test
+    version: ">= 0"
   gettext: 
     group: 
     - :development
     version: < 2
-  steak: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
   moro-miso: 
     group: 
     - :test
@@ -146,11 +145,6 @@ dependencies:
     version: = 0.0.2
     require: []
 
-  capybara: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
   nokogiri: 
     group: 
     - :test
@@ -166,6 +160,10 @@ dependencies:
     version: ">= 0"
     require: []
 
+  capybara: 
+    group: 
+    - :test
+    version: ">= 0"
   autotest-rails: 
     group: 
     - :test
@@ -321,7 +319,7 @@ specs:
     version: 0.4.2
 - will_paginate: 
     version: 2.3.12
-hash: cb0d85a8bdcdcd2e795907e19ad558bdade7759c
+hash: f5ad355f37e31a23a947aba05e89112d4af3902d
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

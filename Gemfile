@@ -30,6 +30,11 @@ group :development do
   gem 'thin'
 end
 
+group :test do
+  gem 'steak'
+  gem 'capybara'
+end
+
 group :test, :cucumber do
   gem 'rspec-rails'
   gem 'rr'
@@ -44,6 +49,4 @@ group :test, :cucumber do
   gem 'moro-miso'
   gem 'database_cleaner'
   gem 'nokogiri'
-  gem 'steak'
-  gem 'capybara'
 end

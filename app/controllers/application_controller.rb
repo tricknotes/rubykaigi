@@ -34,8 +34,7 @@ class ApplicationController < ActionController::Base
     return false unless login_required
     return true if user.staff?
 
-    # TODO 403 ページにしたい
-    render :file => Rails.root + 'public/404.html', :status => :forbidden
+    render :file => Rails.root + 'public/403.html', :status => :forbidden
     false
   end
 

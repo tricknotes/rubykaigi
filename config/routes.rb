@@ -17,6 +17,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.spike("/spike", :controller => 'spike', :action => 'index')
 
+   map.registrations(":year/:locale/Registration",
+     :controller => 'registrations', :action => 'index',
+     :requirements => {:year => /2\d{3}/, :locale => /en|ja/})
+
   map.with_options( :controller => "pages", :action => "show",
                     :defaults => {:page_name => "index"} ) do |pr|
     pr.page ":year/:locale/:page_name", :requirements => {:year => /2\d{3}/, :locale => /en|ja/ }

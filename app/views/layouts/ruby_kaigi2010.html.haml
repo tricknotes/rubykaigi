@@ -163,7 +163,7 @@
           %img{ :alt => "REGISTRATION", :src => "/2010/images/registration_head.png" }
           %p#registration_btn
             - button = (current_locale == "ja" ? image_tag("/2010/images/registration_btn.png", :alt => "参加登録はこちら") : image_tag("/2010/images/registration_btn_en.png", :alt => "REGISTER NOW"))
-            != link_to(button, registrations_path)
+            != link_to(button, "/2010/#{current_locale}/Registration")
         %h2
           %img{ :alt => "TAGS", :src => "/2010/images/tags_head.png" }
         %div#tags

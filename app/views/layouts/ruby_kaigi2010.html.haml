@@ -11,8 +11,10 @@
     %script{ :src => "/2010/javascripts/superfish.js", :type => "text/javascript" }
     :javascript
       jQuery(function(){
-      jQuery('ul.sf-menu').superfish();
+        jQuery('ul.sf-menu').superfish();
       });
+    != yield :head
+
   %body
     %div#header
       %a{ :href => "/2010/#{current_locale}/"}

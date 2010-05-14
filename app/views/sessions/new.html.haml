@@ -10,16 +10,15 @@
           :repeat no-repeat
           :position 2px center
 
-%div#content
-  %h1 #{@title}
+#content
+  %h1= @title
 
-  %p
-    != link_to image_tag('sign_in_with_twitter.png', :alt => 'Sign in with Twitter'), sessions_path(:warden_oauth_provider => 'twitter')
-    != link_to 'Sign in with Google Account', sessions_path(:openid_identifier => 'https://www.google.com/accounts/o8/id')
-
-  %p or
-
-  - form_tag sessions_path, :method => :get do
-    %p
-      != text_field_tag :openid_identifier
-      != submit_tag 'Sign in'
+  %ul
+    %li!= link_to 'Sign in with Twitter', sessions_path(:warden_oauth_provider => 'twitter')
+    %li!= link_to 'Sign in with Google Account', sessions_path(:openid_identifier => 'https://www.google.com/accounts/o8/id')
+    %li!= link_to 'Sign in with Yahoo! ID', sessions_path(:openid_identifier => 'http://yahoo.com')
+    %li!= link_to 'Sign in with Yahoo! Japan ID', sessions_path(:openid_identifier => 'http://yahoo.co.jp')
+    %li
+      - form_tag sessions_path, :method => :get do
+        != text_field_tag :openid_identifier
+        != submit_tag 'Sign in'

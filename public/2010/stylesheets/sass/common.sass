@@ -178,6 +178,7 @@ h4
 
 
 .whitebox
+  padding: 10px
   color: #393939
   background-color: #fff
   background-repeat: repeat
@@ -233,6 +234,9 @@ h4
 .f_right
   float: right
 
+.inline
+  li, p, dd, dt
+    display: inline
 
 #header
   margin: 0 auto
@@ -329,11 +333,12 @@ h4
   display: block
   text-align: center
 
-  a:hover
-    height: 62px
-    position: relative
-    top: 1px
-    left: 1px
+  a
+    &:hover
+      height: 62px
+      position: relative
+      top: 1px
+      left: 1px
 
 
 #tags
@@ -356,8 +361,6 @@ h4
 
 
 #sponsors
-  padding-bottom: 10px
-  text-align: center
 
   p
     a
@@ -366,7 +369,7 @@ h4
         border-bottom: 1px dotted #666
 
   img
-    margin: 2px
+    margin: 5px
 
 
 #content
@@ -391,7 +394,8 @@ h4
   border-bottom: 1px dotted #666
 
 
-#content a.noborder, #langnav a.noborder
+#content a.noborder,
+#langnav a.noborder
   border-bottom: none
 
 
@@ -469,3 +473,70 @@ a
 
 * html a:hover.tip span
   display: none
+
+
+.clearfix
+  display: inline-block
+  &:after
+    content: ""
+    display:block 
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1px
+
+
+#sponsors_ruby,
+#sponsors_platinum
+  img
+    margin: 15px
+
+
+#sponsors_gold
+  p
+    width: 580px
+    margin: 0 auto
+  img
+    margin: 5px
+
+=sponsors_xxx_list
+  img
+    float: left
+    margin-left: 5px
+  hr
+    border-color: #ccc
+    clear: both
+  h2
+    margin: 0px
+    padding: 0px
+    background: none
+
+#sponsors_gold_list
+  +sponsors_xxx_list
+  div
+    width: 500px
+    margin-left: 130px
+
+#sponsors_platinum_list
+  +sponsors_xxx_list
+  div
+    width: 450px
+    margin-left: 180px
+
+#sponsors_ruby_page
+  h3
+    margin: 10px
+
+
+#sponsors_individual
+  ul
+    li
+      margin: 5px
+      width: 250px
+      float: left
+
+#sponsors_ruby.whitebox.center a,
+#sponsors_platinum.whitebox.center a,
+#sponsors_gold.whitebox a
+  border-bottom: none

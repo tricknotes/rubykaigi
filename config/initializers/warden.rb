@@ -15,7 +15,7 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
 
   manager.serialize_from_session do |keys|
     klass, id = keys
-    klass.find_by_id(id)
+    klass.constantize.find_by_id(id)
   end
 end
 

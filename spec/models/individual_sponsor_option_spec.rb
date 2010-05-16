@@ -21,8 +21,13 @@ describe IndividualSponsorOption do
     it { should be_valid }
   end
 
-  context 'link_label と link_url が片方だけ入ってる' do
-    specify { IndividualSponsorOption.make_unsaved(:link_label => '').should_not be_valid }
-    specify { IndividualSponsorOption.make_unsaved(:link_url   => '').should_not be_valid }
+  context 'link_label のみは OK' do
+    subject { IndividualSponsorOption.make_unsaved(:link_url   => '') }
+    it { should be_valid }
+  end
+
+  context 'link_url のみは NG' do
+    subject { IndividualSponsorOption.make_unsaved(:link_label => '').tap(&:valid?) }
+    its(:errors) { should be_invalid(:link_label) }
   end
 end

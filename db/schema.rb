@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100512042405) do
+ActiveRecord::Schema.define(:version => 20100516162909) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20100512042405) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "purchased_at"
-    t.integer  "price",                                             :null => false
+    t.integer  "price",                          :default => 0,     :null => false
     t.integer  "paypal_payment_notification_id"
     t.integer  "ruby_kaigi_id",                  :default => 5,     :null => false
     t.string   "invoice_code",                                      :null => false
@@ -114,11 +114,11 @@ ActiveRecord::Schema.define(:version => 20100512042405) do
   add_index "product_items", ["item_code"], :name => "index_product_items_on_item_code", :unique => true
 
   create_table "ruby_kaigis", :force => true do |t|
-    t.integer  "year",           :null => false
+    t.integer  "year",                          :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "capacity",       :null => false
-    t.integer  "party_capacity", :null => false
+    t.integer  "capacity",       :default => 0, :null => false
+    t.integer  "party_capacity", :default => 0, :null => false
   end
 
   add_index "ruby_kaigis", ["year"], :name => "index_ruby_kaigis_on_year", :unique => true
@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(:version => 20100512042405) do
     t.string   "identity_url"
     t.string   "full_name"
     t.string   "website"
+    t.string   "avatar_type",     :default => "default", :null => false
   end
 
   add_index "rubyists", ["identity_url"], :name => "index_rubyists_on_identity_url", :unique => true

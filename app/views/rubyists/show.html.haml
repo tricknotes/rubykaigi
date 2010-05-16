@@ -1,5 +1,7 @@
 #content
-  %h1!= rubyist_name @rubyist
+  %h1
+    != image_tag @rubyist.avatar_url
+    = rubyist_name @rubyist
 
   - if @rubyist == user
     %p [That's you!]

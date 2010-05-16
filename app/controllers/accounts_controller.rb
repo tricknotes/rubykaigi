@@ -4,7 +4,15 @@ class AccountsController < ApplicationController
   layout_for_latest_ruby_kaigi
 
   def new
-    @rubyist = Rubyist.new
+    @rubyist = Rubyist.new.tap {|r|
+      r.twitter_user_id, r.identity_url = session[:credentials].values_at(:twitter_user_id, :identity_url)
+
+      if tw = r.twitter_account
+        r.full_name   = tw.name
+        r.website     = tw.url
+        r.avatar_type = 'twitter'
+      end
+    }
   end
 
   def create

@@ -4,13 +4,12 @@ class TwitterAccount
   extend ActiveSupport::Memoizable
 
   def initialize(twitter_user_id)
-    raise ArgumentError if twitter_user_id.blank?
     @user_id = twitter_user_id
   end
 
   attr_reader :user_id
 
-  ATTRS = %w(screen_name profile_image_url)
+  ATTRS = %w(name screen_name url profile_image_url)
 
   ATTRS.each do |attr|
     define_method attr do
@@ -20,6 +19,8 @@ class TwitterAccount
 
   def attributes
     JSON.parse(redis[key] ||= fetch_single)
+  rescue Twitter::NotFound
+    {}
   end
   memoize :attributes
 

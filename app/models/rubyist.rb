@@ -12,6 +12,8 @@ class Rubyist < ActiveRecord::Base
   validates_uniqueness_of :twitter_user_id, :allow_nil => true
   validates_uniqueness_of :identity_url, :allow_nil => true
 
+  validates_inclusion_of :avatar_type, :in => %w(default twitter gravatar)
+
   attr_protected :twitter_user_id, :identity_url
 
   def to_param
@@ -49,10 +51,21 @@ class Rubyist < ActiveRecord::Base
     contribution_types_of(kaigi_year).include?('party_attendee')
   end
 
-  def twitter_account(id = twitter_user_id)
-    TwitterAccount.new(id)
-  rescue Twitter::NotFound
-    nil
+  def twitter_account
+    return nil if twitter_user_id.blank?
+    @twitter_account ||= TwitterAccount.new(twitter_user_id)
+  end
+
+  def avatar_url(type = avatar_type)
+    case type.to_s
+    when 'twitter'
+      twitter_account.try(:profile_image_url)
+    when 'gravatar'
+      "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}?s=48"
+    else
+      # TODO 棒人間に差し替える
+      '/2010/images/icon.gif'
+    end
   end
 
   private

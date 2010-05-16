@@ -37,8 +37,8 @@ describe Rubyist do
     end
   end
 
-  describe '#twitter' do
-    subject { Rubyist.make(:twitter_user_id => 1234).twitter }
+  describe '#twitter_account' do
+    subject { Rubyist.make(:twitter_user_id => 1234).twitter_account }
     its(:user_id) { should == 1234 }
   end
 end

@@ -49,9 +49,10 @@ class Rubyist < ActiveRecord::Base
     contribution_types_of(kaigi_year).include?('party_attendee')
   end
 
-  def twitter
-    return unless twitter_user_id
-    TwitterAccount.new(twitter_user_id)
+  def twitter_account(id = twitter_user_id)
+    TwitterAccount.new(id)
+  rescue Twitter::NotFound
+    nil
   end
 
   private

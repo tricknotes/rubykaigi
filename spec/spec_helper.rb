@@ -37,6 +37,7 @@ Spork.prefork do
     config.include EmailSpec::Helpers
     config.include EmailSpec::Matchers
     config.include WardenHelperMethods
+    config.include WithRedis
 
     # == Fixtures
     #
@@ -81,6 +82,7 @@ Spork.prefork do
     config.before(:each) do
       DatabaseCleaner.start
       Sham.reset(:before_each)
+      redis.flushdb
     end
 
     config.after(:each) do

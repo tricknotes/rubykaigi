@@ -36,4 +36,9 @@ describe Rubyist do
       its(:errors) { should be_invalid(:website) }
     end
   end
+
+  describe '#twitter' do
+    subject { Rubyist.make(:twitter_user_id => 1234).twitter }
+    its(:user_id) { should == 1234 }
+  end
 end

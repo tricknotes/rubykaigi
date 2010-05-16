@@ -7,6 +7,10 @@ development:
   pool: 5
   timeout: 5000
   socket: /opt/local/var/run/mysql5/mysqld.sock
+  redis:
+    host: localhost
+    port: 6379
+    db: 0
 
 test: &TEST
   adapter: mysql
@@ -17,6 +21,10 @@ test: &TEST
   pool: 5
   timeout: 5000
   socket: /opt/local/var/run/mysql5/mysqld.sock
+  redis:
+    host: localhost
+    port: 6379
+    db: 1
 
 production:
   adapter: mysql
@@ -27,6 +35,10 @@ production:
   pool: 5
   timeout: 5000
   socket: /var/run/mysqld/mysqld.sock
+  redis:
+    host: localhost
+    port: 6379
+    db: 2
 
 cucumber:
   <<: *TEST

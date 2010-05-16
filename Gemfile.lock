@@ -139,6 +139,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  redis: 
+    group: 
+    - :default
+    version: ">= 0"
   capistrano-notification: 
     group: 
     - :development
@@ -149,6 +153,10 @@ dependencies:
     group: 
     - :test
     - :cucumber
+    version: ">= 0"
+  twitter: 
+    group: 
+    - :default
     version: ">= 0"
   rack-google-analytics: 
     group: 
@@ -229,7 +237,7 @@ specs:
 - selenium-webdriver: 
     version: 0.0.18
 - capybara: 
-    version: 0.3.7
+    version: 0.3.8
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -240,6 +248,8 @@ specs:
     version: 0.1.0
 - configatron: 
     version: 2.6.3
+- crack: 
+    version: 0.1.6
 - diff-lcs: 
     version: 1.1.2
 - trollop: 
@@ -271,9 +281,13 @@ specs:
 - god: 
     version: 0.9.0
 - haml: 
-    version: 3.0.0
+    version: 3.0.4
+- hashie: 
+    version: 0.2.0
 - hoptoad_notifier: 
     version: 2.2.2
+- httparty: 
+    version: 0.5.2
 - i18n_generators: 
     version: 0.6.0
     source: 0
@@ -293,8 +307,12 @@ specs:
     version: 1.0.3
 - rails: 
     version: 2.3.5
+- warden: 
+    version: 0.10.4
 - rails_warden: 
-    version: 0.5.1
+    version: 0.5.2
+- redis: 
+    version: 2.0.0
 - rr: 
     version: 0.10.11
 - rspec: 
@@ -307,8 +325,10 @@ specs:
     version: 0.3.7
 - thin: 
     version: 1.2.7
-- warden: 
-    version: 0.10.3
+- yajl-ruby: 
+    version: 0.7.6
+- twitter: 
+    version: 0.9.5
 - warden-openid: 
     version: 0.0.1
 - warden_oauth: 
@@ -319,7 +339,7 @@ specs:
     version: 0.4.2
 - will_paginate: 
     version: 2.3.12
-hash: f5ad355f37e31a23a947aba05e89112d4af3902d
+hash: bbbdd70c47e1c03457183849c45b263bc76362fc
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

@@ -49,6 +49,11 @@ class Rubyist < ActiveRecord::Base
     contribution_types_of(kaigi_year).include?('party_attendee')
   end
 
+  def twitter
+    return unless twitter_user_id
+    TwitterAccount.new(twitter_user_id)
+  end
+
   private
   def contribution_types_of(kaigi_year)
     contributions.select {|c| c.ruby_kaigi.year == kaigi_year }.map(&:contribution_type)

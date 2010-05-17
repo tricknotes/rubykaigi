@@ -164,27 +164,25 @@ h4
       margin: 10px 0px 0px 0px
       vertical-align: middle
 
+=borderradius
+  -webkit-border-radius: 7px
+  -moz-border-radius: 7px
+  border-radius: 7px
+
 
 .whitebox_alpha
-  color: #393939
   background-image: url(/2010/images/bg_white.png)
   background-repeat: repeat
-  -webkit-border-radius: 7px
+  +borderradius
   -webkit-border-top-right-radius: 0
-  -moz-border-radius: 7px
   -moz-border-radius-topright: 0
-  border-radius: 7px
   border-top-right-radius: 0
 
 
 .whitebox
   padding: 10px
-  color: #393939
   background-color: #fff
-  background-repeat: repeat
-  -webkit-border-radius: 7px
-  -moz-border-radius: 7px
-  border-radius: 7px
+  +borderradius
 
 
 .mark
@@ -486,6 +484,12 @@ a
   * html &
     height: 1px
 
+#addfeed
+  border: #ccc 1px solid
+  padding: 5px 2px 2px 2px
+  margin-left: 270px
+  text-align: center
+  +borderradius
 
 #sponsors_ruby,
 #sponsors_platinum

@@ -534,6 +534,9 @@ a
   h3
     margin: 10px
 
+=sponsors_individual_badge
+  padding: 0px 5px 5px 30px
+  background: url(/2010/images/sponsors_individual_badge.png) no-repeat top left
 
 #sponsors_individual
   ul
@@ -541,6 +544,13 @@ a
       margin: 5px
       width: 250px
       float: left
+      +sponsors_individual_badge
+
+.individual_badge
+  width: 170px
+  margin: 0 auto
+  +sponsors_individual_badge
+  
 
 #sponsors_ruby.whitebox.center a,
 #sponsors_platinum.whitebox.center a,

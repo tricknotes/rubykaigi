@@ -1,31 +1,33 @@
 <p>
-  <b>Title en:</b>
-  <%=h @event.title_en %>
+  <b>Speaker(s):</b>
+  <%- @event.speakers.each do |speaker| -%>
+    <%= link_to speaker.full_name, speaker %><br>
+  <% end -%>
 </p>
 
 <p>
-  <b>Title ja:</b>
-  <%=h @event.title_ja %>
+  <b>Title</b>
+  <%=h @event.title %>
 </p>
 
 <p>
-  <b>Abstract en:</b>
-  <%=h @event.abstract_en %>
+  <b>When:</b>
+  <%= l @event.date %> <%= l @event.from, :format => :hhmm %> - <%= l @event.to, :format => :hhmm %>
 </p>
 
 <p>
-  <b>Abstract ja:</b>
-  <%=h @event.abstract_ja %>
+  <b>Room:</b>
+  <%= @event.room.name %>
 </p>
 
 <p>
-  <b>Detail en:</b>
-  <%=h @event.detail_en %>
+  <b>Abstract</b>
+  <%=h @event.abstract %>
 </p>
 
 <p>
-  <b>Detail ja:</b>
-  <%=h @event.detail_ja %>
+  <b>Detail</b>
+  <%=h @event.detail %>
 </p>
 
 <p>

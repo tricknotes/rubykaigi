@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :rooms
+
   map.resources :time_slits
 
   map.resource :sessions, :collection => {:unauthenticated => :get}

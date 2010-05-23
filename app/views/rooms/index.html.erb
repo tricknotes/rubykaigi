@@ -1,0 +1,28 @@
+<h1>Listing rooms</h1>
+
+<table>
+  <tr>
+    <th>Name en</th>
+    <th>Name ja</th>
+    <th>Floor en</th>
+    <th>Floor ja</th>
+    <th>Sort order</th>
+  </tr>
+
+<% @rooms.each do |room| %>
+  <tr>
+    <td><%=h room.name_en %></td>
+    <td><%=h room.name_ja %></td>
+    <td><%=h room.floor_en %></td>
+    <td><%=h room.floor_ja %></td>
+    <td><%=h room.sort_order %></td>
+    <td><%= link_to 'Show', room %></td>
+    <td><%= link_to 'Edit', edit_room_path(room) %></td>
+    <td><%= link_to 'Destroy', room, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New room', new_room_path %>

@@ -1,40 +1,22 @@
-<h1>Listing events</h1>
-
-<table>
-  <tr>
-    <th>Title en</th>
-    <th>Title ja</th>
-    <th>Abstract en</th>
-    <th>Abstract ja</th>
-    <th>Detail en</th>
-    <th>Detail ja</th>
-    <th>Additional info</th>
-    <th>Lang</th>
-    <th>Required equipment</th>
-    <th>Parent event</th>
-    <th>Break</th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%=h event.title_en %></td>
-    <td><%=h event.title_ja %></td>
-    <td><%=h event.abstract_en %></td>
-    <td><%=h event.abstract_ja %></td>
-    <td><%=h event.detail_en %></td>
-    <td><%=h event.detail_ja %></td>
-    <td><%=h event.additional_info %></td>
-    <td><%=h event.lang %></td>
-    <td><%=h event.required_equipment %></td>
-    <td><%=h event.parent_event_id %></td>
-    <td><%=h event.break %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New event', new_event_path %>
+<div id="timetables">
+<% @events.group_by(&:date).each do |date, events_per_date| -%>
+  <a name="timetable-<%= date.strftime '%m%d' %>"></a>
+  <h2><%= l date, :format => :long %></h2>
+  <table class="timetable">
+    <thead>
+      <tr>
+        <th class="time">&nbsp;</th>
+        <%- @rooms.each do |room| -%>
+        <th class="room"><%= room.name %></th>
+        <%- end -%>
+      </tr>
+    </thead>
+    <tbody>
+  <% (events_per_date.map(&:from).min..events_per_date.map(&:to).max).step(30.minutes) do |from| -%>
+    <% events_per_from = events_per_date.select {|e| e.time.from == from} -%>
+    <%= render 'time', :from => from, :events_per_from => events_per_from %>
+  <% end -%>
+    </tbody>
+  </table>
+<% end -%>
+</div>

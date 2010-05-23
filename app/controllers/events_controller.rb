@@ -1,8 +1,11 @@
 class EventsController < ApplicationController
+  layout_for_latest_ruby_kaigi
+
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all
+    @events = Event.all :include => [:room, :time_slits]
+    @rooms = @events.map(&:room).uniq.sort_by(&:sort_order)
 
     respond_to do |format|
       format.html # index.html.erb

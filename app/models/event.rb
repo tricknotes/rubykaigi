@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  extend ActiveSupport::Memoizable
+
   has_many :event_rubyists
   has_many :speakers, :source => :account, :through => :event_rubyists, :source => :rubyist
   has_many :event_time_slits
@@ -29,4 +31,16 @@ class Event < ActiveRecord::Base
   def date
     from.to_date
   end
+
+  def time
+    returning [self.from, self.to] do |arr|
+      def arr.from; first; end
+      def arr.to; last; end
+    end
+  end
+
+  def minutes
+    (to - from).to_i / 60
+  end
+  memoize :from, :to, :date, :time
 end

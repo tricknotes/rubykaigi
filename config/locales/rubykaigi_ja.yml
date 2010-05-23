@@ -1,4 +1,8 @@
 ja:
+  time:
+    formats:
+      hhmm: "%H:%M"
+
   rubykaigi2010: '日本Ruby会議 2010'
   sponsors: 'スポンサー'
   ruby_sponsor: 'Rubyスポンサー'

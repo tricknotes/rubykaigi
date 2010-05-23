@@ -1,4 +1,8 @@
 en:
+  time:
+    formats:
+      hhmm: "%H:%M"
+
   rubykaigi2010: RubyKaigi 2010
   sponsors: 'Sponsors'
   ruby_sponsor: 'Ruby Sponsor'

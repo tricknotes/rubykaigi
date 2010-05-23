@@ -1,0 +1,58 @@
+<p>
+  <b>Title en:</b>
+  <%=h @event.title_en %>
+</p>
+
+<p>
+  <b>Title ja:</b>
+  <%=h @event.title_ja %>
+</p>
+
+<p>
+  <b>Abstract en:</b>
+  <%=h @event.abstract_en %>
+</p>
+
+<p>
+  <b>Abstract ja:</b>
+  <%=h @event.abstract_ja %>
+</p>
+
+<p>
+  <b>Detail en:</b>
+  <%=h @event.detail_en %>
+</p>
+
+<p>
+  <b>Detail ja:</b>
+  <%=h @event.detail_ja %>
+</p>
+
+<p>
+  <b>Additional info:</b>
+  <%=h @event.additional_info %>
+</p>
+
+<p>
+  <b>Lang:</b>
+  <%=h @event.lang %>
+</p>
+
+<p>
+  <b>Required equipment:</b>
+  <%=h @event.required_equipment %>
+</p>
+
+<p>
+  <b>Parent event:</b>
+  <%=h @event.parent_event_id %>
+</p>
+
+<p>
+  <b>Break:</b>
+  <%=h @event.break %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,20 @@
+<h1>Editing time_slit</h1>
+
+<% form_for(@time_slit) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :start_at %><br />
+    <%= f.datetime_select :start_at %>
+  </p>
+  <p>
+    <%= f.label :end_at %><br />
+    <%= f.datetime_select :end_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @time_slit %> |
+<%= link_to 'Back', time_slits_path %>

@@ -2,10 +2,11 @@
   %a{:name => 'individuals'}
     = t('individual_sponsor')
 
-%ul
-  - if ((sponsors = Contribution.individual_sponsors_of(2010)).present?)
-    - sponsors.each do |sponsor|
-      %li
-        != link_to_if(sponsor.link_url.present?, h(sponsor.link_label), sponsor.link_url)
-  - else
-    %li (Not Yet)
+%div#sponsors_individual.whitebox.clearfix
+  %ul
+    - if ((sponsors = Contribution.individual_sponsors_of(2010)).present?)
+      - sponsors.each do |sponsor|
+        %li
+          != link_to_if(sponsor.link_url.present?, h(sponsor.link_label), sponsor.link_url)
+    - else
+      %li (Not Yet)

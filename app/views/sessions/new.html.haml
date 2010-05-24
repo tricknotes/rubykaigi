@@ -10,15 +10,23 @@
           :repeat no-repeat
           :position 2px center
 
-#content
-  %h1= @title
-
+%div#content
+  %h1 #{@title}
+  %h2
+    サインイン
   %ul
-    %li!= link_to 'Sign in with Twitter', sessions_path(:warden_oauth_provider => 'twitter')
-    %li!= link_to 'Sign in with Google Account', sessions_path(:openid_identifier => 'https://www.google.com/accounts/o8/id')
-    %li!= link_to 'Sign in with Yahoo! ID', sessions_path(:openid_identifier => 'http://yahoo.com')
-    %li!= link_to 'Sign in with Yahoo! Japan ID', sessions_path(:openid_identifier => 'http://yahoo.co.jp')
     %li
-      - form_tag sessions_path, :method => :get do
-        != text_field_tag :openid_identifier
-        != submit_tag 'Sign in'
+      Twitterアカウントでサインイン
+      %br
+      != link_to image_tag('/2010/images/signin_twitter.png', :alt => 'Sign in with Twitter account'), sessions_path(:warden_oauth_provider => 'twitter'), :class => 'noborder'
+    %li
+      Googleアカウントでサインイン
+      %br
+      != link_to image_tag('/2010/images/signin_google.png', :alt => 'Sign in with Google account'), sessions_path(:warden_oauth_provider => 'google'), :class => 'noborder'
+  %h2
+    上記アカウントをお持ちで無い場合はこちら
+
+  - form_tag sessions_path, :method => :get do
+    %p
+      != text_field_tag :openid_identifier
+      != submit_tag 'Sign in'

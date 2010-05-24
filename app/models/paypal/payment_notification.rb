@@ -18,6 +18,10 @@ module Paypal
         HashWithIndifferentAccess[syms.map {|attr_sym| [attr_sym, params[attr_sym]]}]
       end
 
+    end # eigenclass
+
+    def completed?
+      payment_status == "Completed"
     end
   end
 end

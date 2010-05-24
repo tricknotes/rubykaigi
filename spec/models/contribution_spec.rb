@@ -31,6 +31,7 @@ describe Contribution do
         :rubyist => @kakutani,
         :ruby_kaigi => RubyKaigi._2010,
         :line_items => [@line_item])
+      stub(@order).completed? { true }
     end
 
     context "懇親会に参加するチェックをつけている" do
@@ -130,6 +131,18 @@ describe Contribution do
         }.to raise_error Contribution::DuplicationError
       end
     end
+
+    context "PayPalで決済が完了していない場合" do
+      before do
+        stub(@order).completed? { false }
+      end
+
+      specify do
+        expect {
+          Contribution.from_order(@order)
+        }.should raise_error Contribution::OrderNotCompletedError
+      end
+    end
   end
 end
 
@@ -162,7 +175,6 @@ describe Contribution do
 
       it { should be_staff(2010) }
     end
-
   end
 end
 

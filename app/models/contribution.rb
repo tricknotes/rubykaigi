@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class Contribution < ActiveRecord::Base
+  class OrderNotCompletedError < StandardError; end
   class DuplicationError < StandardError; end
 
   class Type
@@ -18,6 +19,8 @@ class Contribution < ActiveRecord::Base
     end
 
     def create
+      validate_order_is_completed
+
       if individual_sponsor_included?
         # TODO なんかこのへん年ごとに依存してるなあ。年毎のオブジェクトにdouble dispatchしたほうがいいんかな。
         individual_sponsor = build_contribution_for(Contribution::Type.individual_sponsor).as_individual_sponsor
@@ -60,6 +63,13 @@ class Contribution < ActiveRecord::Base
         :rubyist => order.rubyist,
         :ruby_kaigi => order.ruby_kaigi,
         :order_item => extract_individual_sponsor_order_item)
+    end
+
+    def validate_order_is_completed
+      unless order.completed?
+        raise(OrderNotCompletedError,
+          "#{order.rubyist.username}(order_id: #{order.id})'s order was not completed for rubykaigi #{order.ruby_kaigi.year}")
+      end
     end
 
   end # FromOrder

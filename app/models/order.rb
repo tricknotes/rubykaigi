@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
       prefix = Digest::SHA1.hexdigest(srand.to_s)[0..7].upcase
       "#{ymd}-#{prefix}"
     end
-  end
+  end # engenclass
 
   def before_create
     self.invoice_code = Order.generate_invoice_code
@@ -31,5 +31,9 @@ class Order < ActiveRecord::Base
 
   def individual_sponsor_included?
     line_items.detect {|item| item.individual_sponsor? }
+  end
+
+  def completed?
+    paypal_payment_notification.present? && paypal_payment_notification.completed?
   end
 end

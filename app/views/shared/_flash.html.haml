@@ -1,0 +1,11 @@
+#flash{:style => 'display:none'}
+  %div{:class => level}
+    %span #{flash_message}
+
+:javascript
+  $(document).ready(function() {
+    $('#flash').fadeIn('slow');
+    $('#flash').click(function() {
+      $('#flash').fadeOut('slow');
+    });
+    });

@@ -12,10 +12,12 @@
       </tr>
     </thead>
     <tbody>
-  <% (events_per_date.map(&:from).min..events_per_date.map(&:to).max).step(30.minutes) do |from| -%>
-    <% events_per_from = events_per_date.select {|e| e.time.from == from} -%>
-    <%= render 'time', :from => from, :events_per_from => events_per_from %>
-  <% end -%>
+  <%- from, to = events_per_date.map(&:from).min, events_per_date.map(&:to).max -%>
+  <%- while from.time < to.time -%>
+    <%- events_per_from = events_per_date.select {|e| e.time.from == from} -%>
+      <%= render 'time', :from => from, :events_per_from => events_per_from -%>
+    <%- from += 30.minutes -%>
+  <%- end -%>
     </tbody>
   </table>
 <% end -%>

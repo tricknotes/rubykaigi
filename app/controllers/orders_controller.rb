@@ -7,6 +7,10 @@ class OrdersController < ApplicationController
     cart = current_cart
     @order = Order.new(:rubyist => user, :ruby_kaigi => RubyKaigi.latest)
     @order.add_line_item_from_cart(cart)
+    if @order.individual_sponsor_included? && authenticated? && user.individual_sponsor?
+      flash[:error] = "You're already Individual Sponsor of RubyKaigi #{RubyKaigi.latest_year}"
+      redirect_to(carts_path) and return
+    end
     if @order.save
       session[:order_id] = @order.id
       if @order.individual_sponsor_included?

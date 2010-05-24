@@ -3,7 +3,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account
   map.resources :rubyists
 
-  map.resources :registrations
   map.resources :carts, :collection => {
     :add_item => :post, :remove_item => :delete
   }

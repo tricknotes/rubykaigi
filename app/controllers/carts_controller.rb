@@ -17,9 +17,13 @@ class CartsController < ApplicationController
     product_item = ProductItem.find_by_item_code(params[:product_item_code])
     unless product_item
       # TODO handle flash
-      redirect_to registrations_url
-      return
+      redirect_to(registrations_url(:year => RubyKaigi.latest_year, :locale => current_locale)) and return
     end
+    if authenticated? && user.individual_sponsor?
+      flash[:error] = "You're already Individual Sponsor of RubyKaigi #{RubyKaigi.latest_year}"
+      redirect_to(registrations_url(:year => RubyKaigi.latest_year, :locale => current_locale)) and return
+    end
+
     cart.add_product(product_item)
     redirect_to carts_path
   end

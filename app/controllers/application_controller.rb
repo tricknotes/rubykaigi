@@ -55,4 +55,9 @@ class ApplicationController < ActionController::Base
   def current_cart
     session[:cart] ||= Cart.new
   end
+
+  # XXX duplicated in application_helper.rb
+  def current_locale
+    I18n.locale
+  end
 end

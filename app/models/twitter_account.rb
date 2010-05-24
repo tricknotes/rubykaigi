@@ -18,11 +18,10 @@ class TwitterAccount
   end
 
   def attributes
-    JSON.parse(redis[key] ||= fetch_single)
+    JSON.parse(redis ? (redis[key] ||= fetch_single) : fetch_single)
   rescue Twitter::NotFound
     {}
   end
-  memoize :attributes
 
   def fetch_single
     twitter.user(user_id).slice(*ATTRS).to_json

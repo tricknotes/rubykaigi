@@ -82,7 +82,7 @@ Spork.prefork do
     config.before(:each) do
       DatabaseCleaner.start
       Sham.reset(:before_each)
-      redis.flushdb
+      redis.try(:flushdb)
     end
 
     config.after(:each) do

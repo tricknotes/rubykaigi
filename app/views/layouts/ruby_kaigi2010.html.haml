@@ -34,46 +34,46 @@
       %ul.sf-menu
         %li.current
           %a{ :href => "#" }
-            日本Ruby会議2010
+            #{t(:rubykaigi2010)}
           %ul
             %li
               %a{ :href => "/2010/#{params[:locale]}/Prospectus" }
-                イベント趣意書
+                #{t(:prospectus)}
             %li
               %a{ :href => "#" }
-                チケット
+                #{t(:tickets)}
             %li
               %a{ :href => "#" }
-                実行委員
+                #{t(:team)}
             %li
               %a{ :href => "#" }
-                スポンサー
+                #{t(:sponsors)}
             %li
               %a{ :href => "#" }
-                おまけ
+                #{t(:goodies)}
             %li
               %a{ :href => "#" }
-                取材をご希望の方へ
+                #{t(:press)}
             %li
               %a
-                これまでのRuby会議
+                #{t(:rubykaigi_archives)}
               %ul
                 %li
                   %a{ :href => "http://rubykaigi.org/2009/#{params[:locale]}" }
-                    \Ruby会議2009
+                    \#{t(:rubykaigi)} 2009
                 %li
                   %a{ :href => "http://jp.rubyist.net/RubyKaigi2008/" }
-                    \Ruby会議2008
+                    \#{t(:rubykaigi)} 2008
                 %li
                   %a{ :href => "http://jp.rubyist.net/RubyKaigi2007/" }
-                    \Ruby会議2007
+                    \#{t(:rubykaigi)} 2007
                 %li
                   %a{ :href => "http://jp.rubyist.net/RubyKaigi2006/" }
-                    \Ruby会議2006
+                    \#{t(:rubykaigi)} 2006
 
         %li.current
           %a{ :href => "#" }
-            タイムテーブル(準備中)
+            #{t(:time_table)}(#{t(:coming_soon)})
           %ul
             %li
               %a{ :href => "#" }
@@ -86,7 +86,7 @@
                 X月X日
         %li.current
           %a{ :href => "#" }
-            ライブ(準備中)
+            #{t(:live)}(#{t(:coming_soon)})
           %ul
             %li
               %a{ :href => "#" }
@@ -99,14 +99,14 @@
                 ○○会議室
         %li.current
           %a{ :href => "#" }
-            参加者向け情報
+            #{t(:information)}
           %ul
             %li
               %a{ :href => "#" }
-                ネットワーク
+                #{t(:network)}
             %li
               %a{ :href => "#" }
-                電源
+                #{t(:power_outlets)}
             %li
               %a{ :href => "#" }
                 IRC
@@ -115,12 +115,12 @@
                 FAQ
             %li
               %a{ :href => "#" }
-                ジュンク堂書店
+                #{t(:junkudo)}
                 %br
-                RubyKaigi店
+                RubyKaigi #{t(:store)}
         %li.current
           %a{ :href => "http://rubykaigi.tdiary.net/" }
-            Ruby会議日記
+            #{t(:rubykaigi_nikki)}
 
     %div#langnav
       %p

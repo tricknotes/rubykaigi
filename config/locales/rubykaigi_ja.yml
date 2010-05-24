@@ -1,4 +1,5 @@
 ja:
+  rubykaigi: '日本Ruby会議'
   rubykaigi2010: '日本Ruby会議 2010'
   sponsors: 'スポンサー'
   ruby_sponsor: 'Rubyスポンサー'
@@ -29,3 +30,16 @@ ja:
   individual_sponsor_link_label: "個人スポンサー一覧に掲載するリンクのラベル"
   recommend_write_in_english: "英語での記述を強くおすすめします"
   individual_sponsor_party_attend_bonus_is_over: "個人スポンサーの懇親会参加特典は終了しました。悪しからずご了承ください。"
+  prospectus: "イベント趣意書"
+  tickets: "チケット"
+  team: "実行委員"
+  goodies: "おまけ"
+  press: "取材をご希望の方へ"
+  rubykaigi_archives: "これまでのRuby会議"
+  live: "配信"
+  information: "参加者向け情報"
+  rubykaigi_nikki: "Ruby会議日記"
+  network: "ネットワーク"
+  power_outlets: "電源"
+  junkudo: "ジュンク堂書店"
+  store: "店"

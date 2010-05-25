@@ -1,8 +1,0 @@
-<div class="session">
-  <p class="title"><%= link_to event.title, event %></p>
-  <p class="speaker">
-    <%- event.speakers.each do |speaker| -%>
-      <%= speaker.full_name || speaker.username %>
-    <%- end -%>
-  </p>
-</div>

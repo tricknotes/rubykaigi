@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100516162909) do
+ActiveRecord::Schema.define(:version => 20100523103749) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -34,6 +34,43 @@ ActiveRecord::Schema.define(:version => 20100516162909) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "event_rooms", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "room_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_rubyists", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "rubyist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_time_slits", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "time_slit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "title_en"
+    t.string   "title_ja"
+    t.string   "abstract_en"
+    t.string   "abstract_ja"
+    t.string   "detail_en"
+    t.string   "detail_ja"
+    t.string   "additional_info"
+    t.string   "lang"
+    t.string   "required_equipment"
+    t.integer  "parent_event_id"
+    t.boolean  "break"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "headline_entries", :force => true do |t|
     t.text     "title"
@@ -113,6 +150,16 @@ ActiveRecord::Schema.define(:version => 20100516162909) do
 
   add_index "product_items", ["item_code"], :name => "index_product_items_on_item_code", :unique => true
 
+  create_table "rooms", :force => true do |t|
+    t.string   "name_en"
+    t.string   "name_ja"
+    t.string   "floor_en"
+    t.string   "floor_ja"
+    t.integer  "sort_order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "ruby_kaigis", :force => true do |t|
     t.integer  "year",                          :null => false
     t.datetime "created_at"
@@ -138,5 +185,12 @@ ActiveRecord::Schema.define(:version => 20100516162909) do
   add_index "rubyists", ["identity_url"], :name => "index_rubyists_on_identity_url", :unique => true
   add_index "rubyists", ["twitter_user_id"], :name => "index_rubyists_on_twitter_user_id", :unique => true
   add_index "rubyists", ["username"], :name => "index_rubyists_on_username", :unique => true
+
+  create_table "time_slits", :force => true do |t|
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

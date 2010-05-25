@@ -6,26 +6,32 @@
   - form_for @rubyist, :url => account_path do |form|
     != render :partial => form
 
+    -#     %dl
+    -#       %dt Avatar
+    -#       %dd
+    -#         %ul
+    -#           - if @rubyist.twitter_account
+    -#             %li
+    -#               != image_tag @rubyist.avatar_url(:twitter)
+    -#               %label
+    -#                 != form.radio_button :avatar_type, :twitter
+    -#                 Twitter
+    -#           %li
+    -#             != image_tag @rubyist.avatar_url(:gravatar)
+    -#             %label
+    -#               != form.radio_button :avatar_type, :gravatar
+    -#               Gravatar
+    -#           %li
+    -#             != image_tag @rubyist.avatar_url(:default)
+    -#             %label
+    -#               != form.radio_button :avatar_type, :default
+    -#               Sticky Man
     %dl
-      %dt Avatar
+      %dt Avator Icon
       %dd
-        %ul
-          - if @rubyist.twitter_account
-            %li
-              != image_tag @rubyist.avatar_url(:twitter)
-              %label
-                != form.radio_button :avatar_type, :twitter
-                Twitter
-          %li
-            != image_tag @rubyist.avatar_url(:gravatar)
-            %label
-              != form.radio_button :avatar_type, :gravatar
-              Gravatar
-          %li
-            != image_tag @rubyist.avatar_url(:default)
-            %label
-              != form.radio_button :avatar_type, :default
-              Sticky Man
+        %div{:style=>"padding-left:1em"}
+          != image_tag("/images/bow_face.png", :alt => 'Avator', :title => 'Avator Icon Setting Feature is coming soon', :height => 40)
+          <br />(coming soon)
 
     != form.submit 'Save'
 

@@ -14,8 +14,6 @@ ActionController::Routing::Routes.draw do |map|
   map.dashboard("/dashboard",
     :controller => 'dashboard', :action => 'index')
 
-  map.spike("/spike", :controller => 'spike', :action => 'index')
-
    map.registrations(":year/:locale/Registration",
      :controller => 'registrations', :action => 'index',
      :requirements => {:year => /2\d{3}/, :locale => /en|ja/})

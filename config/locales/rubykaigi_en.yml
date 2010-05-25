@@ -7,7 +7,7 @@ en:
   gold_sponsor: 'Gold Sponsor'
   individual_sponsor: 'Individual Sponsor'
   link_to_individual_sponsors: 'Individual Sponsor List'
-  coming_soon: 'Coming Soon'
+  coming_soon: 'Upcoming'
   product_item:
     rk10: 'RubyKaigi 2010'
     rk10_party: 'Conference Perty(RubyKaigi 2010)'
@@ -16,7 +16,7 @@ en:
   sign_out: 'Sign Out'
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
-  time_table: 'Time Table'
+  time_table: 'Schedule'
   registration: 'Registration'
   order:
     confirm: "Order Confirmation"
@@ -31,13 +31,13 @@ en:
   recommend_write_in_english: "It's strongly recommended to write in English"
   individual_sponsor_party_attend_bonus_is_over: "Sorry. RubyKaigi 2010 official conference party ticket has been sold out."
   prospectus: "Prospectus"
-  tickets: "Tickets"
+  tickets: "Registration"
   team: "Team"
   goodies: "Goodies"
   press: "Press"
   rubykaigi_archives: "Archives"
   live: "Live"
-  information: "Information"
+  information: "Attendee"
   rubykaigi_nikki: "Blog"
   network: "Internet Access"
   power_outlets: "Power Outlets"

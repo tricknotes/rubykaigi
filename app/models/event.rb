@@ -8,6 +8,9 @@ class Event < ActiveRecord::Base
   has_one :event_room
   has_one :room, :through => :event_room
 
+  named_scope :at, lambda {|room| {:joins => :event_room, :conditions => {:event_rooms => {:room_id => room}}}}
+  named_scope :on, lambda {|day| {:joins => :time_slits, :conditions => {:time_slits => {:start_at => (from = Time.parse(day))..from.end_of_day}}}}
+
   def title
     I18n.locale.to_s == 'ja' ? (title_ja || title_en) : (title_en || title_ja)
   end

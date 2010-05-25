@@ -1,4 +1,4 @@
-class RegistrationsController < ApplicationController
+class RegistrationsController < LocaleBaseController
   layout_for_latest_ruby_kaigi
 
   def index

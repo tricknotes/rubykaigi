@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-require "capistrano/ext/multistage"
+set :stages, %w(staging production)
 set :default_stage, "staging"
-trigger :start
-
 set :application, "rubykaigi"
 set :repository,  "git://github.com/ruby-no-kai/rubykaigi.git"
+set :branch, "production"
+require "capistrano/ext/multistage"
 
 set :deploy_to, "/home/#{application}/railsapp"
 set :ssh_options, { :forward_agent => true }

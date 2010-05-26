@@ -111,7 +111,9 @@ class Contribution < ActiveRecord::Base
     end
 
     def link_label
-      order_item.link_label || rubyist.full_name
+      return order_item.link_label if order_item.link_label.present?
+      return rubyist.full_name if rubyist.full_name.present?
+      rubyist.username
     end
 
     def link_url

@@ -132,10 +132,10 @@
       %p
         %a.noborder{ :href => "/" }
           %img{ :alt => "HOME", :src => "/2010/images/home_btn.png" }
-        %a{ :href => "/2010/en/" }<
+        %a{ :href => "/2010/en/#{params[:page_name]}" }
           English
         |
-        %a{ :href => "/2010/ja/" }
+        %a{ :href => "/2010/ja/#{params[:page_name]}" }
           日本語
     %div#container.whitebox_alpha.main
       %div#sidebar

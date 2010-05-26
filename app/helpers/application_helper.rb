@@ -27,4 +27,8 @@ module ApplicationHelper
     end
   end
 
+  def registration_opened?
+    datetime = RubyKaigi.latest.registration_open_at
+    !!datetime.try(:past?)
+  end
 end

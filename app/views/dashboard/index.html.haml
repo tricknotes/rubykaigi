@@ -12,6 +12,8 @@
         %li [Individual Sponsor (#{number_with_delimiter(user.individual_sponsor.amount)} JPY)]
       - if user.staff?(2010)
         %li [Staff]
+      - if user.party_attendee?(2010)
+        %li [Official Conference Party Attendee]
     - else
       %li (Not Yet)
 

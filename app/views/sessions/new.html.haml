@@ -12,7 +12,7 @@
 
 %div#content
   %h1 #{@title}
-  %h2 You can Sign in/up to rubykaigi.org with OAuth/OpenID
+  %h2 You can Sign in/up with OAuth/OpenID
   %ul
     %li
       via Twitter
@@ -27,7 +27,7 @@
     %li!= link_to 'Sign in with Yahoo! Japan ID', sessions_path(:openid_identifier => 'http://yahoo.co.jp')
     %li!= link_to 'Sign in with mixi', sessions_path(:openid_identifier => 'http://mixi.jp')
   %h2
-    Other OpenID Providers
+    Using Other OpenID Providers
 
   - form_tag sessions_path, :method => :get do
     %p

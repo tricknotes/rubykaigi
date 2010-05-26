@@ -9,8 +9,8 @@ en:
   link_to_individual_sponsors: 'Individual Sponsor List'
   coming_soon: 'Upcoming'
   product_item:
-    rk10: 'RubyKaigi 2010'
-    rk10_party: 'Conference Perty(RubyKaigi 2010)'
+    rk10: 'Conference Pass(RubyKaigi 2010)'
+    rk10_party: 'Official Conference Party(RubyKaigi 2010)'
     rk10_individual_sponsor: 'Individual Sponsor(RubyKaigi 2010)'
   sign_in: 'Sign In'
   sign_out: 'Sign Out'

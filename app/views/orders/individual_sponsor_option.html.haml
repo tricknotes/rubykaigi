@@ -1,6 +1,6 @@
 - @title = t("order.individual_sponsor_option")
 #content
-  %h1 #{@title}
+  %h1= @title
 
   - form_for @option, :url => order_path(@order), :html => {:method => :put}  do |f|
     != f.error_messages
@@ -30,5 +30,4 @@
         %dd (#{t('individual_sponsor_party_attend_bonus_is_over')})
     <br />
     <br />
-    %p{:stle => 'text-align:right'}
-      != f.submit 'Submit Individual Sponsor Additional Information'
+    %p!= f.submit t(:submit_individual_sponsor_additional_information)

@@ -11,7 +11,7 @@
         %li Individual Sponsor Link Label: <strong>#{item.link_label.present? ? item.link_label : "(default: name on your account)" }</strong>
         %li Individual Sponsor Link URL: <strong>#{item.link_url.present? ? item.link_url : "(default: website on your account)" }</strong>
         - if ProductItem.kaigi(2010).rk10_party.now_on_sale?
-          %li I <strong>#{ item.attend_party? ? "will " : "will not" }</strong> attend offician conference party on 28th Aug.
+          %li I <strong>#{ item.attend_party? ? "will " : "will not" }</strong> attend official conference party on 28th Aug.
         - else
           %li (#{t('individual_sponsor_party_attend_bonus_is_over')})
 

@@ -69,6 +69,11 @@ class OrdersController < ApplicationController
     @option.attend_party = opt_params[:attend_party]
     @option.link_label = opt_params[:link_label]
     @option.link_url = opt_params[:link_url]
-    @option.save
+    order = @option.order
+    order.calculate_price
+    Option.transaction do
+      @option.save
+      order.save
+    end
   end
 end

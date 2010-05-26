@@ -19,7 +19,7 @@ class Order < ActiveRecord::Base
   end
 
   def before_save
-    self.price = line_items.inject(0){|r,sum| r += sum.price}
+    calculate_price
   end
 
   def add_line_item_from_cart(cart)
@@ -27,6 +27,10 @@ class Order < ActiveRecord::Base
       li = OrderItem.from_cart_item(item)
       line_items << li
     end
+  end
+
+  def calculate_price
+    self.price = line_items.inject(0){|r,sum| r += sum.price}
   end
 
   def individual_sponsor_included?

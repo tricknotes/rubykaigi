@@ -23,10 +23,10 @@ class PaypalController < ApplicationController
       return
     end
 
-    unless (params[:mc_gross] == order.price.to_s && params[:mc_currency] == "JPY")
-      render :nothing => true, :status => 400
-      return
-    end
+#    unless (params[:mc_gross] == order.price.to_s && params[:mc_currency] == "JPY")
+#      render :nothing => true, :status => 400
+#      return
+#    end
 
     Order.transaction do
       notification = Paypal::PaymentNotification.from_notified_params(params)

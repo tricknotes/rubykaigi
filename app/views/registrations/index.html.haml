@@ -2,10 +2,11 @@
 #content
   %h1= @title
 
-  %p
-    To register RubyKaigi, <strong>You need to
-    != link_to 'Sign in', new_sessions_path
-    to register rubykaigi</strong> with Twitter OAuth or OpenID.
+  - unless authenticated?
+    %p
+      To register RubyKaigi, <strong>You need to
+      != link_to 'Sign in', new_sessions_path
+      to register rubykaigi</strong> with Twitter OAuth or OpenID.
 
   %h2 #{t('product_item.rk10_individual_sponsor')}
 

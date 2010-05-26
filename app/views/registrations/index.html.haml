@@ -13,6 +13,14 @@
   %p.price
     #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + #{t('additional_amount_label')}
 
+  %p
+    #{t('individual_sponsor_detail')}:
+    (
+    != link_to 'English', 'http://rubykaigi.tdiary.net/20100524.html#p02'
+    ),(
+    != link_to '日本語', 'http://rubykaigi.tdiary.net/20100507.html#p02'
+    )
+
   %p.add_to_cart{:style => 'text-align:right'}
     - addtocart_button = (current_locale == "ja" ? image_tag("/2010/images/addtocart_ja.png", :alt => "カートへ入れる") : image_tag("/2010/images/addtocart_en.png", :alt => "Add To Cart"))
 

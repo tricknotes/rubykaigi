@@ -1,10 +1,11 @@
 #content
-  %h1
-    != image_tag @rubyist.avatar_url
-    = rubyist_name @rubyist
+  %h1= rubyist_name @rubyist
+
+  %img.icon{ :alt => "Avator", :title => "Avator Icon Setting Feature is coming soon :<", :src => '/images/bow_face.png', :height => 80 }
+  <br />
 
   - if @rubyist == user
-    %p [That's you!]
+    %div (That's you!)
 
   %h2 Website
   %p

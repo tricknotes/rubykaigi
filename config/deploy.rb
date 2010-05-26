@@ -102,3 +102,5 @@ notification.irc do |irc|
   irc.channel '#rubykaigi.org'
   irc.message "#{local_user} deployed #{application} to #{deploy_target}"
 end
+
+after 'deploy:finalize_update', 'bundler:bundle'

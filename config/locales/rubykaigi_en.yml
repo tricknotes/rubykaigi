@@ -44,3 +44,5 @@ en:
   junkudo: "Junkudo"
   store: "store"
   in_preparation: "In Preparation"
+  delete_this_item: "Delete This Item"
+  amount: "Amount"

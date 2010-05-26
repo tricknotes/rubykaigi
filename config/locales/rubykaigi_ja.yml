@@ -23,7 +23,7 @@ ja:
     individual_sponsor_option: "個人スポンサー向け追加情報の設定"
   latest_news: '新着情報'
   no_news: "(特にありません)"
-  additional_amount_label: '追加支援いただける場合の金額'
+  additional_amount_label: '追加支援いただける金額'
   individual_sponsor_amount_label: '個人スポンサー支援額'
   i_will_attend_the_official_party_2010: "8月28日のRubyKaigi2010公式懇親会に参加します"
   individual_sponsor_link_url: "個人スポンサー一覧に掲載するリンクのURL"
@@ -44,3 +44,5 @@ ja:
   junkudo: "ジュンク堂書店"
   store: "店"
   in_preparation: "準備中"
+  delete_this_item: "このアイテムを削除"
+  amount: "金額"

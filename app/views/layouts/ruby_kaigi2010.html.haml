@@ -37,7 +37,7 @@
     %div#menu
       %ul.sf-menu
         %li.current
-          %a{ :href => "#" }
+          %a{ :href => "/2010/#{current_locale}" }
             #{t(:rubykaigi2010)}
           %ul
             %li
@@ -45,10 +45,10 @@
                 #{t(:prospectus)}
             - if registration_opened?
               %li
-                %a{ :href => "/2010/#{params[:locale]}/Registration" }
+                %a{ :href => "/2010/#{current_locale}/Registration" }
                   #{t(:tickets)}
             %li
-              %a{ :href => "/2010/#{params[:locale]}/Sponsors" }
+              %a{ :href => "/2010/#{current_locale}/Sponsors" }
                 #{t(:sponsors)}
               %ul
                 %li
@@ -65,7 +65,7 @@
                     \#{t(:individual_sponsor)}
             /
               %li
-                %a{ :href => "/2010/#{params[:locale]}/Team" }
+                %a{ :href => "/2010/#{current_locale}/Team" }
                   #{t(:team)}
               %li
                 %a{ :href => "#" }
@@ -78,7 +78,7 @@
                 #{t(:rubykaigi_archives)}
               %ul
                 %li
-                  %a{ :href => "http://rubykaigi.org/2009/#{params[:locale]}" }
+                  %a{ :href => "http://rubykaigi.org/2009/#{current_locale}" }
                     \#{t(:rubykaigi)} 2009
                 %li
                   %a{ :href => "http://jp.rubyist.net/RubyKaigi2008/" }

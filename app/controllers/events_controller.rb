@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class EventsController < LocaleBaseController
   layout_for_latest_ruby_kaigi
 
   # GET /events

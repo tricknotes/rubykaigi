@@ -33,3 +33,8 @@ ja:
   individual_sponsor_link_label: "個人スポンサー一覧に掲載するリンクのラベル"
   recommend_write_in_english: "英語での記述を強くおすすめします"
   individual_sponsor_party_attend_bonus_is_over: "個人スポンサーの懇親会参加特典は終了しました。悪しからずご了承ください。"
+  speaker: "スピーカー"
+  when: "日程"
+  abstract: "概要"
+  room: "会場"
+  lang: "言語"

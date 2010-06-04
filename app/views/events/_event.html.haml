@@ -1,6 +1,6 @@
 %div.session
   %p.title
-    = link_to event.title, event
+    != link_to event.title, event
   %p.speaker
     - event.speakers.each do |speaker|
       = speaker.full_name || speaker.username

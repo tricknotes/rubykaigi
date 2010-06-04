@@ -1,60 +1,38 @@
-<p>
-  <b>Speaker(s):</b>
+<div id='content'>
+  <h1><%=h @event.title %></h1>
+
+  <h2><%= t(:speaker) %></h2>
+
+  <p>
   <%- @event.speakers.each do |speaker| -%>
-    <%= link_to speaker.full_name, speaker %><br>
+    <%= link_to speaker.username, speaker %><br>
   <% end -%>
-</p>
+  </p>
 
-<p>
-  <b>Title</b>
-  <%=h @event.title %>
-</p>
+  <h2><%= t(:abstract) %></h2>
 
-<p>
-  <b>When:</b>
-  <%= l @event.date %> <%= l @event.from, :format => :hhmm %> - <%= l @event.to, :format => :hhmm %>
-</p>
-
-<p>
-  <b>Room:</b>
-  <%= @event.room.name %>
-</p>
-
-<p>
-  <b>Abstract</b>
+  <p>
   <%=h @event.abstract %>
-</p>
+  </p>
 
-<p>
-  <b>Detail</b>
-  <%=h @event.detail %>
-</p>
+  <h2><%= t(:when) %></h2>
 
-<p>
-  <b>Additional info:</b>
-  <%=h @event.additional_info %>
-</p>
+  <p>
+  <%= l @event.date %> <%= l @event.from, :format => :hhmm %> - <%= l @event.to, :format => :hhmm %>
+  </p>
 
-<p>
-  <b>Lang:</b>
+  <h2><%= t(:room) %></h2>
+
+  <p>
+  <%= @event.room.name %>
+  </p>
+
+  <h2><%= t(:lang) %></h2>
+
+  <p>
   <%=h @event.lang %>
-</p>
+  </p>
 
-<p>
-  <b>Required equipment:</b>
-  <%=h @event.required_equipment %>
-</p>
-
-<p>
-  <b>Parent event:</b>
-  <%=h @event.parent_event_id %>
-</p>
-
-<p>
-  <b>Break:</b>
-  <%=h @event.break %>
-</p>
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <%# link_to 'Edit', edit_event_path(@event) %>
+  <%= link_to 'Back', events_path(2010, current_locale) %>
+</div>

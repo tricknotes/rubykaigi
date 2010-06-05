@@ -1,3 +1,9 @@
+%w(time_slits events rooms event_rubyists event_rooms event_time_slits).each do |t|
+  conn = ActiveRecord::Base.connection
+  conn.execute("truncate #{t};")
+  conn.execute("alter table #{t} auto_increment = 1;")
+end
+
 # time_slit
 [Time.zone.parse('2010/8/27 9:30'), Time.zone.parse('2010/8/28 9:30'), Time.zone.parse('2010/8/29 9:30')].each do |start_time|
   t, end_time = start_time, 10.hours.since(start_time)

@@ -3,8 +3,8 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
       t.string :title_en
       t.string :title_ja
-      t.string :abstract_en
-      t.string :abstract_ja
+      t.text :abstract_en
+      t.text :abstract_ja
       t.string :detail_en
       t.string :detail_ja
       t.string :additional_info

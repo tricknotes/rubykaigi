@@ -3,12 +3,12 @@ class EventLoader
   # day: 27, 28 or 29
   # from, to: HH:MM
   def self.create(values)
-    title, title_ja, speaker, room, day, is_break, length = values[:title], values[:title_ja], values[:speaker], values[:room], values[:day], (values[:break] || false), (values[:length] || 30.minutes)
+    title, title_ja, abstract, abstract_ja, speaker, room, day, is_break, length = values[:title], values[:title_ja], values[:abstract], values[:abstract_ja], values[:speaker], values[:room], values[:day], (values[:break] || false), (values[:length] || 30.minutes)
     date = "2010/8/#{day}"
     from = values[:from] ? Time.zone.parse("#{date} #{values[:from]}") : Event.at(room).on(date).scoped(:order => 'start_at').last.to
     to = values[:to] ? Time.zone.parse("#{date} #{values[:to]}") : length.since(from)
 
-    event = Event.create :title_en => title, :title_ja => title_ja || title, :additional_info => 'あとでかく', :lang => 'ja', :break => is_break
+    event = Event.create :title_en => title, :title_ja => title_ja || title, :abstract_en => abstract, :abstract_ja => abstract_ja || abstract, :additional_info => 'あとでかく', :lang => 'ja', :break => is_break
     if speaker
       rubyist = Rubyist.find_or_create_by_username speaker
       EventRubyist.create :event => event, :rubyist => rubyist

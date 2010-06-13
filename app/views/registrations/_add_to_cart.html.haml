@@ -1,0 +1,6 @@
+%p.add_to_cart{:style => 'text-align:right'}
+  - if item.now_on_sale?
+    != link_to(img_add_to_cart_button, add_item_carts_path(:product_item_code => item.item_code), :method => :post, :class => 'noborder')
+  - else
+    %span{:style => 'font-size: 24px;font-weight:bold'}
+      [Sold Out]

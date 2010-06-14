@@ -62,7 +62,7 @@ class Contribution < ActiveRecord::Base
       party_attendees = build_contribution_for(Contribution::Type.party_attendee, extract_party_attendee_item)
       rk10_party = ProductItem.kaigi(2010).rk10_party
       rk10_party.stock -= party_attendees.size
-      tickets = Ticket.build_from_contrib(attendees)
+      tickets = Ticket.build_from_contrib(party_attendees)
       Contribution.transaction do
         [party_attendees, rk10_party, tickets].flatten.compact.each(&:save!)
       end

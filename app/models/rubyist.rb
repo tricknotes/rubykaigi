@@ -38,7 +38,7 @@ class Rubyist < ActiveRecord::Base
   end
 
   def attendee?(kaigi_year = RubyKaigi.latest_year)
-    __attendee?(kaigi_year) || individual_sponsor?(kaigi_year)
+    __attendee?(kaigi_year) # || individual_sponsor?(kaigi_year)
   end
 
   def staff?(kaigi_year = RubyKaigi.latest_year)

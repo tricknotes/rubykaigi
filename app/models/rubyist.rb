@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Rubyist < ActiveRecord::Base
   extend  ActiveSupport::Memoizable
 
@@ -56,6 +57,7 @@ class Rubyist < ActiveRecord::Base
     @twitter_account ||= TwitterAccount.new(twitter_user_id)
   end
 
+  # TODO 2010-06-14現在、avator機能は有効化されておらず、そもそも呼び出していない
   def avatar_url(type = avatar_type)
     case type.to_s
     when 'twitter'

@@ -20,7 +20,7 @@
   -# %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
   %h2 Permalink
-  %p!= link_to ticket_url(@ticket), ticket_path(@ticket)
+  %p{:style=>'font-size:12px'}!= link_to ticket_url(@ticket), ticket_path(@ticket)
   %p (Anybody can see this page via permalink)
   %p{:style => 'text-align:right'}!= link_to('Regenerate Permalink', regenerate_permalink_ticket_path(@ticket), :method => :put)
 

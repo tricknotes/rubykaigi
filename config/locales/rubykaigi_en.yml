@@ -8,6 +8,8 @@ en:
   platinum_sponsor: 'Platinum Sponsor'
   gold_sponsor: 'Gold Sponsor'
   individual_sponsor: 'Individual Sponsor'
+  attendee: 'Attendee'
+  party_attendee: 'Party Attendee'
   link_to_individual_sponsors: 'Individual Sponsor List'
   coming_soon: 'Upcoming'
   product_item:
@@ -49,7 +51,11 @@ en:
   in_preparation: "In Preparation"
   delete_this_item: "Delete This Item"
   amount: "Amount"
+  quantity: "Quantity"
+  subtotal_price: "Subtotal Price"
+  total_price: "Total Price"
   individual_sponsor_detail: 'Individual Sponsorship Program Detail'
   normal_registartion_open_notification: 'Registration will open at 2010-06-15(Tue) 19:00 (JST)'
   venue: "Venue"
   accommodation: "Accommodation"
+  notice_max_quantity: "You can register up to 4 tickets at one"

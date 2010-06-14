@@ -59,3 +59,10 @@ IndividualSponsorOption.blueprint do
   additional_amount { 0 }
   attend_party { true }
 end
+
+Contribution.blueprint do
+  contribution_type { "attendee" }
+  rubyist { Rubyist.make }
+  ruby_kaigi_id { 5 }
+  order_item { OrderItem.make }
+end

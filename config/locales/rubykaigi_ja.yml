@@ -8,6 +8,8 @@ ja:
   platinum_sponsor: 'Platinumスポンサー'
   gold_sponsor: 'Goldスポンサー'
   individual_sponsor: '個人スポンサー'
+  attendee: '一般参加'
+  party_attendee: '懇親会'
   link_to_individual_sponsors: '個人スポンサーの一覧'
   coming_soon: '準備中'
   product_item:
@@ -49,7 +51,11 @@ ja:
   in_preparation: "準備中"
   delete_this_item: "このアイテムを削除"
   amount: "金額"
+  quantity: "数量"
+  subtotal_price: "小計"
+  total_price: "合計"
   individual_sponsor_detail: '個人スポンサーの仕様についてはこちら'
   normal_registartion_open_notification: '一般参加登録の開始は 2010-06-15(Tue) 19:00 (JST) を予定しています'
   venue: "会場"
-  accommodation: "ホテル"
+  accommodation: "宿泊"
+  notice_max_quantity: "1度に登録できるのは4件までです"

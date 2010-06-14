@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 class Rubyist < ActiveRecord::Base
   extend  ActiveSupport::Memoizable
 
   has_many :contributions
+  has_many :tickets
 
   validates_uniqueness_of :username
   validates_format_of :username, :with => /^[\w-]+$/
@@ -36,7 +38,7 @@ class Rubyist < ActiveRecord::Base
   end
 
   def attendee?(kaigi_year = RubyKaigi.latest_year)
-    __attendee?(kaigi_year) || individual_sponsor?(kaigi_year)
+    __attendee?(kaigi_year) # || individual_sponsor?(kaigi_year)
   end
 
   def staff?(kaigi_year = RubyKaigi.latest_year)
@@ -51,11 +53,20 @@ class Rubyist < ActiveRecord::Base
     contribution_types_of(kaigi_year).include?('party_attendee')
   end
 
+  def has_ticket?(kaigi_year = RubyKaigi.latest_year)
+    tickets_of(kaigi_year).present?
+  end
+
+  def tickets_of(kaigi_year)
+    tickets.select {|t| t.ruby_kaigi.year == kaigi_year }.sort {|a, b| b.created_at <=> a.created_at }
+  end
+
   def twitter_account
     return nil if twitter_user_id.blank?
     @twitter_account ||= TwitterAccount.new(twitter_user_id)
   end
 
+  # TODO 2010-06-14現在、avator機能は有効化されておらず、そもそも呼び出していない
   def avatar_url(type = avatar_type)
     case type.to_s
     when 'twitter'
@@ -77,4 +88,5 @@ class Rubyist < ActiveRecord::Base
   def __attendee?(kaigi_year)
     contribution_types_of(kaigi_year).include?('attendee')
   end
+
 end

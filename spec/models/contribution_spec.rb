@@ -19,6 +19,8 @@ describe Contribution do
       :item_code => "rk10_individual_sponsor",
       :ruby_kaigi => RubyKaigi._2010,
       :stock => 5)
+
+    stub(Ticket).build_from_contrib(anything) { nil }
   end
 
   describe "#from_order", ' with Individual Sponsor' do

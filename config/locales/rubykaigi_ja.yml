@@ -8,6 +8,8 @@ ja:
   platinum_sponsor: 'Platinumスポンサー'
   gold_sponsor: 'Goldスポンサー'
   individual_sponsor: '個人スポンサー'
+  attendee: '一般参加'
+  party_attendee: '懇親会'
   link_to_individual_sponsors: '個人スポンサーの一覧'
   coming_soon: '準備中'
   product_item:

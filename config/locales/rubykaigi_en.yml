@@ -8,6 +8,8 @@ en:
   platinum_sponsor: 'Platinum Sponsor'
   gold_sponsor: 'Gold Sponsor'
   individual_sponsor: 'Individual Sponsor'
+  attendee: 'Attendee'
+  party_attendee: 'Party Attendee'
   link_to_individual_sponsors: 'Individual Sponsor List'
   coming_soon: 'Upcoming'
   product_item:

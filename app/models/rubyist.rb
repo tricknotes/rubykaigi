@@ -3,6 +3,7 @@ class Rubyist < ActiveRecord::Base
   extend  ActiveSupport::Memoizable
 
   has_many :contributions
+  has_many :tickets
 
   validates_uniqueness_of :username
   validates_format_of :username, :with => /^[\w-]+$/
@@ -52,6 +53,14 @@ class Rubyist < ActiveRecord::Base
     contribution_types_of(kaigi_year).include?('party_attendee')
   end
 
+  def has_ticket?(kaigi_year = RubyKaigi.latest_year)
+    tickets_of(kaigi_year).present?
+  end
+
+  def tickets_of(kaigi_year)
+    tickets.select {|t| t.ruby_kaigi.year == kaigi_year }.sort {|a, b| b.created_at <=> a.created_at }
+  end
+
   def twitter_account
     return nil if twitter_user_id.blank?
     @twitter_account ||= TwitterAccount.new(twitter_user_id)
@@ -79,4 +88,5 @@ class Rubyist < ActiveRecord::Base
   def __attendee?(kaigi_year)
     contribution_types_of(kaigi_year).include?('attendee')
   end
+
 end

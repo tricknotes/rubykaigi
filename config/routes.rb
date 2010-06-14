@@ -9,6 +9,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :orders, :collection => {
     :confirm => :get, :thanks => :get, :individual_sponsor_option => :get
   }
+
+  map.resources :tickets, :member => {
+    :regenerate_permalink => :put
+  }
+
   map.paypal_ipn "/paypal/instant_payment_notification",
     :controller => 'paypal', :action => 'instant_payment_notification'
   map.dashboard("/dashboard",

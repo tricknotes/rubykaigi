@@ -28,19 +28,23 @@ class Contribution < ActiveRecord::Base
 
     private
     def handle_individual_sponsor
+      tickets = []
       # TODO なんかこのへん年ごとに依存してるなあ。年毎のオブジェクトにdouble dispatchしたほうがいいんかな。
       individual_sponsor = build_contribution_for(Contribution::Type.individual_sponsor, extract_individual_sponsor_order_item).as_individual_sponsor
       rk10_individual_sponsor = ProductItem.kaigi(2010).rk10_individual_sponsor
       rk10_individual_sponsor.stock -= 1
+      tickets << Ticket.build_from_contrib(individual_sponsor)
 
       rk10_party = ProductItem.kaigi(2010).rk10_party
       if individual_sponsor.attend_party? && !rk10_party.sold_out?
-        party_attendee = build_contribution_for(Contribution::Type.party_attendee, extract_individual_sponsor_order_item)
+        party_attendees = build_contribution_for(Contribution::Type.party_attendee, extract_individual_sponsor_order_item)
+        tickets << Ticket.build_from_contrib(party_attendees)
         rk10_party.stock -= 1
       end
 
       Contribution.transaction do
-        [individual_sponsor, party_attendee, rk10_individual_sponsor, rk10_party].flatten.compact.each(&:save!)
+        [individual_sponsor, party_attendees,
+          rk10_individual_sponsor, rk10_party, tickets].flatten.compact.each(&:save!)
       end
     end
 
@@ -48,8 +52,9 @@ class Contribution < ActiveRecord::Base
       attendees = build_contribution_for(Contribution::Type.attendee, extract_attendee_item)
       rk10_attendee = ProductItem.kaigi(2010).rk10
       rk10_attendee.stock -= attendees.size
+      tickets = Ticket.build_from_contrib(attendees)
       Contribution.transaction do
-        [attendees, rk10_attendee].flatten.compact.each(&:save!)
+        [attendees, rk10_attendee, tickets].flatten.compact.each(&:save!)
       end
     end
 
@@ -57,8 +62,9 @@ class Contribution < ActiveRecord::Base
       party_attendees = build_contribution_for(Contribution::Type.party_attendee, extract_party_attendee_item)
       rk10_party = ProductItem.kaigi(2010).rk10_party
       rk10_party.stock -= party_attendees.size
+      tickets = Ticket.build_from_contrib(attendees)
       Contribution.transaction do
-        [party_attendees, rk10_party].flatten.compact.each(&:save!)
+        [party_attendees, rk10_party, tickets].flatten.compact.each(&:save!)
       end
     end
 
@@ -154,7 +160,7 @@ class Contribution < ActiveRecord::Base
 
   module IndividualSponsorInstanceMethods
     def amount
-      order_item.price
+      order_item.try(:price).to_i
     end
 
     def link_label
@@ -189,6 +195,21 @@ class Contribution < ActiveRecord::Base
         :conditions => ["contribution_type = ? AND ruby_kaigis.year = ?", "individual_sponsor", kaigi_year]).
         map(&:as_individual_sponsor).sort_by { |e| e.amount }.reverse
     end
+  end # eiganclass
+
+  def name_for_ticket
+    return rubyist.full_name if rubyist.full_name.present?
+    rubyist.username
+  end
+
+  def email_for_ticket
+    return rubyist.email if rubyist.email.present?
+    if (order = order_item.try(:order))
+      if (payment = order.paypal_payment_notification)
+        payment.payer_email
+      end
+    end
+    "N / A"
   end
 
   def as_individual_sponsor

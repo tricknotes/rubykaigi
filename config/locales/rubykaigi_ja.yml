@@ -59,3 +59,4 @@ ja:
   venue: "会場"
   accommodation: "宿泊"
   notice_max_quantity: "1度に登録できるのは4件までです"
+  should_be_alphabetical: " はアルファベットっぽい文字列でお願いします(/^[a-zA-Z0-9_-]+$/)."

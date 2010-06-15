@@ -6,7 +6,7 @@ class Rubyist < ActiveRecord::Base
   has_many :tickets
 
   validates_uniqueness_of :username
-  validates_format_of :username, :with => /^[a-zA-Z0-9_-]+$/
+  validates_format_of :username, :with => /^[a-zA-Z0-9_-]+$/, :message => I18n.t('should_be_alphabetical')
   validates_exclusion_of :username, :in => %w(new edit)
 
   validates_format_of :website, :with => URI.regexp(%w(http https)), :allow_blank => true

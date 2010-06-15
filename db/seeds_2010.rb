@@ -161,6 +161,7 @@ EventLoader.with_options(:day => 28) do |e28|
   e28.create :title => 'JRubyKaigi 2010', :title_ja => 'JRuby会議 2010', :speaker => 'Koichiro Ohba', :room => b202, :from => '12:00', :to => '18:00', :abstract => "It's JRubyKaigi for people who love JRuby, by JRuby core developers and Japanese JRuby developers. This kaigi will make both people who like JRuby already or not love JRuby much more. It will contain great sessions; the keynote session by Thomas E.Enebo(@tom_enebo) and Charles O.Nutter(@headus), the invited talks by Nick Sieger(@nicksieger), Hiroshi Nakamura(@nahi), Takeru Sasaki(@urekat), Koichi Fujikawa(@fujibee), Yoko Harada(@yokolet). We also have time table for 6 lightning talks from general participant (we'll accept proposals beforehand).", :abstract_ja => "JRuby コア開発者と日本のJRuby開発者によるJRubyが好きな人のためのJRubyKaigiを開催します。JRubyが好きな人はますます好きになり、そうでない人もJRubyが好きになる会議です。開催概要は次を予定しています。基調講演：Thomas E.Enebo(@tom_enebo) and Charles O.Nutter(@headus)、招致講演：Nick Sieger(@nicksieger)、Hiroshi Nakamura(@nahi)、Takeru Sasaki(@urekat)、Koichi Fujikawa(@fujibee)、Yoko Harada(@yokolet)、他にLightning Talks 6枠前後を一般募集。"
 
   e28.with_options(:room => a202) do |e28_a202|
+    e28_a202.create :title => 'tDiaryKaigi', :title_ja => 'tDiary会議', :speaker => 'SHIBATA Hiroshi', :from => '9:30', :length => 90.minutes, :abstract => "In this session, tDiary users and developpers will discuss future and love for tDiary! we plan to hackathon, and if you have useful patches, please attend this session.", :abstract_ja => "tDiary のユーザと開発者が集まって今後のロードマップや意見交換を中心にtDiary愛について語り合いたいと思います。 Hackathonも予定していますので、コミッタに取り込んでもらいたいパッチがある人はぜひお越し下さい。"
     e28_a202.create :title => 'Asakusa.rb in Tsukuba', :title_ja => '浅草.rb in つくば', :speaker => 'Akira Matsuda', :from => '12:00', :length => 90.minutes, :abstract => "#TODO", :abstract_ja => "RubyKaigi の会場には、皆さんも日ごろお世話になっているはずのプロダクトや書籍の作者さんご本人がうじゃうじゃ来場しています。せっかくの年に一度のチャンスなので、是非この機会にいつも感じている疑問や要望、それから感謝の気持ちを思>い切って直接作者さんに伝えちゃいましょう！とはいえ、誰が誰だかよくわからないし、いきなり面と向かっては話しかけづらいし、特に言語の壁があった>りするとなかなか勇気が要りますよね？そこで、僕たち Asakusa.rbでは、Jeremy Kemper や Chad Fowler をはじめ、当日会場に居る豪華外タレさんたちを>ゲストにお迎えして、彼ら自身の \"あの\"プロダクトについて、ご本人と Asakusa.rb のメンバーたちと、それからもちろん会場の皆様も巻き込んで、生のアツいディスカッションを行います。"
     e28_a202.create :title => 'Pair Programming Cultural Exchange', :speaker => 'Sarah Mei', :to => '18:00', :abstract => "We may not speak the same language, but we do have one language in common. So, we can code together!
     
@@ -170,6 +171,10 @@ EventLoader.with_options(:day => 28) do |e28|
   end
 
   e28.with_options(:room => b201) do |e28_b201|
+    e28_b201.create :title => 'jpmobile Kaigi 2010', :speaker => 'Shin-ichiro OGAWA', :from => '9:30', :length => 90.minutes, :abstract => "A Kaigi for \"jpmobile\" developers. Jpmobile is the de facto standard Rails plugin for Japanese mobile phones. Almost all of \"jpmobile\" developers will come to this session and discuss the future of jpmobile, then
+     start to struggle to make it real, that means, write codes. The main topics will be supporting Rails 3.0+ and Ruby 1.9, building Rack middleware.
+     
+     Anyone who wants to contribute to jpmobile should attend this Kaigi.", :abstract_ja => "日本全国から jpmobile 開発者・利用者が一堂に会して、jpmobile の今後について議論や開発を行う企画です。えにしテックの設楽さんを中心に、Rails 3.0 以降や Rack について、その場で議論して開発に入るハッカソンスタイルを取る予定です。"
     e28_b201.create :title => 'PGP Keysign Party', :speaker => 'Shyouhei Urabe w/ Yugui', :from => '12:00', :length => 90.minutes, :abstract => "Let's trade pubkeys! Keysign party connects our community tightly each other. It is also fairly important when you want to make a secure channel with us (e.g. when you report a security incident).
     
     Please take a look at this howto before joining this party. You need a PGP key pair plus few more physical preparations.

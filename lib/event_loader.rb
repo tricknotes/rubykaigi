@@ -8,11 +8,14 @@ class EventLoader
     from = values[:from] ? Time.zone.parse("#{date} #{values[:from]}") : Event.at(room).on(date).scoped(:order => 'start_at').last.to
     to = values[:to] ? Time.zone.parse("#{date} #{values[:to]}") : length.since(from)
 
-    event = Event.create :title_en => title, :title_ja => title_ja || title, :abstract_en => abstract, :abstract_ja => abstract_ja || abstract, :additional_info => 'あとでかく', :lang => 'ja', :break => is_break
+    event = Event.create :presenter_name => speaker, :title_en => title, :title_ja => title_ja || title, :abstract_en => abstract, :abstract_ja => abstract_ja || abstract, :additional_info => 'あとでかく', :lang => 'ja', :break => is_break
+#TODO Rubyistとの紐付けはあとで考える
+=begin
     if speaker
       rubyist = Rubyist.find_or_create_by_username speaker
       EventRubyist.create :event => event, :rubyist => rubyist
     end
+=end
     EventRoom.create :event => event, :room => room
     (from..30.minutes.until(to)).step(30.minutes) do |t|
       EventTimeSlit.create :event => event, :time_slit => TimeSlit.find_by_start_at(t)

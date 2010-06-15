@@ -7,7 +7,7 @@
     - events_per_date.reject{|e| ["Break", "Closing", "Opening", "Keynote中継", "LT中継"].include?(e.title)}.each do |event|
       %ul
         %li
-          #{event.title}, #{event.speakers.map(&:username)}
+          #{event.title}, #{event.presenter_name}
 
   -#
     - content_for :head, stylesheet_link_tag('timetables_lagacy')

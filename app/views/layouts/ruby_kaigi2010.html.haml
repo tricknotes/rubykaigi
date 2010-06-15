@@ -90,9 +90,8 @@
                     \#{t(:rubykaigi)} 2006
 
         %li.current
-          %a{ :href => "#" }
-            #{t(:time_table)}(#{t(:coming_soon)})
-          /
+          != link_to t(:program), events_path
+          -#
             %ul
               %li
                 %a{ :href => "#" }

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :events, :path_prefix => ":year/:locale", :requirements => {:year => /2\d{3}/, :locale => /en|ja/}
+
   map.resource :sessions, :collection => {:unauthenticated => :get}
   map.resource :account
   map.resources :rubyists

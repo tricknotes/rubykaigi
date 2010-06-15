@@ -2,6 +2,9 @@ ja:
   ja: '日本語'
   en: 'English'
   rubykaigi: '日本Ruby会議'
+  time:
+    formats:
+      hhmm: "%H:%M"
   rubykaigi2010: '日本Ruby会議 2010'
   sponsors: 'スポンサー'
   ruby_sponsor: 'Rubyスポンサー'
@@ -21,6 +24,7 @@ ja:
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
   time_table: 'タイムテーブル'
+  program: 'プログラム'
   registration: '参加登録'
   order:
     confirm: "注文のご確認"
@@ -63,3 +67,8 @@ ja:
   student_discount_program: "学割制度"
   student_discount_program_detail: "学割制度について詳しくはこちら"
   student_discount_program_entry_form: "学割の申請フォームはこちら"
+  speaker: "スピーカー"
+  when: "日程"
+  abstract: "概要"
+  room: "会場"
+  lang: "言語"

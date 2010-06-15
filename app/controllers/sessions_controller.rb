@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     authenticate!
     flash[:notice] = 'You have signed in successfully'
     redirect_to session.delete(:return_to) || dashboard_path
-  rescue Net::HTTPFatalError => e
+  rescue Net::HTTPFatalError
     flash[:error] = 'Something Wrong in Twitter.'
     redirect_to new_sessions_path
   end
@@ -55,7 +55,7 @@ class SessionsController < ApplicationController
       flash[:error] = warden.message
       redirect_to new_sessions_path
     end
-  rescue Twitter::Unavailable => e
+  rescue Twitter::Unavailable, Twitter::InformTwitter
     flash[:error] = 'Something Wrong in Twitter.'
     redirect_to new_sessions_path
   end

@@ -3,6 +3,8 @@ class Ticket < ActiveRecord::Base
   belongs_to :ruby_kaigi
   belongs_to :rubyist
 
+  validates_presence_of :name
+
   class << self
     def generate_ticket_code
       prefix = Digest::SHA1.hexdigest(srand.to_s)[0..7].upcase
@@ -33,5 +35,9 @@ class Ticket < ActiveRecord::Base
 
   def to_param
     code4url
+  end
+
+  def before_save
+    self.email = "N / A" if self.email.blank?
   end
 end

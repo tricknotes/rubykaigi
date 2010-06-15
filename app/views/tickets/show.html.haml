@@ -12,12 +12,12 @@
   %h2 Your Name
   %p #{@ticket.name}
 
-  -# %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
+  %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
   %h2 Your Email
   %p #{@ticket.email}
 
-  -# %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
+  %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
   %h2 Permalink
   %p{:style=>'font-size:12px'}!= link_to ticket_url(@ticket), ticket_path(@ticket)

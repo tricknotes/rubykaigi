@@ -176,6 +176,10 @@ class Contribution < ActiveRecord::Base
     def attend_party?
       order_item.attend_party?
     end
+
+    def anonymous?
+      order_item.anonymous?
+    end
   end # IndividualSponsorInstanceMethods
 
   belongs_to :rubyist

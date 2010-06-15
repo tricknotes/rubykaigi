@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100615020038) do
+ActiveRecord::Schema.define(:version => 20100615054304) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20100615020038) do
     t.integer  "order_item_id",                        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "anonymous",         :default => false
   end
 
   create_table "order_items", :force => true do |t|

@@ -17,7 +17,7 @@
   %h2 RubyKaigi 2010
   %ul
     - if @rubyist.contributions.present?
-      - if @rubyist.individual_sponsor?(2010)
+      - if @rubyist.individual_sponsor?(2010) && !@rubyist.individual_sponsor.anonymous?
         %li [Individual Sponsor]
       - if @rubyist.staff?(2010)
         %li [Staff]

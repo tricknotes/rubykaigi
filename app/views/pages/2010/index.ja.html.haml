@@ -61,12 +61,12 @@
       Jeremy Kemper
   %h2
     プレゼンテーション発表
-  %p (登壇予定者の速報です。詳細は追って告知いたします)
+  %p!= link_to 'プレゼンテーション発表と企画の一覧(タイトルは最新のものではありません)', "/2010/#{current_locale}/events"
   %p!= render :partial => 'pages/2010/speakers_list'
 
   %h2
     企画
-  %p (企画責任者の速報です。正式な企画の名前などの詳細は追って告知いたします)
+  %p!= link_to 'プレゼンテーション発表と企画の一覧(タイトルは最新のものではありません)', "/2010/#{current_locale}/events"
   %p!= render :partial => 'pages/2010/subevent_organizers_list'
 
   %h2

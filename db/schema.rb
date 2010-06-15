@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100614074903) do
+ActiveRecord::Schema.define(:version => 20100615020038) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -34,6 +34,44 @@ ActiveRecord::Schema.define(:version => 20100614074903) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "event_rooms", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "room_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_rubyists", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "rubyist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_time_slits", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "time_slit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "title_en"
+    t.string   "title_ja"
+    t.text     "abstract_en"
+    t.text     "abstract_ja"
+    t.string   "detail_en"
+    t.string   "detail_ja"
+    t.string   "additional_info"
+    t.string   "lang"
+    t.string   "required_equipment"
+    t.integer  "parent_event_id"
+    t.boolean  "break"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "presenter_name"
+  end
 
   create_table "headline_entries", :force => true do |t|
     t.text     "title"
@@ -73,7 +111,7 @@ ActiveRecord::Schema.define(:version => 20100614074903) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "purchased_at"
-    t.integer  "price",                                             :null => false
+    t.integer  "price",                          :default => 0,     :null => false
     t.integer  "paypal_payment_notification_id"
     t.integer  "ruby_kaigi_id",                  :default => 5,     :null => false
     t.string   "invoice_code",                                      :null => false
@@ -113,12 +151,22 @@ ActiveRecord::Schema.define(:version => 20100614074903) do
 
   add_index "product_items", ["item_code"], :name => "index_product_items_on_item_code", :unique => true
 
-  create_table "ruby_kaigis", :force => true do |t|
-    t.integer  "year",                 :null => false
+  create_table "rooms", :force => true do |t|
+    t.string   "name_en"
+    t.string   "name_ja"
+    t.string   "floor_en"
+    t.string   "floor_ja"
+    t.integer  "sort_order"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "capacity",             :null => false
-    t.integer  "party_capacity",       :null => false
+  end
+
+  create_table "ruby_kaigis", :force => true do |t|
+    t.integer  "year",                                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "capacity",             :default => 0, :null => false
+    t.integer  "party_capacity",       :default => 0, :null => false
     t.datetime "registration_open_at"
   end
 
@@ -149,6 +197,13 @@ ActiveRecord::Schema.define(:version => 20100614074903) do
     t.integer  "contribution_id"
     t.integer  "rubyist_id"
     t.integer  "ruby_kaigi_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "time_slits", :force => true do |t|
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

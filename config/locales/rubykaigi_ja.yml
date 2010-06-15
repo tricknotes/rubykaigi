@@ -2,6 +2,9 @@ ja:
   ja: '日本語'
   en: 'English'
   rubykaigi: '日本Ruby会議'
+  time:
+    formats:
+      hhmm: "%H:%M"
   rubykaigi2010: '日本Ruby会議 2010'
   sponsors: 'スポンサー'
   ruby_sponsor: 'Rubyスポンサー'
@@ -21,6 +24,7 @@ ja:
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
   time_table: 'タイムテーブル'
+  program: 'プログラム'
   registration: '参加登録'
   order:
     confirm: "注文のご確認"
@@ -60,3 +64,8 @@ ja:
   accommodation: "宿泊"
   notice_max_quantity: "1度に登録できるのは4件までです"
   should_be_alphabetical: " はアルファベットっぽい文字列でお願いします(/^[a-zA-Z0-9_-]+$/)."
+  speaker: "スピーカー"
+  when: "日程"
+  abstract: "概要"
+  room: "会場"
+  lang: "言語"

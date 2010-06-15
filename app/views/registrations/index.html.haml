@@ -10,14 +10,27 @@
   %h2 #{t('product_item.rk10')}
 
   %p.price
-    #{number_with_delimiter(@kaigi.unit_price)} JPY
+    <strong>#{number_with_delimiter(@kaigi.unit_price)} JPY</strong>
+
+  %p
+    #{t('student_discount_program_entry_form')}: (#{t('in_preparation')})
+  %p
+    #{t('student_discount_program_detail')}:
+    (
+    != link_to 'English', 'http://rubykaigi.tdiary.net/20100614.html#p02'
+    ),(
+    != link_to '日本語', 'http://rubykaigi.tdiary.net/20100614.html#p01'
+    )
 
   != render :partial => 'add_to_cart', :locals => {:item => @kaigi}
 
   %h2 #{t('product_item.rk10_party')}
 
   %p.price
-    #{number_with_delimiter(@party.unit_price)} JPY
+    <strong>#{number_with_delimiter(@party.unit_price)} JPY</strong>
+
+  %p
+    (We don't have <strong>any student discount</strong> for Conference Party.)
 
   != render :partial => 'add_to_cart', :locals => {:item => @party}
 

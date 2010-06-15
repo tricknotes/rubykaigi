@@ -46,4 +46,9 @@ describe Rubyist do
     subject { Rubyist.make_unsaved(:username => 'hoge fuga').tap(&:valid?) }
     its(:errors) { should be_invalid(:username) }
   end
+
+  context '日本語のusername' do
+    subject { Rubyist.make_unsaved(:username => 'まつもとゆきひろ').tap(&:valid?) }
+    its(:errors) { should be_invalid(:username) }
+  end
 end

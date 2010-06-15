@@ -61,5 +61,5 @@ en:
   notice_max_quantity: "You can register up to 4 tickets at one"
   should_be_alphabetical: "should be alphabetical(/^[a-zA-Z0-9_-]+$/)."
   student_discount_program: "Student Discount Program"
-  student_discount_program_detail: "About the Student Discount Program"
+  student_discount_program_detail: "We have the Student Discount Program"
   student_discount_program_entry_form: "Student Discount Program Entry Form"

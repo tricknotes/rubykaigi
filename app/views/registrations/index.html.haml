@@ -14,14 +14,16 @@
   %p
     3 days pass
   %p
-    #{t('student_discount_program_entry_form')}: (#{t('in_preparation')})
-  %p
     #{t('student_discount_program_detail')}:
     (
     != link_to 'English', 'http://rubykaigi.tdiary.net/20100614.html#p02'
     ),(
     != link_to '日本語', 'http://rubykaigi.tdiary.net/20100614.html#p01'
     )
+  %p
+    != link_to_if(@kaigi.now_on_sale?, t('student_discount_program_entry_form'), 'https://spreadsheets.google.com/viewform?formkey=dEpJSldhXzV6Skp6d0RxQVdWQS1Odnc6MQ')
+    - unless @kaigi.now_on_sale?
+      (In Preparation)
 
   != render :partial => 'add_to_cart', :locals => {:item => @kaigi}
 

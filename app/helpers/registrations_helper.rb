@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module RegistrationsHelper
   def img_add_to_cart_button
     file_path = "/2010/images/addtocart_#{current_locale}.png"

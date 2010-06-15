@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 class Rubyist < ActiveRecord::Base
   extend  ActiveSupport::Memoizable
+  include Redis::Objects
 
   has_many :contributions
   has_many :tickets
@@ -17,6 +18,8 @@ class Rubyist < ActiveRecord::Base
   validates_inclusion_of :avatar_type, :in => %w(default twitter gravatar)
 
   attr_protected :twitter_user_id, :identity_url
+
+  value :twitter_account, :marshal => true, :key => 'twitter/users/#{twitter_user_id}'
 
   def to_param
     username
@@ -70,7 +73,7 @@ class Rubyist < ActiveRecord::Base
   def avatar_url(type = avatar_type)
     case type.to_s
     when 'twitter'
-      twitter_account.try(:profile_image_url)
+      twitter_account.nil? ? avatar_url('default') : twitter_account.value.profile_image_url
     when 'gravatar'
       "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}?s=48"
     else

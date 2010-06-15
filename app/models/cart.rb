@@ -12,8 +12,8 @@ class Cart
     if current_item
       if qty == 0
         remove_product(product)
-      else
-        current_item.increment_quantity(qty) unless product.individual_sponsor?
+#      else
+#        current_item.increment_quantity(qty) unless product.individual_sponsor?
       end
     else
       current_item = CartItem.new(product)

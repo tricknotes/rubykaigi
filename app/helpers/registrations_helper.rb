@@ -7,6 +7,7 @@ module RegistrationsHelper
   end
 
   def stock_notification(item)
+    return "" unless item.now_on_sale?
     stock = item.stock
     if stock == 0
       content_tag :span, :style => 'background:#e7161c;border:1px solid #999;padding: 4px;margin-left:1em' do

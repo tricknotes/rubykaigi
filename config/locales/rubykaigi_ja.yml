@@ -20,6 +20,7 @@ ja:
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
   time_table: 'タイムテーブル'
+  program: 'プログラム'
   registration: '参加登録'
   order:
     confirm: "注文のご確認"

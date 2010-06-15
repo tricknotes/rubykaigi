@@ -71,18 +71,18 @@
                     \Ruby会議2006
 
         %li.current
-          %a{ :href => "#" }
-            タイムテーブル(準備中)
-          %ul
-            %li
-              %a{ :href => "#" }
-                X月X日
-            %li
-              %a{ :href => "#" }
-                X月X日
-            %li
-              %a{ :href => "#" }
-                X月X日
+          != link_to t(:program), events_path
+          -#
+            %ul
+              %li
+                %a{ :href => "#" }
+                  X月X日
+              %li
+                %a{ :href => "#" }
+                  X月X日
+              %li
+                %a{ :href => "#" }
+                  X月X日
         %li.current
           %a{ :href => "#" }
             ライブ(準備中)

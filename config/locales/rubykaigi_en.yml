@@ -20,6 +20,7 @@ en:
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
   time_table: 'Time Table'
+  program: 'Program'
   registration: 'Registration'
   order:
     confirm: "Order Confirmation"

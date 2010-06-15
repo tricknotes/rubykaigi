@@ -34,3 +34,16 @@
   %h2 #{t('product_item.rk10_party')}
 
   %p (#{t('in_preparation')}. #{t('normal_registartion_open_notification')})
+
+  %h2 #{t('student_discount_program')}
+
+  %p
+    #{t('student_discount_program_detail')}:
+    (
+    != link_to 'English', 'http://rubykaigi.tdiary.net/20100614.html#p02'
+    ),(
+    != link_to '日本語', 'http://rubykaigi.tdiary.net/20100614.html#p01'
+    )
+
+  %p
+    #{t('student_discount_program_entry_form')}: (#{t('in_preparation')})

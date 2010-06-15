@@ -11,6 +11,7 @@
 
   %p.price
     <strong>#{number_with_delimiter(@kaigi.unit_price)} JPY</strong>
+    != stock_notification(@kaigi)
   %p
     3 days pass
   %p
@@ -31,6 +32,7 @@
 
   %p.price
     <strong>#{number_with_delimiter(@party.unit_price)} JPY</strong>
+    != stock_notification(@party)
   %p
     Start at 2010-08-28(Sat) 19:00 JST on the same location as RubyKaigi 2010.
   %p
@@ -42,7 +44,7 @@
 
   %p.price
     #{number_with_delimiter(@individual_sponsor.unit_price)} JPY + #{t('additional_amount_label')}
-
+    != stock_notification(@individual_sponsor)
   %p
     #{t('individual_sponsor_detail')}:
     (

@@ -1,6 +1,7 @@
 %div#content
   %h1
     RubyKaigi2010 Events
+  %p <strong>This list is mix Talk and SubEvent. Official Time table is in preparation. Stay tuned!</strong>
   - @events.group_by(&:date).each do |date, events_per_date|
     %h2
       = l date, :format => :long

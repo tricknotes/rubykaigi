@@ -104,26 +104,12 @@
                   X月X日
         %li.current
           %a{ :href => "#" }
-            #{t(:live)}(#{t(:coming_soon)})
-          /
-            %ul
-              %li
-                %a{ :href => "#" }
-                  ○○会議室
-              %li
-                %a{ :href => "#" }
-                  ○○会議室
-              %li
-                %a{ :href => "#" }
-                  ○○会議室
-        %li.current
-          %a{ :href => "#" }
-            #{t(:information)}(#{t(:coming_soon)})
-          /
-            %ul
-              %li
-                %a{ :href => "#" }
-                  #{t(:network)}
+            #{t(:information)}
+          %ul
+            %li
+              %a{ :href => "/2010/#{current_locale}/Accommodation" }
+                #{t(:accommodation)}
+            /
               %li
                 %a{ :href => "#" }
                   #{t(:power_outlets)}
@@ -138,6 +124,20 @@
                   #{t(:junkudo)}
                   %br
                   RubyKaigi #{t(:store)}
+        %li.current
+          %a{ :href => "#" }
+            #{t(:live)}(#{t(:coming_soon)})
+          /
+            %ul
+              %li
+                %a{ :href => "#" }
+                  ○○会議室
+              %li
+                %a{ :href => "#" }
+                  ○○会議室
+              %li
+                %a{ :href => "#" }
+                  ○○会議室
         %li.current
           %a{ :href => "http://rubykaigi.tdiary.net/" }
             #{t(:rubykaigi_nikki)}

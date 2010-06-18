@@ -13,7 +13,7 @@
     <strong>#{number_with_delimiter(@kaigi.unit_price)} JPY</strong>
     != stock_notification(@kaigi)
   %p
-    3 days pass
+    3 day pass
   %p
     #{t('student_discount_program_detail')}:
     (
@@ -34,9 +34,9 @@
     <strong>#{number_with_delimiter(@party.unit_price)} JPY</strong>
     != stock_notification(@party)
   %p
-    Start at 2010-08-28(Sat) 19:00 JST on the same location as RubyKaigi 2010.
+    Starts at 2010-08-28(Sat) 19:00 JST at the same location as RubyKaigi 2010 (Tsukuba International Congress Center).
   %p
-    (We don't have <strong>any student discount</strong> for Conference Party.)
+    (Student discounts <strong>are not available</strong> for the Conference Party.)
 
   != render :partial => 'add_to_cart', :locals => {:item => @party}
 

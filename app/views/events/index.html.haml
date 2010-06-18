@@ -1,7 +1,8 @@
 %div#content
   %h1
     RubyKaigi2010 Events
-  %p <strong>Now talks and subevents are listed all together and not up to date. Official time table will come soon. Stay tuned! </strong>
+  %p <strong>The official time table is coming soon. Stay tuned! </strong> In the meantime, the program preview below lists the currently scheduled talks and subevents. This schedule is tentative and may change without notice.
+
   - @events.group_by(&:date).each do |date, events_per_date|
     %h2
       = l date, :format => :long

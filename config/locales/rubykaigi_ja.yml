@@ -6,6 +6,7 @@ ja:
     formats:
       hhmm: "%H:%M"
   rubykaigi2010: '日本Ruby会議 2010'
+  rubykaigi2010_dates: '8月27日〜29日'
   sponsors: 'スポンサー'
   ruby_sponsor: 'Rubyスポンサー'
   platinum_sponsor: 'Platinumスポンサー'

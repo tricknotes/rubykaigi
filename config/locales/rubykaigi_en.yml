@@ -3,6 +3,7 @@ en:
   en: 'English'
   rubykaigi: 'RubyKaigi'
   rubykaigi2010: 'RubyKaigi 2010'
+  rubykaigi2010_dates: 'August 27-29'
   time:
     formats:
       hhmm: "%H:%M"

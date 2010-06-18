@@ -4,7 +4,7 @@
   %head
     != yield :meta_top
     %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
-    %title= [@title, t(:rubykaigi2010)].compact.join(' - ')
+    %title= [@title, "#{t(:rubykaigi2010)} (#{:rubykaigi2010_dates})].compact.join(' - ')
     %link{ :href => "/2010/stylesheets/common.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "/2010/stylesheets/superfish.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "/2010/stylesheets/form_flash.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }

@@ -1,0 +1,47 @@
+completed_orders = Order.all(:include => [:paypal_payment_notification, {:line_items => :product_item}],:conditions => {:ruby_kaigi_id => RubyKaigi.latest.id}).select{|o| o.completed? };nil
+by_date = completed_orders.group_by {|o| o.updated_at.to_date }.map do |date, orders|
+  item_codes = orders.map {|o| o.line_items.map{|i|i.product_item.item_code}}.flatten
+  item_code_count_group = item_codes.group_by {|c| c }.map {|code, arr| {code => arr.size } }
+  { date => item_code_count_group }
+end;nil
+
+puts "=" * 78
+puts "  Date Summary"
+puts "=" * 78
+by_date.sort_by{|d| d.first }.each do |date_row|
+  puts "* #{date_row.keys.first.strftime('%Y-%m-%d')}"
+  date_row.values.first.each do |count_hash|
+    item_disp = "%-23s" % count_hash.keys.first
+    count_disp = "%3d" % count_hash.values.first
+    puts "  - #{item_disp}: #{count_disp}"
+  end
+  puts ""
+end;nil
+
+completed_line_items = Order.all(:include => [:paypal_payment_notification, {:line_items => :product_item}],:conditions => {:ruby_kaigi_id => RubyKaigi.latest.id}).select{|o| o.completed? }.map{|o| o.line_items }.flatten;nil
+
+completed_line_items_group_by_item_code = completed_line_items.group_by {|i| i.product_item.item_code }
+by_code = completed_line_items_group_by_item_code.map do |(code, items)|
+  count_by_date =items.group_by {|i| i.updated_at.to_date}.map {|date, arr| {date => arr.size}}
+  { code => count_by_date }
+end;nil
+
+puts "=" * 78
+puts "  Item Code Summary on #{Time.now.to_s(:db)}"
+puts "=" * 78
+puts ""
+by_code.each do |row|
+  item_code = row.keys.first
+  by_date = row.values.first
+  puts "* #{item_code}"
+  total = 0
+  by_date.each do |date_row|
+    date = date_row.keys.first.strftime('%Y-%m-%d')
+    count = date_row.values.first
+    total += count
+    count_disp = "%3d" % count
+    puts "  - #{date}: #{count_disp}"
+  end
+  puts "  - #{'%10s' % 'total'}: #{'%3d' % total}"
+  puts ""
+end;nil

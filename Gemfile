@@ -2,7 +2,7 @@
 source :rubygems
 source 'http://gems.github.com'
 
-gem 'rails', '2.3.5', :require => nil
+gem 'rails', '2.3.8', :require => nil
 gem 'mysql'
 gem 'configatron'
 gem "ambethia-smtp-tls", :require => "smtp-tls"

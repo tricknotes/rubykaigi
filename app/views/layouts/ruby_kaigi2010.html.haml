@@ -62,6 +62,9 @@
                 %li
                   %a{ :href => "/2010/#{current_locale}/Sponsors#individuals" }
                     \#{t(:individual_sponsor)}
+            - if "#{current_locale}" == "ja"
+              %li
+                != link_to t(:press), "/2010/#{current_locale}/Press"
             %li
               %a{ :href => "/2010/#{current_locale}/Team" }
                 #{t(:team)}
@@ -69,9 +72,6 @@
               %li
                 %a{ :href => "#" }
                   #{t(:goodies)}
-              %li
-                %a{ :href => "#" }
-                  #{t(:press)}
             %li.current
               %a
                 #{t(:rubykaigi_archives)}

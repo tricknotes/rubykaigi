@@ -22,7 +22,9 @@
     != link_to '日本語', 'http://rubykaigi.tdiary.net/20100614.html#p01'
     )
   %p
-    != link_to_if(@kaigi.now_on_sale?, t('student_discount_program_entry_form'), 'https://spreadsheets.google.com/viewform?formkey=dEpJSldhXzV6Skp6d0RxQVdWQS1Odnc6MQ')
+    %strike
+      != link_to_if(false, t('student_discount_program_entry_form'), 'https://spreadsheets.google.com/viewform?formkey=dEpJSldhXzV6Skp6d0RxQVdWQS1Odnc6MQ')
+    (#{t("already_at_capacity")})
     - unless @kaigi.now_on_sale?
       (In Preparation)
 

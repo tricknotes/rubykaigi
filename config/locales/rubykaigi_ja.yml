@@ -76,3 +76,4 @@ ja:
   out_of_stock: "売り切れ"
   running_out_of_stock: "残席わずか"
   in_stock: "在庫あり"
+  already_at_capacity: "定員に達しました"

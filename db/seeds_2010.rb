@@ -279,6 +279,64 @@ EventLoader.with_options(:day => 29) do |e29|
     数種のパッケージが存在する以上、そこに多様性が存在するはずです。求めるオペレーションによって最適なものは何か、妥当性を選択するための判断基準が存在するはずと考えます。
     
     この企画は各パッケージでの利用事例を公募し、それぞれがその利点を発表する事によって、 LDAP を扱おうとする Ruby コミュニティにパッケージ選択の指針を提供しようとする試みです。"
+    e29_b201.create :title => 'Ruby powering 9 million dining tables', :title_ja => 'Ruby powering 9 million dining tables', :speaker => 'Yukiyo.Sakurai@COOKPAD Inc., Kenta.Hashimoto@COOKPAD Inc.', :from => '12:00', :length => 90.minutes, :abstract => "Do you know the website that 45% of Japanese women in their 30's are
+    using regularly?
+    COOKPAD (cookpad.com) is the world's greatest user-generated recipe
+    site with 9.8 million monthly users and over 800 thousand recipes.
+    So what is the reason for its continued growth as the largest Ruby on
+    Rails site in Japan?
+    Kenta Hashimoto, our CTO, will introduce you to our practical
+    technology and development environment.
+
+      We will focus on these 3 points:
+
+      ・Ruby; the value proposition for COOKPAD
+    ・How we scale and develop COOKPAD
+    ・COOKPAD from the eyes of non-Japanese engineers
+
+    The slides will be in English, and the lecture will be given in
+    Japanese, so non-Japanese are more than welcome to participate.
+
+
+      <time table>
+    12:00-12:50 - 'Ruby powering 9 million dining tables'
+    12:50-13:20 - Q&A and Lunch time（Please bring your lunch）
+
+    <Notice>
+    COOKPAD has branch offices in the US, and is always eager to take in
+    engineers regardless of nationality. We would appreciate participation
+    of non-Japanese technicians interested in working with a Japanese
+    company.
+
+
+
+      <Reference>
+    Cookpad Developer Blog
+    http://techlife.cookpad.com/
+
+", :abstract_ja => "日本人女性30代の45％が利用するサイトをご存じですか？
+クックパッド（cookpad.com）は月間989万人が利用し、80万品のレシピが集まる世界最大の料理レシピ投稿サイトです。そんなクックパッドが日本最大のRuby
+on Rails製サイトとして成長を続けている理由とは何か。日々実践している技術や開発環境についてCTOの橋本健太がお話します。
+
+以下の３つを中心にお話します。
+
+・       価値を提供する手段としてのRuby
+・       クックパッドのスケーリングと開発体制
+・       クックパッドで働く外国人エンジニアから見たクックパッド
+
+当日スライド資料は英語、講演は日本語で行いますので、外国人の方も是非ご参加ください。
+
+＜time table＞
+12：00～12：50　'Ruby powering 9 million dining tables'
+12：50～13：20　Q&A and Lunch time（各自お弁当を持参ください）
+
+＜お知らせ＞
+クックパッドは米国に支社を設けており、国籍問わず技術者の積極採用をしております。日本企業で働くことに興味がある外国人の方も、ぜひご参加ください。
+
+＜参考＞
+クックパッド開発者ブログ
+http://techlife.cookpad.com/
+"
     e29_b201.create :title => 'Making MS-Win32 Ruby Hands-ON', :title_ja => 'MSWin32版Ruby野良ビルダー養成塾', :speaker => 'Akio Tajima aka arton', :from => '13:30', :length => 3.hours, :abstract => "This hands-on is for Window user who 'd like to build own ruby, extended libs and gem. From installation of the compiler to build own extended library.", :abstract_ja => "この企画は、無料の意味でのFreeなVisual C++ 2010 Expressを利用して、WindowsでRubyのタールボール（安定版、および最新版スナップショット）からのmakeとinstall、PATH の通し方、拡張ライブラリの作成、make、インストール、Gemの管理など、Ruby野良ビルダーに最低限必要な知識をハンズオン形式で講習します。"
   end
 

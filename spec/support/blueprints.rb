@@ -66,6 +66,7 @@ Contribution.blueprint do
   rubyist { Rubyist.make }
   ruby_kaigi_id { 5 }
   order_item { OrderItem.make }
+end
 
 Room.blueprint do
   name_en { 'Room A' }

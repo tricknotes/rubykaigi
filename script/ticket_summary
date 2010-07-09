@@ -1,22 +1,6 @@
-completed_orders = Order.all(:include => [:paypal_payment_notification, {:line_items => :product_item}],:conditions => {:ruby_kaigi_id => RubyKaigi.latest.id}).select{|o| o.completed? };nil
-by_date = completed_orders.group_by {|o| o.updated_at.to_date }.map do |date, orders|
-  item_codes = orders.map {|o| o.line_items.map{|i|i.product_item.item_code}}.flatten
-  item_code_count_group = item_codes.group_by {|c| c }.map {|code, arr| {code => arr.size } }
-  { date => item_code_count_group }
-end;nil
-
-puts "=" * 78
-puts "  Date Summary"
-puts "=" * 78
-by_date.sort_by{|d| d.first }.each do |date_row|
-  puts "* #{date_row.keys.first.strftime('%Y-%m-%d')}"
-  date_row.values.first.each do |count_hash|
-    item_disp = "%-23s" % count_hash.keys.first
-    count_disp = "%3d" % count_hash.values.first
-    puts "  - #{item_disp}: #{count_disp}"
-  end
-  puts ""
-end;nil
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + '/../config/boot'
+require RAILS_ROOT + '/config/environment'
 
 completed_line_items = Order.all(:include => [:paypal_payment_notification, {:line_items => :product_item}],:conditions => {:ruby_kaigi_id => RubyKaigi.latest.id}).select{|o| o.completed? }.map{|o| o.line_items }.flatten;nil
 

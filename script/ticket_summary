@@ -27,7 +27,8 @@ by_code = completed_line_items_group_by_item_code.map do |(code, items)|
 end;nil
 
 puts "=" * 78
-puts "  Item Code Summary on #{Time.now.to_s(:db)}"
+now_in_jst =  ActiveSupport::TimeWithZone.new(Time.now.utc, TZInfo::Timezone.get("Asia/Tokyo")).to_s
+puts "  Item Code Summary on #{now_in_jst}"
 puts "=" * 78
 puts ""
 by_code.each do |row|

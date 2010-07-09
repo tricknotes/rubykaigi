@@ -32,23 +32,23 @@ EventLoader.with_options(:day => 27) do |e27|
     e27_big.create :title => 'Open social application development for cell-phones to begin in Ruby on Rails', :title_ja => 'Ruby on Railsではじめる携帯電話向けオープンソーシャルアプリケーション開発', :speaker => 'Masaki Yamada', :from => '14:30', :abstract => "In the world of the open social application development for cell-phones, PHP is a major language, but the development using Ruby on Rails is possible. I show the know-how which we got through development of our product \"Sweets Collection\" and introduce open social application development using Ruby on Rails.", :abstract_ja => "携帯電話向けのオープンソーシャルアプリケーション開発の世界では、PHPがメジャーな言語ですが、Ruby on Railsを使った開発も可能です。私達が自社プロダクト「スイーツコレクション」の開発を通じて得たノウハウを公開するとともに、Ruby on Railsを使ったオープンソーシャルアプリケーション開発をご紹介します。"
     e27_big.create_break :from => '15:00'
     e27_big.create :title => 'Building Real Time Web', :title_ja => 'リアルタイムウェブができるまで', :speaker => 'Makoto Inoue', :from => '15:30', :abstract => "The real time web is not about adding chat on your website. It's not really about having stock tickers. The most interesting aspect of the realtime web is to be found in augmenting the web that we already know. We can add realtime functionally to our applications as another layer of fidelity.
-    
+
     This is our story (New Bamboo, London, UK) of experimenting various real time web technologies and coming up with our own solutions (http://www.pusherapp.com). This is not about explaining how to use our solutions, but about sharing exciting opportunities and new technical challenges HTML5 WebSocket brings when you build real time web.", :abstract_ja => "ここ最近のAjaxにかわるトレンドとしてリアルタイムウェブを利用した例が見かけられることが多いですが、その多くはチャットや株価更新などのサンプルの域をでないように見えます。弊社New Bamboo (London, UK)では、既存のリアルタイム技術をいろいろ研究した結果をPusher (http://www.pusherapp.com)というサービスとしてリリースしました。このトークでは、リリースにいたるまでの経緯をご紹介すると共に、HTML5 WebSocketを使うことによる新しい発見やチャレンジを皆様と共有していきたいと思います。"
     e27_big.create :title => 'The LazySweepGC and Me - over the rejected', :title_ja => '僕が愛したLazySweepGC 〜Rejectを越えて〜（仮）', :speaker => 'nari', :from => '16:00', :to => '17:00', :abstract => "The presentation introduces the technique and a result about Lazy Sweep GC for CRuby GC. In addition, I introduce the prospects of the future GC improvement.", :abstract_ja => "CRubyに対するLazySweepGCの実装方法と結果を紹介する。また、今後のGC改善の展望を述べる。"
     e27_big.create_break :from => '17:00'
     e27_big.create :title => 'The basis of making DSL with Ruby', :title_ja => 'Rubyで作るDSLの基礎', :speaker => 'Yasuko Ohba', :from => '17:30', :abstract => "Ruby is well known as a language with which you can create your own DSL easily. Making DSL with Ruby is really easy, but there seem to be many developers who have not tried to make DSL with Ruby by design. In my opinion, there is no clear boundary between 'Useful APIs' and DSL. However, we can always judge whether a code is like DSL or not, that means, we can create DSL by design. In this talk, I'll start by looking into what DSL is and when to use it. After that I'll talk what concepts, habits and techniques you need to make your own DSL, showing typical examples from famous DSL codes like Rails, RSpec and so on.", :abstract_ja => "RubyはDSLを作りやすい言語として知られています。実際に、DSLを作るのは簡単です。しかし、Rubyで意識的にDSLを作ったことのある人は意外に少ないのかもしれません。 Rubyで実現するDSLは、「使いやすいAPI」の一形態であり、ここから先がDSLだという明確な境界はありませんが、結果として出来上がったコードがDSL的かどうかは歴然と判断できます。つまり、コードをDSL的にするかどうかは開発者が意図的に選択していける事柄なのです。 本セッションでは、DSLとは何か、どんなときにDSLが有効かからはじめて、RubyでDSLを書く際に必要となる考え方、習慣、そしてテクニックを、 Rails や RSpec といった良く知られたコードを例にして話していきます。"
     e27_big.create :title => 'Best Imitation of Your Class', :title_ja => '君のクラスの最高の偽物', :speaker => 'Shugo Maeda', :from => '18:00', :to => '19:00', :abstract => "Ruby's open classes contribute to extensibility of applications such as Ruby on Rails. However, they sometimes cause serious conflicts between class extensions. This talk illustrates problems of open classes, and propose a resolution by which classes can be refined locally.
-    
+
     Keywords: selector namespace, classbox, context-oriented programming", :abstract_ja => "Rubyのオープンクラスは、Ruby on Railsのようなアプリケーションの拡張性に 寄与している。しかし、オープンクラスはクラス拡張間の深刻な衝突を引き起こ すこともある。この発表では、オープンクラスの問題を説明し、クラスを局所的に 変更することができるような解決法を提案する。
-    
+
 キーワード: selector namespace, classbox, context-oriented programming"
   end
 
   e27.with_options(:room => medium) do |e27_medium|
     e27_medium.create :title => 'Feels Like Ruby', :speaker => 'Sarah Mei', :from => '14:00', :abstract => "For a Rubyist, writing Javascript is the worst part of working on a Ruby web application. Those clean, modern UIs are often made possible by incredibly complex Javascript. The helpers inevitably get in the way, and you end up writing most of it by hand.
-    
+
     It is painful.
-    
+
     But you can make writing Javascript code feel more like writing Ruby code. I will show techniques that go beyond \"unobtrusive\" and turn Javascript into a first-class citizen in your Ruby application. Make your Javascript more joyful!"
     e27_medium.create :title => 'User Experience for Library Designers', :speaker => 'geemus', :from => '14:30', :abstract => "I've written \"a lot of code\":http://github.com/geemus, both hobby and work, over the last year, and looking back I can't help but think that writing code for yourself is easy; it's writing code for others can be tough. In this session, I'll share some examples of good and bad practices gathered in my years writing code and libraries, and discuss how to get past being too close to the problem. I'll talk specifically about growing your work into something anybody (and hopefully everybody) will use."
     e27_medium.create_break :from => '15:00'
@@ -57,11 +57,11 @@ EventLoader.with_options(:day => 27) do |e27|
     e27_medium.create :title => 'A frog in a well does not know the great sea', :title_ja => '井の中の蛙、大海を知らず', :speaker => 'Sarah Allen', :from => '16:30', :abstract => "When building an application it is easy to forget that most applications today are available globally and used by people who speak many languages. You may create user interface in English or Japanese, but people may choose to type their data in their native language. Web browsers will allow people to enter text in almost any script, and if you are lucky it will \"just work\" ... but often it needs a little more attention. Sarah will share anecdotes from her adventures building Mightyverse, a multi-lingual database of native language video recordings. She will highlight details of how to get unicode text in and out of a database well as how to handle multibyte text in Ruby.", :abstract_ja => "アプリケーションを構築する時、ほとんどのアプリケーションが今日グローバル的に使用されること、多国語を話す人々に使用されること忘れがちになってしまいます。あなたは、英語や日本語のユーザーインターフェイスを制作するかもしれません。でも、人々は母国語でデーターを記入することを選ぶかもしれません。ウェブブラウザは、ほぼすべてのスクリプトを記入することを可能にします。もし、あなたがラッキーなら、それはなんとか機能するかもしれません。しかし、しばしば、それはもう少し注意を必要とします。サラは、ネイティブスピーカーのビデオを使用した多国語データーベースのMightyverseを構築する経験からの逸話を共有するでしょう。　サラは、どのようにしてUnicodeテキストをデータベースに出し入れするのかの詳細に重点をおきます。また、Rubyでどのようにマルチバイトテキストを扱うかにも重点をおきます。"
     e27_medium.create_break :from => '17:00'
     e27_medium.create :title => '1.9 on 1.8', :speaker => 'ujihisa', :from => '17:30', :abstract => "Topic: RubyGems library \"backports\" and \"sfl\", RubySpec, and Rubinius.
-    
+
     There's no doubt that all features newly introduced in Ruby 1.9 are really useful. Besides the biggest changes like the introduction of YARV, new methods like Kernel.spawn are also handy. Most Rubyists code in Ruby 1.9, however, they sometimes need to write 1.8 compatible code. Some methods have already been introduced in Ruby 1.8.7, whilst the others were not. For example, `Enumerable#map` without block differs between 1.8 and 1.9.
-    
+
     Fortunately Marc-Andre, one of the ruby committers, is working on solving the issue with his RubyGems library \"backports\". Also, I am working on porting Kernel.spawn to 1.8 on some platforms with the RubyGems library \"sfl\". They are not perfect yet, but we can figure out what's compatible or incompatible.
-    
+
     I'll explain the background, usage and implementation of \"backports\" and \"sfl\", referring RubySpec and Rubinius which played a very important role. I'll demonstrate some pragmatic cases on several Ruby implementations. Throughout the presentation, I'd like to clarify how useful the latest Ruby is."
     e27_medium.create :title => 'My many failure products', :speaker => 'jugyo', :from => '18:00', :abstract => "I talk about my many failure products and few successful products. My products is here => http://github.com/jugyo/", :abstract_ja => "私のたくさんの失敗プロダクトと少しの成功プロダクトについて話します。 私のプロダクトはここ => http://github.com/jugyo/"
     e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove', :from => '18:30', :abstract => "Programming for fun, or having fun programming. Ruby is the best language for both! Let's talk about programming after we've punched out from work, the programming we can do while drinking a beer, and the programming we can do to make our friends laugh. We'll take a look at projects built for fun, as well as projects built to have fun! We'll dissect them to figure out what makes them tick, then
@@ -73,35 +73,35 @@ EventLoader.with_options(:day => 27) do |e27|
   e27.with_options(:room => a202) do |e27_a202|
     e27_a202.create :title => 'Ruby developer meeting at Tsukuba', :title_ja => 'Ruby開発会議つくば', :speaker => 'Ruby core team', :from => '10:00', :to => '12:30', :abstract => "We will hold a meeting about development of Ruby."
     e27_a202.create :title => "Monthly 'toRuby' workshop in Tsukuba", :title_ja => '出張版 toRuby勉強会', :speaker => 'Shouichi Nakauchi', :from => '14:00', :to => '16:00', :abstract => "Monthly 'toRuby' workshop that always holds in Nasu area comes to here Tsukuba and holds the same workshop as usual. Since we are going to prepare some subject maters, you will be able to enjoy programing Ruby. Please bring your PC for Ruby programing.
-    
+
     The Nasu area is located in an only 150km north direction from Tokyo. Nasu is Tochigi-ken Nasushiobara city formally. 'to' of toTuby is 'To' of Tochigi-ken. Now, we are having programming and a discussion using the book of Mr. Masatoshi Seki's dRuby. Please look at http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=toRuby for details. (This page is Japanese only.) Moreover, also about the contents of our event performed by RubyKaigi, we are going to notify in the above-mentioned website. Thank you.", :abstract_ja => "いつも那須方面で開催しているtoRuby勉強会が、つくばに出張してきて、いつものような勉強会を開催します。Rubyを使ったお題を用意するので、参加者みなさんにPCを持参してもらい、手を動かしながらRubyを楽しむ会になります。
-    
+
     toRubyは東京のちょっとだけ北、150kmくらいにある栃木県、那須塩原市で月に一度、勉強会を開催しています。toRubyのtoはとちぎの'と'です。現在は咳さんのdRubyの本を使って、写経やディスカッションをしています。詳細は http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=toRuby をご覧ください。またRubyKaigiでの内容についても、上記Webにて告知していきます。"
     e27_a202.create :title => 'Ordinary Systems Development:Revenge', :title_ja => '帰ってきたふつうのシステム開発 - Rubyとアジャイル開発の永和システムマネジメントだけど何か質問ある?', :speaker => 'SHIBATA Hiroshi', :from => '16:00', :to => '18:00', :abstract => "In RubyKaigi 2008, we gave a talk about our development style using Ruby with agile way as \"Ordinary Systems Development\".
-    
+
     In this sub-event, we'd love to show you the current status of our development style and provie a time for discussing about our challenges addressed and not yet addressed with you.", :abstract_ja => "RubyKaigi2008の0日目に私たち永和システムマネジメントのRubyとアジャイル開発の取り組みを「ふつうのシステム開発」として紹介しました。
-    
+
     あれから2年、現在の私たちが克服した課題、克服できていない課題や悩みについて、私たちのプロジェクト事例や採用技術の紹介を交じえながら、参加者の皆さまと、Rubyを使ったシステム開発をもっとアジャイルにしていくための会話の場を一緒につくりあげたいと考えています。"
   end
 
   e27.with_options(:room => a201) do |e27_a201|
     e27_a201.create :title => 'rake:money', :title_ja => 'rake:money 拡大版', :speaker => 'Ouka Yuka', :from => '14:00', :to => '16:00', :abstract => "The meeting of the IT system engineer to think that I earn money seriously.
-    
+
     I raise awareness of the money, and it is a meeting of the people who want to become the engineer who can earn one's convincible income. I take up marketing and a business trend or a topic about the money that it is not readily possible for in a topic about economy in tax or assets use in the normal technology system study society how I cut one's skill efficiently in imitation Ta'izz.
-    
+
     In the Ruby meeting extension, I make t", :abstract_ja => "真剣にお金を稼ぐことを考えるIT系エンジニアの会。
-    
+
     お金に対する意識を高めて、自分の納得のいく収入を稼げるエンジニアになりたいと考える人たちの会合です。 自分のスキルをどうすれば効率よくマネタイズできるか、マーケティングやビジネストレンド、はたまた節税や資産運用についてなど、普通の技術系勉強会ではなかなか話題にできないお金に関する話題を取り上げます。
-    
+
     Ruby会議拡大版では、Ruby会議スポンサーの各社をパネラーに迎え、Rubyエンジニアに対するビジネスニーズや、企業の中のRubyist がどのようにビジネス価値を発揮していくかといったテーマについてパネルディスカッションを行います。"
     e27_a201.create :title => 'Ruby Business Owner Kaigi', :title_ja => 'Ruby親方会議', :speaker => 'Takeyuki FUJIOKA', :from => '16:00', :to => '18:00', :abstract => "Ruby's small business owner talk about own working and exchange experience each other.", :abstract_ja => "Rubyを使ってスモールビジネスを展開しているビジネスオーナーの情報交換を行います。"
   end
 
   e27.create :title => "Let's create your own T-shirt designed by Ruby at RubyKaigi 2010!! / The Origami Ruby (paper craft) Generated by The Ruby", :title_ja => "Rubykaigiで自分だけのrubyTシャツを作ろう！/ Ruby で作る Ruby の折り紙", :speaker => 'Yasuo Yoshikawa / Hiroyuki Shimura', :room => foyer, :from => '13:00', :to => '15:30', :abstract => "Let's create your own T-shirt designed by Ruby at RubyKaigi 2010!!!:
   Let's create your own T-shirt designed by Ruby on tmix! tmix is the only on-demand retail platform for consumers.
-  
+
   If you can create T-shirt today, you can put on it tomorrow!
-  
+
   This event open until Aug 27th 15:00 pm . price 1,500en (front or back print only!) White or Black T ,size S,M,L,XL,XXL Cash only.
 
   The Origami Ruby (paper craft) Generated by The Ruby:#TODO
@@ -121,7 +121,7 @@ EventLoader.with_options(:day => 27) do |e27|
   ・翌日午後13時から17時のあいだに受け取る。
 
   2010 年 8 月 27 日(金)のみ開催注文は28 日(土)13時から17時までに会場で受け取りできる人のみ。
-  
+
   Ruby で作る Ruby の折り紙:
   Ruby の折り紙を折ります。 http://dl.dropbox.com/u/4921720/RubyFoldings/IMG_0362.A3_C35_Chu25.WebSmall.JPG 折り線をプリントした展開図を用意しますので、前半それを参考にみんなで折りましょう。後半は、ちょっと難しくなりますがホイル折紙や透明折紙(セロファン)で折ってみたり、或は展開図を作成する Rubyスクリプトを読みましょう。"
 end
@@ -150,9 +150,9 @@ EventLoader.with_options(:day => 28) do |e28|
     e28_medium.create :title => 'Seamless Integration Testing', :speaker => 'paulelliott', :abstract => "Do you have a solid, full coverage integration test suite? You should. It is the final automated point of assurance that what you are about to push to production is not going to blow something up and cost your or your client money. I show how to integration test a real Rails application, demonstrating best practices you can apply to any setup and the latest technologies for fully covering your app, including javascript!"
     e28_medium.create_break
     e28_medium.create :title => 'A Metaprogramming Spell Book', :speaker => 'Paolo "Nusco" Perrotta', :length => 1.hour, :abstrat => "When I started to learn Ruby, I was awed by the code of experienced rubyists. That code was full of amazing magic tricks that I could barely understand. People called those tricks \"metaprogramming\".
-    
+
     With time, I found that metaprogramming sits right at the core of Ruby. To think in Ruby, I had to understand all those scary tricks! Feeling like a sorcerer's apprentice, I set out to write a Spell Book of metaprogramming techniques. Once I'd finished the Spell Book, metaprogramming didn't seem like black magic anymore. Instead, it just felt like any other set of techniques.
-    
+
     In this talk, I'll show you the content of my Spell Book, so that you don't have to go through the trouble of writing one yourself."
     e28_medium.create_break
     e28_medium.create :title => 'LT中継', :length => 1.hour
@@ -164,24 +164,24 @@ EventLoader.with_options(:day => 28) do |e28|
     e28_a202.create :title => 'tDiaryKaigi', :title_ja => 'tDiary会議', :speaker => 'SHIBATA Hiroshi', :from => '9:30', :length => 90.minutes, :abstract => "In this session, tDiary users and developpers will discuss future and love for tDiary! we plan to hackathon, and if you have useful patches, please attend this session.", :abstract_ja => "tDiary のユーザと開発者が集まって今後のロードマップや意見交換を中心にtDiary愛について語り合いたいと思います。 Hackathonも予定していますので、コミッタに取り込んでもらいたいパッチがある人はぜひお越し下さい。"
     e28_a202.create :title => 'Asakusa.rb in Tsukuba', :title_ja => '浅草.rb in つくば', :speaker => 'Akira Matsuda', :from => '12:00', :length => 90.minutes, :abstract => "#TODO", :abstract_ja => "RubyKaigi の会場には、皆さんも日ごろお世話になっているはずのプロダクトや書籍の作者さんご本人がうじゃうじゃ来場しています。せっかくの年に一度のチャンスなので、是非この機会にいつも感じている疑問や要望、それから感謝の気持ちを思>い切って直接作者さんに伝えちゃいましょう！とはいえ、誰が誰だかよくわからないし、いきなり面と向かっては話しかけづらいし、特に言語の壁があった>りするとなかなか勇気が要りますよね？そこで、僕たち Asakusa.rbでは、Jeremy Kemper や Chad Fowler をはじめ、当日会場に居る豪華外タレさんたちを>ゲストにお迎えして、彼ら自身の \"あの\"プロダクトについて、ご本人と Asakusa.rb のメンバーたちと、それからもちろん会場の皆様も巻き込んで、生のアツいディスカッションを行います。"
     e28_a202.create :title => 'Pair Programming Cultural Exchange', :speaker => 'Sarah Mei', :to => '18:00', :abstract => "We may not speak the same language, but we do have one language in common. So, we can code together!
-    
+
     Armed with a list of pair programming phrases in English and Japanese, let's work together on a project in Ruby. Coding together can help us bridge the artificial boundaries created by language, culture, and distance, and can create friendships that last beyond the conference.
-    
+
     Unicorns and ponies for everyone!"
   end
 
   e28.with_options(:room => b201) do |e28_b201|
     e28_b201.create :title => 'jpmobile Kaigi 2010', :speaker => 'Shin-ichiro OGAWA', :from => '9:30', :length => 90.minutes, :abstract => "A Kaigi for \"jpmobile\" developers. Jpmobile is the de facto standard Rails plugin for Japanese mobile phones. Almost all of \"jpmobile\" developers will come to this session and discuss the future of jpmobile, then
      start to struggle to make it real, that means, write codes. The main topics will be supporting Rails 3.0+ and Ruby 1.9, building Rack middleware.
-     
+
      Anyone who wants to contribute to jpmobile should attend this Kaigi.", :abstract_ja => "日本全国から jpmobile 開発者・利用者が一堂に会して、jpmobile の今後について議論や開発を行う企画です。えにしテックの設楽さんを中心に、Rails 3.0 以降や Rack について、その場で議論して開発に入るハッカソンスタイルを取る予定です。"
     e28_b201.create :title => 'PGP Keysign Party', :speaker => 'Shyouhei Urabe w/ Yugui', :from => '12:00', :length => 90.minutes, :abstract => "Let's trade pubkeys! Keysign party connects our community tightly each other. It is also fairly important when you want to make a secure channel with us (e.g. when you report a security incident).
-    
+
     Please take a look at this howto before joining this party. You need a PGP key pair plus few more physical preparations.
-    
+
     "
     e28_b201.create :title => 'M-x ruby-and-emacs-workshop', :speaker => 'Zev Blut', :length => 90.minutes, :abstract => "Stretch your fingers and warm up your control and meta keys. Bring your laptop and .emacs file. Let's show each other our techniques for writing Ruby code using Emacs.
-    
+
     This is a workshop for both beginners and advanced users to share tips and tricks for developing Ruby code with Emacs."
     e28_b201.create :title => 'Cucumber hands-on', :title => 'Cucumber ハンズオン', :speaker => 'MOROHASHI Kyosuke', :length => 90.minutes, :abstract => "Cucumber is a very nice testing framework. But the major feature, execute natural language text as tests, varies from familiar \"Ruby syntax\". Therefore, you may feel inhibited to take the first step (so I was.). In this sub-event, we try Cucumber to build a simple Rails application. It will tell you that cucumber is not so difficult to start and has great power to describe software test.", :abstract_ja => "Cucumberはとてもよくできたテスティングツールです。しかし、その大きな特長である、自然言語を使ったテスト定義は、慣れ親しんでいる「Ruby の文法」とは見た目が大きくことなります。そのため、はじめの一歩を踏み出すに心理的な抵抗を感じることもあるでしょう(私もそうでした)。この企画では、Cucumberを使いながら簡単なRailsアプリケーションを作っていくことで、始めるのは難しくないことと、そしてCucumber のパワーを実感してもらうことを目的としています。"
   end
@@ -189,11 +189,11 @@ EventLoader.with_options(:day => 28) do |e28|
   e28.with_options(:room => a201) do |e28_a201|
     e28_a201.create :title => 'Nihon Ruby-no-Kai meeting', :title_ja => '日本Rubyの会の会', :speaker => 'Koji Shimada', :from => '12:00', :length => 90.minutes, :abstract => "An open meeting where Rubyists discuss what we can do for Ruby.", :abstract_ja => "RubyのためにRubyistができることについて話し合うイベント。 RubyKaigi2010の時期には実は第6期が終わっているので、第6期の活動のふりかえりと、第7期の活動のアイデア出しをやりましょう!"
     e28_a201.create :title => 'Vim', :speaker => 'ujihisa', :to => '17:00', :abstract => "About half of Rubyists are using Vim to code Ruby. Vim is one of the ultimate tools for software developments, which vary among programmers. Why don't you exchange the ways you use Vim?
-    
+
     For example, I am using some Vim plugins such as quickrun.vim, neocomplcache, and smartchr.vim to code Ruby efficiently. Although my ~/.vimrc is less than just 900 lines, there are plenty of good tricks worth telling to you. I'd like to tell you about my Vim knowledge, and learn how you yourself are optimizing Vim.
-    
+
     I'd like to make the event in English, because most Japanese have already been learning English for a while. Of course, attendees are supposed to be familiar with Ruby and Vim, because they are the lingua franca of this event. I can help translating Japanese to English or English to Japanese. Even if you don't have a lot of confidence with other languages, you can still attend this event.
-    
+
     Other editor users such "
   end
 
@@ -205,9 +205,9 @@ EventLoader.with_options(:day => 29) do |e29|
     e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka', :from => '9:30', :abstract => "We show the construction/operation methods for Cloud with Ruby. (ex. NIFTY Cloud)"
     e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita', :abstract => "Castor is a new scalable storage system implemented in Ruby. In this session, we talk about the reasons why we decided to develop new Castor storage system, and the features against another storage systems such as MogileFS and kumoFS.", :abstract_ja => "Castorは、Rubyで実装されたスケーラブルなストレージシステムです。本発表では、開発に至った経緯と、MogileFSやkumoFS等、他の分散ストレージシステムとの違いについて紹介します。"
     e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI', :abstract => "#TODO", :abstract_ja => "2000-8-31、ruby-listにすこし変わったWikiが紹介されました。[ruby-list:24661] dRubyの最初の実用的なアプリケーション、RWikiです。
-    
+
     RWikiはメッセージ色の濃いソフトウェアです。RWikiはRuby周辺のさまざまなライブラリのサンプルとして紹介されましたが、ほかにも特異な実装も作者のメッセージです。RWikiのもっとも大きな特徴はデータベース、オブジェクトを全て一つのプロセスの中に配置する、In-Memory のアプリケーションであることです。そういえば、NoSQL、In-Memoryは最近のバズワードでもありますね。
-    
+
     この発表の数日後、RWikiはちょうど10年を迎えます。 作者はアクティブなRWikiサイトを複数運営していて、現在では3万ページ、プロセスサイズは1GBを超えています。本発表では、このサイトが「大きさ・量」を獲得していく過程で展開された、ちょっとした物語を報告します。"
     e29_big.create :title => 'Practical Ruby Projects with MongoDB', :speaker => 'Alex Sharp', :length => 1.hour, :abstract => "While there is a lot of excitement surrounding MongoDB and the NoSQL movement, MongoDB is all about practicality, pragmatism and performance. MongoDB boasts a robust feature set that provides a pragmatic blend of rich functionality, performance and scalability that today's software developers need, and all at a relatively low barrier to entry."
     e29_big.create_break :length => 90.minutes
@@ -225,12 +225,12 @@ EventLoader.with_options(:day => 29) do |e29|
     e29_medium.create :title => 'NArray and scientific computing NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka', :abstract => "NArray is an n-dimensional numerical array library developed for use in science fields, but it is usable for handling binary data efficiently. I talk about NArray for the first time after 10 years from the first release. I will also present topics including the next version of NArray,　 and distributed scientific computing using Ruby for multi-core era."
     e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura'
     e29_medium.create :title => 'AOT Compiler for Ruby', :title_ja => 'Ruby 用 AOT コンパイラ', :speaker => 'Satoshi Shiba', :abstract => "We developed a AOT Compiler, which translates Ruby script into native code to run Ruby script faster.
-    
+
     In this presentation, we show composition of CRuby and the challenges we overcome to achieve full compatible AOT compiler for the CRuby. We also show the design and the implementation of our AOT compiler. We evaluated the compatibility and performance by using tests and benchmarks included in CRuby release.", :abstract_ja => "Ruby スクリプトの実行をより高速にするために，Ruby スクリプトを機械語に変換する AOT（Ahead-Of-Time）コンパイラ を開発した．
-    
+
     本発表では，CRubyの構成を述べ，CRubyと完全互換なAOTコンパイラを開発するにあたっての課題を述べる．そして，我々のAOTコンパイラの設計と実装を示す． Ruby処理系に付属するテストプログラム，ベンチマークプログラムを用いて， その互換性，および得られた性能向上について述べる．"
     e29_medium.create :title => 'Memory Profiler for Ruby', :speaker => 'Tetsu Soh', :abstract => "We developed a memory profiler for Ruby programming language that fulfills the requirement for measuring and analyzing the memory usage of Ruby applications.
-    
+
     In this presentation, we will describe the features, the design and the implementation of the memory profiler. We will also show the performance evaluation and demonstrate the memory profiler in action."
     e29_medium.create_break :length => 1.5.hours
     e29_medium.create :title => 'How to create Ruby reference manual search Web application with Ruby 1.9  groonga and rroonga', :title_ja => 'るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索', :speaker => 'Kouhei Sutou'
@@ -251,17 +251,17 @@ EventLoader.with_options(:day => 29) do |e29|
     e29_a202.create :title => 'Ruby Game Developers Kaigi', :title_ja => 'Rubyゲーム会議', :speaker => 'kumaryu', :from => '10:00', :length => 2.hours
     e29_a202.create :title => 'Asakusa.rb in Tsukuba', :title_ja => '浅草.rb in つくば', :speaker => 'Akira Matsuda', :from => '12:00', :length => 90.minutes, :abstract => "#TODO", :abstract_ja => "RubyKaigi の会場には、皆さんも日ごろお世話になっているはずのプロダクトや書籍の作者さんご本人がうじゃうじゃ来場しています。せっかくの年に一度のチャンスなので、是非この機会にいつも感じている疑問や要望、それから感謝の気持ちを思い切って直接作者さんに伝えちゃいましょう！とはいえ、誰が誰だかよくわからないし、いきなり面と向かっては話しかけづらいし、特に言語の壁があったりするとなかなか勇気が要りますよね？そこで、僕たち Asakusa.rbでは、Jeremy Kemper や Chad Fowler をはじめ、当日会場に居る豪華外タレさんたちをゲストにお迎えして、彼ら自身の \"あの\"プロダクトについて、ご本人と Asakusa.rb のメンバーたちと、それからもちろん会場の皆様も巻き込んで、生のアツいディスカッションを行います。"
     e29_a202.create :title => 'TermtterKaigi', :speaker => 'Kazuyuki Kohno', :length => 3.hours, :abstract => "\"Termtter\" is a twitter client, written in Ruby, and based on terminal applications/softwares or shells.
-    
+
     TermtterKaigi does:
-    
+
     * Hackathon
     * Lightning Talks
     * Refactoring Termtter
     * Tutorial of Termtter
     * Q&A of Termtter", :abstract_ja => "ermtterはRubyで実装されている、ターミナルやシェルから利用することができるTwitterクライアントです。
-    
+
     TermtterKaigiは以下の事をします:
-    
+
     * ハッカソン
     * ライトニングトーク
     * Termtter のリファクタリング
@@ -271,13 +271,13 @@ EventLoader.with_options(:day => 29) do |e29|
 
   e29.with_options(:room => b201) do |e29_b201|
     e29_b201.create :title => 'Ruby meets LDAP  choices and case', :title_ja => 'Ruby で扱う LDAP のススメ - 選択肢とその事例', :speaker => 'Kazuaki Takase', :from => '10:00', :length => 2.hours, :abstract => "LDAP is widely used for directory service, defined on RFC 4510-4519.
-    
+
     Ruby has library to manage LDAP, such as \"Ruby/LDAP\", \"Net::LDAP\" and \"ActiveLdap\". Unfortunately, no found enough documentation on the internet to determine library which is better.
-    
+
     This session introduce case of each library for Ruby community to determine for choosing which library.", :abstract_ja => "Ruby/LDAP, Net::LDAP, ActiveLdap など数々の実装がある中でLDAP自身のマイナーさも相まってか、各パッケージ間の特色やその利用事例について、まとまった情報が存在していません。
-    
+
     数種のパッケージが存在する以上、そこに多様性が存在するはずです。求めるオペレーションによって最適なものは何か、妥当性を選択するための判断基準が存在するはずと考えます。
-    
+
     この企画は各パッケージでの利用事例を公募し、それぞれがその利点を発表する事によって、 LDAP を扱おうとする Ruby コミュニティにパッケージ選択の指針を提供しようとする試みです。"
     e29_b201.create :title => 'Ruby powering 9 million dining tables', :title_ja => 'Ruby powering 9 million dining tables', :speaker => 'Yukiyo.Sakurai@COOKPAD Inc., Kenta.Hashimoto@COOKPAD Inc.', :from => '12:00', :length => 90.minutes, :abstract => "Do you know the website that 45% of Japanese women in their 30's are
     using regularly?

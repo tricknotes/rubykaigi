@@ -279,7 +279,7 @@ EventLoader.with_options(:day => 29) do |e29|
     数種のパッケージが存在する以上、そこに多様性が存在するはずです。求めるオペレーションによって最適なものは何か、妥当性を選択するための判断基準が存在するはずと考えます。
 
     この企画は各パッケージでの利用事例を公募し、それぞれがその利点を発表する事によって、 LDAP を扱おうとする Ruby コミュニティにパッケージ選択の指針を提供しようとする試みです。"
-    e29_b201.create :title => 'Ruby powering 9 million dining tables', :title_ja => 'Ruby powering 9 million dining tables', :speaker => 'Yukiyo.Sakurai@COOKPAD Inc., Kenta.Hashimoto@COOKPAD Inc.', :from => '12:00', :length => 90.minutes, :abstract => "Do you know the website that 45% of Japanese women in their 30's are
+    e29_b201.create :title => 'Ruby powering 9 million dining tables', :title_ja => 'Ruby powering 9 million dining tables', :speaker => 'Kenta Hashimoto(COOKPAD Inc.)', :from => '12:00', :length => 90.minutes, :abstract => "Do you know the website that 45% of Japanese women in their 30's are
     using regularly?
     COOKPAD (cookpad.com) is the world's greatest user-generated recipe
     site with 9.8 million monthly users and over 800 thousand recipes.

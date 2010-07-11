@@ -36,25 +36,60 @@ describe SessionsController do
         stub(controller).warden.stub!.env {
           {'warden.options' => {:oauth => {:twitter => {:access_token => token}}}}
         }
-
-        stub.instance_of(Twitter::Base).user {
-          Hashie::Mash.new(
-            :name              => 'Keita Urashima',
-            :url               => 'http://ursm.jp/',
-            :screen_name       => 'ursm',
-            :profile_image_url => 'http://example.com/ursm.png'
-          )
-        }
-
-        get :unauthenticated
       end
 
-      it { response.should redirect_to(new_account_path) }
-      it { session[:params_from_authenticator][:twitter_user_id].should == 1234 }
-      it { session[:params_from_authenticator][:full_name].should == 'Keita Urashima' }
-      it { session[:params_from_authenticator][:website].should == 'http://ursm.jp/' }
-      it { session[:params_from_authenticator][:avatar_type].should == 'twitter' }
-      it { Redis::Value.new('twitter/users/1234', Redis::Objects.redis, :marshal => true).value.keys.should =~ %w(screen_name profile_image_url) }
+      context 'happy case' do
+        before do
+          mock.instance_of(Twitter::Base).user(1234) {
+            Hashie::Mash.new(
+              :name              => 'Keita Urashima',
+              :url               => 'http://ursm.jp/',
+              :screen_name       => 'ursm',
+              :profile_image_url => 'http://example.com/ursm.png'
+            )
+          }
+
+          get :unauthenticated
+        end
+
+        it { response.should redirect_to(new_account_path) }
+        it { session[:params_from_authenticator][:twitter_user_id].should == 1234 }
+        it { session[:params_from_authenticator][:full_name].should == 'Keita Urashima' }
+        it { session[:params_from_authenticator][:website].should == 'http://ursm.jp/' }
+        it { session[:params_from_authenticator][:avatar_type].should == 'twitter' }
+
+        it do
+          begin
+            Redis::Value.new('twitter/users/1234', Redis::Objects.redis, :marshal => true).value.keys.should =~ %w(screen_name profile_image_url)
+          rescue Errno::ECONNREFUSED
+            pending "Redis doesn't running"
+          end
+        end
+      end
+
+      context 'API rate limit exceeded' do
+        before do
+          mock.instance_of(Twitter::Base).user(1234) {
+            raise Twitter::RateLimitExceeded, 'hi'
+          }
+
+          get :unauthenticated
+        end
+
+        it { response.should redirect_to(new_account_path) }
+        it { session[:params_from_authenticator][:twitter_user_id].should == 1234 }
+        it { session[:params_from_authenticator][:full_name].should be_nil }
+        it { session[:params_from_authenticator][:website].should be_nil }
+        it { session[:params_from_authenticator][:avatar_type].should == 'twitter' }
+
+        it do
+          begin
+            Redis::Value.new('twitter/users/1234', Redis::Objects.redis, :marshal => true).value.should be_nil
+          rescue Errno::ECONNREFUSED
+            pending "Redis doesn't running"
+          end
+        end
+      end
     end
 
     context 'redirect back from OpenID provider with credentials' do

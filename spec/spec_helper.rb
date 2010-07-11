@@ -81,7 +81,12 @@ Spork.prefork do
     config.before(:each) do
       DatabaseCleaner.start
       Sham.reset(:before_each)
-      Redis::Objects.redis.flushdb
+
+      begin
+        Redis::Objects.redis.flushdb
+      rescue Errno::ECONNREFUSED
+        # Redis doesn't running.
+      end
     end
 
     config.after(:each) do

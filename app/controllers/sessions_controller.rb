@@ -35,8 +35,13 @@ class SessionsController < ApplicationController
 
       begin
         profile = Twitter::Base.new(client).user(user_id)
-        cache = Redis::Value.new("twitter/users/#{user_id}", Redis::Objects.redis, :marshal => true)
-        cache.value = profile.slice(:screen_name, :profile_image_url)
+
+        begin
+          cache = Redis::Value.new("twitter/users/#{user_id}", Redis::Objects.redis, :marshal => true)
+          cache.value = profile.slice(:screen_name, :profile_image_url)
+        rescue Errno::ECONNREFUSED => e
+          Rails.logger.warn e
+        end
       rescue Twitter::RateLimitExceeded
         profile = Hashie::Mash.new
       end

@@ -1,7 +1,11 @@
 %div.session
   %p.title
     - unless event.break
-      != link_to event.title, event_path(2010, current_locale, event)
+      %a.tip{:href =>  event_path(2010, current_locale, event)}
+        = event.title
+        - if event.abstract
+          %span
+            = event.abstract
     - else
       = event.title
   %p.speaker

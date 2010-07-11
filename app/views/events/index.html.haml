@@ -4,19 +4,19 @@
   %p <strong>The official time table is coming soon. Stay tuned! </strong> In the meantime, the program preview below lists the currently scheduled talks and subevents. This schedule is tentative and may change without notice.
 
   - @events.group_by(&:date).each do |date, events_per_date|
-    %h2
+    -#%h2
       = l date, :format => :long
-    - events_per_date.reject{|e| ["Break", "Closing", "Opening", "Keynote中継", "LT中継"].include?(e.title)}.each do |event|
+    -# events_per_date.reject{|e| ["Break", "Closing", "Opening", "Keynote中継", "LT中継"].include?(e.title)}.each do |event|
       %ul
         %li
           #{event.title}, #{event.presenter_name}
 
-  -#
-    - content_for :head, stylesheet_link_tag('timetables_lagacy')
+
+    -# content_for :head, stylesheet_link_tag('timetables_lagacy')
     #timetables
       - @events.group_by(&:date).each do |date, events_per_date|
         %a{:name => "timetable-#{date.strftime '%m%d'}"}
-          %h1
+          %h2
             = l date, :format => :long
           %table.timetable
             %thead

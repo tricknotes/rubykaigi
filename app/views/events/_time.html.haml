@@ -1,6 +1,6 @@
 %tr
   %th
-    != "#{l from, :format => :hhmm} - #{l 30.minutes.since(from), :format => :hhmm}"
+    != "#{l from, :format => :hhmm} | #{l 30.minutes.since(from), :format => :hhmm}"
   - if (events_per_from.count == 1) && (event = events_per_from.first).break?
     %td.break{ :colspan => @rooms.count}
       = event.title

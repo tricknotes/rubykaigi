@@ -32,10 +32,14 @@ class SessionsController < ApplicationController
       client.authorize_from_access atoken.token, atoken.secret
 
       user_id = atoken.params[:user_id]
-      profile = Twitter::Base.new(client).user(user_id)
 
-      cache = Redis::Value.new("twitter/users/#{user_id}", Redis::Objects.redis, :marshal => true)
-      cache.value = profile.slice(:screen_name, :profile_image_url)
+      begin
+        profile = Twitter::Base.new(client).user(user_id)
+        cache = Redis::Value.new("twitter/users/#{user_id}", Redis::Objects.redis, :marshal => true)
+        cache.value = profile.slice(:screen_name, :profile_image_url)
+      rescue Twitter::RateLimitExceeded
+        profile = Hashie::Mash.new
+      end
 
       session[:params_from_authenticator] = {
         :twitter_user_id => user_id,

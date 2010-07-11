@@ -64,11 +64,6 @@ class Rubyist < ActiveRecord::Base
     tickets.select {|t| t.ruby_kaigi.year == kaigi_year }.sort {|a, b| b.created_at <=> a.created_at }
   end
 
-  def twitter_account
-    return nil if twitter_user_id.blank?
-    @twitter_account ||= TwitterAccount.new(twitter_user_id)
-  end
-
   # TODO 2010-06-14現在、avator機能は有効化されておらず、そもそも呼び出していない
   def avatar_url(type = avatar_type)
     case type.to_s

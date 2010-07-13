@@ -261,11 +261,11 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 2.0.2
+    version: 2.1.2
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
-    version: 0.8.3
+    version: 0.8.4
 - cucumber-rails: 
     version: 0.3.2
 - daemons: 
@@ -285,13 +285,13 @@ specs:
 - gettext: 
     version: 1.93.0
 - god: 
-    version: 0.10.1
+    version: 0.11.0
 - haml: 
     version: 3.0.13
 - hashie: 
     version: 0.2.1
 - hoptoad_notifier: 
-    version: 2.3.0
+    version: 2.3.2
 - httparty: 
     version: 0.5.2
 - i18n_generators: 
@@ -306,7 +306,7 @@ specs:
 - oauth: 
     version: 0.4.1
 - rack-google-analytics: 
-    version: 0.4.0
+    version: 0.6.1
 - ruby-openid: 
     version: 2.1.7
 - rack-openid: 
@@ -334,7 +334,7 @@ specs:
 - thin: 
     version: 1.2.7
 - yajl-ruby: 
-    version: 0.7.6
+    version: 0.7.7
 - twitter: 
     version: 0.9.8
 - warden-openid: 
@@ -344,7 +344,7 @@ specs:
 - webrat: 
     version: 0.7.1
 - whenever: 
-    version: 0.4.2
+    version: 0.5.0
 - will_paginate: 
     version: 2.3.14
 hash: 5cfed259da4b234a2f792cc4354fee1c16614bba

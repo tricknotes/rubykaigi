@@ -77,6 +77,7 @@ namespace :bundler do
 end
 
 namespace :god do
+  desc "start god for rubykaigi.org"
   task :start do
     pid_path = "#{current_path}/tmp/pids/god.pid"
     log_path = "#{current_path}/log/god.log"
@@ -84,10 +85,12 @@ namespace :god do
     run("god -c #{config_path} -P #{pid_path} -l #{log_path}")
   end
 
+  desc "terminate god"
   task :terminate do
     run("god terminate")
   end
 
+  desc "restart god w/ deplayed_job"
   task :restart do
     run("god restart delayed_job")
   end

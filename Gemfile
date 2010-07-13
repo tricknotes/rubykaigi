@@ -11,7 +11,7 @@ gem "hoptoad_notifier"
 gem 'i18n_generators', :git => 'git://github.com/amatsuda/i18n_generators.git'
 gem 'haml'
 gem 'fastercsv'
-gem 'whenever'
+gem 'whenever', '0.4.2'
 gem 'delayed_job'
 gem 'rack-google-analytics'
 gem 'will_paginate'

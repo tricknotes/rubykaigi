@@ -61,7 +61,7 @@ dependencies:
   whenever: 
     group: 
     - :default
-    version: ">= 0"
+    version: = 0.4.2
   redis-objects: 
     group: 
     - :default
@@ -344,10 +344,10 @@ specs:
 - webrat: 
     version: 0.7.1
 - whenever: 
-    version: 0.5.0
+    version: 0.4.2
 - will_paginate: 
     version: 2.3.14
-hash: 5cfed259da4b234a2f792cc4354fee1c16614bba
+hash: 0b0dd299b0b362efb94c0024756e2be34f094fac
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

@@ -1,8 +1,6 @@
 %div#content
   %h1
-    RubyKaigi2010 Events
-  %p <strong>The official time table is coming soon. Stay tuned! </strong> In the meantime, the program preview below lists the currently scheduled talks and subevents. This schedule is tentative and may change without notice.
-
+    = t(:time_table)
   #timetables
     - @events.group_by(&:date).each do |date, events_per_date|
       %a{:name => "timetable-#{date.strftime '%m%d'}"}

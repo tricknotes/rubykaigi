@@ -91,17 +91,9 @@
 
         %li.current
           != link_to t(:program), "/2010/#{current_locale}/events"
-          -#
-            %ul
-              %li
-                %a{ :href => "#" }
-                  X月X日
-              %li
-                %a{ :href => "#" }
-                  X月X日
-              %li
-                %a{ :href => "#" }
-                  X月X日
+          %ul
+            %li
+              != link_to t(:time_table), "/2010/#{current_locale}/timetable"
         %li.current
           %a{ :href => "#" }
             #{t(:information)}

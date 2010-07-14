@@ -3,21 +3,19 @@ require 'spec_helper'
 
 describe OrderItem do
   describe ".from_cart_item" do
-    context "カートに複数のアイテムが入っている場合" do
+    context "カートにアイテムが入っている場合" do
       before do
         @product_item = ProductItem.make(:unit_price => 123)
         cart = Cart.new
-        2.times do
-          cart.add_product(@product_item)
-        end
+        cart.add_product(@product_item)
         @order_item = OrderItem.from_cart_item(cart.items.first)
       end
       subject { @order_item }
 
       its(:item_code) { should == @product_item.item_code }
       its(:unit_price) { should == 123 }
-      its(:quantity) { should == 2 }
-      its(:subtotal_price) { should == 246 }
+      its(:quantity) { should == 1 }
+      its(:subtotal_price) { should == 123 }
     end
   end
 

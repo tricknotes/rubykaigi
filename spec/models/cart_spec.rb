@@ -32,18 +32,5 @@ describe Cart do
       its(:total_items) { should == 1 }
       it { should_not be_empty }
     end
-
-    context "複数のアイテムがある場合" do
-      before(:all) do
-        @cart.add_product(@product1)
-        @cart.add_product(@product1)
-        @cart.add_product(@product2)
-      end
-
-      subject { @cart }
-      its(:total_price) { should == 2200 }
-      its(:total_items) { should == 3 }
-      it { should_not be_empty }
-    end
   end
 end

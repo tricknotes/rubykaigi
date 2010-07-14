@@ -58,7 +58,7 @@ describe Contribution do
         subject { @kakutani }
 
         it { should be_individual_sponsor(2010) }
-        it { should be_attendee(2010) }
+        it { should_not be_attendee(2010) }
         it { should be_party_attendee(2010) }
 
         specify "個人スポンサーの在庫が1減っていること" do
@@ -76,7 +76,7 @@ describe Contribution do
 
       shared_examples_for "本編には参加するが、懇親会には参加しない個人スポンサー" do
         it { should be_individual_sponsor(2010) }
-        it { should be_attendee(2010) }
+        it { should_not be_attendee(2010) }
         it { should_not be_party_attendee(2010) }
 
         specify "個人スポンサーの在庫が1減っていること" do

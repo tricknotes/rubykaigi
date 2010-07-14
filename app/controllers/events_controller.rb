@@ -13,6 +13,16 @@ class EventsController < LocaleBaseController
     end
   end
 
+  def timetable
+    @events = Event.all :include => [:room, :time_slits]
+    @rooms = @events.map(&:room).uniq.sort_by(&:sort_order)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @events }
+    end
+  end
+
   # GET /events/1
   # GET /events/1.xml
   def show

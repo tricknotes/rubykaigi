@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.timetable ":year/:locale/timetable",
+    :controller => 'events', :action => 'timetable',
+    :requirements => {:year => /2\d{3}/, :locale => /en|ja/}
+
   map.resources :events, :path_prefix => ":year/:locale", :requirements => {:year => /2\d{3}/, :locale => /en|ja/}, :only => %w(index show)
 
   map.signin "/signin", :controller => 'sessions', :action => 'new'

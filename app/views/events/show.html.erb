@@ -4,9 +4,7 @@
   <h2><%= t(:speaker) %></h2>
 
   <p>
-  <%- @event.speakers.each do |speaker| -%>
-    <%= link_to speaker.username, speaker %><br>
-  <% end -%>
+  <%= @event.presenter_name %>
   </p>
 
   <h2><%= t(:abstract) %></h2>

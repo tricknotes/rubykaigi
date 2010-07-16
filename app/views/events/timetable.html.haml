@@ -1,3 +1,6 @@
+- content_for :head do
+  != stylesheet_link_tag '/2010/stylesheets/timetable'
+
 %div#content
   %h1
     = t(:time_table)
@@ -12,7 +15,7 @@
               %th.time
                 &nbsp;
               - @rooms.each do |room|
-                %th.room
+                %th{:class => (room.hall? ? 'room_hall' : 'room')}
                   = room.name
           %tbody
             - from, to = events_per_date.map(&:from).min, events_per_date.map(&:to).max

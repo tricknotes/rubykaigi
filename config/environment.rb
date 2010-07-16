@@ -71,3 +71,6 @@ Rails::Initializer.run do |config|
   require 'rack/git_commit_header'
   config.middleware.use Rack::GitCommitHeader
 end
+
+ActionController::Base.perform_caching = true
+ActionController::Base.cache_store = :file_store, File.join(Rails.root, 'tmp', 'rails-cache')

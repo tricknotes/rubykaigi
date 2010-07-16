@@ -42,6 +42,10 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def presenter_name_without_afffiliation
+    presenter_name ? presenter_name.gsub(/\(.+\)/, '') : ""
+  end
+
   def minutes
     (to - from).to_i / 60
   end

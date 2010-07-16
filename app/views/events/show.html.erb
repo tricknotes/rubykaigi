@@ -4,9 +4,7 @@
   <h2><%= t(:speaker) %></h2>
 
   <p>
-  <%- @event.speakers.each do |speaker| -%>
-    <%= link_to speaker.username, speaker %><br>
-  <% end -%>
+  <%= @event.presenter_name %>
   </p>
 
   <h2><%= t(:abstract) %></h2>
@@ -34,5 +32,7 @@
   </p>
 
   <%# link_to 'Edit', edit_event_path(@event) %>
-  <%= link_to 'Back', events_path(2010, current_locale) %>
+  <p class="right">
+  <%= link_to 'Back', events_path(2010, current_locale), :class => 'mark' %>
+  </p>
 </div>

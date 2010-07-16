@@ -90,18 +90,10 @@
                     \#{t(:rubykaigi)} 2006
 
         %li.current
-          != link_to t(:program), "/2010/#{current_locale}/events"
-          -#
-            %ul
-              %li
-                %a{ :href => "#" }
-                  X月X日
-              %li
-                %a{ :href => "#" }
-                  X月X日
-              %li
-                %a{ :href => "#" }
-                  X月X日
+          != link_to t(:time_table), "/2010/#{current_locale}/timetable"
+          %ul
+            %li
+              != link_to t(:program_list), "/2010/#{current_locale}/events"
         %li.current
           %a{ :href => "#" }
             #{t(:information)}

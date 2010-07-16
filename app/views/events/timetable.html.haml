@@ -1,7 +1,7 @@
 - content_for :head do
   != stylesheet_link_tag '/2010/stylesheets/timetable'
 
-- cache do
+- cache "timetable-#{I18n.locale}" do
   %div#content
     %h1
       = t(:time_table)

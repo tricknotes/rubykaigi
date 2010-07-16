@@ -15,8 +15,8 @@ end
 end
 
 # room: name_en: string, name_ja: string, floor_en: string, floor_ja: string, sort_order: integer
-big = Room.create :name_en => 'Big Hall', :name_ja => '大ホール', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 1
-medium = Room.create :name_en => 'Medium Hall', :name_ja => '中ホール', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 2
+big = Room.create :name_en => 'Main Convention Hall', :name_ja => '大ホール', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 1
+medium = Room.create :name_en => 'Convention Hall 200', :name_ja => '中ホール200', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 2
 b202 = Room.create :name_en => '202-B', :name_ja => '202-B', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 3
 a202 = Room.create :name_en => '202-A', :name_ja => '202-A', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 4
 b201 = Room.create :name_en => '201-B', :name_ja => '201-B', :floor_en => '2nd floor', :floor_ja => '2階', :sort_order => 5

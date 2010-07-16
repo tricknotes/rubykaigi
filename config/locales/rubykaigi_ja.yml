@@ -25,7 +25,7 @@ ja:
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
   time_table: 'タイムテーブル'
-  program: 'プログラム'
+  program_list: 'プログラム一覧'
   registration: '参加登録'
   order:
     confirm: "注文のご確認"

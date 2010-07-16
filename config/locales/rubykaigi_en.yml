@@ -25,7 +25,7 @@ en:
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
   time_table: 'Schedule'
-  program: 'Program'
+  program_list: 'Program'
   registration: 'Registration'
   order:
     confirm: "Order Confirmation"

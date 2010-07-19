@@ -37,4 +37,17 @@
 
   %hr
 
+  - if @rubyist.use_password?
+    - form_for @rubyist, :url => account_path do |form|
+      %dl
+        %dt!= form.label :password
+        %dd!= form.password_field :password, :value => ''
+
+        %dt!= form.label :password_confirmation
+        %dd!= form.password_field :password_confirmation, :value => ''
+
+      != form.submit 'Save'
+
+    %hr
+
   !=link_to t(:dashboard), dashboard_path

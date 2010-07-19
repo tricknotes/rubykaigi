@@ -25,7 +25,7 @@ dependencies:
     version: = 2.3.8
     require: []
 
-  mysql: 
+  haml: 
     group: 
     - :default
     version: ">= 0"
@@ -35,7 +35,7 @@ dependencies:
     version: ">= 0"
     require: 
     - smtp-tls
-  haml: 
+  mysql: 
     group: 
     - :default
     version: ">= 0"
@@ -46,28 +46,28 @@ dependencies:
     version: ">= 0"
     require: 
     - machinist/active_record
-  i18n_generators: 
-    group: 
-    - :default
-    version: ">= 0"
   rails_warden: 
     group: 
     - :default
     version: ">= 0"
-  delayed_job: 
+  i18n_generators: 
     group: 
     - :default
     version: ">= 0"
-  whenever: 
-    group: 
-    - :default
-    version: = 0.4.2
   redis-objects: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - redis/objects
+  whenever: 
+    group: 
+    - :default
+    version: = 0.4.2
+  delayed_job: 
+    group: 
+    - :default
+    version: ">= 0"
   rspec-rails: 
     group: 
     - :test
@@ -97,7 +97,7 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  will_paginate: 
+  warden-openid: 
     group: 
     - :default
     version: ">= 0"
@@ -105,7 +105,7 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  warden-openid: 
+  will_paginate: 
     group: 
     - :default
     version: ">= 0"
@@ -118,6 +118,12 @@ dependencies:
     group: 
     - :development
     version: < 2
+  bcrypt-ruby: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - bcrypt
   steak: 
     group: 
     - :test
@@ -164,11 +170,11 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  twitter: 
+  rack-google-analytics: 
     group: 
     - :default
     version: ">= 0"
-  rack-google-analytics: 
+  twitter: 
     group: 
     - :default
     version: ">= 0"
@@ -206,10 +212,12 @@ specs:
     version: 1.1.2
 - autotest-rails: 
     version: 4.1.0
+- bcrypt-ruby: 
+    version: 2.1.2
 - builder: 
     version: 2.1.2
 - highline: 
-    version: 1.5.2
+    version: 1.6.1
 - net-ssh: 
     version: 2.0.23
 - net-scp: 
@@ -261,11 +269,11 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 2.1.2
+    version: 2.1.5
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
-    version: 0.8.4
+    version: 0.8.5
 - cucumber-rails: 
     version: 0.3.2
 - daemons: 
@@ -347,7 +355,7 @@ specs:
     version: 0.4.2
 - will_paginate: 
     version: 2.3.14
-hash: 0b0dd299b0b362efb94c0024756e2be34f094fac
+hash: 0d917ee860c33b090f51a7063cff53015417f2d4
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

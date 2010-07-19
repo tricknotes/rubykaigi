@@ -2,6 +2,7 @@
 class Rubyist < ActiveRecord::Base
   extend  ActiveSupport::Memoizable
   include Redis::Objects
+  include Warden::Password::Model
 
   has_many :contributions
   has_many :tickets
@@ -83,6 +84,7 @@ class Rubyist < ActiveRecord::Base
   end
 
   private
+
   def contribution_types_of(kaigi_year)
     contributions.select {|c| c.ruby_kaigi.year == kaigi_year }.map(&:contribution_type)
   end
@@ -91,5 +93,4 @@ class Rubyist < ActiveRecord::Base
   def __attendee?(kaigi_year)
     contribution_types_of(kaigi_year).include?('attendee')
   end
-
 end

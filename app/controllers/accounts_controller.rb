@@ -18,7 +18,7 @@ class AccountsController < ApplicationController
       self.user = @rubyist
       session.delete(:params_from_authenticator)
 
-      redirect_to session.delete(:return_to) || root_path
+      redirect_to session.delete(:return_to) || root_path, :notice => 'You have signed up successfully'
     else
       render :new
     end

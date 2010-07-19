@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100615054304) do
+ActiveRecord::Schema.define(:version => 20100719062408) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -182,7 +182,8 @@ ActiveRecord::Schema.define(:version => 20100615054304) do
     t.string   "identity_url"
     t.string   "full_name"
     t.string   "website"
-    t.string   "avatar_type",     :default => "default", :null => false
+    t.string   "avatar_type",      :default => "default", :null => false
+    t.string   "crypted_password"
   end
 
   add_index "rubyists", ["identity_url"], :name => "index_rubyists_on_identity_url", :unique => true

@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
     redirect_to new_sessions_path
   end
 
+  alias create show
 
   def destroy
     logout

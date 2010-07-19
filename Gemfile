@@ -21,6 +21,7 @@ gem 'twitter'
 gem 'rails_warden'
 gem 'warden_oauth'
 gem 'warden-openid'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 gem 'god'
 

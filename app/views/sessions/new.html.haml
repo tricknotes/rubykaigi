@@ -11,7 +11,7 @@
           :position 2px center
 
 %div#content
-  %h1 #{@title}
+  %h1= @title
   %h2 You can Sign in/up with OAuth/OpenID
   %ul
     %li
@@ -26,10 +26,20 @@
     %li!= link_to 'Sign in with Yahoo! ID', sessions_path(:openid_identifier => 'http://yahoo.com')
     %li!= link_to 'Sign in with Yahoo! Japan ID', sessions_path(:openid_identifier => 'http://yahoo.co.jp')
     %li!= link_to 'Sign in with mixi', sessions_path(:openid_identifier => 'http://mixi.jp')
-  %h2
-    Using Other OpenID Providers
 
+  %h2 Using Other OpenID Providers
   - form_tag sessions_path, :method => :get do
     %p
       != text_field_tag :openid_identifier
       != submit_tag 'Sign in'
+
+  %h2 Using Password
+  - form_tag sessions_path do
+    %dl
+      %dt!= label_tag :username
+      %dd!= text_field_tag :username
+
+      %dt!= label_tag :password
+      %dd!= password_field_tag :password
+
+      %p!= submit_tag 'Sign in'

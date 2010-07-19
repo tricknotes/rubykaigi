@@ -1,4 +1,5 @@
 require 'openid/store/filesystem'
+require 'warden/password'
 
 Rails.configuration.middleware.use Rack::OpenID, OpenID::Store::Filesystem.new(Rails.root + 'tmp/openid')
 OpenID::Util.logger = Rails.logger
@@ -10,7 +11,7 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
     twitter.consumer_secret = configatron.twitter.consumer_secret
   end
 
-  manager.default_strategies :twitter_oauth, :openid
+  manager.default_strategies :twitter_oauth, :openid, :password
   manager.failure_app = SessionsController
 
   manager.serialize_from_session do |keys|

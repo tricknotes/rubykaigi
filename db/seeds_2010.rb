@@ -105,13 +105,23 @@ EventLoader.with_options(:day => 27) do |e27|
     :abstract_ja => "いつも那須方面で開催しているtoRuby勉強会が、つくばに出張してきて、いつものような勉強会を開催します。Rubyを使ったお題を用意するので、参加者みなさんにPCを持参してもらい、手を動かしながらRubyを楽しむ会になります。
 
     toRubyは東京のちょっとだけ北、150kmくらいにある栃木県、那須塩原市で月に一度、勉強会を開催しています。toRubyのtoはとちぎの'と'です。現在は咳さんのdRubyの本を使って、写経やディスカッションをしています。詳細は http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=toRuby をご覧ください。またRubyKaigiでの内容についても、上記Webにて告知していきます。"
-    e27_a202.create :title => 'Ordinary Systems Development:Revenge', :title_ja => '帰ってきたふつうのシステム開発 - Rubyとアジャイル開発の永和システムマネジメントだけど何か質問ある?', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc.)', :from => '16:00', :to => '18:00',
-    :abstract => "In RubyKaigi 2008, we gave a talk about our development style using Ruby with agile way as \"Ordinary Systems Development\".
+    e27_a202.create :title => 'Head First "Ordinary" System Development', :title_ja => 'Head First ふつうのシステム開発', :speaker => 'Eiwa System Management, Inc.', :from => '16:00', :to => '18:00',
+    :abstract => (<<EOS)
+We, Eiwa System Management, Inc. are one of the cutting-edge Ruby/Rails company in Japan. We're proud of presenting our way on building Rails application. @pragdave says "agility is part of the fabric of Rails." in his book Agile Web Development with Rails.
+However, we need a little bit more tools to improve our Rails projects in the real world. In this sub event, we'll give you live-demo, some commentary on what agile software development is and discussion with audiences.
 
-    In this sub-event, we'd love to show you the current status of our development style and provie a time for discussing about our challenges addressed and not yet addressed with you.",
-    :abstract_ja => "RubyKaigi2008の0日目に私たち永和システムマネジメントのRubyとアジャイル開発の取り組みを「ふつうのシステム開発」として紹介しました。
+Keywords: Agile Software Devleopment, Test Driven Development, Scrum, Pivotal Tracker, Ruby on Rails, Bundler, RSpec, Steak, Git, Capistrano
+EOS,
+    :abstract_ja => (<<EOS)
+『RailsによるアジャイルWebアプリケーション開発』にもあるように「アジリティ(アジャイルであること)は、Railsの骨組みの一部」です。
+とはいうものの、実際にプロジェクトを進めるには、Rails以外にももう少し仕掛けが必要です。
+この企画では、永和システムマネジメントが普段の受託開発プロジェクトでおこなっている、ふつうのシステム開発のすすめ方をライブ形式でお伝えします。
+参加者の皆さまからの疑問・質問にお答えする時間も用意しております。
+Railsの良さを活かしたプロジェクトの進め方に興味のある皆さまのご参加をお待ちしております。
 
-    あれから2年、現在の私たちが克服した課題、克服できていない課題や悩みについて、私たちのプロジェクト事例や採用技術の紹介を交じえながら、参加者の皆さまと、Rubyを使ったシステム開発をもっとアジャイルにしていくための会話の場を一緒につくりあげたいと考えています。"
+キーワード: アジャイル開発、TDD、Scrum、Pivotal Tracker、Ruby on
+Rails、Bundler、RSpec、Steak、Git、Capistrano、など
+EOS
   end
 
   e27.with_options(:room => a201) do |e27_a201|

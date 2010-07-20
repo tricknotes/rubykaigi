@@ -493,6 +493,6 @@ end
 
 
 # Event.create :title_en => 'Opening', :title_ja => 'オープニング',
-    :abstract_en => 'begin Rubykaigi',
-    :abstract_ja => 'はじまり', :detail_en => 'DETAIL!', :detail_ja => 'くわしく', :additional_info => 'ADDITIONAL!', :lang => 'ja', :break => false
+#    :abstract_en => 'begin Rubykaigi',
+#    :abstract_ja => 'はじまり', :detail_en => 'DETAIL!', :detail_ja => 'くわしく', :additional_info => 'ADDITIONAL!', :lang => 'ja', :break => false
 # Rubyist.create :username => 'a_matsuda', :email => 'ronnie@dio.jp', :twitter_user_id => 7220202, :identity_url => 'http://dio.jp/', :full_name => '松田 明', :website => 'http://localhost:3000/'

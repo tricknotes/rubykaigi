@@ -91,7 +91,7 @@ EventLoader.with_options(:day => 27) do |e27|
      extract techniques that we can use with our day to day tasks."
   end
 
-  e27.create :title => 'World Wide Ruby Conferences - Lightning Talks', :title_ja => '世界の Ruby Conference 紹介 Lightning Talks', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',
+  e27.create :title => 'World Wide Ruby Conferences', :title_ja => '世界の Ruby Conference から', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',
     :abstract => "There are many Ruby/Rails conferences, \"RubyKaigi\"s and Ruby/Rails meetups throughout the world, but we can only participate in a few of these. I'd like to use the \"Lightening Talk\" style to introduce some of the people running these other meetups. You may learn about a new meetup to visit, or give you ideas for your own m0eetup.",
     :abstract_ja => "世界中でたくさんのRuby会議、Ruby/Rails Conference、Ruby/Rails勉強会が行われています。私たちが参加できるのはそのうちのほんの一部です。この時間は世界中の勉強会を運営する方々にLT形式で紹介していただきます。次に行く勉強会を開拓したり、あなたが開催する勉強会の参考にするのはいかがでしょうか？"
 
@@ -174,7 +174,7 @@ end
 
 EventLoader.with_options(:day => 28) do |e28|
   e28.with_options(:room => big) do |e28_big|
-    e28_big.create :title => 'Ruby committers Q & A', :title_ja => 'Rubyコミッタ Q & A', :speaker => 'Yugui', :from => '9:30', :to => '11:00',
+    e28_big.create :title => 'Ruby committers Q & A', :title_ja => 'Rubyコミッタ Q & A', :speaker => 'Shugo Maeda', :from => '9:30', :to => '11:00',
     :abstract => "Many committers will come to RubyKaigi, so it's a good chance to ask them. In this event Ruby committers will answer questions from audience (or other committers).",
     :abstract_ja => "RubyKaigiにはたくさんのコミッタが来場するので、彼らに質問するよい機会です。このイベントでは、Rubyコミッタが聴衆(又は他のコミッタ) からの質問に回答します。"
     e28_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Matz', :length => 1.hour
@@ -246,7 +246,7 @@ EventLoader.with_options(:day => 28) do |e28|
 
      Anyone who wants to contribute to jpmobile should attend this Kaigi.",
     :abstract_ja => "日本全国から jpmobile 開発者・利用者が一堂に会して、jpmobile の今後について議論や開発を行う企画です。えにしテックの設楽さんを中心に、Rails 3.0 以降や Rack について、その場で議論して開発に入るハッカソンスタイルを取る予定です。"
-    e28_b201.create :title => 'PGP Keysign Party', :speaker => 'Shyouhei Urabe w/ Yugui (Ruby Core Team)', :from => '12:00', :length => 90.minutes,
+    e28_b201.create :title => 'PGP Key Signing Party', :title_ja => "キーサインパーティー 2010", :speaker => 'Shyouhei Urabe w/ Yugui (Ruby Core Team)', :from => '12:00', :length => 90.minutes,
     :abstract => "Let's trade pubkeys! Keysign party connects our community tightly each other. It is also fairly important when you want to make a secure channel with us (e.g. when you report a security incident).
 
     Please take a look at this howto before joining this party. You need a PGP key pair plus few more physical preparations.
@@ -420,7 +420,7 @@ EventLoader.with_options(:day => 29) do |e29|
   end
 
   e29.with_options(:room => b201) do |e29_b201|
-    e29_b201.create :title => 'Ruby meets LDAP  choices and case', :title_ja => 'Ruby で扱う LDAP のススメ - 選択肢とその事例', :speaker => 'Kazuaki Takase', :from => '10:00', :length => 2.hours,
+    e29_b201.create :title => 'Ruby meets LDAP, choices and case', :title_ja => 'Ruby で扱う LDAP のススメ - 選択肢とその事例', :speaker => 'Kazuaki Takase', :from => '10:00', :length => 2.hours,
     :abstract => "LDAP is widely used for directory service, defined on RFC 4510-4519.
 
     Ruby has library to manage LDAP, such as \"Ruby/LDAP\", \"Net::LDAP\" and \"ActiveLdap\". Unfortunately, no found enough documentation on the internet to determine library which is better.

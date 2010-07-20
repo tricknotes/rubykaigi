@@ -307,7 +307,7 @@ end
 
 EventLoader.with_options(:day => 29) do |e29|
   e29.with_options(:room => big) do |e29_big|
-    e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka (NIFTY Corporation), Yuichi Saotome (NIFTY Corporation)', :from => '9:30',
+    e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'Rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka (NIFTY Corporation), Yuichi Saotome (NIFTY Corporation)', :from => '9:30',
     :abstract => "We show the construction/operation methods for Cloud with Ruby. (ex. NIFTY Cloud)"
     e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)',
     :abstract => "Castoro is a new scalable storage system implemented in Ruby. In this session, we talk about the reasons why we decided to develop new Castoro storage system, and the features against another storage systems such as MogileFS and kumoFS.",

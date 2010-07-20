@@ -1,7 +1,7 @@
 %div#content
   %h1
     RubyKaigi2010 Events
-  %p <strong>The official time table is <a href="/2010/#{current_locale}/timetable">here</a>!</strong>
+  %p <strong>The official time table is <a href="/2010/#{current_locale}/timetable">here</a>!</strong>. Session details will be coming soon.
 
   - @events.group_by(&:date).each do |date, events_per_date|
     %h2
@@ -13,4 +13,3 @@
           -#
             %a{:href => event_path(2010, current_locale, event)}
               #{event.title}, #{event.presenter_name}
-

@@ -34,3 +34,6 @@ config.after_initialize do
     :password => configatron.gmail.password
   }
 end
+
+ActionController::Base.perform_caching = true
+ActionController::Base.cache_store = :file_store, File.join(Rails.root, 'tmp', 'rails-cache')

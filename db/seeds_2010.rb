@@ -139,7 +139,7 @@ EventLoader.with_options(:day => 28) do |e28|
     e28_big.create_break
     e28_big.create :title => 'Ruby API is Improved Unix API', :title_ja => 'Unix修正主義', :speaker => 'Tanaka Akira (National Institute of Advanced Industrial Science and Technology (AIST))', :length => 1.hour, :abstract => "Ruby's library API is similar to Unix API but improved. For example, Unix provides non-blocking I/O by the flag for each open file. This is problematic because the open file is used for various operations and the flag affects all of them. Ruby I/O provides non-blocking methods such as read_nonblock. This provides a way to specify non-blocking behavior for each operation individually. Another example is fork() system call which is problematic with multi threads. Ruby provides spawn() method for safe usage of fork(). This presentation shows API problem discovery and fix by such examples and other problems we may fix in future.", :abstract_ja => "Ruby のライブラリ API は Unix の影響を色濃く受けているが、 Unix の API をそのまま提供しているのではなく、 Unix の失敗を修正している部分がいくつかある。 たとえば、ノンブロッキング I/O は、オープンしたファイルに対するフラグで指示するため、 特定の操作だけをノンブロッキングにすることが難しい。 これに対し、Ruby ではフラグでなく read_nonblock メソッドなどを用いることにより、それが簡単になっている。 また、プロセスを起動する fork システムコールは近年のマルチスレッド環境では大きな問題がある。 これに対し、Ruby ではその問題がないプロセス起動方法として spawn メソッドを導入した。 本発表ではこのような修正例を述べ、また、まだ修正していない Unix の失敗とそれを Ruby で修正する可能性について述べる。 それにより、API の問題の発見と修正についての知見を示す。"
     e28_big.create_break
-    e28_big.create :title => 'LT', :length => 1.hour
+    e28_big.create :title => 'Lightning Talks', :length => 1.hour
   end
 
   e28.with_options(:room => medium) do |e28_medium|
@@ -157,7 +157,7 @@ EventLoader.with_options(:day => 28) do |e28|
 
     In this talk, I'll show you the content of my Spell Book, so that you don't have to go through the trouble of writing one yourself."
     e28_medium.create_break
-    e28_medium.create :title => 'LT', :length => 1.hour
+    e28_medium.create :title => 'Lightning Talks', :length => 1.hour
   end
 
   e28.create :title => 'JRubyKaigi 2010', :title_ja => 'JRuby会議 2010', :speaker => 'Koichiro Ohba / Akasaka.rb (JRuby.org and EngineYard)', :room => b202, :from => '12:00', :to => '18:00', :abstract => "It's JRubyKaigi for people who love JRuby, by JRuby core developers and Japanese JRuby developers. This kaigi will make both people who like JRuby already or not love JRuby much more. It will contain great sessions; the keynote session by Thomas E.Enebo(@tom_enebo) and Charles O.Nutter(@headus), the invited talks by Nick Sieger(@nicksieger), Hiroshi Nakamura(@nahi), Takeru Sasaki(@urekat), Koichi Fujikawa(@fujibee), Yoko Harada(@yokolet). We also have time table for 6 lightning talks from general participant (we'll accept proposals beforehand).", :abstract_ja => "JRuby コア開発者と日本のJRuby開発者によるJRubyが好きな人のためのJRubyKaigiを開催します。JRubyが好きな人はますます好きになり、そうでない人もJRubyが好きになる会議です。開催概要は次を予定しています。基調講演：Thomas E.Enebo(@tom_enebo) and Charles O.Nutter(@headus)、招致講演：Nick Sieger(@nicksieger)、Hiroshi Nakamura(@nahi)、Takeru Sasaki(@urekat)、Koichi Fujikawa(@fujibee)、Yoko Harada(@yokolet)、他にLightning Talks 6枠前後を一般募集。"

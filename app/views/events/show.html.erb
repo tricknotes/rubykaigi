@@ -10,7 +10,7 @@
   <h2><%= t(:abstract) %></h2>
 
   <p>
-  <%=h @event.abstract %>
+  <%= simple_format(h(@event.abstract)) %>
   </p>
 
   <h2><%= t(:when) %></h2>

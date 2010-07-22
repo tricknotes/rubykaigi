@@ -12,7 +12,7 @@
             = l date, :format => :long
           %p
             (Session details will be coming soon)
-          %table.timetable
+          %table{ :class => "timetable#{ date.day == 29 ? '' : ' br_a'}" }
             %thead
               %tr
                 %th.time

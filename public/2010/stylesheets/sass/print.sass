@@ -14,9 +14,8 @@ img, table, tr, td, a, form, fieldset
 
 
 body
-  background: #020202 url(/2010/images/top_main.jpg) top center no-repeat
   margin: 0px
-  color: #302b2b
+  color: #fff
 
 
 html, h1, h2, h3, h4, h5, h6
@@ -257,9 +256,7 @@ h4
     display: inline
 
 #header
-  margin: 0 auto
-  width: 980px
-  height: 50px
+  display: none
 
 #account
   float: right
@@ -310,34 +307,12 @@ h4
     margin: 5px 5px 0px 5px
 
 #menu
-  background: #111
-  border-top: 1px solid #222
-  border-bottom: 1px solid #222
-  font-size: 100%
-
+  display: none
 
 #langnav
-  margin: 0 auto
-  margin-top: 310px
-  width: 980px
-  text-align: right
-  height: 20px
-  background: url(/2010/images/langnav_bg.png) top center no-repeat
-  padding-top: 9px
-  padding-right: 12px
-
-
-#langnav p
-  display: inline
-  padding-top: 7px
-
-
-#langnav p img
-  float: right
-
+  display: none
 
 #container
-  width: 980px
   margin: 0 auto
   margin-bottom: 20px
 
@@ -348,16 +323,7 @@ h4
 
 
 #sidebar
-  float: left
-  width: 290px
-  margin: 10px 10px 10px 20px
-  position: relative
-
-  ul li
-    background: url(/2010/images/list_bg.gif) no-repeat top left
-    padding: 0px 5px 0px 20px
-    list-style: none
-
+  display: none
 
 #registration_btn
   display: block
@@ -371,40 +337,10 @@ h4
       left: 1px
 
 
-#tags
-  a
-    &:link, &:visited
-      text-decoration: none
-      border-bottom: 1px dotted #666
-
-
-  h3
-    margin: 0px 0px 0px 10px
-
-  p
-    font-size: 140%
-    margin: 0px 0px 0px 30px
-
-
-#sociallinks
-  text-align: center
-
-
 #sponsors
-
-  p
-    a
-      &:link, &:visited
-        text-decoration: none
-        border-bottom: 1px dotted #666
-
-  img
-    margin: 5px
-
+  display: none
 
 #content
-  float: right
-  width: 640px
   margin: 10px 10px 0px 0px
 
   a
@@ -412,20 +348,12 @@ h4
       text-decoration: none
       border-bottom: 1px dotted #666
 
-
-#langnav a
-  &:link, &:visited
-    text-decoration: none
-    border-bottom: 1px dotted #666
-
-
-#content a:hover, #langnav a:hover
+#content a:hover
   text-decoration: none
   border-bottom: 1px dotted #666
 
 .noborder,  
-#content a.noborder,
-#langnav a.noborder
+#content a.noborder
   border-bottom: none
 
 
@@ -434,35 +362,31 @@ h4
     margin-bottom: 20px
 
   p
-    line-height: 150%
     margin: 10px
+    font-size: 80%
 
   h1
-    background: url(/2010/images/head_bg.png) no-repeat bottom left
-    padding: 10px 10px 15px 0px
-    border: none
+    font-size: 100%
+    padding: 2px
+    margin: 2px
+    border: 2px solid #333
 
   h2
-    background: url(/2010/images/head_sub_bg.png) no-repeat bottom left
-    height: 30px
-    padding: 6px 10px 0px 10px
-    margin: 30px 0px 20px 0px
+    padding: 2px
+    margin: 2px
+    border-bottom: 1px dashed #333
 
   h3
-    border-bottom: 1px solid #8d8882
-    margin: 20px 0px 10px 0px
+    font-size: 80%
+    padding: 2px
+    margin: 2px
 
   li
     margin-bottom: 10px
 
 
 #footer
-  margin-top: 10px
-  clear: both
-  padding: 10px
-  text-align: center
-  font-size: 80%
-
+  display: none
 
 a
   &.tip
@@ -599,8 +523,10 @@ a
   border-bottom: none
 
 #timetables
+  h2
+    font-size: 90%
   th, td
-    font-size: 70%
+    font-size: 60% 
     padding: 4px 2px
     p
       margin: 0px
@@ -616,5 +542,10 @@ a
   p
     color: #888
     font-weight: bold
-.timetable *
-  letter-spacing: 0px
+
+.br_b
+  page-break-before: always
+
+.br_a
+  page-break-after: always
+

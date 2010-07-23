@@ -19,7 +19,7 @@ class Rubyist < ActiveRecord::Base
 
   attr_protected :twitter_user_id, :identity_url
 
-  value :twitter_account, :marshal => true, :key => 'twitter/users/#{twitter_user_id}'
+  value :twitter_profile, :key => "#{TwitterProfile::PREFIX}/\#{twitter_user_id}", :marshal => true
 
   def to_param
     username
@@ -64,11 +64,11 @@ class Rubyist < ActiveRecord::Base
     tickets.select {|t| t.ruby_kaigi.year == kaigi_year }.sort {|a, b| b.created_at <=> a.created_at }
   end
 
-  # TODO 2010-06-14現在、avator機能は有効化されておらず、そもそも呼び出していない
+  # TODO 2010-06-14現在、avatar機能は有効化されておらず、そもそも呼び出していない
   def avatar_url(type = avatar_type)
     case type.to_s
     when 'twitter'
-      twitter_account.nil? ? avatar_url('default') : twitter_account.value.profile_image_url
+      twitter_profile.nil? ? avatar_url('default') : twitter_profile.value.profile_image_url
     when 'gravatar'
       "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}?s=48"
     else

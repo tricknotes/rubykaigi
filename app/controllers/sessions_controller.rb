@@ -50,8 +50,7 @@ class SessionsController < ApplicationController
       profile = Twitter::Base.new(client).user(user_id)
 
       begin
-        cache = Redis::Value.new("twitter/users/#{user_id}", Redis::Objects.redis, :marshal => true)
-        cache.value = profile.slice(:screen_name, :profile_image_url)
+        TwitterProfile[user_id] = profile.slice(:screen_name, :profile_image_url)
       rescue Errno::ECONNREFUSED => e
         Rails.logger.warn e
       end

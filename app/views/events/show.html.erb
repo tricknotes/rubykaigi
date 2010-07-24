@@ -12,9 +12,9 @@
   <p>
   <%= simple_format(h(@event.abstract)) %>
 
-  <ul>
+  <ol>
   <% @event.children.each do |child_event| %>
-    <ol><%=h child_event.title %>, <%=h child_event.presenter_name %></ol>
+    <li><%=h child_event.title %>, <%=h child_event.presenter_name %></li>
   <% end %>
 </ul>
   </p>

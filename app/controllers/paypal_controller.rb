@@ -4,15 +4,7 @@ class PaypalController < ApplicationController
 
   verify :method => :post, :only => [:instant_payment_notification]
   def instant_payment_notification
-    logger.info("==== ipn params ====>")
-    logger.info("{")
-    notified_params = params.dup
-    notified_params.to_a.sort_by{|pair| pair.first}.each do |(k,v)|
-      logger.info("'#{k}' => '#{v}',")
-    end
-    logger.info("}")
-    logger.info("<==== ipn params ====>")
-
+    logging_ipn_params("ipn params")
     unless (params[:secret] == Paypal::EncryptedForm.ipn_secret ||
         params[:receiver_email] == Paypal::EncryptedForm.business_email)
       render :nothing => true, :status => 400
@@ -20,7 +12,8 @@ class PaypalController < ApplicationController
     end
 
     unless (order = Order.find_by_invoice_code(params["invoice"]))
-      render :nothing => true, :status => 404
+      logging_ipn_params("ipn params (order not found)")
+      render :nothing => true, :status => 200
       return
     end
 
@@ -39,5 +32,17 @@ class PaypalController < ApplicationController
 
     Delayed::Job.enqueue(Paypal::HandlePaymentNotificationJob.new(order.id))
     render :nothing => true, :status => 200
+  end
+
+  private
+  def logging_ipn_params(header_message)
+    logger.info("<==== #{header_message} ====>")
+    logger.info("{")
+    notified_params = params.dup
+    notified_params.to_a.sort_by{|pair| pair.first}.each do |(k,v)|
+      logger.info("'#{k}' => '#{v}',")
+    end
+    logger.info("}")
+    logger.info("<==== #{header_message} ====>")
   end
 end

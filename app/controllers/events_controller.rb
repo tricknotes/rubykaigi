@@ -14,7 +14,7 @@ class EventsController < LocaleBaseController
   end
 
   def timetable
-    @events = Event.all :include => [:room, :time_slits]
+    @events = Event.root :include => [:room, :time_slits]
     @rooms = @events.map(&:room).uniq.sort_by(&:sort_order)
 
     respond_to do |format|

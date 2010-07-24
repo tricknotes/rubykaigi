@@ -11,6 +11,12 @@
 
   <p>
   <%= simple_format(h(@event.abstract)) %>
+
+  <ul>
+  <% @event.children.each do |child_event| %>
+    <ol><%=h child_event.title %>, <%=h child_event.presenter_name %></ol>
+  <% end %>
+</ul>
   </p>
 
   <h2><%= t(:when) %></h2>
@@ -31,7 +37,6 @@
   <%=h @event.lang %>
   </p>
 
-  <%# link_to 'Edit', edit_event_path(@event) %>
   <p class="right">
   <%= link_to 'Back', events_path(2010, current_locale), :class => 'mark' %>
   </p>

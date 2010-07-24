@@ -237,7 +237,7 @@ ABSTRACT
 Ruby のライブラリ API は Unix の影響を色濃く受けているが、 Unix の API をそのまま提供しているのではなく、 Unix の失敗を修正している部分がいくつかある。 たとえば、ノンブロッキング I/O は、オープンしたファイルに対するフラグで指示するため、 特定の操作だけをノンブロッキングにすることが難しい。 これに対し、Ruby ではフラグでなく read_nonblock メソッドなどを用いることにより、それが簡単になっている。 また、プロセスを起動する fork システムコールは近年のマルチスレッド環境では大きな問題がある。 これに対し、Ruby ではその問題がないプロセス起動方法として spawn メソッドを導入した。 本発表ではこのような修正例を述べ、また、まだ修正していない Unix の失敗とそれを Ruby で修正する可能性について述べる。 それにより、API の問題の発見と修正についての知見を示す。
 ABSTRACT_JA
     e28_big.create_break
-    e28_big.create :title => 'Lightning Talks', :length => 1.hour
+    e28_big.create :title => 'Lightning Talks', :abstract => "Lightning Talks are 11 x 5minutes talk in a 60 minutes time slot", :abstract_ja => "1人持ち時間5分のライトニングトークです", :speaker => '(See Abstract)', :length => 1.hour
   end
 
   e28.with_options(:room => medium) do |e28_medium|
@@ -606,6 +606,36 @@ ABSTRACT
 Ruby の折り紙を折ります。 http://dl.dropbox.com/u/4921720/RubyFoldings/IMG_0362.A3_C35_Chu25.WebSmall.JPG 折り線をプリントした展開図を用意しますので、前半それを参考にみんなで折りましょう。後半は、ちょっと難しくなりますがホイル折紙や透明折紙(セロファン)で折ってみたり、或は展開図を作成する Rubyスクリプトを読みましょう。
 ABSTRACT_JA
 end
+
+lt_event = Event.find_by_title_en("Lightning Talks")
+lt_event.children.create :title_en => "ARToolKit Ruby Binding",
+                         :presenter_name => "Urabe, Shyouhei (Network Applied Communication Lab.)"
+lt_event.children.create :title_en => "Toward creating a single stand-alone executable of Ruby",
+                         :title_ja => "Ruby/Tk-Kit から RubyKit へ : Ruby の単一ファイル実行環境の構築に向けて",
+                         :presenter_name => "Hidetoshi NAGAI (Kyushu Institute of Technology / Rubyist Kyushu)"
+lt_event.children.create :title_en => "What is few?",
+                         :presenter_name => "Sora Harkami (few developer team)"
+lt_event.children.create :title_en => "Toward Lightning RubyVM",
+                         :presenter_name => "Koichi Sasada (The University of Tokyo)"
+lt_event.children.create :title_en => "MessagePack, a cross-language communication system",
+                         :title_ja => "MessagePackで多言語間通信",
+                         :presenter_name => "Sadayuki Furuhashi"
+lt_event.children.create :title_en => "It's not just about the Yen: Protecting the planet with Ruby",
+                         :presenter_name => "Simon Tokumine (United Nations Environment Programme)"
+lt_event.children.create :title_en => "Introducing the Lingo Project: A New Generationi Text Input System Leveraging Non-native English Writing",
+                         :presenter_name => "Kazki Matz (Lingo project)"
+lt_event.children.create :title_en => "babushka?test-driven sysadmin for rubyists",
+                         :presenter_name => "Ben Hoskings (babushka)"
+lt_event.children.create :title_en => "parse.y Fam Tour",
+                         :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-",
+                         :presenter_name => "Ando Yasushi (Seesaa Inc.)"
+lt_event.children.create :title_en => "The Timeless Way of E-Publishing with Ruby",
+                         :title_ja => "時を超えた電子出版の道の中をRubyと歩いていく",
+                         :presenter_name => "Masayoshi Takahashi (Tatsu-zine publishing, Nihon Ruby-no-Kai)"
+lt_event.children.create :title_en => "My Report of \"Ruby Summer of Code 2010\" - Road to be a stdlib -",
+                         :title_ja => "Ruby Summer of Code 2010のご報告 〜俺たちのDecimalはまだ始まったばかりだ〜",
+                         :presenter_name => "Tadashi Saito (University of Tsukuba)"
+
 
 # Event.create :title_en => 'Opening', :title_ja => 'オープニング',
 #    :abstract_en => 'begin RubyKaigi',

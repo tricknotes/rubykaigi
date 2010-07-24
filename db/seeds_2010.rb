@@ -174,7 +174,7 @@ end
 
 EventLoader.with_options(:day => 28) do |e28|
   e28.with_options(:room => big) do |e28_big|
-    e28_big.create :title => 'Ruby committers Q & A', :title_ja => 'Rubyコミッタ Q & A', :speaker => 'Shugo Maeda', :from => '9:30', :to => '11:00',
+    e28_big.create :title => 'Ruby 1.9.2 is released! / Ruby committers Q & A', :title_ja => 'Ruby 1.9.2 is relesed! / Rubyコミッタ Q & A', :speaker => 'Yugui, Shugo Maeda', :from => '9:30', :to => '11:00',
     :abstract => "Many committers will come to RubyKaigi, so it's a good chance to ask them. In this event Ruby committers will answer questions from audience (or other committers).",
     :abstract_ja => "RubyKaigiにはたくさんのコミッタが来場するので、彼らに質問するよい機会です。このイベントでは、Rubyコミッタが聴衆(又は他のコミッタ) からの質問に回答します。"
     e28_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Matz', :length => 1.hour
@@ -215,7 +215,6 @@ EventLoader.with_options(:day => 28) do |e28|
 
     In this talk, I'll show you the content of my Spell Book, so that you don't have to go through the trouble of writing one yourself."
     e28_medium.create_break
-    e28_medium.create :title => 'Lightning Talks', :length => 1.hour
   end
 
   e28.create :title => 'JRubyKaigi 2010', :title_ja => 'JRuby会議 2010', :speaker => 'Koichiro Ohba / Akasaka.rb (JRuby.org and EngineYard)', :room => b202, :from => '12:00', :to => '18:00',

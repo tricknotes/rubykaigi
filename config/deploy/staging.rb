@@ -1,2 +1,2 @@
-set :branch, "timetable-preview"
+set :branch, "master"
 server 'staging.rubykaigi.org', :app, :web, :db, :primary => true

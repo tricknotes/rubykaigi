@@ -4,6 +4,7 @@
   %p <strong>The official time table is <a href="/2010/#{current_locale}/timetable">here</a>!</strong>. Session details will be coming soon.
 
   - @events.group_by(&:date).each do |date, events_per_date|
+    - next if date == Date.parse('1970-01-01')
     %h2
       = l date, :format => :long
     - events_per_date.reject{|e| ["Break", "Closing", "Opening", "Keynote中継", "LT中継"].include?(e.title)}.each do |event|

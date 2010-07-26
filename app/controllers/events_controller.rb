@@ -4,7 +4,7 @@ class EventsController < LocaleBaseController
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all :include => [:room, :time_slits]
+    @events = Event.root :include => [:room, :time_slits]
     @rooms = @events.map(&:room).uniq.compact.sort_by(&:sort_order)
 
     respond_to do |format|

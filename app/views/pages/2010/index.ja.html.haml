@@ -60,14 +60,9 @@
     %li
       Jeremy Kemper
   %h2
-    プレゼンテーション発表
+    プレゼンテーション発表と企画
+  %p!= link_to 'タイムテーブル', "/2010/#{current_locale}/timetable"
   %p!= link_to 'プレゼンテーション発表と企画の一覧(タイトルは最新のものではありません)', "/2010/#{current_locale}/events"
-  %p!= render :partial => 'pages/2010/speakers_list'
-
-  %h2
-    企画
-  %p!= link_to 'プレゼンテーション発表と企画の一覧(タイトルは最新のものではありません)', "/2010/#{current_locale}/events"
-  %p!= render :partial => 'pages/2010/subevent_organizers_list'
 
   %h2 Ruby会議2010のライトニングトークスを募集します
   %p

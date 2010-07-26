@@ -50,14 +50,10 @@
     %li
       Jeremy Kemper
   %h2
-    Speakers
-  %p!= link_to 'The List of Talk and SubEvent Titles(not up to date)', "/2010/#{current_locale}/events"
-  %p!= render :partial => 'pages/2010/speakers_list'
-
-  %h2
-    Sub-Event Organizers
-  %p!= link_to 'The List of Talk and SubEvent Titles(not up to date)', "/2010/#{current_locale}/events"
-  %p!= render :partial => 'pages/2010/subevent_organizers_list'
+    Speakers, Sub-Event Organizers
+  %ul
+    %li!= link_to t(:time_table), "/2010/#{current_locale}/timetable"
+    %li!= link_to t(:program_list), "/2010/#{current_locale}/events"
 
   %h2 Call For Lightning Talk Proposals
   %p

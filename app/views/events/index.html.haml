@@ -1,7 +1,7 @@
 %div#content
   %h1
     RubyKaigi2010 Events
-  %p <strong>The official time table is <a href="/2010/#{current_locale}/timetable">here</a>!</strong>. Session details will be coming soon.
+  %p <strong>The official time table is <a href="/2010/#{current_locale}/timetable">here</a>!</strong>
 
   - @events.group_by(&:date).each do |date, events_per_date|
     - next if date == Date.parse('1970-01-01')

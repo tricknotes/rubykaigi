@@ -27,7 +27,7 @@ class Event < ActiveRecord::Base
   end
 
   def from
-    ((f = time_slits.first) ? f.start_at : Time.parse('1970-01-01'))
+    time_slits.first.start_at
   end
 
   def to

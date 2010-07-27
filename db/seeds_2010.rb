@@ -30,7 +30,7 @@ EventLoader.with_options(:day => 27) do |e27|
     e27_big.create :title => 'Opening', :from => '12:30'
     e27_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Jeremy Kemper ', :from => '13:00', :to => '14:00'
     e27_big.create :title => 'jpmobile on Rails 3', :title_ja => 'jpmobile on Rails 3 の作り方', :speaker => 'Shin-ichiro OGAWA (Tokyu.rb / Nihon Ruby no Kai)', :from => '14:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-Jpmobile is the Rails plugin for Japanese mobile phones. This plugin consists of a several convertions including Japanse emoticons, Japanese kanji codes, and the session managiment of some mobile phones which can't handle Cookie. In this talk, I will introduce how we rebuild the jpmobile codes, in order to support Rails 3 and Rack applications(Sinatra, etc.).
+Jpmobile is a Rails plugin for Japanese mobile phones. This plugin features the ability to convert Japanese emoticons and Japanese kanji codes, and session management for mobile phones which can't handle HTTP cookies. In this talk, I will introduce how we rebuilt the jpmobile codebase to support Rack applications such as Rails 3 and Sinatra.
 ABSTRACT
 jpmobile を Rails 3 や Sinatra に対応させるまでの道のりを紹介。Rack化や絵文字やデコメへの対応などを、どのようにRailsをハックしたかとともに紹介します。
 ABSTRACT_JA
@@ -101,8 +101,8 @@ Fortunately Marc-Andre, one of the ruby committers, is working on solving the is
 
 I'll explain the background, usage and implementation of \"backports\" and \"sfl\", referring RubySpec and Rubinius which played a very important role. I'll demonstrate some pragmatic cases on several Ruby implementations. Throughout the presentation, I'd like to clarify how useful the latest Ruby is.
 ABSTRACT
-    e27_medium.create :title => 'My many failure products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '18:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-I talk about my many failure products and few successful products. My products is here => http://github.com/jugyo/
+    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '18:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+I will talk about my many failed products, and a few of my successful ones. My products can be found here: http://github.com/jugyo
 ABSTRACT
 私のたくさんの失敗プロダクトと少しの成功プロダクトについて話します。 私のプロダクトはここ => http://github.com/jugyo/
 ABSTRACT_JA
@@ -224,7 +224,7 @@ ABSTRACT
 Ruby は読みやすいプログラムを簡単に書ける言語だが、読みにくいプログラムも簡単に書ける。 本発表では、発表者による「芸術的に」読みにくい Ruby プログラムを紹介する。 時間があれば、その実装技法の解説を行う。
 ABSTRACT_JA
     e28_big.create :title => 'Daily Ruby', :title_ja => 'Rubyな日々', :speaker => 'Kazuhiro NISHIYAMA (Good-Day, Inc.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-I will talk about my daily life as a committer of Ruby and Ruby Reference Manual Renewal Project.
+I will talk about my daily life as a committer of Ruby and the Ruby Reference Manual Renewal Project.
 ABSTRACT
 Ruby や Ruby リファレンスマニュアル刷新計画のコミッターとしてどういうことをしているのかという話をする予定です。
 ABSTRACT_JA
@@ -235,7 +235,11 @@ ABSTRACT
 ABSTRACT_JA
     e28_big.create_break
     e28_big.create :title => 'Ruby API is Improved Unix API', :title_ja => 'Unix修正主義', :speaker => 'Tanaka Akira (National Institute of Advanced Industrial Science and Technology (AIST))', :length => 1.hour,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-Ruby's library API is similar to Unix API but improved. For example, Unix provides non-blocking I/O by the flag for each open file. This is problematic because the open file is used for various operations and the flag affects all of them. Ruby I/O provides non-blocking methods such as read_nonblock. This provides a way to specify non-blocking behavior for each operation individually. Another example is fork() system call which is problematic with multi threads. Ruby provides spawn() method for safe usage of fork(). This presentation shows API problem discovery and fix by such examples and other problems we may fix in future.
+Ruby's library API is like Unix's API, but improved. Ruby tries to fix some of the problems in Unix's API. For example, non-blocking IO in Unix is provided by setting a flag when opening a file, making it difficult to specify non-blocking behavior for individual operations. Ruby overcomes this problem by providing non-blocking methods such as #read_nonblock.
+
+Another example is the fork() system call, which has problems in multi-threaded environments. Ruby provides the #spawn method as an alternative way to launch processes safely.
+
+This presentation will discuss techniques for API problem discovery with more examples of Ruby's improvements over Unix's API and other problematic parts of Unix which Ruby may improve in the future.
 ABSTRACT
 Ruby のライブラリ API は Unix の影響を色濃く受けているが、 Unix の API をそのまま提供しているのではなく、 Unix の失敗を修正している部分がいくつかある。 たとえば、ノンブロッキング I/O は、オープンしたファイルに対するフラグで指示するため、 特定の操作だけをノンブロッキングにすることが難しい。 これに対し、Ruby ではフラグでなく read_nonblock メソッドなどを用いることにより、それが簡単になっている。 また、プロセスを起動する fork システムコールは近年のマルチスレッド環境では大きな問題がある。 これに対し、Ruby ではその問題がないプロセス起動方法として spawn メソッドを導入した。 本発表ではこのような修正例を述べ、また、まだ修正していない Unix の失敗とそれを Ruby で修正する可能性について述べる。 それにより、API の問題の発見と修正についての知見を示す。
 ABSTRACT_JA
@@ -401,16 +405,16 @@ EventLoader.with_options(:day => 29) do |e29|
 We show the construction/operation methods for Cloud with Ruby. (ex. NIFTY Cloud)
 ABSTRACT
     e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-Castoro is a new scalable storage system implemented in Ruby. In this session, we talk about the reasons why we decided to develop new Castoro storage system, and the features against another storage systems such as MogileFS and kumoFS.
+Castoro is a new scalable storage system implemented in Ruby. In this session, we talk about why we decided to develop a new storage system, Castoro. We will also compare Castoro against other distributed storage systems, such as MogileFS and kumoFS.
 ABSTRACT
 Castoroは、Rubyで実装されたスケーラブルなストレージシステムです。本発表では、開発に至った経緯と、MogileFSやkumoFS等、他の分散ストレージシステムとの違いについて紹介します。
 ABSTRACT_JA
     e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI (druby.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-On August 31st, 2000, A slightly strange Wiki was introduced in ruby-list. It was [ruby-list:24661] The first practical application, RWiki.
+On August 31st, 2000, A slightly unusual Wiki was introduced on ruby-list. It was [ruby-list:24661] The first practical dRuby application, RWiki.
 
-RWiki is a software with strong opinion. RWiki was introduced as one example of many Ruby libraries, but its singular implementation also reflects author's opinion. The most significant feature of RWiki is in-memory application that contains all databases and objects in one process. Yes, NoSQL and In-Memory are also recent buzzwords.
+RWiki is strongly opinionated software. RWiki was introduced as an demonstration of the usage of various Ruby libraries, but its unique implementation also reflects the author's opinion. The most significant feature of RWiki is that it is an in-memory application that contains both the database and objects all in a single process. Which is rather reminiscent of some recent buzzwords: NoSQL and In-Memory.
 
-A couple days after this presentation, RWiki will celebrate its ten years. I am managing several RWiki sites that are in active. Currently, those sites have about 30 thousand pages and its process size is over 1 giga bytes. In this presentation, I will tell a little story which was developed in the process of those RWiki sites' gaining \"size and quantity\".
+A couple days after this presentation, RWiki will celebrate its tenth year anniversary. I am currently running several active RWiki sites. These sites have over 30 thousand pages with a process size exceeding 1Gb. In this presentation, I will tell a little story of how these RWiki sites achieved scale and volume.
 ABSTRACT
 2000-8-31、ruby-listにすこし変わったWikiが紹介されました。[ruby-list:24661] dRubyの最初の実用的なアプリケーション、RWikiです。
 
@@ -483,13 +487,15 @@ ABSTRACT_JA
 Turn the multimedia render loop inside out. Cooperatively scheduling lightweight Ruby threads on a virtual clock allows you to reason about the concurrent code in your game and perform complex synchronization tasks without even realizing it. Ditch the nested trees of update() calls by making time a first class cit
 ABSTRACT
     e29_medium.create_break
-    e29_medium.create :title => "How to survive in after Rails' time", :title_ja => 'before Rails 時代のプログラマが如何にして after Rails の世界にたどりついたか', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc. / asakusa.rb / tDiary.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-In before Rails appeared(before Rails' time), many programmers had used Ruby for developing products or useful tools. In after Rails appeared(after Rails' time), we need to change old thinking. I'll talk about my experience of changing my thinking to adapt to new days.
+    e29_medium.create :title => "How to survive in a post-Rails world", :title_ja => 'before Rails 時代のプログラマが如何にして after Rails の世界にたどりついたか', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc. / asakusa.rb / tDiary.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+Even before the release of Rails, we have created many useful tools and applications in Ruby. In this post-Rails world, however, the way we approach application development has changed. In this session, I will talk about my experiences in adapting my way of thinking to a post-Rails world.
 ABSTRACT
 Rails が登場する以前(before Rails)から私たちは多くのプロダクトやツールをRubyによって作ってきました。しかし、Rails が登場した現代(after Rails)のアプリケーション開発では、before Rails とは異なる考え方を持つ必要があります。このセッションでは、自分が経験したbefore Rails から after Rails に適応するための頭の切り替え方を話します。
 ABSTRACT_JA
-    e29_medium.create :title => 'How To Create Beautiful Template Engine Which Never Break HTML Design', :title_ja => 'HTMLデザインをまったく崩さない、美しいテンプレートエンジンの作り方', :speaker => 'Makoto Kuwata (programmer)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
-One of the problems of web application development is that it is hard to cooperate with web designer. For example, eRuby requires template files to contain Ruby codes which breaks HTML design of template files. In the result, web designer have a lot of stress. To solve this problem, several template engines are invented in the world. However, they cause another problems such as bad performance or hard to use while solving the problem. In this session, I'll explain how to create beautiful template engine which never break HTML design at all with keeping good performance and ease-to-use. I'll also explain what is wrong in existing template engines. This will be definitive session about template engine for web application development. You should join this session if you are interested in web design.
+    e29_medium.create :title => 'How To Create A Beautiful Template Engine Which Never Breaks HTML', :title_ja => 'HTMLデザインをまったく崩さない、美しいテンプレートエンジンの作り方', :speaker => 'Makoto Kuwata (programmer)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+One of the biggest challenges in modern web application development is the difficulty of collaborating with web designers. For example, eRuby requires Ruby code to be embedded inside template files, often resulting in broken HTML designs, making life difficult for web designers. To solve this problem, various template engines which don't break HTML have been created. The trade off of these template engines, however, is that they sacrifice other features such as performance or usability.
+
+In this session, a template engine that doesn't break HTML while also  preserving performance and usability will be introduced. This session  will also explore a variety of problems relating to template engines, such as the problems with techniques used in existing template engines, and whether simple "not breaking" HTML designs is sufficient.  This will be definitive session about template engines for web application development. If you are interested in web design, you must attend this session.
 ABSTRACT
 Webアプリケーション開発における問題点のひとつに、Webデザイナと協業がしにくいことが挙げられます。たとえばeRubyだとテンプレートファイル中にRubyコードを埋め込むため、テンプレートファイルのHTMLデザインが崩れてしまい、デザイナが作業しにくくなってしまいます。この問題を解決するために、HTMLデザインを崩さないようなテンプレートエンジンがいくつか考案されています。しかしそれらはHTMLデザインの問題を解決したかわりに、パフォーマンスや使い勝手の悪さなど別の問題を引き起こしています。本セッションでは、HTMLデザインを一切崩さず、かつ使いやすくて高速なテンプレートエンジンの作り方を紹介します。また既存の方法は何が間違っていたのか、そもそもHTMLデザインを崩さないだけでいいのか、など、テンプレートエンジンにまつわる様々な問題について考察します。本セッションは、テンプレートエンジンについての「決定版」ともいうべき内容です。Webデザインに興味のある方は必見です。
 ABSTRACT_JA

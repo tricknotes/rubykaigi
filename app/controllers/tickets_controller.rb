@@ -1,9 +1,10 @@
-class TicketsController < LocaleBaseController
+class TicketsController < ApplicationController
   before_filter :login_required, :except => [:show, :regenerate_permalink]
 
   layout_for_latest_ruby_kaigi
 
   def index
+    I18n.locale = 'en'
     @tickets = user.tickets_of(RubyKaigi.latest_year)
   end
 
@@ -41,6 +42,7 @@ class TicketsController < LocaleBaseController
   end
 
   def show
+    I18n.locale = 'en'
     @ticket = Ticket.find_by_code4url(params[:id])
     unless @ticket
       render :status => '404', :file => 'public/404.html'

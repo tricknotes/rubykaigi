@@ -4,7 +4,8 @@
 
   %ul
     - @tickets.each do |ticket|
-      - ticket_label = "RubyKaigi #{ticket.ruby_kaigi.year}, #{I18n.t(ticket.ticket_type)}(#{ticket.name})"
+      - extra_ticket_type = ticket.extra_ticket_type.present? ? " (#{ticket.extra_ticket_type})" : ""
+      - ticket_label = "RubyKaigi #{ticket.ruby_kaigi.year}, #{I18n.t(ticket.ticket_type)}#{extra_ticket_type}, #{ticket.name}"
       %li!= link_to(ticket_label, ticket_path(ticket))
 
   <br /><br /><br />

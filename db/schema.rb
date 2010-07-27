@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100615054304) do
+ActiveRecord::Schema.define(:version => 20100727123124) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -190,16 +190,17 @@ ActiveRecord::Schema.define(:version => 20100615054304) do
   add_index "rubyists", ["username"], :name => "index_rubyists_on_username", :unique => true
 
   create_table "tickets", :force => true do |t|
-    t.string   "ticket_code",     :null => false
-    t.string   "ticket_type",     :null => false
-    t.string   "code4url",        :null => false
-    t.string   "name",            :null => false
-    t.string   "email",           :null => false
+    t.string   "ticket_code",       :null => false
+    t.string   "ticket_type",       :null => false
+    t.string   "code4url",          :null => false
+    t.string   "name",              :null => false
+    t.string   "email",             :null => false
     t.integer  "contribution_id"
     t.integer  "rubyist_id"
-    t.integer  "ruby_kaigi_id",   :null => false
+    t.integer  "ruby_kaigi_id",     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "extra_ticket_type"
   end
 
   create_table "time_slits", :force => true do |t|

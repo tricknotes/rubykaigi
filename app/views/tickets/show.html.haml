@@ -1,13 +1,19 @@
 -content_for :meta_top do
   !=noindex_nofollow
 #content
-  %h1 RubyKaigi #{@ticket.ruby_kaigi.year}, #{t(@ticket.ticket_type)}
+  %h1
+    RubyKaigi #{@ticket.ruby_kaigi.year}, #{t(@ticket.ticket_type)}
+    - if @ticket.extra_ticket_type.present?
+      (#{@ticket.extra_ticket_type})
 
   %h2 Ticket Code
   %p #{@ticket.ticket_code}
 
   %h2 Ticket Type
-  %p #{t(@ticket.ticket_type)}
+  %p
+    #{t(@ticket.ticket_type)}
+    - if @ticket.extra_ticket_type.present?
+      (#{@ticket.extra_ticket_type})
 
   %h2 Your Name
   %p #{@ticket.name}

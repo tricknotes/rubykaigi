@@ -31,6 +31,37 @@ class Ticket < ActiveRecord::Base
           )
       end
     end
+
+    def build_extra_ticket_for_rubyist(rubyist, contribution_type, extra_ticket_type = nil)
+      unless Contribution::Type::ENUM.include?(contribution_type.to_s)
+        raise ArgumentError, "passed contribution_type '#{contribution_type}' is invalid. it should be one of these:'#{Contribution::Type::ENUM.join(', ')}'"
+      end
+      Ticket.new(
+        :ticket_code => Ticket.generate_ticket_code,
+        :ticket_type => contribution_type.to_s,
+        :extra_ticket_type => extra_ticket_type.to_s,
+        :code4url => Ticket.generate_code4url,
+        :name => rubyist.full_name,
+        :email => rubyist.email,
+        :rubyist => rubyist,
+        :ruby_kaigi => RubyKaigi.latest
+        )
+    end
+
+    def build_extra_ticket_for_sponsor(name, email, contribution_type, extra_ticket_type = nil)
+      unless Contribution::Type::ENUM.include?(contribution_type.to_s)
+        raise ArgumentError, "passed contribution_type '#{contribution_type}' is invalid. it should be one of these:'#{Contribution::Type::ENUM.join(', ')}'"
+      end
+      Ticket.new(
+        :ticket_code => Ticket.generate_ticket_code,
+        :ticket_type => contribution_type.to_s,
+        :extra_ticket_type => extra_ticket_type.to_s,
+        :code4url => Ticket.generate_code4url,
+        :name => name,
+        :email => email,
+        :ruby_kaigi => RubyKaigi.latest
+        )
+    end
   end # eigenclass
 
   def to_param

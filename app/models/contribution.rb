@@ -4,8 +4,9 @@ class Contribution < ActiveRecord::Base
   class DuplicationError < StandardError; end
 
   class Type
+    ENUM = %w[attendee individual_sponsor party_attendee staff]
     class << self
-      %w[attendee individual_sponsor party_attendee staff].each do |_type|
+      ENUM.each do |_type|
         define_method(_type) { _type }
       end
     end

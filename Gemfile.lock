@@ -171,7 +171,7 @@ dependencies:
   rack-google-analytics: 
     group: 
     - :default
-    version: ">= 0"
+    version: = 0.6.1
   capistrano: 
     group: 
     - :development
@@ -240,8 +240,10 @@ specs:
     version: 0.6.3
 - json_pure: 
     version: 1.4.3
+- rubyzip: 
+    version: 0.9.4
 - selenium-webdriver: 
-    version: 0.0.24
+    version: 0.0.27
 - capybara: 
     version: 0.3.9
 - rubyforge: 
@@ -261,7 +263,7 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 2.1.4
+    version: 2.1.5
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
@@ -287,7 +289,7 @@ specs:
 - god: 
     version: 0.11.0
 - haml: 
-    version: 3.0.13
+    version: 3.0.14
 - hashie: 
     version: 0.2.1
 - hoptoad_notifier: 
@@ -308,9 +310,9 @@ specs:
 - rack-google-analytics: 
     version: 0.6.1
 - ruby-openid: 
-    version: 2.1.7
+    version: 2.1.8
 - rack-openid: 
-    version: 1.0.3
+    version: 1.1.1
 - rails: 
     version: 2.3.8
 - warden: 
@@ -318,9 +320,9 @@ specs:
 - rails_warden: 
     version: 0.5.2
 - redis: 
-    version: 2.0.3
+    version: 2.0.4
 - redis-objects: 
-    version: 0.3.1
+    version: 0.3.2
 - rr: 
     version: 0.10.11
 - rspec: 
@@ -347,7 +349,7 @@ specs:
     version: 0.4.2
 - will_paginate: 
     version: 2.3.14
-hash: 0b0dd299b0b362efb94c0024756e2be34f094fac
+hash: 6949455df650769b9280e804617de013f6058462
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

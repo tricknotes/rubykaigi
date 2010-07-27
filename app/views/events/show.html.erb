@@ -14,7 +14,7 @@
 
   <ol>
   <% @event.children.each do |child_event| %>
-    <li><%=h child_event.title %>, <%=h child_event.presenter_name %></li>
+    <li><%= link_to "#{h(child_event.title)}, #{h(child_event.presenter_name)}", event_path(2010, current_locale, child_event) %></li>
   <% end %>
   </ol>
   </p>
@@ -38,6 +38,9 @@
   </p>
 
   <p class="right">
+  <% if @event.parent_event %>
+    <%= link_to('Parent', event_path(2010, current_locale, @event.parent_event), :class => 'mark') %>
+  <% end %>
   <%= link_to 'Timetable', timetable_path(:year => 2010, :locale => current_locale), :class => 'mark' %>
   </p>
 </div>

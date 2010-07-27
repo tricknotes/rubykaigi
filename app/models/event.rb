@@ -7,7 +7,7 @@ class Event < ActiveRecord::Base
   has_many :time_slits, :through => :event_time_slits, :order => 'start_at'
   has_one :event_room
   has_one :room, :through => :event_room
-  belongs_to :parent, :class_name => 'Event'
+  belongs_to :parent_event, :class_name => 'Event'
   has_many :children, :class_name => 'Event', :foreign_key => :parent_event_id
 
   named_scope :at, lambda {|room| {:joins => :event_room, :conditions => {:event_rooms => {:room_id => room}}}}

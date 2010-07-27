@@ -1,4 +1,4 @@
-class TicketsController < ApplicationController
+class TicketsController < LocaleBaseController
   before_filter :login_required, :except => [:show, :regenerate_permalink]
 
   layout_for_latest_ruby_kaigi

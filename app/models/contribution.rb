@@ -157,7 +157,7 @@ class Contribution < ActiveRecord::Base
         :ruby_kaigi => RubyKaigi.year(year)
         )
     end
-  end
+  end # AuthorizedAsStaff
 
   module IndividualSponsorInstanceMethods
     def amount

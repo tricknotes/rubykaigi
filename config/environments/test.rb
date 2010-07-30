@@ -21,4 +21,5 @@ config.action_controller.allow_forgery_protection    = false
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
 
+config.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log", 50, 1048576)
 require 'pp'

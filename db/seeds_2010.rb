@@ -92,21 +92,12 @@ ABSTRACT
 アプリケーションを構築する時、ほとんどのアプリケーションが今日グローバル的に使用されること、多国語を話す人々に使用されること忘れがちになってしまいます。あなたは、英語や日本語のユーザーインターフェイスを制作するかもしれません。でも、人々は母国語でデーターを記入することを選ぶかもしれません。ウェブブラウザは、ほぼすべてのスクリプトを記入することを可能にします。もし、あなたがラッキーなら、それはなんとか機能するかもしれません。しかし、しばしば、それはもう少し注意を必要とします。サラは、ネイティブスピーカーのビデオを使用した多国語データーベースのMightyverseを構築する経験からの逸話を共有するでしょう。　サラは、どのようにしてUnicodeテキストをデータベースに出し入れするのかの詳細に重点をおきます。また、Rubyでどのようにマルチバイトテキストを扱うかにも重点をおきます。
 ABSTRACT_JA
     e27_medium.create_break :from => '17:00'
-    e27_medium.create :title => '1.9 on 1.8', :speaker => 'ujihisa (HootSuite)', :from => '17:30',:abstract => (<<ABSTRACT)
-Topic: RubyGems library \"backports\" and \"sfl\", RubySpec, and Rubinius.
-
-There's no doubt that all features newly introduced in Ruby 1.9 are really useful. Besides the biggest changes like the introduction of YARV, new methods like Kernel.spawn are also handy. Most Rubyists code in Ruby 1.9, however, they sometimes need to write 1.8 compatible code. Some methods have already been introduced in Ruby 1.8.7, whilst the others were not. For example, `Enumerable#map` without block differs between 1.8 and 1.9.
-
-Fortunately Marc-Andre, one of the ruby committers, is working on solving the issue with his RubyGems library \"backports\". Also, I am working on porting Kernel.spawn to 1.8 on some platforms with the RubyGems library \"sfl\". They are not perfect yet, but we can figure out what's compatible or incompatible.
-
-I'll explain the background, usage and implementation of \"backports\" and \"sfl\", referring RubySpec and Rubinius which played a very important role. I'll demonstrate some pragmatic cases on several Ruby implementations. Throughout the presentation, I'd like to clarify how useful the latest Ruby is.
-ABSTRACT
-    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '18:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 I will talk about my many failed products, and a few of my successful ones. My products can be found here: http://github.com/jugyo
 ABSTRACT
 私のたくさんの失敗プロダクトと少しの成功プロダクトについて話します。 私のプロダクトはここ => http://github.com/jugyo/
 ABSTRACT_JA
-    e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove (AT&T Interactive)', :from => '18:30',:abstract => (<<ABSTRACT)
+    e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove (AT&T Interactive)', :from => '18:00', :to => '19:00', :abstract => (<<ABSTRACT)
 Programming for fun, or having fun programming. Ruby is the best language for both! Let's talk about programming after we've punched out from work, the programming we can do while drinking a beer, and the programming we can do to make our friends laugh. We'll take a look at projects built for fun, as well as projects built to have fun! We'll dissect them to figure out what makes them tick, then
 extract techniques that we can use with our day to day tasks.
 ABSTRACT

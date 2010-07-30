@@ -67,7 +67,7 @@ after("deploy:symlink") do
   setup_shared("certs","app_key.pem")
   setup_shared("certs","paypal_cert_sandbox.pem")
   setup_shared("certs","paypal_cert_live.pem")
-  rum "rm -rf #{shared_path}/tmp/rails-cache/*"
+  run "rm -rf #{shared_path}/tmp/rails-cache/*"
   run "cd #{current_path} && bundle exec whenever --update-crontab #{application}"
 end
 

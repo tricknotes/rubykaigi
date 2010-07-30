@@ -246,7 +246,7 @@ ABSTRACT_JA
     e28_big.create :title => 'babushka―test-driven sysadmin for rubyists', :abstract => '', :speaker => 'Ben Hoskings (babushka)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'parse.y Fam Tour', :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-", :abstract => '', :speaker => 'Ando Yasushi (Seesaa Inc.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'The Timeless Way of E-Publishing with Ruby', :title_ja => "時を超えた電子出版の道の中をRubyと歩いていく", :abstract => '', :speaker => 'Masayoshi Takahashi (Tatsu-zine publishing, Nihon Ruby-no-Kai)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
-    e28_big.create :title => "My Report of \"Ruby Summer of Code 2010\" - Road to be a stdlib -", :title_ja => "Ruby Summer of Code 2010のご報告 〜俺たちのDecimalはまだ始まったばかりだ〜", :abstract => '', :speaker => 'Tadashi Saito (University of Tsukuba)', :lang => 'ja', :paent_event => lt_event, :from => '17:00', :to => '18:00'
+    e28_big.create :title => "My Report of \"Ruby Summer of Code 2010\" - Road to be a stdlib -", :title_ja => "Ruby Summer of Code 2010のご報告 〜俺たちのDecimalはまだ始まったばかりだ〜", :abstract => '', :speaker => 'Tadashi Saito (University of Tsukuba)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
   end
 
   e28.with_options(:room => medium) do |e28_medium|

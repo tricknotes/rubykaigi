@@ -72,6 +72,7 @@ ja:
   when: "日程"
   abstract: "概要"
   room: "会場"
+  speaker_profile: "スピーカー プロフィール"
   lang: "言語"
   out_of_stock: "売り切れ"
   running_out_of_stock: "残席わずか"

@@ -19,6 +19,16 @@
                 - @rooms.each do |room|
                   %th{:class => (room.hall? ? 'room_hall' : 'room')}
                     = room.name
+            %tfoot
+              %tr
+                - case date
+                - when Date.parse('2010-08-27')
+                  %th 19:00 - 20:30
+                  - anchor_to_cn = (current_locale == :ja ? "03" : "04" )
+                  %td{:colspan => 7, :style => "font-size:12px;text-align:center"} <a href="http://rubykaigi.tdiary.net/20100803.html#p#{anchor_to_cn}">#{t('community_night')}, #{t('at_multi_purpose_hall')}</a>
+                - when Date.parse('2010-08-28')
+                  %th 18:30 - 20:30
+                  %td{:colspan => 7, :style => "font-size:12px;text-align:center"} #{t('official_party')}, #{t('at_multi_purpose_hall')}
             %tbody
               - from, to = events_per_date.map(&:from).min, events_per_date.map(&:to).max
               - while from.time < to.time

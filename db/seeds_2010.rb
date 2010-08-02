@@ -241,7 +241,7 @@ ABSTRACT_JA
     e28_big.create :title => 'What is few?', :abstract => '', :speaker => 'Sora Harakami (few developer team)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'Toward Lightning RubyVM', :abstract => '', :speaker => 'Koichi Sasada (The University of Tokyo)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'MessagePack, a cross-language communication system', :abstract => 'MessagePackで多言語間通信', :speaker => 'Sadayuki Furuhashi', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
-    e28_big.create :title => "It's not just about the Yen: Protecting the planet with Ruby", :abstract => '', :speaker => 'Simon Tokumine (United Nations Environment Programme)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
+    e28_big.create :title => "(TBA)", :abstract => '', :speaker => '(TBA)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'Introducing the Lingo Project: A New Generationi Text Input System Leveraging Non-native English Writing', :abstract => '', :speaker => 'Kazki Matz (Lingo project)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'babushka―test-driven sysadmin for rubyists', :abstract => '', :speaker => 'Ben Hoskings (babushka)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'parse.y Fam Tour', :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-", :abstract => '', :speaker => 'Ando Yasushi (Seesaa Inc.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'

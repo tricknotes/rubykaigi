@@ -30,3 +30,9 @@ by_code.each do |row|
   puts "  - #{'%10s' % 'total'}: #{'%3d' % total}"
   puts ""
 end;nil
+
+puts "-" * 78
+puts " tickets stock summary"
+puts "-" * 78
+puts "RubyKaigi 2010 Kaigi: #{ProductItem.find(1).stock}"
+puts "RubyKaigi 2010 Party: #{ProductItem.find(2).stock}"

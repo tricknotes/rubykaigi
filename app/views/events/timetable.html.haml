@@ -28,7 +28,7 @@
                   %td{:colspan => 7, :style => "font-size:12px;text-align:center"} <a href="http://rubykaigi.tdiary.net/20100803.html#p#{anchor_to_cn}">#{t('community_night')}, #{t('at_multi_purpose_hall')}</a>
                 - when Date.parse('2010-08-28')
                   %th 18:30 - 20:30
-                  %td{:colspan => 7, :style => "font-size:12px;text-align:center"} #{t('official_party')}, #{t('at_multi_purpose_hall')}
+                  %td{:colspan => 7, :style => "font-size:12px;text-align:center"} #{t('official_party')}, #{t('at_multi_purpose_hall')}(<a href="/2010/#{current_locale}/Registration/">#{t('registration_required')}</a>)
             %tbody
               - from, to = events_per_date.map(&:from).min, events_per_date.map(&:to).max
               - while from.time < to.time

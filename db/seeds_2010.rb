@@ -339,7 +339,7 @@ ABSTRACT_JA
     e28_a201.create :title => 'Vim', :speaker => 'Kana', :to => '17:00',:abstract => (<<ABSTRACT)
 About half of Rubyists are using Vim to code Ruby. Vim is one of the ultimate tools for software developments, which vary among programmers. Why don't you exchange the ways you use Vim?
 
-For example, I am using some Vim plugins such as quickrun.vim, neocomplcache, and smartchr.vim to code Ruby efficiently. Although my ~/.vimrc is less than just 900 lines, there are plenty of good tricks worth telling to you. I'd like to tell you about my Vim knowledge, and learn how you yourself are optimizing Vim.
+For example, I am using some Vim plugins such as quickrun.vim, neocomplcache, and smartchr.vim to code Ruby efficiently. Although my ~/.vimrc is less than just 3000 lines, there are plenty of good tricks worth telling to you. I'd like to tell you about my Vim knowledge, and learn how you yourself are optimizing Vim.
 
 I'd like to make the event in English, because most Japanese have already been learning English for a while. Of course, attendees are supposed to be familiar with Ruby and Vim, because they are the lingua franca of this event. I can help translating Japanese to English or English to Japanese. Even if you don't have a lot of confidence with other languages, you can still attend this event.
 

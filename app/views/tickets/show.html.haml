@@ -18,19 +18,23 @@
   %h2 Your Name
   %p #{@ticket.name}
 
-  %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
+  #screen_only
+    %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
   %h2 Your Email
   %p #{@ticket.email}
 
-  %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
+  #screen_only
+    %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
-  %h2 Permalink
-  %p{:style=>'font-size:12px'}!= link_to ticket_url(@ticket), ticket_path(@ticket)
-  %p (Anybody can see this page via permalink)
-  %p{:style => 'text-align:right'}!= link_to('Regenerate Permalink', regenerate_permalink_ticket_path(@ticket), :method => :put)
+  #screen_only
+    %h2 Permalink
+    %p{:style=>'font-size:12px'}!= link_to ticket_url(@ticket), ticket_path(@ticket)
+    %p (Anybody can see this page via permalink)
+    %p{:style => 'text-align:right'}!= link_to('Regenerate Permalink', regenerate_permalink_ticket_path(@ticket), :method => :put)
 
   <br />
   <br />
   <br />
-  %p!= link_to 'Back to My Tickets', tickets_path
+  #screen_only
+    %p!= link_to 'Back to My Tickets', tickets_path

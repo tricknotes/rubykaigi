@@ -137,7 +137,7 @@ ABSTRACT_JA
   end
 
   e27.with_options(:room => a201) do |e27_a201|
-    e27_a201.create :title => 'rake:money', :title_ja => 'rake:money 拡大版', :speaker => 'Ayumu Aizawa / Ouka Yuka (rake:money and RubyKaigi2010 Sponsors)', :from => '14:00', :to => '16:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_a201.create :title => 'rake:money', :title_ja => 'rake:money 拡大版～Rubyエンジニアと企業の幸せな関係～', :speaker => 'Ayumu Aizawa / Ouka Yuka (rake:money and RubyKaigi2010 Sponsors)', :from => '14:00', :to => '16:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 The meeting of the IT system engineer to think that I earn money seriously.
 
 I raise awareness of the money, and it is a meeting of the people who want to become the engineer who can earn one's convincible income. I take up marketing and a business trend or a topic about the money that it is not readily possible for in a topic about economy in tax or assets use in the normal technology system study society how I cut one's skill efficiently in imitation Ta'izz.

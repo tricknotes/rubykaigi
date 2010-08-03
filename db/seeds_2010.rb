@@ -442,7 +442,7 @@ I taked over the maintainer of the bigdecimal standard library in the beginning 
 ABSTRACT
 私は今年の初めに bigdecimal 標準ライブラリのメンテナに採用されました。現在 bigdecimal ライブラリは、他の数値クラスとの相互作用規則など、その振る舞いについて幾つかの問題を抱えています。私はこのプレゼンテーションで、このような問題ある振る舞いを実演で示し、これらに対して Ruby の次のバージョンで実現されるべき適切な性質を説明します。加えて、私は Ruby の未来のバージョン（すなわち 2.0）が持っているべき数値系について議論します。
 ABSTRACT_JA
-    e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT)
+    e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT), :lang => 'ja'
 NArray is an n-dimensional numerical array library developed for use in science fields, but it is usable for handling binary data efficiently. I talk about NArray for the first time after 10 years from the first release. I will also present topics including the next version of NArray, and distributed scientific computing using Ruby for multi-core era.
 ABSTRACT
     e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura (CSNagoya)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'

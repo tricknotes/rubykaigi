@@ -117,3 +117,12 @@ end
 
 after 'deploy:finalize_update', 'bundler:bundle'
 after 'deploy:migrations', 'god:reboot'
+
+namespace 'db' do
+  task 'seed_2010', :roles => :app do
+    run("cd #{current_path} && RAILS_ENV=production rake db:seed_2010")
+  end
+end
+before 'db:seed_2010', 'deploy'
+before 'db:seed_2010', 'deploy:web:disable'
+after 'db:seed_2010', 'deploy:web:enable'

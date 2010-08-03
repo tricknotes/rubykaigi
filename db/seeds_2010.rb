@@ -343,7 +343,7 @@ For example, I am using some Vim plugins such as quickrun.vim, neocomplcache, an
 
 I'd like to make the event in English, because most Japanese have already been learning English for a while. Of course, attendees are supposed to be familiar with Ruby and Vim, because they are the lingua franca of this event. I can help translating Japanese to English or English to Japanese. Even if you don't have a lot of confidence with other languages, you can still attend this event.
 
-Other editor users such.
+Other editor users such as Emacs users also can attend this event. In general, tech religious wars are fun.
 ABSTRACT
   end
 

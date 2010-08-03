@@ -119,6 +119,7 @@ after 'deploy:finalize_update', 'bundler:bundle'
 after 'deploy:migrations', 'god:reboot'
 
 namespace 'db' do
+  desc "run RAILS_ENV=produciton rake db:seed_2010 on rubykaigi.org. sweet :)"
   task 'seed_2010', :roles => :app do
     run("cd #{current_path} && RAILS_ENV=production rake db:seed_2010")
   end

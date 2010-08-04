@@ -202,7 +202,7 @@ end
 
 EventLoader.with_options(:day => 28) do |e28|
   e28.with_options(:room => big) do |e28_big|
-    e28_big.create :title => 'Ruby 1.9.2 is released! / Ruby committers Q & A', :title_ja => 'Ruby 1.9.2 is relesed! / Rubyコミッタ Q & A', :speaker => 'Yugui, Shugo Maeda', :from => '9:30', :to => '11:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+     e28_big.create :title => 'Ruby 1.9.2 is released! / Ruby committers Q & A', :title_ja => 'Ruby 1.9.2 is released! / Rubyコミッタ Q & A', :speaker => 'Yugui, Shugo Maeda', :from => '9:30', :to => '11:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 Many committers will come to RubyKaigi, so it's a good chance to ask them. In this event Ruby committers will answer questions from audience (or other committers).
 ABSTRACT
 RubyKaigiにはたくさんのコミッタが来場するので、彼らに質問するよい機会です。このイベントでは、Rubyコミッタが聴衆(又は他のコミッタ) からの質問に回答します。

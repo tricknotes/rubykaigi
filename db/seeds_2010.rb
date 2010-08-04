@@ -253,7 +253,7 @@ ABSTRACT_JA
     e28_medium.create :title => 'Rocking the enterprise with Ruby', :speaker => 'Munjal Budhabhatti And Sudhindra Rao (ThoughtWorks Inc)', :from => '9:30',:abstract => (<<ABSTRACT)
 ThoughtWorks has been working on a long scale project at Rackspace building data center of the future using Ruby. This projects has evolved since its inception. And so has the architecture. Developing in ruby has assisted us in managing changes to the business rules at a rapid pace. We have been delivering successfully every two weeks for last three years. We would like to share our learnings from this effort.
 ABSTRACT
-    e28_medium.create :title => 'Rails to Sinatra: What is ready', :speaker => 'Jiang Wu (Tengu)',:abstract => (<<ABSTRACT), :lang => 'ja'
+    e28_medium.create :title => 'Rails to Sinatra: What is ready', :speaker => 'Jiang Wu (Tengu)',:abstract => (<<ABSTRACT), :lang => 'en'
 As Sinatra 1.0 came out, we have a good alternative to rails(before is merb). I will introduce efforts of people around Sinatra community to eliminate gap of moving from Rails to Sinatra including my works.
 ABSTRACT
     e28_medium.create :title => 'Mapping the world with DataMapper', :speaker => 'Ted Han (%w(Videojuicer DataMapper))',:abstract => (<<ABSTRACT)

@@ -72,7 +72,7 @@ en:
   when: "Date"
   abstract: "Abstract"
   room: "Room"
-  lang: "Lang"
+  lang: "Spoken Language"
   out_of_stock: "Out of Stock"
   running_out_of_stock: "Running Out of Stock"
   in_stock: "In Stock"

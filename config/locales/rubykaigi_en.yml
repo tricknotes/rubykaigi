@@ -73,6 +73,7 @@ en:
   abstract: "Abstract"
   room: "Room"
   lang: "Spoken Language"
+  speaker_profile: "Speaker Profile"
   out_of_stock: "Out of Stock"
   running_out_of_stock: "Running Out of Stock"
   in_stock: "In Stock"

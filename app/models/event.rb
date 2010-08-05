@@ -49,6 +49,10 @@ class Event < ActiveRecord::Base
     presenter_name ? presenter_name.gsub(/\(.+\)/, '') : ""
   end
 
+  def presenter_profile
+    I18n.locale.to_s == 'ja' ? (presenter_profile_ja || presenter_profile_en) : (presenter_profile_en || presenter_profile_ja)
+  end
+
   def minutes
     (to - from).to_i / 60
   end

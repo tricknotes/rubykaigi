@@ -503,8 +503,8 @@ An open meeting (\"kaigi\") about Regional RubyKaigi for anyone who is intereste
 ABSTRACT
 地域 Ruby 会議に興味ある人たちが集まって、地域Ruby会議の今後について話し合うBOF。これまでの開催の関係者、これから地域Ruby会議を開催したいと考えている人、単に地域Ruby会議に興味のある人の参加を歓迎します。
 ABSTRACT_JA
-    e29_b202.create :title => "We're rubyists living abroad. Any questions?", :title_ja => '外国で暮らすRubyistだけど何か質問ある？', :speaker => 'Kazuhiko (Nexedi SA)', :from => '13:30', :length => 1.hour,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
-In the RubyKaigi, we have many foreign Rubyists. And we also have Japanese rubyists who are living abroad and foreign rubyists who is living in Japan. Please join this sub-event to discuss with such 'rubyists living abroad'! If you are interested in 'living in Japan as a foreign rubyist', please feel free to ask your questions. Both English and Japanese are welcome in this sub-event.
+    e29_b202.create :title => "We're rubyists living abroad. Any questions?", :title_ja => '外国で暮らすRubyistだけど何か質問ある？', :speaker => 'Kazuhiko (Nexedi SA)', :from => '13:30', :length => 90.minutes,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
+In the RubyKaigi, we have many foreign Rubyists. And we also have Japanese rubyists who are living abroad and foreign rubyists who are living in Japan. Please join this sub-event to discuss with such 'rubyists living abroad'! If you are interested in 'living in Japan as a foreign rubyist', please feel free to ask your questions. Both English language and Japanese lauguage are welcome in this sub-event.
 ABSTRACT
 RubyKaigiには、外国から多くのRubyistが来ますが、外国で活躍する日本人Rubyistや日本で活躍する外国人Rubyistもたくさんやってきます。そんな身近だけれどちょっと遠い存在に見えなくもない「外国で暮らすRubyist」と意見交換する企画です。 この企画では、@ujm, @vincentisambart, @lchin といった「外国で活躍する」豪華Rubyistを招いて、「カナダのRubyistはどういうところに着目しているか」「母国語と違う環境での Rubyistの仕事の様子」など、参加者の皆さんからの質問に何でもお答えします。なお、この企画では日本語も英語もどちらもOKです。
 ABSTRACT_JA

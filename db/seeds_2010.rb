@@ -430,11 +430,15 @@ In Matsue City and SHIMANE prefecture of local government, many common business 
 ABSTRACT
 地方自治体である松江市や島根県では、2007年から一般的な行政システムをRuby/Railsで再構築を行っている。今、Ruby/Railsの波が企業システムの分野や周辺の地域に広がり始めた。 多くの経験と実績に基づいて、Ruby/Railsの基幹業務システムの構築方法、長期間メンテナンスするシステムの構築方法、高生産性や別なアジャイル開発への挑戦について説明する。
 ABSTRACT_JA
-    e29_big.create :title => 'There Is No Spoon -- Think Global, Act Regional', :speaker => 'Shintaro Kakutani (rubykaigi.org, Nihon Ruby-no-kai)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_big.create :title => 'There Is No Spoon -- Think Global, Act Regional', :speaker => 'Shintaro Kakutani (rubykaigi.org, Nihon Ruby-no-kai)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 I have been a member of RubyKaigi organizer since 2006 and also am the founder of Regional RubyKaigi started in 2008. \"Kaigis\" have changed the landscape of the Ruby community in Japan. These 2 years mean a lot to me. I'd love to show you what happened is and tell you what I believe is going to happen in the Ruby community in Japan.
 ABSTRACT
 2008年につくばで(!)開催されたRejectKaigiで提案した地域Ruby会議プロジェクトは2周年を迎えます。この2年間に9都市で17の地域Ruby会議が実施され、私はその全てに参加しました。本セッションでは、過去2年間の地域Ruby会議をふりかえり、今後の地域Ruby会議のありかたについて私見を述べます。東京と東京以外の違いと地域のRubyユーザグループの重要性や地域Ruby会議とRubyKaigiの関係など、「RubyKaigi以後」のRuby コミュニティのあり方を考える材料を提供します。
 ABSTRACT_JA
+Kakutani Shintaro is a just another strong Ruby proponent, chief programmer in Eiwa System Management, Inc and board member of Nihon Ruby-no-kai(Japan Ruby Group). He is one of the organizers of RubyKaigi since 2006. He have translated some english technical book into japanese: "Agile Estimating and Planning"(co-translator), "Interface Oriented Design"(supervisor), "Practices of an Agile Developer"(co-supervisor) and "From Java to Ruby"(translator).
+PROFILE
+ただのRuby厨。(株)永和システムマネジメントサービスプロバイディング事業部チーフプログラマ。日本Rubyの会理事。RubyKaigiの運営を2006年からやってます。著書は『アジャイルな見積りと計画づくり』(共同翻訳)、『インターフェイス指向設計』(監訳)、『アジャイルプラクティス』(共同監訳)、『JavaからRubyへ』(翻訳)。
+PROFILE_JA
     e29_big.create_break
     e29_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Chad Fowler', :length => 1.hour
     e29_big.create :title => 'Closing'

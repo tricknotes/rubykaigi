@@ -40,12 +40,19 @@ ABSTRACT
 携帯電話向けのオープンソーシャルアプリケーション開発の世界では、PHPがメジャーな言語ですが、Ruby on Railsを使った開発も可能です。私達が自社プロダクト「スイーツコレクション」の開発を通じて得たノウハウを公開するとともに、Ruby on Railsを使ったオープンソーシャルアプリケーション開発をご紹介します。
 ABSTRACT_JA
     e27_big.create_break :from => '15:00'
-    e27_big.create :title => 'Building Real Time Web', :title_ja => 'リアルタイムウェブができるまで', :speaker => 'Makoto Inoue (New Bamboo (London, UK))', :from => '15:30', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
+    e27_big.create :title => 'Building Real Time Web', :title_ja => 'リアルタイムウェブができるまで', :speaker => 'Makoto Inoue (New Bamboo (London, UK))', :from => '15:30', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 The real time web is not about adding chat on your website. It's not really about having stock tickers. The most interesting aspect of the realtime web is to be found in augmenting the web that we already know. We can add realtime functionally to our applications as another layer of fidelity.
 This is our story (New Bamboo, London, UK) of experimenting various real time web technologies and coming up with our own solutions (http://www.pusherapp.com). This is not about explaining how to use our solutions, but about sharing exciting opportunities and new technical challenges HTML5 WebSocket brings when you build real time web.
 ABSTRACT
 ここ最近のAjaxにかわるトレンドとしてリアルタイムウェブを利用した例が見かけられることが多いですが、その多くはチャットや株価更新などのサンプルの域をでないように見えます。弊社New Bamboo (London, UK)では、既存のリアルタイム技術をいろいろ研究した結果をPusher (http://www.pusherapp.com)というサービスとしてリリースしました。このトークでは、リリースにいたるまでの経緯をご紹介すると共に、HTML5 WebSocketを使うことによる新しい発見やチャレンジを皆様と共有していきたいと思います。
 ABSTRACT_JA
+井上真(New Bamboo)
+2004年からロンドンに在住中の逆輸入Rubyist（日本にいる時はRubyのこと知りませんでした。すみません）。元DBA(Sybase)。London Javascript Meetup, London NoSQL Summerの共同運営者、Tokyo Cabinet Wiki主催、 ３ヶ月ごとに興味の対象が変わるのが悩み。現在はGolangに浮気中。
+PROFILE
+Makoto Inoue (New Bamboo)
+Rubyist living in London since 2004 (though did not know about Ruby when I was in Japan. Sorry..)
+ex-DBA(Sybase). Co-organises London Javascript Meetup, London NoSQL Summer. Hosts Tokyo Cabinet Wiki. Currently toying around with Golang.
+PROFILE_JA
     e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 The presentation introduces the technique and a result about Lazy Sweep GC for CRuby GC. In addition, I introduce the prospects of the future GC improvement.
 ABSTRACT
@@ -57,7 +64,7 @@ Ruby is well known as a language with which you can create your own DSL easily. 
 ABSTRACT
 RubyはDSLを作りやすい言語として知られています。実際に、DSLを作るのは簡単です。しかし、Rubyで意識的にDSLを作ったことのある人は意外に少ないのかもしれません。 Rubyで実現するDSLは、「使いやすいAPI」の一形態であり、ここから先がDSLだという明確な境界はありませんが、結果として出来上がったコードがDSL的かどうかは歴然と判断できます。つまり、コードをDSL的にするかどうかは開発者が意図的に選択していける事柄なのです。 本セッションでは、DSLとは何か、どんなときにDSLが有効かからはじめて、RubyでDSLを書く際に必要となる考え方、習慣、そしてテクニックを、 Rails や RSpec といった良く知られたコードを例にして話していきます。
 ABSTRACT_JA
-    e27_big.create :title => 'Best Imitation of Your Class', :title_ja => '君のクラスの最高の偽物', :speaker => 'Shugo Maeda (Network Applied Communication Laboratory Ltd.)', :from => '18:00', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_big.create :title => 'Best Imitation of Your Class', :title_ja => '君のクラスの最高の偽物', :speaker => 'Shugo Maeda (Network Applied Communication Laboratory Ltd.)', :from => '18:00', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Ruby's open classes contribute to extensibility of applications such as Ruby on Rails. However, they sometimes cause serious conflicts between class extensions. This talk illustrates problems of open classes, and propose a resolution by which classes can be refined locally.
 
   Keywords: selector namespace, classbox, context-oriented programming
@@ -66,6 +73,12 @@ Rubyのオープンクラスは、Ruby on Railsのようなアプリケーショ
 
   キーワード: selector namespace, classbox, context-oriented programming
 ABSTRACT_JA
+Shugo Maeda (Network Applied Communication Laboratory Ltd.)
+He is a director of Network Applied Communication Laboratory Ltd., a co-chairperson of Ruby Association LLC, and a daimyo programmer.
+PROFILE
+前田 修吾（株式会社ネットワーク応用通信研究所）
+株式会社ネットワーク応用通信研究所取締役。Rubyアソシエーション副理事長。大名プログラマ。
+PROFILE_JA
   end
 
   e27.with_options(:room => medium) do |e27_medium|
@@ -225,7 +238,7 @@ ABSTRACT
 昨年の報告以降の動きをまとめて報告します。また、今後の予定や特に助けが必要な部分について説明します。
 ABSTRACT_JA
     e28_big.create_break
-    e28_big.create :title => 'Ruby API is Improved Unix API', :title_ja => 'Unix修正主義', :speaker => 'Tanaka Akira (National Institute of Advanced Industrial Science and Technology (AIST))', :length => 1.hour,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e28_big.create :title => 'Ruby API is Improved Unix API', :title_ja => 'Unix修正主義', :speaker => 'Tanaka Akira (National Institute of Advanced Industrial Science and Technology (AIST))', :length => 1.hour,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Ruby's library API is like Unix's API, but improved. Ruby tries to fix some of the problems in Unix's API. For example, non-blocking IO in Unix is provided by setting a flag when opening a file, making it difficult to specify non-blocking behavior for individual operations. Ruby overcomes this problem by providing non-blocking methods such as #read_nonblock.
 
 Another example is the fork() system call, which has problems in multi-threaded environments. Ruby provides the #spawn method as an alternative way to launch processes safely.
@@ -234,6 +247,12 @@ This presentation will discuss techniques for API problem discovery with more ex
 ABSTRACT
 Ruby のライブラリ API は Unix の影響を色濃く受けているが、 Unix の API をそのまま提供しているのではなく、 Unix の失敗を修正している部分がいくつかある。 たとえば、ノンブロッキング I/O は、オープンしたファイルに対するフラグで指示するため、 特定の操作だけをノンブロッキングにすることが難しい。 これに対し、Ruby ではフラグでなく read_nonblock メソッドなどを用いることにより、それが簡単になっている。 また、プロセスを起動する fork システムコールは近年のマルチスレッド環境では大きな問題がある。 これに対し、Ruby ではその問題がないプロセス起動方法として spawn メソッドを導入した。 本発表ではこのような修正例を述べ、また、まだ修正していない Unix の失敗とそれを Ruby で修正する可能性について述べる。 それにより、API の問題の発見と修正についての知見を示す。
 ABSTRACT_JA
+A Ruby committer.
+Main interests are I/O, socket, process, time and other difficulties.
+PROFILE
+Ruby コミッタ。
+主に I/O、ソケット、プロセス、時刻、その他の厄介事に興味を持つ。
+PROFILE_JA
     e28_big.create_break
     lt_event = e28_big.create :title => 'Lightning Talks', :abstract => "Lightning Talks are 11 x 5minutes talk in a 60 minutes time slot", :abstract_ja => "1人持ち時間5分のライトニングトークです", :speaker => '(See Abstract)', :length => 1.hour, :lang => 'ja, en'
     e28_big.create :title => 'ARToolKit Ruby Binding', :abstract => '', :speaker => 'Urabe, Shyouhei (Network Applied Communication Lab.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
@@ -453,11 +472,17 @@ ABSTRACT_JA
     e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT), :lang => 'ja'
 NArray is an n-dimensional numerical array library developed for use in science fields, but it is usable for handling binary data efficiently. I talk about NArray for the first time after 10 years from the first release. I will also present topics including the next version of NArray, and distributed scientific computing using Ruby for multi-core era.
 ABSTRACT
-    e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura (CSNagoya)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura (CSNagoya)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Yarv2llvm is a translator which converts instruciton set of VM of CRuby (aka YARV) into llvm. The feature of yarv2llvm is to use the type inference for raising the execution efficiency of generated llvm. Yarv2llvm get a results. For example it executes the program for computing fibonacci number 40 times faster than Ruby1.9. But it was clarified to be able not to convert all Ruby programs into llvm well either though it had expected beforehand. I will show the example of programming Ruby that cannot be converted with yarv2llvm well and the settlement plan. In addition I will introduce the outline of the next generation translator (ytl) that I am developing to support all specification of Ruby.
 ABSTRACT
 yarv2llvmはCRubyのVMの命令列をllvmに変換するトランスレータである。生成するllvmの実行効率を上げるために、型推論を用いるのが特徴である。 yarv2llvmはフィボナッチ級数プログラムでRuby1.9の約40倍の実行速度を得るなど、一定の成果が得られた。一方で、事前に予想していたことではあるが、すべてのRubyプログラムがうまくllvmに変換できるわけではないことも明らかになった。 この発表ではyarv2llvmではうまく変換できないRubyプログラム例とその解決案を説明する。さらに、フルセットRubyをサポートすることを目的に現在開発中の次世代トランスレータ(ytl)の概要を紹介する。
 ABSTRACT_JA
+Hideki Miura (CSNagoya)
+My job is pipework. I develop software as my hobby. You can see my products in http://github.com/miura1729 .
+PROFILE
+三浦 英樹　(CSNagoya)
+水道屋です。趣味でプログラムを書いています。書いたものはhttp://github.com/miura1729 にあります。
+PROFILE_JA
     e29_medium.create :title => 'AOT Compiler for Ruby', :title_ja => 'Ruby 用 AOT コンパイラ', :speaker => 'Satoshi Shiba (The University of Tokyo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 We developed a AOT Compiler, which translates Ruby script into native code to run Ruby script faster.
 
@@ -473,7 +498,7 @@ We developed a memory profiler for Ruby programming language that fulfills the r
 In this presentation, we will describe the features, the design and the implementation of the memory profiler. We will also show the performance evaluation and demonstrate the memory profiler in action.
 ABSTRACT
     e29_medium.create_break :length => 1.5.hours
-    e29_medium.create :title => 'How to create Ruby reference manual search Web application with Ruby 1.9  groonga and rroonga', :title_ja => 'るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索', :speaker => 'Kouhei Sutou (ClearCode Inc. / COZMIXNG)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_medium.create :title => 'How to create Ruby reference manual search Web application with Ruby 1.9  groonga and rroonga', :title_ja => 'るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索', :speaker => 'Kouhei Sutou (ClearCode Inc. / COZMIXNG)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 This talk explains about rurema-search, Ruby reference manual in Japanese search Web application, and how to create rurema-search. Rurema-search uses Ruby 1.9.1 (MRI) as a Ruby interpreter, groonga as a full-text search engine and data store and rroonga as a Ruby-groonga interface. Those technologies are particularly explained in 'how to create rurema-search' time.
 
   rurema-search (Japanese): http://rurema.clear-code.com/
@@ -482,6 +507,12 @@ ABSTRACT
 
  るりまサーチ: http://rurema.clear-code.com/
 ABSTRACT_JA
+Kouhei Sutou (ClearCode Inc.)
+The president of ClearCode Inc.. The author or a developer of RSS Parser, Rabbit, rcairo, Ruby-GNOME2, ActiveLdap, ActiveSambaLdap, test-unit 2.x, rroonga, rurema-search, Ruby/Subversion, RWiki, Ruby and so on.
+PROFILE
+須藤 功平（株式会社クリアコード）
+株式会社クリアコード代表取締役。RSS ParserとRabbitとrcairoとRuby-GNOME2とActiveLdapとActiveSambaLdapとtest-unit 2.xとrroongaとるりまサーチとRuby/SubversionとRWikiとRubyなどの開発者。
+PROFILE_JA
     e29_medium.create :title => "Now you're thinking with virtual clocks", :title_ja => 'ゲームとバーチャルタイム', :speaker => 'Tom Lieber (SonicMule,Inc.)',:abstract => (<<ABSTRACT)
 Turn the multimedia render loop inside out. Cooperatively scheduling lightweight Ruby threads on a virtual clock allows you to reason about the concurrent code in your game and perform complex synchronization tasks without even realizing it. Ditch the nested trees of update() calls by making time a first class citizen!
 ABSTRACT

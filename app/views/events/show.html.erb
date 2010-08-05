@@ -34,7 +34,7 @@
   <h2><%= t(:speaker_profile) %></h2>
 
   <p>
-  <%= @event.presenter_profile %>
+  <%= simple_format(h(@event.presenter_profile)) %>
   </p>
 
   <h2><%= t(:lang) %></h2>

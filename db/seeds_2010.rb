@@ -53,11 +53,20 @@ Makoto Inoue (New Bamboo)
 Rubyist living in London since 2004 (though did not know about Ruby when I was in Japan. Sorry..)
 ex-DBA(Sybase). Co-organises London Javascript Meetup, London NoSQL Summer. Hosts Tokyo Cabinet Wiki. Currently toying around with Golang.
 PROFILE_JA
-    e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 The presentation introduces the technique and a result about Lazy Sweep GC for CRuby GC. In addition, I introduce the prospects of the future GC improvement.
 ABSTRACT
 CRubyに対するLazySweepGCの実装方法と結果を紹介する。また、今後のGC改善の展望を述べる。
 ABSTRACT_JA
+nari (Network Applied Communication Laboratory Ltd.)
+A Ruby commiter.
+He is good at letting it collect garbages.
+He have written a japanese book: "Garbage Collection - Algorithms and implementions"
+PROFILE
+nari（株式会社ネットワーク応用通信研究所）
+Rubyコミッタ。ゴミを集めさせることが得意。
+著書は『ガベージコレクションのアルゴリズムと実装』（共著）
+PROFILE_JA
     e27_big.create_break :from => '17:00'
     e27_big.create :title => 'The basis of making DSL with Ruby', :title_ja => 'Rubyで作るDSLの基礎', :speaker => 'Yasuko Ohba (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 Ruby is well known as a language with which you can create your own DSL easily. Making DSL with Ruby is really easy, but there seem to be many developers who have not tried to make DSL with Ruby by design. In my opinion, there is no clear boundary between 'Useful APIs' and DSL. However, we can always judge whether a code is like DSL or not, that means, we can create DSL by design. In this talk, I'll start by looking into what DSL is and when to use it. After that I'll talk what concepts, habits and techniques you need to make your own DSL, showing typical examples from famous DSL codes like Rails, RSpec and so on.
@@ -256,8 +265,17 @@ PROFILE_JA
     e28_big.create_break
     lt_event = e28_big.create :title => 'Lightning Talks', :abstract => "Lightning Talks are 11 x 5minutes talk in a 60 minutes time slot", :abstract_ja => "1人持ち時間5分のライトニングトークです", :speaker => '(See Abstract)', :length => 1.hour, :lang => 'ja, en'
     e28_big.create :title => 'ARToolKit Ruby Binding', :abstract => '', :speaker => 'Urabe, Shyouhei (Network Applied Communication Lab.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
-    e28_big.create :title => 'Toward creating a single stand-alone executable of Ruby', :title_ja => "Ruby/Tk-Kit から RubyKit へ : Ruby の単一ファイル実行環境の構築に向けて", :abstract => '', :speaker => 'Hidetoshi NAGAI (Kyushu Institute of Technology / Rubyist Kyushu)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
-    e28_big.create :title => 'What is few?', :abstract => '', :speaker => 'Sora Harakami (few developer team)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
+    e28_big.create :title => 'Toward creating a single stand-alone executable of Ruby', :title_ja => "Ruby/Tk-Kit から RubyKit へ : Ruby の単一ファイル実行環境の構築に向けて", :abstract => '', :speaker => 'Hidetoshi NAGAI (Kyushu Institute of Technology / Rubyist Kyushu)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+One of CRuby committers and a Ruby/Tk developer.
+PROFILE
+CRuby の commit 権所有者で，Ruby/Tk 開発者．
+PROFILE_JA
+    e28_big.create :title => 'What is few?', :abstract => '', :speaker => 'Sora Harakami (few developer team)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+Shota Fukumori (sora_h) is a junior high school 2 grade *half-time(!)* student and a rubyist in Japan.
+He commits to Termtter and some projects and his repository, and create web service by rails. Also he is usually talking at some communities. He has a online workshop which name is online.sg http://onlinesg.org/ .
+PROFILE
+Shota Fukumori (sora_h)は中2で半登校 (昼休み後早退). よくtermtterや自分のレポジトリにコミットしたり, Rails などでいろいろ作ってたり, よくいろんなコミュニティのチャットで喋っている. そしてOnline.sg と呼ばれるオンラインの勉強会を開催したりもしている.
+PROFILE_JA
     e28_big.create :title => 'Toward Lightning RubyVM', :abstract => '', :speaker => 'Koichi Sasada (The University of Tokyo)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'MessagePack, a cross-language communication system', :title_ja => 'MessagePackで多言語間通信', :speaker => 'Sadayuki Furuhashi', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :abstract => '', :abstract_ja => ''
     e28_big.create :title => 'Let\'s calculate easily civil days by using "Ruby"', :title_ja => 'Rubyで手軽に暦日を算出しよう！', :abstract => '',:abstract_ja => '' ,:speaker => 'Yoshihiko Hara, Japan OSS Promotion Forum Application Sub Committee Ruby Application Task Force, FUJITSU SOCIAL SCIENCE LABORATORY LIMITED', :parent_event => lt_event, :from => '17:00', :to => '18:00'
@@ -423,7 +441,7 @@ Castoro is a new scalable storage system implemented in Ruby. In this session, w
 ABSTRACT
 Castoroは、Rubyで実装されたスケーラブルなストレージシステムです。本発表では、開発に至った経緯と、MogileFSやkumoFS等、他の分散ストレージシステムとの違いについて紹介します。
 ABSTRACT_JA
-    e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI (druby.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI (druby.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA)
 On August 31st, 2000, A slightly unusual Wiki was introduced on ruby-list. It was [ruby-list:24661] The first practical dRuby application, RWiki.
 
 RWiki is strongly opinionated software. RWiki was introduced as an demonstration of the usage of various Ruby libraries, but its unique implementation also reflects the author's opinion. The most significant feature of RWiki is that it is an in-memory application that contains both the database and objects all in a single process. Which is rather reminiscent of some recent buzzwords: NoSQL and In-Memory.
@@ -436,6 +454,9 @@ RWikiはメッセージ色の濃いソフトウェアです。RWikiはRuby周辺
 
 この発表の数日後、RWikiはちょうど10年を迎えます。 私はアクティブなRWikiサイトを複数運営していて、現在では3万ページ、プロセスサイズは1GBを超えています。本発表では、このサイトが「大きさ・量」を獲得していく過程で展開された、ちょっとした物語を報告します。
 ABSTRACT_JA
+関将俊（druby.org）
+プログラマ。dRuby、ERBの作者。代表作はhメソッド、著書『dRubyによる分散・Webプログラミング』。ポケモンWCS2010栃木県代表(カード部門)。
+PROFILE_JA
     e29_big.create :title => 'Practical Ruby Projects with MongoDB', :speaker => 'Alex Sharp (Lead Developer, OptimisDev)', :length => 1.hour,:abstract => (<<ABSTRACT)
 While there is a lot of excitement surrounding MongoDB and the NoSQL movement, MongoDB is all about practicality, pragmatism and performance. MongoDB boasts a robust feature set that provides a pragmatic blend of rich functionality, performance and scalability that today's software developers need, and all at a relatively low barrier to entry.
 ABSTRACT

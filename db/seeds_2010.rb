@@ -281,7 +281,7 @@ One of CRuby committers and a Ruby/Tk developer.
 PROFILE
 CRuby の commit 権所有者で，Ruby/Tk 開発者．
 PROFILE_JA
-    e28_big.create :title => 'What is few?', :abstract => '', :speaker => 'Sora Harakami (few developer team)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e28_big.create :title => 'What is few?', :abstract => '', :speaker => 'Shota Fukumori/@sora_h (few developers team)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Shota Fukumori (sora_h) is a junior high school 2 grade *half-time(!)* student and a rubyist in Japan.
 He commits to Termtter and some projects and his repository, and create web service by rails. Also he is usually talking at some communities. He has a online workshop which name is online.sg http://onlinesg.org/ .
 PROFILE

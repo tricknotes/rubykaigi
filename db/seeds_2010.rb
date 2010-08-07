@@ -98,9 +98,11 @@ It is painful.
 
 But you can make writing Javascript code feel more like writing Ruby code. I will show techniques that go beyond \"unobtrusive\" and turn Javascript into a first-class citizen in your Ruby application. Make your Javascript more joyful!
 ABSTRACT
-    e27_medium.create :title => 'User Experience for Library Designers', :speaker => 'geemus (Wesley Beary)(Engine Yard)', :from => '14:30',:abstract => (<<ABSTRACT)
+    e27_medium.create :title => 'User Experience for Library Designers', :speaker => 'geemus (Wesley Beary)(Engine Yard)', :from => '14:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 I've written \"a lot of code\":http://github.com/geemus, both hobby and work, over the last year, and looking back I can't help but think that writing code for yourself is easy; it's writing code for others can be tough. In this session, I'll share some examples of good and bad practices gathered in my years writing code and libraries, and discuss how to get past being too close to the problem. I'll talk specifically about growing your work into something anybody (and hopefully everybody) will use.
 ABSTRACT
+geemus (Wesley Beary) [github.com/geemus] is an avid Rubyist and Open Source enthusiast. When not spending his spare time working on enumerable overly ambitious open source projects he spends his days developing the Engine Yard Cloud [http://www.engineyard.com/products/cloud].
+PROFILE
     e27_medium.create_break :from => '15:00'
     e27_medium.create :title => 'Rubygems, Bundler, and the future', :speaker => 'Carl Lerche (Engine Yard)', :from => '15:30',:abstract => (<<ABSTRACT)
 Rubygems has served the community well for many years. However, as applications become more and more complex, certain problems arise. Bundler was created to solve some of those problems and has been evolving rapidly based on community feedback. It's time to look at the current state of affairs and think about Rubygems 2.0. What parts of bundler could be moved upstream and what problems remain to be solved?
@@ -231,11 +233,20 @@ RubyKaigiにはたくさんのコミッタが来場するので、彼らに質�
 ABSTRACT_JA
     e28_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Matz', :length => 1.hour, :lang => 'ja'
     e28_big.create_break :from => '12:00', :length => 90.minutes
-    e28_big.create :title => 'Esoteric Obfuscated Ruby Programming', :title_ja => '超絶技巧 Ruby プログラミング', :speaker => 'Yusuke Endoh (independent)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e28_big.create :title => 'Esoteric Obfuscated Ruby Programming', :title_ja => '超絶技巧 Ruby プログラミング', :speaker => 'Yusuke Endoh (independent)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Ruby allows us to write not only easy-to-read programs but also hard-to-read programs. In this presentation, we introduce our \"artistically\" hard-to-read programs written in Ruby. We also discuss its implementation techniques, if time permits.
 ABSTRACT
 Ruby は読みやすいプログラムを簡単に書ける言語だが、読みにくいプログラムも簡単に書ける。 本発表では、発表者による「芸術的に」読みにくい Ruby プログラムを紹介する。 時間があれば、その実装技法の解説を行う。
 ABSTRACT_JA
+A committer for Ruby and RubySpec.  1.9.2 assistant release manager.
+A Ruby test maintainer.
+His main interests are YARV, release engineering, tests, functional programming features and bignum.
+He enjoys esoteric programming and Quine.
+PROFILE
+Ruby と RubySpec のコミッタ。1.9.2 リリースマネージャ補佐。Ruby テストメンテナ。
+評価器 (YARV) 、リリースエンジニアリング、テスト、関数型プログラミング機能、Bignum など、Ruby の中でもどうでもいいところに興味を持つ。
+Esoteric programming や Quine を好む。
+PROFILE_JA
     e28_big.create :title => 'Daily Ruby', :title_ja => 'Rubyな日々', :speaker => 'Kazuhiro NISHIYAMA (Good-Day, Inc.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 I will talk about my daily life as a committer of Ruby and the Ruby Reference Manual Renewal Project.
 ABSTRACT
@@ -300,9 +311,11 @@ ABSTRACT
     e28_medium.create :title => 'The Necessity and Implementation of Speedy Tests', :speaker => 'Jake Scruggs (Backstop Solutions)', :length => 1.hour,:abstract => (<<ABSTRACT)
 Your project's software practices are deteriorating every minute the developers wait for slow tests to finish. Once developers get fed up and stop running the tests, disregard for failing builds can't be far behind, and from there it's only a short leap to the albatross of a brittle/irrelevant test suite. Luckily this can all be avoided by adopting some time-saving testing standards and practices.
 ABSTRACT
-    e28_medium.create :title => 'Seamless Integration Testing', :speaker => 'paulelliott (Hashrocket)', :abstract => (<<ABSTRACT)
+    e28_medium.create :title => 'Seamless Integration Testing', :speaker => 'paulelliott (Hashrocket)', :abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Do you have a solid, full coverage integration test suite? You should. It is the final automated point of assurance that what you are about to push to production is not going to blow something up and cost your or your client money. I show how to integration test a real Rails application, demonstrating best practices you can apply to any setup and the latest technologies for fully covering your app, including javascript!
 ABSTRACT
+Paul works for Hashrocket on projects for clients ranging from small start ups to large enterprises. In addition to his consulting work, he contributes regularly to open source projects and maintains some of his own, most notably Fabrication, an object generation framework for Ruby. He is passionate about outside-in testing, Ruby, jQuery, and motorcycles.
+PROFILE
     e28_medium.create_break
     e28_medium.create :title => 'A Metaprogramming Spell Book', :speaker => 'Paolo "Nusco" Perrotta', :length => 1.hour, :abstract => (<<ABSTRACT)
 When I started to learn Ruby, I was awed by the code of experienced rubyists. That code was full of amazing magic tricks that I could barely understand. People called those tricks \"metaprogramming\".
@@ -325,11 +338,18 @@ JRuby コア開発者と日本のJRuby開発者によるJRubyが好きな人の�
 ABSTRACT_JA
 
   e28.with_options(:room => a202) do |e28_a202|
-    e28_a202.create :title => 'tDiaryKaigi', :title_ja => 'tDiary会議', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc., asakusa.rb, tDiary.org)', :from => '9:30', :length => 90.minutes,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e28_a202.create :title => 'tDiaryKaigi', :title_ja => 'tDiary会議', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc., asakusa.rb, tDiary.org)', :from => '9:30', :length => 90.minutes,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 In this session, tDiary users and developpers will discuss future and love for tDiary! we plan to hackathon, and if you have useful patches, please attend this session.
 ABSTRACT
 tDiary のユーザと開発者が集まって今後のロードマップや意見交換を中心にtDiary愛について語り合いたいと思います。 Hackathonも予定していますので、コミッタに取り込んでもらいたいパッチがある人はぜひお越し下さい。
 ABSTRACT_JA
+SHIBATA Hiroshi(hsbt) (Eiwa System Management,Inc./asakusa.rb)
+He is a programmer in Eiwa System Management,Inc. member of  Japanese Society for Quality Control (JSQC). His lifework is to develop Rails application and tDiary, The tsukkomi oriented weblog.
+PROFILE
+柴田博志(hsbt) (永和システムマネジメント/asakusa.rb)
+サービスプロバイディング事業部プログラマ、品質管理学会 正会員
+Rails を使った業務システムや tDiary という Web 日記システムを作っています。
+PROFILE_JA
     e28_a202.create :title => 'Asakusa.rb in Tsukuba', :title_ja => '浅草.rb in つくば', :speaker => 'Akira Matsuda (Asakusa.rb)', :from => '12:00', :length => 90.minutes,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
 During RubyKaigi, you'll find tons of foreign Ruby Stars and Book writers here in Tsukuba. Why don't we directly tell them our questions, requirements, and of course, our deep appreciation, since these days are only once a year and are a very special chance for us. OK, of course we're all willing to tell them, but we know it's very hard to do so. We can hardly distinguish who's who, maybe we lack the courage to talk to them, especially when there's a language barrier between us. So, Asakusa.rb are producing a special event which aims to help introduce everybody to one another and facilitate communicate. We're having live discussions with, for example,
     the creators of Rails 3, the author of \"The Passionate Programmer\", guys from the crazy \"Ruby Brigade\" Seattle.rb, and lot of other foreign super Ruby Stars who are sticking around here. C'mon everybody, let's get together and talk about \"your\" Ruby!
@@ -485,11 +505,24 @@ PROFILE_JA
   end
 
   e29.with_options(:room => medium) do |e29_medium|
-    e29_medium.create :title => 'The future of the bigdecimal library and the number system of Ruby', :title_ja => "bigdecimal ライブラリと Ruby の数値系の未来", :speaker => 'Kenta Murata (GeneticLab Co., Ltd. && Ruby Sapporo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :from => '9:30', :lang => 'ja'
+    e29_medium.create :title => 'The future of the bigdecimal library and the number system of Ruby', :title_ja => "bigdecimal ライブラリと Ruby の数値系の未来", :speaker => 'Kenta Murata (GeneticLab Co., Ltd. && Ruby Sapporo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :from => '9:30', :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 I taked over the maintainer of the bigdecimal standard library in the beginning of this year. Today, the bigdecimal library has some problems in its behaviors, such as interacting convention with any other number classes. In this presentation, I will demonstrate these problematic behaviors and express their appropriate characteristics in the next version of Ruby. Additionally, I will discuss the number system which the future version of Ruby, that is 2.0, should have.
 ABSTRACT
 私は今年の初めに bigdecimal 標準ライブラリのメンテナに採用されました。現在 bigdecimal ライブラリは、他の数値クラスとの相互作用規則など、その振る舞いについて幾つかの問題を抱えています。私はこのプレゼンテーションで、このような問題ある振る舞いを実演で示し、これらに対して Ruby の次のバージョンで実現されるべき適切な性質を説明します。加えて、私は Ruby の未来のバージョン（すなわち 2.0）が持っているべき数値系について議論します。
 ABSTRACT_JA
+mrkn, Kenta Murata (Genetic Lab Co., Ltd.)
+Kenta is a Ruby committer, who manages the bigdecimal library, and is interested in numerical computation, programming languages, random number generators, and complex networks.
+He obtained his Ph.D. (Information science) from Hokkaido University in 2008.
+Also, he is an author of a Japanese book titled "Ruby 逆引きレシピ".
+Finally, he is a member of Ruby Sapporo, Nihon Ruby-no-kai, and Kosen Conference Planning Party.
+PROFILE
+mrkn, 村田賢太 (株式会社ジェネティックラボ)
+2008年北海道大学博士 (情報科学)。同年、株式会社ジェネティックラボ入社。
+2010年 bigdecimal のメンテナに就任し Ruby コミッタになる。
+数値計算、プログラミング言語、乱数生成器、複雑ネットワークに興味を持つ。
+著書は『Ruby逆引きレシピ』(共著)。情報処理学会、人工知能学会、各会員。
+Ruby札幌、日本Rubyの会、高専カンファレンス実行委員会に所属。
+PROFILE_JA
     e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT), :lang => 'ja'
 NArray is an n-dimensional numerical array library developed for use in science fields, but it is usable for handling binary data efficiently. I talk about NArray for the first time after 10 years from the first release. I will also present topics including the next version of NArray, and distributed scientific computing using Ruby for multi-core era.
 ABSTRACT
@@ -538,11 +571,19 @@ PROFILE_JA
 Turn the multimedia render loop inside out. Cooperatively scheduling lightweight Ruby threads on a virtual clock allows you to reason about the concurrent code in your game and perform complex synchronization tasks without even realizing it. Ditch the nested trees of update() calls by making time a first class citizen!
 ABSTRACT
     e29_medium.create_break
-    e29_medium.create :title => "How to survive in a post-Rails world", :title_ja => 'before Rails 時代のプログラマが如何にして after Rails の世界にたどりついたか', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc. / asakusa.rb / tDiary.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_medium.create :title => "How to survive in a post-Rails world", :title_ja => 'before Rails 時代のプログラマが如何にして after Rails の世界にたどりついたか', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc. / asakusa.rb / tDiary.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Even before the release of Rails, we have created many useful tools and applications in Ruby. In this post-Rails world, however, the way we approach application development has changed. In this session, I will talk about my experiences in adapting my way of thinking to a post-Rails world.
 ABSTRACT
 Rails が登場する以前(before Rails)から私たちは多くのプロダクトやツールをRubyによって作ってきました。しかし、Rails が登場した現代(after Rails)のアプリケーション開発では、before Rails とは異なる考え方を持つ必要があります。このセッションでは、自分が経験したbefore Rails から after Rails に適応するための頭の切り替え方を話します。
 ABSTRACT_JA
+SHIBATA Hiroshi(hsbt) (Eiwa System Management,Inc./asakusa.rb)
+He is a programmer in Eiwa System Management,Inc. member of  Japanese Society for Quality Control (JSQC). His lifework is to develop Rails ap
+plication and tDiary, The tsukkomi oriented weblog.
+PROFILE
+柴田博志(hsbt) (永和システムマネジメント/asakusa.rb)
+サービスプロバイディング事業部プログラマ、品質管理学会 正会員
+Rails を使った業務システムや tDiary という Web 日記システムを作っています。
+PROFILE_JA
     e29_medium.create :title => 'How To Create A Beautiful Template Engine Which Never Breaks HTML', :title_ja => 'HTMLデザインをまったく崩さない、美しいテンプレートエンジンの作り方', :speaker => 'Makoto Kuwata (programmer)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 One of the biggest challenges in modern web application development is the difficulty of collaborating with web designers. For example, eRuby requires Ruby code to be embedded inside template files, often resulting in broken HTML designs, making life difficult for web designers. To solve this problem, various template engines which don't break HTML have been created. The trade off of these template engines, however, is that they sacrifice other features such as performance or usability.
 

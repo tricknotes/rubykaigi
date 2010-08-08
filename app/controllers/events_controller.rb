@@ -11,7 +11,7 @@ class EventsController < LocaleBaseController
       format.html # index.html.erb
       format.xml  { render :xml => @events }
       format.json { render :json => @events.to_json(:only => [:id, :break, :parent_event_id, :presenter_name],
-                                                    :methods => [:title, :abstract, :date, :time_slot, :room_name])}
+                                                    :methods => [:title, :abstract, :presenter_profile, :date, :time_slot, :room_name])}
     end
   end
 

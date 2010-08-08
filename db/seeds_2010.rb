@@ -485,11 +485,19 @@ ABSTRACT
 IronRuby is the new implementation of the Ruby language from Microsoft which opens the .NET world to Rubyists. This brings a whole set of new opportunities to Rubyists like using Ruby to write RIA applications, providing enhanced user interface to Ruby applications and more. Come and see the new possibilities that IronRuby brings to the Ruby world!
 ABSTRACT
     e29_big.create_break
-    e29_big.create :title => 'The spread of enterprise Ruby at hot spot SHIMANE', :title_ja => 'Ruby業務システムの広がりとホットスポット島根', :speaker => 'Hiroshi Yoshioka (TechnoProject Ltd.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_big.create :title => 'The spread of enterprise Ruby at hot spot SHIMANE', :title_ja => 'Ruby業務システムの広がりとホットスポット島根', :speaker => 'Hiroshi Yoshioka (TechnoProject Ltd.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 In Matsue City and SHIMANE prefecture of local government, many common business systems began to remake by Ruby/Rails since 2007. Now, the wave of Ruby/Rails spreads to enterprise system fields and prepheral regions. Based many experience and results, how to built up the enterprise systems by Ruby/Rails, how to built up the long term maintenance systems, challenging to high productivty and another Agile development.
 ABSTRACT
 地方自治体である松江市や島根県では、2007年から一般的な行政システムをRuby/Railsで再構築を行っている。今、Ruby/Railsの波が企業システムの分野や周辺の地域に広がり始めた。 多くの経験と実績に基づいて、Ruby/Railsの基幹業務システムの構築方法、長期間メンテナンスするシステムの構築方法、高生産性や別なアジャイル開発への挑戦について説明する。
 ABSTRACT_JA
+Hiroshi Yoshioka (TechnoProject LTD. & Matsukei LTD. Both CEO)
+I am born in 1953.It started from the development of the middleware, and SI and a lot of package developments and application such as finance and public in the field were commanded in the first line.
+A lot of environments have been experienced from the mainframe to the CSS・Web application program.
+PROFILE
+吉岡 宏（ヨシオカ ヒロシ）
+(株)テクノプロジェクト：代表取締役社長兼(株)マツケイ：代表取締役社長
+1953年生まれ。1976年からソフトウエア業界に身を置く。その間、ミドルウエアの開発から始まり、フィールドでの金融・公共など多くのＳＩやパッケージ開発・適用を第一線で指揮して来た。メインフレームからＣＳＳ・Webアプリまで、多くの環境を経験してきた。
+PROFILE_JA
     e29_big.create :title => 'There Is No Spoon -- Think Global, Act Regional', :speaker => 'Shintaro Kakutani (rubykaigi.org, Nihon Ruby-no-kai)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 I have been a member of RubyKaigi organizer since 2006 and also am the founder of Regional RubyKaigi started in 2008. \"Kaigis\" have changed the landscape of the Ruby community in Japan. These 2 years mean a lot to me. I'd love to show you what happened is and tell you what I believe is going to happen in the Ruby community in Japan.
 ABSTRACT

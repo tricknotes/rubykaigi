@@ -45,6 +45,10 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def minutes
+    (to - from).to_i / 60
+  end
+
   def presenter_name_without_afffiliation
     presenter_name ? presenter_name.gsub(/\(.+\)/, '') : ""
   end
@@ -53,8 +57,13 @@ class Event < ActiveRecord::Base
     I18n.locale.to_s == 'ja' ? (presenter_profile_ja || presenter_profile_en) : (presenter_profile_en || presenter_profile_ja)
   end
 
-  def minutes
-    (to - from).to_i / 60
+  def time_slot
+    "#{from.strftime("%H:%M")} - #{to.strftime("%H:%M")}"
   end
+
+  def room_name
+    room.name
+  end
+
   memoize :from, :to, :date, :time
 end

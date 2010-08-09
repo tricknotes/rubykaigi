@@ -128,3 +128,11 @@ end
 before 'db:seed_2010', 'deploy'
 before 'db:seed_2010', 'deploy:web:disable'
 after 'db:seed_2010', 'deploy:web:enable'
+
+namespace 'ticket' do
+  desc "ticket summary report"
+  task "summary", :roles => :app do
+    ticket_summary = capture("cd #{current_path} && RAILS_ENV=production script/ticket_summary")
+    puts ticket_summary
+  end
+end

@@ -462,11 +462,22 @@ EventLoader.with_options(:day => 29) do |e29|
     e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'Rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka (NIFTY Corporation), Yuichi Saotome (NIFTY Corporation)', :from => '9:30',:abstract => (<<ABSTRACT), :lang => 'ja'
 We show the construction/operation methods for Cloud with Ruby. (ex. NIFTY Cloud)
 ABSTRACT
-    e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA)
 Castoro is a new scalable storage system implemented in Ruby. In this session, we talk about why we decided to develop a new storage system, Castoro. We will also compare Castoro against other distributed storage systems, such as MogileFS and kumoFS.
 ABSTRACT
 Castoroは、Rubyで実装されたスケーラブルなストレージシステムです。本発表では、開発に至った経緯と、MogileFSやkumoFS等、他の分散ストレージシステムとの違いについて紹介します。
 ABSTRACT_JA
+寺下 敏之（てらした としゆき） リコーITソリューションズ株式会社
+
+OSなし組み込みファームウエアからデータセンター内ソフトウエアまで手がけてき
+ました。
+自宅で書いたものをgithubへ置いてOSSと称して業務に持ち込む、自作自演プログラ
+マです。
+Railsアプリコードを書いたら負けかなと思っているRuby使いで、鳥取Ruby会
+「tottoruby」主催・開催しています。
+ストレージサービス「quanp」ではミドルウエアからOS寄りのコンポーネントを作っ
+ています。
+PROFILE_JA
     e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI (druby.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA)
 On August 31st, 2000, A slightly unusual Wiki was introduced on ruby-list. It was [ruby-list:24661] The first practical dRuby application, RWiki.
 

@@ -91,13 +91,19 @@ PROFILE_JA
   end
 
   e27.with_options(:room => medium) do |e27_medium|
-    e27_medium.create :title => 'Feels Like Ruby', :speaker => 'Sarah Mei (Pivotal Labs)', :from => '14:00',:abstract => (<<ABSTRACT)
+    e27_medium.create :title => 'Feels Like Ruby', :speaker => 'Sarah Mei (Pivotal Labs)', :from => '14:00',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 For a Rubyist, writing Javascript is the worst part of working on a Ruby web application. Those clean, modern UIs are often made possible by incredibly complex Javascript. The helpers inevitably get in the way, and you end up writing most of it by hand.
 
 It is painful.
 
 But you can make writing Javascript code feel more like writing Ruby code. I will show techniques that go beyond \"unobtrusive\" and turn Javascript into a first-class citizen in your Ruby application. Make your Javascript more joyful!
 ABSTRACT
+Sarah Mei has spent most of the last dozen years writing code, and
+most of the last four doing Ruby. She's a developer at Pivotal Labs,
+and a pair programming fangirl. She spends a lot of her free time
+showing people of all ages and backgrounds how awesome programming is
+- especially, of course, with Ruby.
+PROFILE
     e27_medium.create :title => 'User Experience for Library Designers', :speaker => 'geemus (Wesley Beary)(Engine Yard)', :from => '14:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 I've written \"a lot of code\":http://github.com/geemus, both hobby and work, over the last year, and looking back I can't help but think that writing code for yourself is easy; it's writing code for others can be tough. In this session, I'll share some examples of good and bad practices gathered in my years writing code and libraries, and discuss how to get past being too close to the problem. I'll talk specifically about growing your work into something anybody (and hopefully everybody) will use.
 ABSTRACT

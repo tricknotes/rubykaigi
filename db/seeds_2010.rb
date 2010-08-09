@@ -29,17 +29,7 @@ EventLoader.with_options(:day => 27) do |e27|
   e27.with_options(:room => big) do |e27_big|
     e27_big.create :title => 'Opening', :from => '12:30'
     e27_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Jeremy Kemper ', :from => '13:00', :to => '14:00'
-    e27_big.create :title => 'jpmobile on Rails 3', :title_ja => 'jpmobile on Rails 3 の作り方', :speaker => 'Shin-ichiro OGAWA (Tokyu.rb / Nihon Ruby no Kai)', :from => '14:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
-Shin-ichiro OGAWA (Tokyu.rb)
-Developer of Raku-Raku renraku-mou in eole. inc., which is mailing
-list service for Japanese mobile phone. Core commiter of jpmobile.
-Born in Kyoto, grew up in Osaka. Ph.D in Physics, but It's no use for
-works.
-PROFILE
-小川 伸一郎 (Tokyu.rb)
-株式会社イオレで「らくらく連絡網」という携帯向けメーリングリストサービスの開発に従事。RubyKaigi
-2009を機にjpmobileのコアコミッターに。京都生まれで大阪育ちの博士（理学）。
-PROFILE_JA
+    e27_big.create :title => 'jpmobile on Rails 3', :title_ja => 'jpmobile on Rails 3 の作り方', :speaker => 'Shin-ichiro OGAWA (Tokyu.rb / Nihon Ruby no Kai)', :from => '14:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 Jpmobile is a Rails plugin for Japanese mobile phones. This plugin features the ability to convert Japanese emoticons and Japanese kanji codes, and session management for mobile phones which can't handle HTTP cookies. In this talk, I will introduce how we rebuilt the jpmobile codebase to support Rack applications such as Rails 3 and Sinatra.
 ABSTRACT
 jpmobile を Rails 3 や Sinatra に対応させるまでの道のりを紹介。Rack化や絵文字やデコメへの対応などを、どのようにRailsをハックしたかとともに紹介します。
@@ -132,15 +122,7 @@ ABSTRACT
 アプリケーションを構築する時、ほとんどのアプリケーションが今日グローバル的に使用されること、多国語を話す人々に使用されること忘れがちになってしまいます。あなたは、英語や日本語のユーザーインターフェイスを制作するかもしれません。でも、人々は母国語でデーターを記入することを選ぶかもしれません。ウェブブラウザは、ほぼすべてのスクリプトを記入することを可能にします。もし、あなたがラッキーなら、それはなんとか機能するかもしれません。しかし、しばしば、それはもう少し注意を必要とします。サラは、ネイティブスピーカーのビデオを使用した多国語データーベースのMightyverseを構築する経験からの逸話を共有するでしょう。　サラは、どのようにしてUnicodeテキストをデータベースに出し入れするのかの詳細に重点をおきます。また、Rubyでどのようにマルチバイトテキストを扱うかにも重点をおきます。
 ABSTRACT_JA
     e27_medium.create_break :from => '17:00'
-    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
-jugyo, Kazuyuki Kohno (Everyleaf Corporation)
-He is a Rails engineer, and author of Termtter and g.
-github.com/jugyo
-PROFILE
-jugyo, 河野十行 (株式会社万葉)
-Rails エンジニアであり Termtter と g の開発者。
-github.com/jugyo
-PROFILE_JA
+    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 I will talk about my many failed products, and a few of my successful ones. My products can be found here: http://github.com/jugyo
 ABSTRACT
 私のたくさんの失敗プロダクトと少しの成功プロダクトについて話します。 私のプロダクトはここ => http://github.com/jugyo/

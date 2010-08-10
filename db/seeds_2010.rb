@@ -345,7 +345,12 @@ PROFILE_JA
     e28_big.create :title => 'Let\'s calculate easily civil days by using "Ruby"', :title_ja => 'Rubyで手軽に暦日を算出しよう！', :abstract => '',:abstract_ja => '' ,:speaker => 'Yoshihiko Hara, Japan OSS Promotion Forum Application Sub Committee Ruby Application Task Force, FUJITSU SOCIAL SCIENCE LABORATORY LIMITED', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'Introducing the Lingo Project: A New Generationi Text Input System Leveraging Non-native English Writing', :abstract => '', :speaker => 'Kazki Matz (Lingo project)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'babushka―test-driven sysadmin for rubyists', :abstract => '', :speaker => 'Ben Hoskings (babushka)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
-    e28_big.create :title => 'parse.y Fam Tour', :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-", :abstract => '', :speaker => 'Ando Yasushi (Seesaa Inc.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
+    e28_big.create :title => 'parse.y Fam Tour', :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-", :abstract => '', :speaker => 'Ando Yasushi (Seesaa Inc.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+The author of the first and last Google Wave book written in Japanese;
+the book released on August 19th.
+PROFILE
+たぶん史上最後のGoogle Wave本の著者。あとおっぱいとかカリスマとか
+PROFILE_JA
     e28_big.create :title => 'The Timeless Way of E-Publishing with Ruby', :title_ja => "時を超えた電子出版の道の中をRubyと歩いていく", :abstract => '', :speaker => 'Masayoshi Takahashi (Tatsu-zine publishing, Nihon Ruby-no-Kai)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => "My Report of \"Ruby Summer of Code 2010\" - Road to be a stdlib -", :title_ja => "Ruby Summer of Code 2010のご報告 〜俺たちのDecimalはまだ始まったばかりだ〜", :abstract => '', :speaker => 'Tadashi Saito (University of Tsukuba)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
   end

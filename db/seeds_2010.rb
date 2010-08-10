@@ -338,9 +338,11 @@ PROFILE_JA
     e28_medium.create :title => 'Rocking the enterprise with Ruby', :speaker => 'Munjal Budhabhatti And Sudhindra Rao (ThoughtWorks Inc)', :from => '9:30',:abstract => (<<ABSTRACT)
 ThoughtWorks has been working on a long scale project at Rackspace building data center of the future using Ruby. This projects has evolved since its inception. And so has the architecture. Developing in ruby has assisted us in managing changes to the business rules at a rapid pace. We have been delivering successfully every two weeks for last three years. We would like to share our learnings from this effort.
 ABSTRACT
-    e28_medium.create :title => 'Rails to Sinatra: What is ready', :speaker => 'Jiang Wu (Tengu)',:abstract => (<<ABSTRACT), :lang => 'en'
+    e28_medium.create :title => 'Rails to Sinatra: What is ready', :speaker => 'Jiang Wu (Tengu)',:abstract => (<<ABSTRACT), :lang => 'en', :profile => (<<PROFILE)
 As Sinatra 1.0 came out, we have a good alternative to rails(before is merb). I will introduce efforts of people around Sinatra community to eliminate gap of moving from Rails to Sinatra including my works.
 ABSTRACT
+Jiang Wu(呉江) is a Ruby developer in Shanghai, China. He has worked with Ruby for 3 years. In 2008, he open sourced a library of Chinese payment gateway, implemented in Active Merchant. From 2009, he is devoted to promote "off rails", such as Sinatra and Sequel, in China.
+PROFILE
     e28_medium.create :title => 'Mapping the world with DataMapper', :speaker => 'Ted Han (%w(Videojuicer DataMapper))',:abstract => (<<ABSTRACT)
 Ubiquitous computing has opened the door to two new revolutions, data collection and data manipulation. Mobile phones, digital cameras, low cost electronics, and wireless internet access have made it possible to collect data any time, anywhere. But what are we doing with the data once it's collected? How do we navigate the oceans of data we generate daily? Where can we find a Rubyist's tools for data mining and manipulation? We'll discuss how to use DataMapper, a Ruby data access library, to make sense of data of all kinds.
 ABSTRACT

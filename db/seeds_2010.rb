@@ -637,11 +637,14 @@ Satoshi Shiba
 A graduate student in the Sasada Laboratory, The University of Tokyo.
 Develop an AOT compiler for Ruby 1.9.
 PROFILE
-    e29_medium.create :title => 'Memory Profiler for Ruby', :speaker => 'Tetsu Soh (The University of Tokyo)',:abstract => (<<ABSTRACT)
+    e29_medium.create :title => 'Memory Profiler for Ruby', :speaker => 'Tetsu Soh (The University of Tokyo)',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 We developed a memory profiler for Ruby programming language that fulfills the requirement for measuring and analyzing the memory usage of Ruby applications.
 
 In this presentation, we will describe the features, the design and the implementation of the memory profiler. We will also show the performance evaluation and demonstrate the memory profiler in action.
 ABSTRACT
+A graduate student in the Sasada Laboratory, The University of Tokyo.
+Developed a memory profiler for Ruby1.9.
+PROFILE
     e29_medium.create_break :length => 1.5.hours
     e29_medium.create :title => 'How to create Ruby reference manual search Web application with Ruby 1.9  groonga and rroonga', :title_ja => 'るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索', :speaker => 'Kouhei Sutou (ClearCode Inc. / COZMIXNG)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 This talk explains about rurema-search, Ruby reference manual in Japanese search Web application, and how to create rurema-search. Rurema-search uses Ruby 1.9.1 (MRI) as a Ruby interpreter, groonga as a full-text search engine and data store and rroonga as a Ruby-groonga interface. Those technologies are particularly explained in 'how to create rurema-search' time.

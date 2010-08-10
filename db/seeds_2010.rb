@@ -164,10 +164,20 @@ jugyo, Kazuyuki Kohno (Everyleaf Corporation)
 He is a Rails engineer, and author of Termtter and g.
 github.com/jugyo
 PROFILE
-    e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove (AT&T Interactive)', :from => '18:00', :to => '19:00', :abstract => (<<ABSTRACT)
+    e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove (AT&T Interactive)', :from => '18:00', :to => '19:00', :abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Programming for fun, or having fun programming. Ruby is the best language for both! Let's talk about programming after we've punched out from work, the programming we can do while drinking a beer, and the programming we can do to make our friends laugh. We'll take a look at projects built for fun, as well as projects built to have fun! We'll dissect them to figure out what makes them tick, then
 extract techniques that we can use with our day to day tasks.
 ABSTRACT
+Aaron Patterson:
+
+Mild mannered Rubyist by day, and culinary superhero by night. When
+Aaron isn’t ruining people’s lives by writing software like phuby,
+enterprise, and neversaydie, he can be found writing slightly more
+useful software like nokogiri. To keep up his Gameboy Lifestyle, Aaron
+spends his weekdays writing high quality software for ATTi. Be sure to
+catch him on Karaoke night, where you can watch him sing his favorite
+smooth rock hits of the 70’s and early 80’s.
+PROFILE
   end
   e27.create :title => 'World Wide Ruby Conferences', :title_ja => '世界の Ruby Conference から', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
 There are many Ruby/Rails conferences, \"RubyKaigi\"s and Ruby/Rails meetups throughout the world, but we can only participate in a few of these. I'd like to use the \"Lightening Talk\" style to introduce some of the people running these other meetups. You may learn about a new meetup to visit, or give you ideas for your own m0eetup.

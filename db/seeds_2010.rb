@@ -131,9 +131,15 @@ ABSTRACT
 geemus (Wesley Beary) [github.com/geemus] is an avid Rubyist and Open Source enthusiast. When not spending his spare time working on enumerable overly ambitious open source projects he spends his days developing the Engine Yard Cloud [http://www.engineyard.com/products/cloud].
 PROFILE
     e27_medium.create_break :from => '15:00'
-    e27_medium.create :title => 'Rubygems, Bundler, and the future', :speaker => 'Carl Lerche (Engine Yard)', :from => '15:30',:abstract => (<<ABSTRACT)
+    e27_medium.create :title => 'Rubygems, Bundler, and the future', :speaker => 'Carl Lerche (Engine Yard)', :from => '15:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Rubygems has served the community well for many years. However, as applications become more and more complex, certain problems arise. Bundler was created to solve some of those problems and has been evolving rapidly based on community feedback. It's time to look at the current state of affairs and think about Rubygems 2.0. What parts of bundler could be moved upstream and what problems remain to be solved?
 ABSTRACT
+Until Carl Lerche discovered Ruby on Rails in 2005 he thought he would
+never do web development again. It was Ruby that lured him back into
+programming and open source development. Currently, he spends much of
+his time at Engine Yard contributing to Rails, and in his free time,
+to many side projects.
+PROFILE
     e27_medium.create :title => 'Truth and Consequences: Handling Ruby 1.9 Encodings in Rails', :speaker => 'Yehuda Katz (Engine Yard)', :from => '16:00',:abstract => (<<ABSTRACT)
 Ruby 1.9 adds support for many different encodings, making it possible to write Ruby web programs that can handle non-English characters well. However, these changes have had many consequences. At the beginning, the new encoding support has introduced much confusion in simple, English-only Rails applications and applications relying heavily on Unicode. Yehuda will explain the common problems caused by the changes, talk about what Rails has done to eliminate many of them, and what the Ruby community can do to make writing internationalized programs easier.
 ABSTRACT

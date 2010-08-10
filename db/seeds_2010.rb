@@ -78,11 +78,22 @@ Rubyコミッタ。ゴミを集めさせることが得意。
 著書は『ガベージコレクションのアルゴリズムと実装』（共著）
 PROFILE_JA
     e27_big.create_break :from => '17:00'
-    e27_big.create :title => 'The basis of making DSL with Ruby', :title_ja => 'Rubyで作るDSLの基礎', :speaker => 'Yasuko Ohba (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_big.create :title => 'The basis of making DSL with Ruby', :title_ja => 'Rubyで作るDSLの基礎', :speaker => 'Yasuko Ohba (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Ruby is well known as a language with which you can create your own DSL easily. Making DSL with Ruby is really easy, but there seem to be many developers who have not tried to make DSL with Ruby by design. In my opinion, there is no clear boundary between 'Useful APIs' and DSL. However, we can always judge whether a code is like DSL or not, that means, we can create DSL by design. In this talk, I'll start by looking into what DSL is and when to use it. After that I'll talk what concepts, habits and techniques you need to make your own DSL, showing typical examples from famous DSL codes like Rails, RSpec and so on.
 ABSTRACT
 RubyはDSLを作りやすい言語として知られています。実際に、DSLを作るのは簡単です。しかし、Rubyで意識的にDSLを作ったことのある人は意外に少ないのかもしれません。 Rubyで実現するDSLは、「使いやすいAPI」の一形態であり、ここから先がDSLだという明確な境界はありませんが、結果として出来上がったコードがDSL的かどうかは歴然と判断できます。つまり、コードをDSL的にするかどうかは開発者が意図的に選択していける事柄なのです。 本セッションでは、DSLとは何か、どんなときにDSLが有効かからはじめて、RubyでDSLを書く際に必要となる考え方、習慣、そしてテクニックを、 Rails や RSpec といった良く知られたコードを例にして話していきます。
 ABSTRACT_JA
+Yasuko Ohba (Everyleaf Corporation), nay3
+A Rails application developer who loves programing.
+President & CEO of Everyleaf Corporation.
+One of her products is Kozuchi, a family bookkeeping web application.
+Wrote the book “Ruby on Rails 逆引きクイックリファレンス” (with other authors, published by Mainichi Communications Inc.) and translated Ola Bini's "Practical JRuby on Rails Web 2.0 Projects" into Japanese (with other guys. The Japanese version, "JRuby on Rails 実践開発ガイド" was published by SHOEISHA).
+PROFILE
+大場寧子（株式会社万葉）, nay3
+実装をこよなく愛するRailsエンジニア。株式会社万葉の代表取締役社長。
+プロダクトにWeb家計簿「小槌」など。
+著書「Ruby on Rails 逆引きクイックリファレンス」（共著、毎日コミュニケーションズ） 訳書「JRuby on Rails 実践開発ガイド」（Ola Bini 著、共訳、翔泳社）。
+PROFILE_JA
     e27_big.create :title => 'Best Imitation of Your Class', :title_ja => '君のクラスの最高の偽物', :speaker => 'Shugo Maeda (Network Applied Communication Laboratory Ltd.)', :from => '18:00', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Ruby's open classes contribute to extensibility of applications such as Ruby on Rails. However, they sometimes cause serious conflicts between class extensions. This talk illustrates problems of open classes, and propose a resolution by which classes can be refined locally.
 

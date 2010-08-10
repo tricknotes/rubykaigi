@@ -568,7 +568,7 @@ mrkn, Kenta Murata (Genetic Lab Co., Ltd.)
 Kenta is a Ruby committer, who manages the bigdecimal library, and is interested in numerical computation, programming languages, random number generators, and complex networks.
 He obtained his Ph.D. (Information science) from Hokkaido University in 2008.
 Also, he is an author of a Japanese book titled "Ruby 逆引きレシピ".
-Finally, he is a member of Ruby Sapporo, Nihon Ruby-no-kai, and Kosen Conference Planning Party.
+Finally, he is a member of Ruby Sapporo, Nihon Ruby-no-kai, and Kosen Conference Committee.
 PROFILE
 mrkn, 村田賢太 (株式会社ジェネティックラボ)
 2008年北海道大学博士 (情報科学)。同年、株式会社ジェネティックラボ入社。

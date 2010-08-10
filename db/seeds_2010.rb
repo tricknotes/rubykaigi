@@ -591,7 +591,7 @@ PROFILE
 三浦 英樹　(CSNagoya)
 水道屋です。趣味でプログラムを書いています。書いたものはhttp://github.com/miura1729 にあります。
 PROFILE_JA
-    e29_medium.create :title => 'AOT Compiler for Ruby', :title_ja => 'Ruby 用 AOT コンパイラ', :speaker => 'Satoshi Shiba (The University of Tokyo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_medium.create :title => 'AOT Compiler for Ruby', :title_ja => 'Ruby 用 AOT コンパイラ', :speaker => 'Satoshi Shiba (The University of Tokyo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE)
 We developed a AOT Compiler, which translates Ruby script into native code to run Ruby script faster.
 
 In this presentation, we show the composition of CRuby and the challenges we overcome to achieve full compatible AOT compiler for the CRuby. We also show the design and the implementation of our AOT compiler. We evaluated the compatibility and performance by using tests and benchmarks included in CRuby release.
@@ -600,6 +600,14 @@ Ruby スクリプトの実行をより高速にするために，Ruby スクリ�
 
 本発表では，CRubyの構成を述べ，CRubyと完全互換なAOTコンパイラを開発するにあたっての課題を述べる．そして，我々のAOTコンパイラの設計と実装を示す． Ruby処理系に付属するテストプログラム，ベンチマークプログラムを用いて， その互換性，および得られた性能向上について述べる．
 ABSTRACT_JA
+芝 哲史 (シバ サトシ)
+東京大学笹田研究室の学生です。
+Ruby 1.9用の AOT コンパイラを開発しています。
+PROFILE_JA
+Satoshi Shiba
+A graduate student in the Sasada Laboratory, The University of Tokyo.
+Develop an AOT compiler for Ruby 1.9.
+PROFILE
     e29_medium.create :title => 'Memory Profiler for Ruby', :speaker => 'Tetsu Soh (The University of Tokyo)',:abstract => (<<ABSTRACT)
 We developed a memory profiler for Ruby programming language that fulfills the requirement for measuring and analyzing the memory usage of Ruby applications.
 

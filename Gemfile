@@ -30,7 +30,7 @@ group :development do
   gem 'capistrano-ext', :require => nil
   gem 'capistrano-notification', '0.0.2', :require => nil
   gem 'gettext', '<2' # required by i18n_generators
-  gem 'thin', :require => :nil
+  gem 'thin', :require => nil
 end
 
 group :test, :cucumber do

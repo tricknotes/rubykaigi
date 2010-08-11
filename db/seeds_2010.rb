@@ -179,10 +179,54 @@ catch him on Karaoke night, where you can watch him sing his favorite
 smooth rock hits of the 70’s and early 80’s.
 PROFILE
   end
-  e27.create :title => 'World Wide Ruby Conferences', :title_ja => '世界の Ruby Conference から', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
+  e27.create :title => 'World Wide Ruby Conferences', :title_ja => '世界の Ruby Conference から', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'en, ja'
 There are many Ruby/Rails conferences, \"RubyKaigi\"s and Ruby/Rails meetups throughout the world, but we can only participate in a few of these. I'd like to use the \"Lightening Talk\" style to introduce some of the people running these other meetups. You may learn about a new meetup to visit, or give you ideas for your own m0eetup.
+
+Speakers
+
+Pat Allan
+Rails Camps
+http://railscamps.com/
+
+Chad Fowler
+Rubyconf
+http://rubyconf.org/
+
+Jiang Wu
+Rubyconf China
+http://rubyconfchina.org/
+
+Daniel Bovensiepen
+EuRuKo
+http://euruko2011.org/
+
+Masayoshi Takahashi
+RubyKaigi
+http://rubykaigi.org/
 ABSTRACT
 世界中でたくさんのRuby会議、Ruby/Rails Conference、Ruby/Rails勉強会が行われています。私たちが参加できるのはそのうちのほんの一部です。この時間は世界中の勉強会を運営する方々にLT形式で紹介していただきます。次に行く勉強会を開拓したり、あなたが開催する勉強会の参考にするのはいかがでしょうか？
+
+Speakers
+
+Pat Allan
+Rails Camps
+http://railscamps.com/
+
+Chad Fowler
+Rubyconf
+http://rubyconf.org/
+
+Jiang Wu
+Rubyconf China
+http://rubyconfchina.org/
+
+Daniel Bovensiepen
+EuRuKo
+http://euruko2011.org/
+
+Masayoshi Takahashi
+RubyKaigi
+http://rubykaigi.org/
 ABSTRACT_JA
   e27.with_options(:room => a202) do |e27_a202|
     e27_a202.create :title => 'Ruby developer meeting at Tsukuba', :title_ja => 'Ruby開発会議つくば', :speaker => 'Ruby core team', :from => '10:00', :to => '12:30',:abstract => (<<ABSTRACT), :lang => 'ja'

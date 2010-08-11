@@ -372,7 +372,16 @@ Ruby コミッタ。
 PROFILE_JA
     e28_big.create_break
     lt_event = e28_big.create :title => 'Lightning Talks', :abstract => "Lightning Talks are 11 x 5minutes talk in a 60 minutes time slot", :abstract_ja => "1人持ち時間5分のライトニングトークです", :speaker => '(See Abstract)', :length => 1.hour, :lang => 'ja, en'
-    e28_big.create :title => 'ARToolKit Ruby Binding', :abstract => '', :speaker => 'Urabe, Shyouhei (Network Applied Communication Lab.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
+    e28_big.create :title => 'ARToolKit Ruby Binding', :abstract => '', :speaker => 'Urabe, Shyouhei (Network Applied Communication Lab.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+Urabe Shyouhei (Network Applied Communication Laboratory)
+
+is a software scientist, best known as a Ruby core developer who maintains
+Ruby 1.8.7.  He is now mainly writing codes at NaCl.  His presentation is
+based on what he wrote there.
+PROFILE
+Ruby 1.8.7のお守り係として知られるが本人はプログラマのつもりなので、たまには
+作ったプログラムの紹介をしたい。仕事で作ったやつだけど。
+PROFILE_JA
     e28_big.create :title => 'Toward creating a single stand-alone executable of Ruby', :title_ja => "Ruby/Tk-Kit から RubyKit へ : Ruby の単一ファイル実行環境の構築に向けて", :abstract => '', :speaker => 'Hidetoshi NAGAI (Kyushu Institute of Technology / Rubyist Kyushu)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 One of CRuby committers and a Ruby/Tk developer.
 PROFILE

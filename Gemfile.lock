@@ -81,6 +81,8 @@ dependencies:
     group: 
     - :development
     version: ">= 0"
+    require: 
+    - :nil
   database_cleaner: 
     group: 
     - :test
@@ -143,7 +145,7 @@ dependencies:
     group: 
     - :test
     - :cucumber
-    version: ">= 0"
+    version: = 0.6.3
   hoptoad_notifier: 
     group: 
     - :default
@@ -207,7 +209,7 @@ specs:
 - activeresource: 
     version: 2.3.8
 - addressable: 
-    version: 2.1.2
+    version: 2.2.0
 - ambethia-smtp-tls: 
     version: 1.1.2
 - autotest-rails: 
@@ -239,13 +241,13 @@ specs:
 - mime-types: 
     version: "1.16"
 - nokogiri: 
-    version: 1.4.2
+    version: 1.4.3.1
 - rack-test: 
     version: 0.5.4
 - ffi: 
     version: 0.6.3
 - json_pure: 
-    version: 1.4.3
+    version: 1.4.6
 - rubyzip: 
     version: 0.9.4
 - selenium-webdriver: 
@@ -283,7 +285,7 @@ specs:
 - delayed_job: 
     version: 2.0.3
 - email_spec: 
-    version: 0.6.2
+    version: 0.6.3
 - eventmachine: 
     version: 0.12.10
 - faker: 
@@ -295,11 +297,11 @@ specs:
 - god: 
     version: 0.11.0
 - haml: 
-    version: 3.0.14
+    version: 3.0.16
 - hashie: 
-    version: 0.2.1
+    version: 0.2.2
 - hoptoad_notifier: 
-    version: 2.3.2
+    version: 2.3.4
 - httparty: 
     version: 0.5.2
 - i18n_generators: 
@@ -326,7 +328,7 @@ specs:
 - rails_warden: 
     version: 0.5.2
 - redis: 
-    version: 2.0.4
+    version: 2.0.5
 - redis-objects: 
     version: 0.3.2
 - rr: 
@@ -355,7 +357,7 @@ specs:
     version: 0.4.2
 - will_paginate: 
     version: 2.3.14
-hash: 5c8f559eb52922818da419f9d195a88ca7795f5b
+hash: 823323fb10f3eae8f5fa69c87b0b82cfae21ccd1
 sources: 
 - Git: 
     uri: git://github.com/amatsuda/i18n_generators.git

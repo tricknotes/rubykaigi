@@ -38,7 +38,7 @@ group :test, :cucumber do
   gem 'rr'
   gem 'machinist', :require => 'machinist/active_record'
   gem 'faker'
-  gem 'email_spec'
+  gem 'email_spec', '0.6.3'
   gem 'autotest-rails'
 #  gem 'autotest-growl'
   gem 'daemons'

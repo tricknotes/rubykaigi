@@ -58,6 +58,7 @@ end
 after("deploy:update_code") do
   setup_shared_config("database.yml")
   setup_shared_config("config.yml")
+  setup_shared_config("vendor/bundle")
 end
 
 after("deploy:symlink") do
@@ -73,7 +74,7 @@ end
 
 namespace :bundler do
   task :bundle do
-    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cucumber && bundle lock")
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/bunlde --deployment --without development test cucumber")
   end
 end
 

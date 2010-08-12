@@ -58,7 +58,6 @@ end
 after("deploy:update_code") do
   setup_shared_config("database.yml")
   setup_shared_config("config.yml")
-  setup_shared_config("vendor/bundle")
 end
 
 after("deploy:symlink") do
@@ -68,13 +67,14 @@ after("deploy:symlink") do
   setup_shared("certs","app_key.pem")
   setup_shared("certs","paypal_cert_sandbox.pem")
   setup_shared("certs","paypal_cert_live.pem")
+  setup_shared("vendor", "bundle")
   run "rm -rf #{shared_path}/tmp/rails-cache/*"
   run "cd #{current_path} && bundle exec whenever --update-crontab #{application}"
 end
 
 namespace :bundler do
   task :bundle do
-    run("cd #{latest_release} && bundle install #{shared_path}/vendor/bunlde --deployment --without development test cucumber")
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/bundle --deployment --without development test cucumber")
   end
 end
 

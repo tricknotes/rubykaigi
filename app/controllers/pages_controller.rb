@@ -17,7 +17,13 @@ class PagesController < LocaleBaseController
       @headlines = HeadlineEntry.recent(I18n.locale, 5)
       page = params[:page_name].blank? ? 'index' : params[:page_name]
       respond_to do |f|
-        f.html { render :template => File.join('pages', params[:year], page) }
+        f.html do
+          begin
+            render :template => File.join('pages', params[:year], page)
+          rescue ActionView::MissingTemplate => e
+            render :file => "public/404.html", :status => 404
+          end
+        end
       end
       return
     end

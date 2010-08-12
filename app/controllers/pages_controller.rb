@@ -4,7 +4,6 @@ class PagesController < LocaleBaseController
   before_filter :readonly
   before_filter :page_name_is_valid
   before_filter :redirect_to_past_kaigi
-#  before_filter :sponsors_only
 
   layout_for_latest_ruby_kaigi
 
@@ -55,7 +54,7 @@ class PagesController < LocaleBaseController
     if (year = params[:year].to_i) < 2009
       redirect_to "http://jp.rubyist.net/RubyKaigi#{year}"
     elsif 2010 < year
-      render :file => "public/404.html"
+      render :file => "public/404.html", :status => 404
     else
       true
     end

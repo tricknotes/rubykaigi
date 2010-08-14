@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_filter :login_required, :except => [:show, :regenerate_permalink]
+  before_filter :login_required, :only => [:regenerate_permalink]
 
   layout_for_latest_ruby_kaigi
 

@@ -651,7 +651,7 @@ Also, he is an author of a Japanese book titled "Ruby 逆引きレシピ".
 Finally, he is a member of Ruby Sapporo, Nihon Ruby-no-kai, and Kosen Conference Committee.
 PROFILE
 mrkn, 村田賢太 (株式会社ジェネティックラボ)
-2008年北海道大学博士 (情報科学)。同年、株式会社ジェネティックラボ入社。
+2009年北海道大学博士 (情報科学)。同年、株式会社ジェネティックラボ入社。
 2010年 bigdecimal のメンテナに就任し Ruby コミッタになる。
 数値計算、プログラミング言語、乱数生成器、複雑ネットワークに興味を持つ。
 著書は『Ruby逆引きレシピ』(共著)。情報処理学会、人工知能学会、各会員。

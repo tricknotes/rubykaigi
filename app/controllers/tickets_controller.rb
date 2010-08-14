@@ -10,10 +10,10 @@ class TicketsController < ApplicationController
 
   def edit
     @ticket = Ticket.find_by_code4url(params[:id])
-    unless @ticket.rubyist == user
-      render :status => '403', :file => 'public/403.html'
-      return
-    end
+#     unless @ticket.rubyist == user
+#       render :status => '403', :file => 'public/403.html'
+#       return
+#     end
     unless @ticket
       render :status => '404', :file => 'public/404.html'
       return
@@ -23,10 +23,10 @@ class TicketsController < ApplicationController
 
   def update
     @ticket = Ticket.find_by_code4url(params[:id])
-    unless @ticket.rubyist == user
-      render :status => '403', :file => 'public/403.html'
-      return
-    end
+#     unless @ticket.rubyist == user
+#       render :status => '403', :file => 'public/403.html'
+#       return
+#     end
     unless @ticket
       render :status => '404', :file => 'public/404.html'
       return

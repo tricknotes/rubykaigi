@@ -469,13 +469,19 @@ During RubyKaigi, you'll find tons of foreign Ruby Stars and Book writers here i
 ABSTRACT
 RubyKaigi の会場には、皆さんも日ごろお世話になっているはずのプロダクトや書籍の作者さんご本人がうじゃうじゃ来場しています。せっかくの年に一度のチャンスなので、是非この機会にいつも感じている疑問や要望、それから感謝の気持ちを思い切って直接作者さんに伝えちゃいましょう！とはいえ、誰が誰だかよくわからないし、いきなり面と向かっては話しかけづらいし、特に言語の壁があったりするとなかなか勇気が要りますよね？そこで、僕たち Asakusa.rbでは、Jeremy Kemper や Chad Fowler をはじめ、当日会場に居る豪華外タレさんたちをゲストにお迎えして、彼ら自身の 'あの'プロダクトについて、ご本人と Asakusa.rb のメンバーたちと、それからもちろん会場の皆様も巻き込んで、生のアツいディスカッションを行います。
 ABSTRACT_JA
-    e28_a202.create :title => 'Pair Programming Cultural Exchange', :speaker => 'Sarah Mei (Pivotal Labs)', :to => '18:00',:abstract => (<<ABSTRACT), :lang => 'ja'
+    e28_a202.create :title => 'Pair Programming Cultural Exchange', :title_ja => 'ペアプログラミング文化交流会', :speaker => 'Sarah Mei (Pivotal Labs)', :to => '18:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'en, ja'
 We may not speak the same language, but we do have one language in common. So, we can code together!
 
 Armed with a list of pair programming phrases in English and Japanese, let's work together on a project in Ruby. Coding together can help us bridge the artificial boundaries created by language, culture, and distance, and can create friendships that last beyond the conference.
 
 Unicorns and ponies for everyone!
 ABSTRACT
+私たちが話す言葉は同じじゃないかもしれない。でも、私たちには一つの共通語がある。そう、だから私たちはいっしょにコードを書けるんだ！
+
+この企画では、英語と日本語のペアプログラミング語録をひもときながら、あるRubyプロジェクトをいっしょにやってみましょう。いっしょにコードを書くことで、私たちの間の言語、文化、距離の壁を乗り越えて、Kaigiを越えた友情が生まれることでしょう。
+
+ユニコーンとポニーをみんなに！
+ABSTRACT_JA
   end
 
   e28.with_options(:room => b201) do |e28_b201|

@@ -493,11 +493,17 @@ Anyone who wants to contribute to jpmobile should attend this Kaigi.
 ABSTRACT
 日本全国から jpmobile 開発者・利用者が一堂に会して、jpmobile の今後について議論や開発を行う企画です。えにしテックの設楽さんを中心に、Rails 3.0 以降や Rack について、その場で議論して開発に入るハッカソンスタイルを取る予定です。
 ABSTRACT_JA
-    e28_b201.create :title => 'PGP Key Signing Party', :title_ja => "キーサインパーティー 2010", :speaker => 'Shyouhei Urabe w/ Yugui (Ruby Core Team)', :from => '12:00', :length => 90.minutes, :abstract => (<<ABSTRACT), :lang => 'ja'
-Let's trade pubkeys! Keysign party connects our community tightly each other. It is also fairly important when you want to make a secure channel with us (e.g. when you report a security incident).
+    e28_b201.create :title => 'PGP Key Signing Party', :title_ja => "キーサインパーティー 2010", :speaker => 'Shyouhei Urabe w/ Yugui (Ruby Core Team)', :from => '12:00', :length => 90.minutes, :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+Let's trade pubkeys! A key signing party is a get-together of people who use the PGP encryption system with the purpose of allowing those people to sign each others keys. Key signing parties serve to extend the web of trust to a great degree.
 
-Please take a look at this howto before joining this party. You need a PGP key pair plus few more physical preparations.
+If you get interested you need some preparation. Take a look at
+http://qwik.atdot.net/rubykaigi2010keysignparty/FrontPageJa.html
 ABSTRACT
+公開会議を交換しましょう。キーサインパーティーは PGP 暗号化方式を利用する人たちが相互に公開鍵を署名しあう集まりです。キーサインパーティーに参加することで信頼の輪を広げることができます。
+
+参加には若干の準備が必要ですので、ご興味のある方は以下のURLを御覧下さい。
+http://qwik.atdot.net/rubykaigi2010keysignparty/FrontPageJa.html
+ABSTRACT_JA
     e28_b201.create :title => 'M-x ruby-and-emacs-workshop', :speaker => 'Zev Blut', :length => 90.minutes,:abstract => (<<ABSTRACT)
 Stretch your fingers and warm up your control and meta keys. Bring your laptop and .emacs file. Let's show each other our techniques for writing Ruby code using Emacs.
 

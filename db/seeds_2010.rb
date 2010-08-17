@@ -257,8 +257,8 @@ Railsの良さを活かしたプロジェクトの進め方に興味のある皆
 ABSTRACT_JA
   end
 
-  e27.with_options(:room => a201) do |e27_a201|
-    e27_a201.create :title => 'rake:money', :title_ja => 'rake:money 拡大版～Rubyエンジニアと企業の幸せな関係～', :speaker => 'Ayumu Aizawa / Ouka Yuka (rake:money and RubyKaigi2010 Sponsors)', :from => '14:00', :to => '16:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+  e27.with_options(:room => b201) do |e27_b201|
+    e27_b201.create :title => 'rake:money', :title_ja => 'rake:money 拡大版～Rubyエンジニアと企業の幸せな関係～', :speaker => 'Ayumu Aizawa / Ouka Yuka (rake:money and RubyKaigi2010 Sponsors)', :from => '14:00', :to => '16:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 The meeting of the IT system engineer to think that I earn money seriously.
 
 I raise awareness of the money, and it is a meeting of the people who want to become the engineer who can earn one's convincible income. I take up marketing and a business trend or a topic about the money that it is not readily possible for in a topic about economy in tax or assets use in the normal technology system study society how I cut one's skill efficiently in imitation Ta'izz.
@@ -271,7 +271,7 @@ ABSTRACT
 
 Ruby会議拡大版では、Ruby会議スポンサーの各社をパネラーに迎え、Rubyエンジニアに対するビジネスニーズや、企業の中のRubyist がどのようにビジネス価値を発揮していくかといったテーマについてパネルディスカッションを行います。
 ABSTRACT_JA
-    e27_a201.create :title => 'Ruby Business Owner Kaigi', :title_ja => 'Ruby親方会議', :speaker => 'Takeyuki FUJIOKA (xibbar)(Rabbix corporation / Nihon Ruby no kai)', :from => '16:00', :to => '18:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_b201.create :title => 'Ruby Business Owner Kaigi', :title_ja => 'Ruby親方会議', :speaker => 'Takeyuki FUJIOKA (xibbar)(Rabbix corporation / Nihon Ruby no kai)', :from => '16:00', :to => '18:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 Ruby's small business owner talk about own working and exchange experience each other.
 ABSTRACT
 Rubyを使ってスモールビジネスを展開しているビジネスオーナーの情報交換を行います。

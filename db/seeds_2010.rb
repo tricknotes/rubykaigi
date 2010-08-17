@@ -527,7 +527,7 @@ An open meeting where Rubyists discuss what we can do for Ruby.
 ABSTRACT
 RubyのためにRubyistができることについて話し合うイベント。 RubyKaigi2010の時期には実は第6期が終わっているので、第6期の活動のふりかえりと、第7期の活動のアイデア出しをやりましょう!
 ABSTRACT_JA
-    e28_a201.create :title => 'Vim', :speaker => 'Kana', :to => '17:00', :abstract => (<<ABSTRACT), :abstract => (<<ABSTRACT_JA), :lang => 'ja'
+    e28_a201.create :title => 'Vim', :speaker => 'Kana', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 About half of Rubyists are using Vim to code Ruby. Vim is one of the ultimate tools for software developments, which vary among programmers. Why don't you exchange the ways you use Vim?
 
 For example, I am using some Vim plugins such as quickrun.vim, neocomplcache, and smartchr.vim to code Ruby efficiently. Although my ~/.vimrc is less than just 3000 lines, there are plenty of good tricks worth telling to you. I'd like to tell you about my Vim knowledge, and learn how you yourself are optimizing Vim.

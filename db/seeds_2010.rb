@@ -504,11 +504,16 @@ ABSTRACT
 参加には若干の準備が必要ですので、ご興味のある方は以下のURLを御覧下さい。
 http://qwik.atdot.net/rubykaigi2010keysignparty/FrontPageJa.html
 ABSTRACT_JA
-    e28_b201.create :title => 'M-x ruby-and-emacs-workshop', :speaker => 'Zev Blut', :length => 90.minutes,:abstract => (<<ABSTRACT)
+    e28_b201.create :title => 'M-x ruby-and-emacs-workshop', :speaker => 'Zev Blut', :length => 90.minutes, :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA)
 Stretch your fingers and warm up your control and meta keys. Bring your laptop and .emacs file. Let's show each other our techniques for writing Ruby code using Emacs.
 
 This is a workshop for both beginners and advanced users to share tips and tricks for developing Ruby code with Emacs.
 ABSTRACT
+指のストレッチ！CtrlキーとMetaキーのウォーミングアップ！
+みんなで自分のラップトップと.emacsファイルを持ち込んで、見せ合いっこしながらEmacsでRubyプログラミングをする技をシェアしましょう。
+
+この企画は、初心者から達人まで、みんなでEmacsでのRubyプログラミングの技をシェアするワークショップです。
+ABSTRACT_JA
     e28_b201.create :title => 'Cucumber hands-on', :title_ja => 'Cucumber ハンズオン', :speaker => 'MOROHASHI Kyosuke (EIWA System Management, Inc.)', :length => 90.minutes,:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 Cucumber is a very nice testing framework. But the major feature, execute natural language text as tests, varies from familiar \"Ruby syntax\". Therefore, you may feel inhibited to take the first step (so I was.). In this sub-event, we try Cucumber to build a simple Rails application. It will tell you that cucumber is not so difficult to start and has great power to describe software test.
 ABSTRACT

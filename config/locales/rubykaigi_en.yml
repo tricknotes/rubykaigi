@@ -64,6 +64,7 @@ en:
   normal_registartion_open_notification: 'Registration will open at 2010-06-15(Tue) 19:00 (JST)'
   venue: "Venue"
   accommodation: "Accommodation"
+  goodies: "Goodies"
   notice_max_quantity: "You can register up to 4 tickets at one"
   should_be_alphabetical: "should be alphabetical(/^[a-zA-Z0-9_-]+$/)."
   student_discount_program: "Student Discount Program"

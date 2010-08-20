@@ -407,7 +407,9 @@ PROFILE
 たぶん史上最後のGoogle Wave本の著者。あとおっぱいとかカリスマとか
 PROFILE_JA
     e28_big.create :title => 'The Timeless Way of E-Publishing with Ruby', :title_ja => "時を超えた電子出版の道の中をRubyと歩いていく", :abstract => '', :speaker => 'Masayoshi Takahashi (Tatsu-zine publishing, Nihon Ruby-no-Kai)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
-    e28_big.create :title => "My Report of \"Ruby Summer of Code 2010\" - Road to be a stdlib -", :title_ja => "Ruby Summer of Code 2010のご報告 〜俺たちのDecimalはまだ始まったばかりだ〜", :abstract => '', :speaker => 'Tadashi Saito (University of Tsukuba)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
+    e28_big.create :title => "My Report of \"Ruby Summer of Code 2010\" - Road to be a stdlib -", :title_ja => "Ruby Summer of Code 2010のご報告 〜俺たちのDecimalはまだ始まったばかりだ〜", :abstract => '', :speaker => 'Tadashi Saito (University of Tsukuba)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE)
+Tadashi is in his nth year of University of Tsukuba where n is smaller than 0xDEAD. He is always interested in to make the world better a little, so he started Decimal project. It's the only one project which was accepted in Ruby Summer of Code 2010 from Japan, but Tadashi wants a cute girlfriend rather than a bounty. His weak subject is math.
+PROFILE
   end
 
   e28.with_options(:room => medium) do |e28_medium|

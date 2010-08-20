@@ -28,7 +28,7 @@ foyer = Room.create :name_en => 'Foyer', :name_ja => 'ホワイエ', :floor_en =
 EventLoader.with_options(:day => 27) do |e27|
   e27.with_options(:room => big) do |e27_big|
     e27_big.create :title => 'Opening', :from => '12:30'
-    e27_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Jeremy Kemper ', :from => '13:00', :to => '14:00', :profile => (<<PROFILE)
+    e27_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Jeremy Kemper', :from => '13:00', :to => '14:00', :profile => (<<PROFILE)
 Jeremy Kemper builds web applications at 37signals and contributes to Rails development.
 PROFILE
     e27_big.create :title => 'jpmobile on Rails 3', :title_ja => 'jpmobile on Rails 3 の作り方', :speaker => 'Shin-ichiro OGAWA (Tokyu.rb / Nihon Ruby no Kai)', :from => '14:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE)

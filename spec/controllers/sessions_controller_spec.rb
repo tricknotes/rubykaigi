@@ -62,7 +62,7 @@ describe SessionsController do
           begin
             TwitterProfile[1234].keys.should =~ %w(screen_name profile_image_url)
           rescue Errno::ECONNREFUSED
-            pending "Redis doesn't running"
+            pending 'Redis is not running'
           end
         end
       end
@@ -86,7 +86,7 @@ describe SessionsController do
           begin
             Redis::Value.new('twitter/users/1234', Redis::Objects.redis, :marshal => true).value.should be_nil
           rescue Errno::ECONNREFUSED
-            pending "Redis doesn't running"
+            pending 'Redis is not running'
           end
         end
       end

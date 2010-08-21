@@ -85,7 +85,7 @@ Spork.prefork do
       begin
         Redis::Objects.redis.flushdb
       rescue Errno::ECONNREFUSED
-        # Redis doesn't running.
+        # Redis is not running.
       end
     end
 

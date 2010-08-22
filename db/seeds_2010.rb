@@ -46,11 +46,18 @@ list service for Japanese mobile phone. Core commiter of jpmobile.
 Born in Kyoto, grew up in Osaka. Ph.D in Physics, but It's no use for
 works.
 PROFILE
-    e27_big.create :title => 'Open social application development for cell-phones to begin in Ruby on Rails', :title_ja => 'Ruby on Railsではじめる携帯電話向けオープンソーシャルアプリケーション開発', :speaker => 'Masaki Yamada (Control plus Co. Ltd.)', :from => '14:30', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e27_big.create :title => 'Open social application development for cell-phones to begin in Ruby on Rails', :title_ja => 'Ruby on Railsではじめる携帯電話向けオープンソーシャルアプリケーション開発', :speaker => 'Masaki Yamada (Control plus Co. Ltd.)', :from => '14:30', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE_JA)
 In the world of the open social application development for cell-phones, PHP is a major language, but the development using Ruby on Rails is possible. I show the know-how which we got through development of our product \"Sweets Collection\" and introduce open social application development using Ruby on Rails.
 ABSTRACT
 携帯電話向けのオープンソーシャルアプリケーション開発の世界では、PHPがメジャーな言語ですが、Ruby on Railsを使った開発も可能です。私達が自社プロダクト「スイーツコレクション」の開発を通じて得たノウハウを公開するとともに、Ruby on Railsを使ったオープンソーシャルアプリケーション開発をご紹介します。
 ABSTRACT_JA
+山田将輝 (コントロールプラス株式会社)
+ソーシャルゲーム作ってます
+レッドブルを入力するとソースコードを出力します
+社内唯一のemacs派
+@masarakki
+github.com/masarakki
+PROFILE_JA
     e27_big.create_break :from => '15:00'
     e27_big.create :title => 'Building Real Time Web', :title_ja => 'リアルタイムウェブができるまで', :speaker => 'Makoto Inoue (New Bamboo (London, UK))', :from => '15:30', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 The real time web is not about adding chat on your website. It's not really about having stock tickers. The most interesting aspect of the realtime web is to be found in augmenting the web that we already know. We can add realtime functionally to our applications as another layer of fidelity.

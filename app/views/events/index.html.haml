@@ -3,6 +3,10 @@
     RubyKaigi2010 Events
   %p <strong>The official time table is <a href="/2010/#{current_locale}/timetable">here</a>!</strong>
 
+  %p
+    != link_to 'RubyKaigi2010.floors.map(&:guide)', '/2010/files/RubyKaigi2010-FloorGuide.pdf'
+    (PDF)
+
   - @events.group_by(&:date).each do |date, events_per_date|
     %h2
       = l date, :format => :long

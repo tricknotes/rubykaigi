@@ -645,7 +645,8 @@ a
   font-size: 100%
   text-align: right
 
-#illustrations
+
+=floatbox_200px
   text-align: center
   margin: 0 auto
   width: 600px 
@@ -653,9 +654,27 @@ a
     margin: 0px 0px 20px 0px
     width: 200px
     float: left
-    a
-      font-size: 70%
-      letter-spacing: 0px
+
+#illustrations
+  +floatbox_200px
+  a
+    font-size: 70%
+    letter-spacing: 0px
+
+#badge
+  +floatbox_200px
+  a
+    &:hover, &:focus, &:visited
+      border-bottom: none
+    span
+      text-align: left
+      width: 200px
+      font-size: 80%
+      top: -150px
+      left: -30px
+      background: #fff
+      color: #333
 
 .stamp
   display: none
+

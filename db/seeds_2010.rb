@@ -563,7 +563,7 @@ end
 
 EventLoader.with_options(:day => 29) do |e29|
   e29.with_options(:room => big) do |e29_big|
-    e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'Rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka (NIFTY Corporation), Yuichi Saotome (NIFTY Corporation)', :from => '9:30',:abstract => (<<ABSTRACT), :lang => 'ja'
+    e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'Rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka, Yuichi Saotome (NIFTY Corporation)', :from => '9:30',:abstract => (<<ABSTRACT), :lang => 'ja'
 We show the construction/operation methods for Cloud with Ruby. (ex. NIFTY Cloud)
 ABSTRACT
     e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA)

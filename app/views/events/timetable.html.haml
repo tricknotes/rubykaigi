@@ -4,9 +4,12 @@
   %div#content
     %h1
       = t(:time_table)
-    %p
-      != link_to 'RubyKaigi2010.floors.map(&:guide)', '/2010/files/RubyKaigi2010-FloorGuide.pdf'
-      (PDF)
+    %ul
+      %li
+        != link_to 'RubyKaigi2010.floors.map(&:guide)', '/2010/files/RubyKaigi2010-FloorGuide.pdf'
+        (PDF)
+      %li
+        %a{:href => 'http://rubykaigi.tdiary.net/20100814.html#p03'} Schedule of Rubyist Autograph Sessions (in Japanese)
 
     #timetables
       - @events.group_by(&:date).each do |date, events_per_date|

@@ -408,8 +408,7 @@ PROFILE_JA
     e28_big.create :title => 'Introducing the Lingo Project: A New Generationi Text Input System Leveraging Non-native English Writing', :abstract => '', :speaker => 'Kazki Matz (Lingo project)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'babushka―test-driven sysadmin for rubyists', :abstract => '', :speaker => 'Ben Hoskings (babushka)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'parse.y Fam Tour', :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-", :abstract => '', :speaker => 'Ando Yasushi (Seesaa Inc.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
-The author of the first and last Google Wave book written in Japanese;
-the book released on August 19th.
+The author of the first and last Google Wave book written in Japanese; the book released on August 19th.
 PROFILE
 たぶん史上最後のGoogle Wave本の著者。あとおっぱいとかカリスマとか
 PROFILE_JA

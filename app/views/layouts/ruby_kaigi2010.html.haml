@@ -69,10 +69,6 @@
             %li
               %a{ :href => "/2010/#{current_locale}/Team" }
                 #{t(:team)}
-            /
-              %li
-                %a{ :href => "#" }
-                  #{t(:goodies)}
             %li.current
               %a
                 #{t(:rubykaigi_archives)}
@@ -101,6 +97,9 @@
           %ul
             %li
               %a{ :href => '/2010/files/RubyKaigi2010-FloorGuide.pdf' } Floor Guide (PDF)
+            %li
+              %a{ :href => "/2010/#{current_locale}/Twitter" }
+                Twitter
             %li
               %a{ :href => "/2010/#{current_locale}/Accommodation" }
                 #{t(:accommodation)}
@@ -169,20 +168,7 @@
             %img{ :alt => "for blog", :src => "/2010/images/tags_for_blog.png"}
           %p
             %a{ :href => "http://b.hatena.ne.jp/t/rubykaigi2010" }
-              \rubykaigi2010
-        /
-          %h2
-            %img{ :alt => "SOCIAL LINKS", :src => "/2010/images/sociallinks_head.png" }
-          %div#sociallinks
-            %p
-              %a{ :href => "#"}
-                %img{ :alt => "twitter", :src => "/2010/images/sociallinks_twitter.png" }
-              %a{ :href => "#"}
-                %img{ :alt => "ustream", :src => "/2010/images/sociallinks_ustream.png" }
-              %a{ :href => "#"}
-                %img{ :alt => "flickr", :src => "/2010/images/sociallinks_flickr.png" }
-              %a{ :href => "#"}
-                %img{ :alt => "?", :src => "/2010/images/sociallinks_blank.png" }
+              rubykaigi2010
         %h2
           %img{ :alt => "SPONSORS", :src => "/2010/images/sponsors_head.png" }
         %div#sponsors.whitebox.center

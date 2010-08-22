@@ -1,9 +1,55 @@
 #content
-  %h1 
-    Twitter
-  %h2
-    みんなのツイート
+  %h1 Twitter
+  %h2 イベント期間中用の便利なビューアーができました！
+  %div#viewer.whitebox.cleafix
+    %div.message
+      %p UstreamとIRCとTwitterを同時に見れるページを用意しました。
+      %p 開催中はぜひこちらをご利用ください。 :-)
+      %p ※Web Socket対応ブラウザでご利用可能です。
+      %p
+        %a.noborder{:href => "#", :target => "_blank" }  
+          %img{ :alt => "OPEN", :src => "/2010/images/viewer_btn.png", :width => "200", :height => "58"}
+    %div
+      %a.noborder{:href => "#", :target => "_blank" }  
+        %img{ :alt => "", :src => "/2010/images/viewer_thumb.jpg", :width => "380", :height => "300"}
+  %h2 Follow me
+  %div.whitebox
+    %p 日本Ruby会議の情報を日英２カ国語でツイートしています。
+    %p
+      %a.noborder{:href => "http://www.twitter.com/rubykaigi", :target => "_blank" }  
+        %img{ :alt => "Follow rubykaigi on Twitter", :src => "/2010/images/twitter_followme_btn.png"}
+  %h2 @rubykaigiのツイート
   %script{ :src => "/2010/javascripts/widget.js", :type => "text/javascript" }
+  :javascript
+    new TWTR.Widget({
+    version: 2,
+    type: 'profile',
+    rpp: 30,
+    interval: 6000,
+    width: 'auto',
+    height: 400,
+    theme: {
+    shell: {
+    background: '#ffffff',
+    color: '#999999'
+    },
+    tweets: {
+    background: '#ffffff',
+    color: '#302b2b',
+    links: '#000000'
+    }
+    },
+    features: {
+    scrollbar: true,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'default'
+    }
+    }).render().setUser('rubykaigi').start();
+  %h2 みんなのツイート
   :javascript
     new TWTR.Widget({
     version: 2,
@@ -35,37 +81,4 @@
     behavior: 'default'
     }
     }).render().start();
-  %h2
-    @rubykaigiのツイート
-  :javascript
-    new TWTR.Widget({
-    version: 2,
-    type: 'profile',
-    rpp: 30,
-    interval: 6000,
-    width: 'auto',
-    height: 400,
-    theme: {
-    shell: {
-    background: '#ffffff',
-    color: '#999999'
-    },
-    tweets: {
-    background: '#ffffff',
-    color: '#302b2b',
-    links: '#000000'
-    }
-    },
-    features: {
-    scrollbar: true,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: false,
-    behavior: 'default'
-    }
-    }).render().setUser('rubykaigi').start();
-  %p.right
-    %a.noborder{:href => "http://www.twitter.com/rubykaigi"}
-      %img{ :alt => "Follow rubykaigi on Twitter", :src => "/2010/images/twitter_followme_btn.png", :target => "_blank" }
+

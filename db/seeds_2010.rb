@@ -591,9 +591,15 @@ ABSTRACT_JA
 関将俊（druby.org）
 プログラマ。dRuby、ERBの作者。代表作はhメソッド、著書『dRubyによる分散・Webプログラミング』。ポケモンWCS2010栃木県代表(カード部門)。
 PROFILE_JA
-    e29_big.create :title => 'Practical Ruby Projects with MongoDB', :speaker => 'Alex Sharp (Lead Developer, OptimisDev)', :length => 1.hour,:abstract => (<<ABSTRACT)
+    e29_big.create :title => 'Practical Ruby Projects with MongoDB', :speaker => 'Alex Sharp (Lead Developer, OptimisDev)', :length => 1.hour,:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 While there is a lot of excitement surrounding MongoDB and the NoSQL movement, MongoDB is all about practicality, pragmatism and performance. MongoDB boasts a robust feature set that provides a pragmatic blend of rich functionality, performance and scalability that today's software developers need, and all at a relatively low barrier to entry.
 ABSTRACT
+Alex has been Lead Developer for OptimisDev since October 2009. Prior to joining OptimisDev, he co-founded Second Street Creative in 2006, a boutique web application development and design consultancy specializing in creative brand development and agile ruby application development. He is particularly interested in the NoSQL movement and mastering the art of refactoring.
+
+Among other open source contributions, Alex is the author of Bunyan and Papermill, two libraries for working with MongoDB.
+
+In addition to hacking, Alex enjoys shredding fresh powder, gourmet coffee and being an amateur foodie. He does not enjoy referring to himself in third person, because it sounds weird. He currently lives in sunny Los Angeles, CA, blogs at alexjsharp.com and tweets as @ajsharp.
+PROFILE
     e29_big.create_break :length => 90.minutes
     e29_big.create :title => "IronRuby - What's in it for Rubyists?", :speaker => 'Shay Friedman (Sela Group)', :length => 1.hour, :abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 IronRuby is the new implementation of the Ruby language from Microsoft which opens the .NET world to Rubyists. This brings a whole set of new opportunities to Rubyists like using Ruby to write RIA applications, providing enhanced user interface to Ruby applications and more. Come and see the new possibilities that IronRuby brings to the Ruby world!

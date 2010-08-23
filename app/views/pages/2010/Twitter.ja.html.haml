@@ -2,22 +2,28 @@
   %h1 Twitter
   %h2 イベント期間中用の便利なビューアーができました！
   %div#viewer.whitebox.cleafix
-    %div.message
+    %div
       %p UstreamとIRCとTwitterを同時に見れるページを用意しました。
       %p 開催中はぜひこちらをご利用ください。 :-)
       %p ※Web Socket対応ブラウザでご利用可能です。
+    %div.btn  
       %p
         %a.noborder{:href => "#", :target => "_blank" }  
-          %img{ :alt => "OPEN", :src => "/2010/images/viewer_btn.png", :width => "200", :height => "58"}
+          %img{ :alt => "大ホール", :src => "/2010/images/viewer_btn_mainhall.png", :width => "200", :height => "80"}
+      %p
+        %a.noborder{:href => "#", :target => "_blank" }  
+          %img{ :alt => "中ホール", :src => "/2010/images/viewer_btn_hall200.png", :width => "200", :height => "80"}
+      %p
+        %a.noborder{:href => "#", :target => "_blank" }  
+          %img{ :alt => "会議室202-B", :src => "/2010/images/viewer_btn_room202b.png", :width => "200", :height => "80"}
     %div
-      %a.noborder{:href => "#", :target => "_blank" }  
-        %img{ :alt => "", :src => "/2010/images/viewer_thumb.jpg", :width => "380", :height => "300"}
+      %img{ :alt => "", :src => "/2010/images/viewer_thumb.jpg", :width => "380", :height => "300"}
   %h2 Follow me
   %div.whitebox
     %p 日本Ruby会議の情報を日英２カ国語でツイートしています。
     %p
       %a.noborder{:href => "http://www.twitter.com/rubykaigi", :target => "_blank" }  
-        %img{ :alt => "Follow rubykaigi on Twitter", :src => "/2010/images/twitter_followme_btn.png"}
+        %img{ :alt => "Follow me on Twitter", :src => "/2010/images/twitter_followme_btn.png"}
   %h2 @rubykaigiのツイート
   %script{ :src => "/2010/javascripts/widget.js", :type => "text/javascript" }
   :javascript

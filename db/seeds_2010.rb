@@ -65,12 +65,12 @@ This is our story (New Bamboo, London, UK) of experimenting various real time we
 ABSTRACT
 ここ最近のAjaxにかわるトレンドとしてリアルタイムウェブを利用した例が見かけられることが多いですが、その多くはチャットや株価更新などのサンプルの域をでないように見えます。弊社New Bamboo (London, UK)では、既存のリアルタイム技術をいろいろ研究した結果をPusher (http://www.pusherapp.com)というサービスとしてリリースしました。このトークでは、リリースにいたるまでの経緯をご紹介すると共に、HTML5 WebSocketを使うことによる新しい発見やチャレンジを皆様と共有していきたいと思います。
 ABSTRACT_JA
-井上真(New Bamboo)
-2004年からロンドンに在住中の逆輸入Rubyist（日本にいる時はRubyのこと知りませんでした。すみません）。元DBA(Sybase)。London Javascript Meetup, London NoSQL Summerの共同運営者、Tokyo Cabinet Wiki主催、 ３ヶ月ごとに興味の対象が変わるのが悩み。現在はGolangに浮気中。
-PROFILE
 Makoto Inoue (New Bamboo)
 Rubyist living in London since 2004 (though did not know about Ruby when I was in Japan. Sorry..)
 ex-DBA(Sybase). Co-organises London Javascript Meetup, London NoSQL Summer. Hosts Tokyo Cabinet Wiki. Currently toying around with Golang.
+PROFILE
+井上真(New Bamboo)
+2004年からロンドンに在住中の逆輸入Rubyist（日本にいる時はRubyのこと知りませんでした。すみません）。元DBA(Sybase)。London Javascript Meetup, London NoSQL Summerの共同運営者、Tokyo Cabinet Wiki主催、 ３ヶ月ごとに興味の対象が変わるのが悩み。現在はGolangに浮気中。
 PROFILE_JA
     e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 The presentation introduces the technique and a result about Lazy Sweep GC for CRuby GC. In addition, I introduce the prospects of the future GC improvement.

@@ -297,7 +297,7 @@ Let's create your own T-shirt designed by Ruby on tmix! tmix is the only on-dema
 
 If you can create T-shirt today, you can put on it tomorrow!
 
-This event open until Aug 27th 15:00 pm . price 1,500en (front or back print only!) White or Black T ,size 160,S,M,L,XL,XXL Cash only.
+This event open until Aug 27th 15:00 pm . price 1,500en (front or back print only!) White or Black T ,size 160,S,M,L,XL Cash only.
 ABSTRACT
 tmixを使って、自分だけのRubyKaigi記念rubyTシャツを作ろう！
 

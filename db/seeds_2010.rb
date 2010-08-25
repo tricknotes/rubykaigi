@@ -28,8 +28,8 @@ foyer = Room.create :name_en => 'Foyer', :name_ja => 'ホワイエ', :floor_en =
 EventLoader.with_options(:day => 27) do |e27|
   e27.with_options(:room => big) do |e27_big|
     e27_big.create :title => 'Opening', :from => '12:30'
-    e27_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Jeremy Kemper', :from => '13:00', :to => '14:00', :profile => (<<PROFILE)
-Jeremy Kemper builds web applications at 37signals and contributes to Rails development.
+    e27_big.create :title => '(To Be Announced)', :title_ja => '(調整中)', :speaker => '(To Be Announced)', :from => '13:00', :to => '14:00', :profile => (<<PROFILE), :abstract => "To Be Announced (We're sorry, at Jeremy's request, his keynote has been cancelled)", :abstract_ja => "Jeremy Kemper氏の基調講演はご本人の都合により中止となりました。代替プログラムについては、追ってアナウンスいたします。悪しからずご了承ください"
+To Be Announced
 PROFILE
     e27_big.create :title => 'jpmobile on Rails 3', :title_ja => 'jpmobile on Rails 3 の作り方', :speaker => 'Shin-ichiro OGAWA (Tokyu.rb / Nihon Ruby no Kai)', :from => '14:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE)
 Jpmobile is a Rails plugin for Japanese mobile phones. This plugin features the ability to convert Japanese emoticons and Japanese kanji codes, and session management for mobile phones which can't handle HTTP cookies. In this talk, I will introduce how we rebuilt the jpmobile codebase to support Rack applications such as Rails 3 and Sinatra.

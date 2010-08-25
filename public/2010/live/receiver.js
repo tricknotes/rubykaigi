@@ -5,9 +5,7 @@ $(document).ready(function() {
   var icon_size = 36;
 
   function format(text) {
-    return text.replace(/(http:\/\/[\x21-\x7e]+)/gi,'<a href="$1" target="_blank">$1</a>')
-               .replace(/@([a-zA-Z0-9_]+)/gi,'<a href="http://twitter.com/$1" target="_blank">@$1</a>')
-               .replace(/#([a-zA-Z0-9_]+)/gi,'<a href="http://search.twitter.com/search?q=%23$1" target="_blank">#$1</a>');
+    return text;
   }
 
   function cutoff() {

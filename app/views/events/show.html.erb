@@ -9,8 +9,9 @@
 
   <h2><%= t(:abstract) %></h2>
 
-  <p>
-  <%= simple_format(h(@event.abstract)) %>
+  <div class="event-abstract">
+    <%= auto_link(simple_format(h(@event.abstract))) {|text| truncate(text, 32)} %>
+  </div>
 
   <ol>
   <% @event.children.each do |child_event| %>
@@ -33,9 +34,9 @@
 
   <h2><%= t(:speaker_profile) %></h2>
 
-  <p>
-  <%= simple_format(h(@event.presenter_profile)) %>
-  </p>
+  <div class="presenter-profile">
+    <%= auto_link(simple_format(h(@event.presenter_profile))) {|text| truncate(text, 32)} %>
+  </div>
 
   <h2><%= t(:lang) %></h2>
 

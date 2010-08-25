@@ -28,8 +28,8 @@ foyer = Room.create :name_en => 'Foyer', :name_ja => 'ホワイエ', :floor_en =
 EventLoader.with_options(:day => 27) do |e27|
   e27.with_options(:room => big) do |e27_big|
     e27_big.create :title => 'Opening', :from => '12:30'
-    e27_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Jeremy Kemper', :from => '13:00', :to => '14:00', :profile => (<<PROFILE)
-Jeremy Kemper builds web applications at 37signals and contributes to Rails development.
+    e27_big.create :title => '(To Be Announced)', :title_ja => '(調整中)', :speaker => '(To Be Announced)', :from => '13:00', :to => '14:00', :profile => (<<PROFILE), :abstract => "To Be Announced (We're sorry, at Jeremy's request, his keynote has been cancelled)", :abstract_ja => "Jeremy Kemper氏の基調講演はご本人の都合により中止となりました。代替プログラムについては、追ってアナウンスいたします。悪しからずご了承ください"
+To Be Announced
 PROFILE
     e27_big.create :title => 'jpmobile on Rails 3', :title_ja => 'jpmobile on Rails 3 の作り方', :speaker => 'Shin-ichiro OGAWA (Tokyu.rb / Nihon Ruby no Kai)', :from => '14:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE)
 Jpmobile is a Rails plugin for Japanese mobile phones. This plugin features the ability to convert Japanese emoticons and Japanese kanji codes, and session management for mobile phones which can't handle HTTP cookies. In this talk, I will introduce how we rebuilt the jpmobile codebase to support Rack applications such as Rails 3 and Sinatra.
@@ -65,12 +65,12 @@ This is our story (New Bamboo, London, UK) of experimenting various real time we
 ABSTRACT
 ここ最近のAjaxにかわるトレンドとしてリアルタイムウェブを利用した例が見かけられることが多いですが、その多くはチャットや株価更新などのサンプルの域をでないように見えます。弊社New Bamboo (London, UK)では、既存のリアルタイム技術をいろいろ研究した結果をPusher (http://www.pusherapp.com)というサービスとしてリリースしました。このトークでは、リリースにいたるまでの経緯をご紹介すると共に、HTML5 WebSocketを使うことによる新しい発見やチャレンジを皆様と共有していきたいと思います。
 ABSTRACT_JA
-井上真(New Bamboo)
-2004年からロンドンに在住中の逆輸入Rubyist（日本にいる時はRubyのこと知りませんでした。すみません）。元DBA(Sybase)。London Javascript Meetup, London NoSQL Summerの共同運営者、Tokyo Cabinet Wiki主催、 ３ヶ月ごとに興味の対象が変わるのが悩み。現在はGolangに浮気中。
-PROFILE
 Makoto Inoue (New Bamboo)
 Rubyist living in London since 2004 (though did not know about Ruby when I was in Japan. Sorry..)
 ex-DBA(Sybase). Co-organises London Javascript Meetup, London NoSQL Summer. Hosts Tokyo Cabinet Wiki. Currently toying around with Golang.
+PROFILE
+井上真(New Bamboo)
+2004年からロンドンに在住中の逆輸入Rubyist（日本にいる時はRubyのこと知りませんでした。すみません）。元DBA(Sybase)。London Javascript Meetup, London NoSQL Summerの共同運営者、Tokyo Cabinet Wiki主催、 ３ヶ月ごとに興味の対象が変わるのが悩み。現在はGolangに浮気中。
 PROFILE_JA
     e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 The presentation introduces the technique and a result about Lazy Sweep GC for CRuby GC. In addition, I introduce the prospects of the future GC improvement.
@@ -297,7 +297,7 @@ Let's create your own T-shirt designed by Ruby on tmix! tmix is the only on-dema
 
 If you can create T-shirt today, you can put on it tomorrow!
 
-This event open until Aug 27th 15:00 pm . price 1,500en (front or back print only!) White or Black T ,size S,M,L,XL,XXL Cash only.
+This event open until Aug 27th 15:00 pm . price 1,500en (front or back print only!) White or Black T ,size 160,S,M,L,XL Cash only.
 ABSTRACT
 tmixを使って、自分だけのRubyKaigi記念rubyTシャツを作ろう！
 
@@ -307,7 +307,7 @@ tmixを使って、自分だけのRubyKaigi記念rubyTシャツを作ろう！
 
 今日作って明日届く！みんなで着てワイワイ楽しも〜☆
 
-！！注意！！白、黒メンズ定番Tシャツ（S〜XXL）のみ。前側、もしくは背中側どちらかの面のみ。午後15時までに注文をお願いします。
+！！注意！！白、黒メンズ定番Tシャツ（160〜XL）のみ。前側、もしくは背中側どちらかの面のみ。午後15時までに注文をお願いします。
 
 1枚1,500円（現金のみ）
 
@@ -408,8 +408,7 @@ PROFILE_JA
     e28_big.create :title => 'Introducing the Lingo Project: A New Generationi Text Input System Leveraging Non-native English Writing', :abstract => '', :speaker => 'Kazki Matz (Lingo project)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'babushka―test-driven sysadmin for rubyists', :abstract => '', :speaker => 'Ben Hoskings (babushka)', :parent_event => lt_event, :from => '17:00', :to => '18:00'
     e28_big.create :title => 'parse.y Fam Tour', :title_ja => "parse.yの歩き方 -ワシのRubyは4式まであるぞ-", :abstract => '', :speaker => 'Ando Yasushi (Seesaa Inc.)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
-The author of the first and last Google Wave book written in Japanese;
-the book released on August 19th.
+The author of the first and last Google Wave book written in Japanese; the book released on August 19th.
 PROFILE
 たぶん史上最後のGoogle Wave本の著者。あとおっぱいとかカリスマとか
 PROFILE_JA
@@ -432,9 +431,17 @@ PROFILE
 Ubiquitous computing has opened the door to two new revolutions, data collection and data manipulation. Mobile phones, digital cameras, low cost electronics, and wireless internet access have made it possible to collect data any time, anywhere. But what are we doing with the data once it's collected? How do we navigate the oceans of data we generate daily? Where can we find a Rubyist's tools for data mining and manipulation? We'll discuss how to use DataMapper, a Ruby data access library, to make sense of data of all kinds.
 ABSTRACT
     e28_medium.create_break :from => '12:00', :length => 90.minutes
-    e28_medium.create :title => 'The Necessity and Implementation of Speedy Tests', :speaker => 'Jake Scruggs (Backstop Solutions)', :length => 1.hour,:abstract => (<<ABSTRACT)
+    e28_medium.create :title => 'The Necessity and Implementation of Speedy Tests', :speaker => 'Jake Scruggs (Backstop Solutions)', :length => 1.hour,:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Your project's software practices are deteriorating every minute the developers wait for slow tests to finish. Once developers get fed up and stop running the tests, disregard for failing builds can't be far behind, and from there it's only a short leap to the albatross of a brittle/irrelevant test suite. Luckily this can all be avoided by adopting some time-saving testing standards and practices.
 ABSTRACT
+In 2004 Jake Scruggs was a high school physics teacher.  Jobs since then: apprentice at Object Mentor, consultant at ThoughtWorks, consultant at Obtiva, and developer at Backstop Solutions.
+
+He also created and maintains the code metrics gem: metric_fu
+http://jakescruggs.blogspot.com/
+http://metric-fu.rubyforge.org/
+http://twitter.com/jakescruggs
+http://www.backstopsolutions.com/
+PROFILE
     e28_medium.create :title => 'Seamless Integration Testing', :speaker => 'paulelliott (Hashrocket)', :abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Do you have a solid, full coverage integration test suite? You should. It is the final automated point of assurance that what you are about to push to production is not going to blow something up and cost your or your client money. I show how to integration test a real Rails application, demonstrating best practices you can apply to any setup and the latest technologies for fully covering your app, including javascript!
 ABSTRACT

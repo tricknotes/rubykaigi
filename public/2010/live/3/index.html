@@ -1,15 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <title>RubyKaigi2010 - Coming soon</title>
-  <link href='/2010/stylesheets/error.css' media='screen' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-  <p id="message"><a href="#" onclick="window.close();"><img src="/2010/images/comingsoon.png" alt="Coming soon" /></a></p>
-</body>
+<!DOCTYPE html>
+<html lang='ja'>
+  <head>
+    <title>RubyKaigi2010 Streamer</title>
+    <meta charset='UTF-8' />
+    <script type='text/javascript'>
+      //<![CDATA[
+        var channel = "rubykaigi-3";
+      //]]>
+    </script>
+    <script src='/2010/live/jquery-1.4.2.min.js'></script>
+    <script src='/2010/live/pusher.min.js'></script>
+    <script src='/2010/live/receiver.js'></script>
+    <link href='/2010/live/style.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div id='container'>
+      <img alt='RubyKaigi2010' id='logo' src='/2010/live/logo.jpg' />
+      <div id='notice'>日本Ruby会議2010実行委員会からのお知らせ</div>
+      <div id='ustream'>
+        <div><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="320" id="utv964114"><param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=975700&amp;locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/1/975700"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=975700&amp;locale=en_US" width="400" height="320" allowfullscreen="true" allowscriptaccess="always" id="utv964114" name="utv_n_676980" src="http://www.ustream.tv/flash/live/1/975700" type="application/x-shockwave-flash" /></object></div>
+      </div>
+      <div id='stream'></div>
+    </div>
+  </body>
 </html>

@@ -55,26 +55,6 @@ $(document).ready(function() {
     }
   });
 
-  stream.bind("irc-" + channel, function(message) {
-    var data       = message.body;
-    var nick       = data.nick;
-    var text       = data.text;
-    var created_at = data.created_at;
-
-    var div = $("<div/>")
-      .addClass("irc")
-      .append($("<p/>")
-              .append($("<img/>")
-                      .addClass("icon")
-                      .attr({ src: "/2010/live/irc.png", alt: "irc", width: icon_size, height: icon_size }))
-              .append($("<span/>")
-                      .addClass("screen_name")
-                      .text(nick + ":"))
-              .append(format(text)));
-
-    prepend(div);
-  });
-
   notice.bind("text", function(message) {
     var data       = message.data;
     var body       = data.body;
@@ -88,4 +68,28 @@ $(document).ready(function() {
                .addClass("message")
                .text(body + " (updated: " + updated_at + ")").fadeIn(2000));
   });
+
+  for (var i = 0; i < channels.length; i++) {
+    var channel = channels[i];
+
+    stream.bind("irc-" + channel, function(message) {
+      var data       = message.body;
+      var nick       = data.nick;
+      var text       = data.text;
+      var created_at = data.created_at;
+
+      var div = $("<div/>")
+        .addClass("irc")
+        .append($("<p/>")
+                .append($("<img/>")
+                        .addClass("icon")
+                        .attr({ src: "/2010/live/irc.png", alt: "irc", width: icon_size, height: icon_size }))
+                .append($("<span/>")
+                        .addClass("screen_name")
+                        .text(nick + ":"))
+                .append($('<span/>').text(format(text))));
+
+      prepend(div);
+    });
+  }
 });

@@ -431,9 +431,17 @@ PROFILE
 Ubiquitous computing has opened the door to two new revolutions, data collection and data manipulation. Mobile phones, digital cameras, low cost electronics, and wireless internet access have made it possible to collect data any time, anywhere. But what are we doing with the data once it's collected? How do we navigate the oceans of data we generate daily? Where can we find a Rubyist's tools for data mining and manipulation? We'll discuss how to use DataMapper, a Ruby data access library, to make sense of data of all kinds.
 ABSTRACT
     e28_medium.create_break :from => '12:00', :length => 90.minutes
-    e28_medium.create :title => 'The Necessity and Implementation of Speedy Tests', :speaker => 'Jake Scruggs (Backstop Solutions)', :length => 1.hour,:abstract => (<<ABSTRACT)
+    e28_medium.create :title => 'The Necessity and Implementation of Speedy Tests', :speaker => 'Jake Scruggs (Backstop Solutions)', :length => 1.hour,:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Your project's software practices are deteriorating every minute the developers wait for slow tests to finish. Once developers get fed up and stop running the tests, disregard for failing builds can't be far behind, and from there it's only a short leap to the albatross of a brittle/irrelevant test suite. Luckily this can all be avoided by adopting some time-saving testing standards and practices.
 ABSTRACT
+In 2004 Jake Scruggs was a high school physics teacher.  Jobs since then: apprentice at Object Mentor, consultant at ThoughtWorks, consultant at Obtiva, and developer at Backstop Solutions.
+
+He also created and maintains the code metrics gem: metric_fu
+http://jakescruggs.blogspot.com/
+http://metric-fu.rubyforge.org/
+http://twitter.com/jakescruggs
+http://www.backstopsolutions.com/
+PROFILE
     e28_medium.create :title => 'Seamless Integration Testing', :speaker => 'paulelliott (Hashrocket)', :abstract => (<<ABSTRACT), :profile => (<<PROFILE)
 Do you have a solid, full coverage integration test suite? You should. It is the final automated point of assurance that what you are about to push to production is not going to blow something up and cost your or your client money. I show how to integration test a real Rails application, demonstrating best practices you can apply to any setup and the latest technologies for fully covering your app, including javascript!
 ABSTRACT

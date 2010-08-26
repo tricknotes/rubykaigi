@@ -185,7 +185,7 @@ catch him on Karaoke night, where you can watch him sing his favorite
 smooth rock hits of the 70’s and early 80’s.
 PROFILE
   end
-  e27.create :title => 'World Wide Ruby Conferences', :title_ja => '世界の Ruby Conference から', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'en, ja'
+  e27.create :title => 'World Wide Ruby Conferences', :title_ja => '世界の Ruby Conference から', :speaker => 'Kuniaki IGARASHI (Everyleaf Corporation)', :room => b202, :from => '17:30', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'en, ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 There are many Ruby/Rails conferences, \"RubyKaigi\"s and Ruby/Rails meetups throughout the world, but we can only participate in a few of these. I'd like to use the \"Lightening Talk\" style to introduce some of the people running these other meetups. You may learn about a new meetup to visit, or give you ideas for your own m0eetup.
 
 Speakers
@@ -234,6 +234,27 @@ Masayoshi Takahashi
 RubyKaigi
 http://rubykaigi.org/
 ABSTRACT_JA
+Kuniaki IGARASHI , igaiga (@igaiga555) http://github.com/igaiga
+Rails and iPhone app developer in Everyleaf Corporation.
+Chief developer of the timer "TwYM" that is used in RubyKaigi2009
+Lightning Talks.
+Staff of Kosen Conference Committee, founder of coffee.rb.
+
+Daniel Bovensiepen (@bovensiepen) http://www.bovensiepen.net
+Projectmanager at Siemens AG.
+Building High Frequency Radios for Mass Transit Projects.
+Giving another talk at RubyWorld Conf 2010
+
+Jiang Wu
+Jiang Wu(呉江) is a Ruby developer in Shanghai, China. He has worked with Ruby for 3 years. In 2008, he open sourced a library of Chinese payment gateway, implemented in Active Merchant. From 2009, he is devoted to promote "off rails", such as Sinatra and Sequel, in China.
+
+and Chad Fowler.
+PROFILE
+五十嵐邦明 (@igaiga555) http://github.com/igaiga
+株式会社万葉 で Rails, iPhone アプリの開発に従事。
+RubyKaigi2009 Lightning Talks で使われたタイマー "TwYM" のメイン開発者。
+高専カンファレンス副代表、coffee.rb設立者。
+PROFILE_JA
   e27.with_options(:room => a202) do |e27_a202|
     e27_a202.create :title => 'Ruby developer meeting at Tsukuba', :title_ja => 'Ruby開発会議つくば', :speaker => 'Ruby core team', :from => '10:00', :to => '12:30',:abstract => (<<ABSTRACT), :lang => 'ja'
 We will hold a meeting about development of Ruby.

@@ -1,0 +1,31 @@
+#content
+  %h1 Live
+  %p イベント開催中は、USTREAMによりライブ中継をしております。
+  %p 今年は以下のビューアーで中継をご覧いただけます。
+  %ul
+    %li 中継品質はベストエフォートです。悪しからずご了承ください。
+    %li KaigiFreaksがお届けします。
+    %li 中継とは別に、後日録画した動画も公開予定です(準備ができ次第、別途アナウンスします)。
+  %h2 RubyKaigi Live Streaming Viewer
+  %div#viewer.whitebox.cleafix
+    %div
+      %p We've put together a page where you can watch the live RubyKaigi Ustream, IRC and Twitter feeds all at once.
+      %p Please try it out during RubyKaigi.
+      %p * Works with browsers supporting WebSockets
+    %div.btn  
+      %p
+        %a.noborder{:href => "/2010/live/1", :target => "_blank" }  
+          %img{ :alt => "Main Convention Hall", :src => "/2010/images/viewer_btn_mainhall.png", :width => "200", :height => "80"}
+      %p
+        %a.noborder{:href => "/2010/live/2", :target => "_blank" }  
+          %img{ :alt => "Convention Hall 200", :src => "/2010/images/viewer_btn_hall200.png", :width => "200", :height => "80"}
+      %p
+        %a.noborder{:href => "/2010/live/3", :target => "_blank" }  
+          %img{ :alt => "Meeting Room 202-B", :src => "/2010/images/viewer_btn_room202b.png", :width => "200", :height => "80"}
+    %div
+      %img{ :alt => "", :src => "/2010/images/viewer_thumb.jpg", :width => "380", :height => "300"}
+  %h2 IRC
+  %p USTREAMのIRCは利用しません。irc.freenode.netをご利用ください。
+  %div.whitebox
+    %p
+      %iframe{ :src => "http://webchat.freenode.net/?channels=rubykaigi1%2Crubykaigi2%2Crubykaigi3%2Crubykaigi", :width => "600", :height => "400" }

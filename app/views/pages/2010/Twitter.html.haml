@@ -1,30 +1,30 @@
 #content
   %h1 Twitter
-  %h2 イベント期間中用の便利なビューアーができました！
+  %h2 RubyKaigi Live Streaming Viewer
   %div#viewer.whitebox.cleafix
     %div
-      %p UstreamとIRCとTwitterを同時に見れるページを用意しました。
-      %p 開催中はぜひこちらをご利用ください。 :-)
-      %p ※Web Socket対応ブラウザでご利用可能です。
+      %p We've put together a page where you can watch the live RubyKaigi Ustream, IRC and Twitter feeds all at once.
+      %p Please try it out during RubyKaigi.
+      %p * Works with browsers supporting WebSockets
     %div.btn  
       %p
         %a.noborder{:href => "/2010/live/1", :target => "_blank" }  
-          %img{ :alt => "大ホール", :src => "/2010/images/viewer_btn_mainhall.png", :width => "200", :height => "80"}
+          %img{ :alt => "Main Convention Hall", :src => "/2010/images/viewer_btn_mainhall.png", :width => "200", :height => "80"}
       %p
         %a.noborder{:href => "/2010/live/2", :target => "_blank" }  
-          %img{ :alt => "中ホール", :src => "/2010/images/viewer_btn_hall200.png", :width => "200", :height => "80"}
+          %img{ :alt => "Convention Hall 200", :src => "/2010/images/viewer_btn_hall200.png", :width => "200", :height => "80"}
       %p
         %a.noborder{:href => "/2010/live/3", :target => "_blank" }  
-          %img{ :alt => "会議室202-B", :src => "/2010/images/viewer_btn_room202b.png", :width => "200", :height => "80"}
+          %img{ :alt => "Meeting Room 202-B", :src => "/2010/images/viewer_btn_room202b.png", :width => "200", :height => "80"}
     %div
       %img{ :alt => "", :src => "/2010/images/viewer_thumb.jpg", :width => "380", :height => "300"}
   %h2 Follow me
   %div.whitebox
-    %p 日本Ruby会議の情報を日英２カ国語でツイートしています。
+    %p Tweeting RubyKaigi info in Japanese and English.
     %p
       %a.noborder{:href => "http://www.twitter.com/rubykaigi", :target => "_blank" }  
         %img{ :alt => "Follow me on Twitter", :src => "/2010/images/twitter_followme_btn.png"}
-  %h2 @rubykaigiのツイート
+  %h2 @rubykaigi on Twitter
   %script{ :src => "/2010/javascripts/widget.js", :type => "text/javascript" }
   :javascript
     new TWTR.Widget({
@@ -55,7 +55,7 @@
     behavior: 'default'
     }
     }).render().setUser('rubykaigi').start();
-  %h2 みんなのツイート
+  %h2 Everyone's #rubykaigi Tweets
   :javascript
     new TWTR.Widget({
     version: 2,

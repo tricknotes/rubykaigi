@@ -8,7 +8,7 @@ body {
 }
 
 #container {
-  width: 1000px;
+  width: 980px;
   height: 800px;
   background-image: url("background.jpg");
   background-repeat: no-repeat;

@@ -2,7 +2,7 @@ $(document).ready(function() {
   WebSocket.__swfLocation = "WebSocketMain.swf";
 
   var capacity  = 20;
-  var icon_size = 36;
+  var icon_size = 48;
 
   function format(text) {
     return text;
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
     div.append($("<span/>").hide()
                .addClass("message")
-               .text(body + " (updated: " + updated_at + ")").fadeIn(2000));
+               .text(body).fadeIn(2000));
   });
 
   for (var i = 0; i < channels.length; i++) {

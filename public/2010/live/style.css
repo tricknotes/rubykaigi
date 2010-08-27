@@ -18,7 +18,8 @@ body {
 
 #notice {
   padding: 5px 10px;
-  background-color: #fff;
+  background-color: #faa;
+  font-weight: bold;
   opacity: 0.8;
 }
 
@@ -31,6 +32,7 @@ body {
   margin: 5px 0;
   padding: 5px;
   font-size: 80%;
+  font-weight: bold;
   background-color: #fff;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -41,6 +43,7 @@ body {
   margin: 5px 0;
   padding: 5px;
   font-size: 80%;
+  font-weight: bold;
   background-color: #fff;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;

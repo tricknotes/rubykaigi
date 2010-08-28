@@ -20,6 +20,10 @@ body {
   padding: 5px 10px;
   background-color: #faa;
   font-weight: bold;
+  height: 7ex;
+  display: table-cell;
+  vertical-align: middle;
+  width: 980px;
   opacity: 0.8;
 }
 

@@ -47,8 +47,7 @@ $(document).ready(function() {
                                 .addClass("screen_name")
                                 .append($("<a/>")
                                         .attr({ href: "http://twitter.com/" + screen_name + "/status/" + id, target: "_blank" })
-                                        .text(screen_name))
-                                .append(":"))
+                                        .text(screen_name)))
                         .append(format(text)));
 
       prepend(div);

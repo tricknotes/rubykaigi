@@ -62,9 +62,9 @@ body {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-.tweet .screen_name {
+.tweet .screen_name a {
   display: inline-block;
-  margin: 0 5px 0 0;
+  margin: 0 5px;
   padding: 5px 10px;
   font-size: 70%;
   font-weight: bold;

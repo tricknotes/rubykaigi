@@ -81,12 +81,9 @@ $(document).ready(function() {
       var div = $("<div/>")
         .addClass("irc")
         .append($("<p/>")
-                .append($("<img/>")
-                        .addClass("icon")
-                        .attr({ src: "/2010/live/irc.png", alt: "irc", width: icon_size, height: icon_size }))
                 .append($("<span/>")
                         .addClass("screen_name")
-                        .text(nick + ":"))
+                        .text(nick))
                 .append($('<span/>').text(format(text))));
 
       prepend(div);

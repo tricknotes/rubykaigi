@@ -47,8 +47,7 @@ $(document).ready(function() {
                                 .addClass("screen_name")
                                 .append($("<a/>")
                                         .attr({ href: "http://twitter.com/" + screen_name + "/status/" + id, target: "_blank" })
-                                        .text(screen_name))
-                                .append(":"))
+                                        .text(screen_name)))
                         .append(format(text)));
 
       prepend(div);
@@ -81,12 +80,9 @@ $(document).ready(function() {
       var div = $("<div/>")
         .addClass("irc")
         .append($("<p/>")
-                .append($("<img/>")
-                        .addClass("icon")
-                        .attr({ src: "/2010/live/irc.png", alt: "irc", width: icon_size, height: icon_size }))
                 .append($("<span/>")
                         .addClass("screen_name")
-                        .text(nick + ":"))
+                        .text(nick))
                 .append($('<span/>').text(format(text))));
 
       prepend(div);

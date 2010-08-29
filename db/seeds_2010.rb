@@ -363,7 +363,9 @@ Many committers will come to RubyKaigi, so it's a good chance to ask them. In th
 ABSTRACT
 RubyKaigiにはたくさんのコミッタが来場するので、彼らに質問するよい機会です。このイベントでは、Rubyコミッタが聴衆(又は他のコミッタ) からの質問に回答します。
 ABSTRACT_JA
-    e28_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Matz', :length => 1.hour, :lang => 'ja'
+    e28_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Matz', :length => 1.hour, :lang => 'ja', :profile_ja => (<<PROFILE_JA)
+いまや数えきれないほどのユーザーを持つ世界的プログラミング言語Rubyの創造者。っていうか、そういう立場に本人が一番困惑してるんですが。
+PROFILE_JA
     e28_big.create_break :from => '12:00', :length => 90.minutes
     e28_big.create :title => 'Esoteric Obfuscated Ruby Programming', :title_ja => '超絶技巧 Ruby プログラミング', :speaker => 'Yusuke Endoh (independent)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Ruby allows us to write not only easy-to-read programs but also hard-to-read programs. In this presentation, we introduce our \"artistically\" hard-to-read programs written in Ruby. We also discuss its implementation techniques, if time permits.

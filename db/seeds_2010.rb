@@ -367,7 +367,7 @@ ABSTRACT_JA
 いまや数えきれないほどのユーザーを持つ世界的プログラミング言語Rubyの創造者。っていうか、そういう立場に本人が一番困惑してるんですが。
 PROFILE_JA
     e28_big.create_break :from => '12:00', :length => 90.minutes
-    e28_big.create :title => 'Esoteric Obfuscated Ruby Programming', :title_ja => '超絶技巧 Ruby プログラミング', :speaker => 'Yusuke Endoh (independent)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e28_big.create :title => 'Esoteric Obfuscated Ruby Programming', :title_ja => '超絶技巧 Ruby プログラミング', :speaker => 'Yusuke Endoh (independent)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 Ruby allows us to write not only easy-to-read programs but also hard-to-read programs. In this presentation, we introduce our \"artistically\" hard-to-read programs written in Ruby. We also discuss its implementation techniques, if time permits.
 ABSTRACT
 Ruby は読みやすいプログラムを簡単に書ける言語だが、読みにくいプログラムも簡単に書ける。 本発表では、発表者による「芸術的に」読みにくい Ruby プログラムを紹介する。 時間があれば、その実装技法の解説を行う。
@@ -381,6 +381,8 @@ Ruby と RubySpec のコミッタ。1.9.2 リリースマネージャ補佐。Ru
 評価器 (YARV) 、リリースエンジニアリング、テスト、関数型プログラミング機能、Bignum など、Ruby の中でもどうでもいいところに興味を持つ。
 Esoteric programming や Quine を好む。
 PROFILE_JA
+http://www.slideshare.net/mametter/ruby-esoteric-obfuscated-ruby-programming-5088683
+PRESENTATION_MATERIAL
     e28_big.create :title => 'Daily Ruby', :title_ja => 'Rubyな日々', :speaker => 'Kazuhiro NISHIYAMA (Good-Day, Inc.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
 I will talk about my daily life as a committer of Ruby and the Ruby Reference Manual Renewal Project.
 ABSTRACT
@@ -419,11 +421,13 @@ PROFILE
 Ruby 1.8.7のお守り係として知られるが本人はプログラマのつもりなので、たまには
 作ったプログラムの紹介をしたい。仕事で作ったやつだけど。
 PROFILE_JA
-    e28_big.create :title => 'Toward creating a single stand-alone executable of Ruby', :title_ja => "Ruby/Tk-Kit から RubyKit へ : Ruby の単一ファイル実行環境の構築に向けて", :abstract => '', :speaker => 'Hidetoshi NAGAI (Kyushu Institute of Technology / Rubyist Kyushu)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e28_big.create :title => 'Toward creating a single stand-alone executable of Ruby', :title_ja => "Ruby/Tk-Kit から RubyKit へ : Ruby の単一ファイル実行環境の構築に向けて", :abstract => '', :speaker => 'Hidetoshi NAGAI (Kyushu Institute of Technology / Rubyist Kyushu)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 One of CRuby committers and a Ruby/Tk developer.
 PROFILE
 CRuby の commit 権所有者で，Ruby/Tk 開発者．
 PROFILE_JA
+http://www.dumbo.ai.kyutech.ac.jp/~nagai/RubyTk/?%A5%D7%A5%EC%A5%BC%A5%F3%A5%C6%A1%BC%A5%B7%A5%E7%A5%F3%BB%F1%CE%C1
+PRESENTATION_MATERIAL
     e28_big.create :title => 'What is few?', :abstract => '', :speaker => 'Shota Fukumori/@sora_h (few developers team)', :lang => 'ja', :parent_event => lt_event, :from => '17:00', :to => '18:00', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Shota Fukumori (sora_h) is a junior high school 2 grade *half-time(!)* student and a rubyist in Japan.
 He commits to Termtter and some projects and his repository, and create web service by rails. Also he is usually talking at some communities. He has a online workshop which name is online.sg http://onlinesg.org/ .
@@ -713,7 +717,7 @@ mrkn, 村田賢太 (株式会社ジェネティックラボ)
 著書は『Ruby逆引きレシピ』(共著)。情報処理学会、人工知能学会、各会員。
 Ruby札幌、日本Rubyの会、高専カンファレンス実行委員会に所属。
 PROFILE_JA
-    e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 NArray is an n-dimensional numerical array library developed for use in science fields, but it is usable for handling binary data efficiently. I talk about NArray for the first time after 10 years from the first release. I will also present topics including the next version of NArray, and distributed scientific computing using Ruby for multi-core era.
 ABSTRACT
 Masahiro Tanaka (University of Tsukuba)
@@ -725,6 +729,8 @@ PROFILE
 筑波大学計算科学研究センター研究員．Ruby/NArrayの作者．
 研究分野は，赤外線天文学，分散システムなど．
 PROFILE_JA
+http://www.slideshare.net/masa16tanaka/narray-and-scientific-computing-with-ruby
+PRESENTATION_MATERIAL
     e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura (CSNagoya)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 Yarv2llvm is a translator which converts instruciton set of VM of CRuby (aka YARV) into llvm. The feature of yarv2llvm is to use the type inference for raising the execution efficiency of generated llvm. Yarv2llvm get a results. For example it executes the program for computing fibonacci number 40 times faster than Ruby1.9. But it was clarified to be able not to convert all Ruby programs into llvm well either though it had expected beforehand. I will show the example of programming Ruby that cannot be converted with yarv2llvm well and the settlement plan. In addition I will introduce the outline of the next generation translator (ytl) that I am developing to support all specification of Ruby.
 ABSTRACT

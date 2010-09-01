@@ -44,6 +44,14 @@
   <%=h @event.lang %>
   </p>
 
+  <h2><%= t(:presentation_material) %></h2>
+
+  <p>
+  <%= auto_link(h(@event.presentation_material)) {|text| truncate(text, 50)} %>
+  </p>
+
+  <br />
+
   <p class="right">
   <% if @event.parent_event %>
     <%= link_to('Parent', event_path(2010, current_locale, @event.parent_event), :class => 'mark') %>

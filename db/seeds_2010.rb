@@ -665,11 +665,13 @@ Among other open source contributions, Alex is the author of Bunyan and Papermil
 In addition to hacking, Alex enjoys shredding fresh powder, gourmet coffee and being an amateur foodie. He does not enjoy referring to himself in third person, because it sounds weird. He currently lives in sunny Los Angeles, CA, blogs at alexjsharp.com and tweets as @ajsharp.
 PROFILE
     e29_big.create_break :length => 90.minutes
-    e29_big.create :title => "IronRuby - What's in it for Rubyists?", :speaker => 'Shay Friedman (Sela Group)', :length => 1.hour, :abstract => (<<ABSTRACT), :profile => (<<PROFILE)
+    e29_big.create :title => "IronRuby - What's in it for Rubyists?", :speaker => 'Shay Friedman (Sela Group)', :length => 1.hour, :abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL)
 IronRuby is the new implementation of the Ruby language from Microsoft which opens the .NET world to Rubyists. This brings a whole set of new opportunities to Rubyists like using Ruby to write RIA applications, providing enhanced user interface to Ruby applications and more. Come and see the new possibilities that IronRuby brings to the Ruby world!
 ABSTRACT
 Shay Friedman is the author of IronRuby Unleashed and a Microsoft IronRuby MVP. With more than 10 years of experience, Friedman now works as a consultant and instructor of dynamic languages and .NET related subjects in CodeValue, a company he has recently co-founded. You can read his blog at http://IronShay.com and contact him via his twitter account - @ironshay.
 PROFILE
+http://www.slideshare.net/shayfriedman/ironruby-whats-in-it-for-rubyists-rubykaigi-2010
+PRESENTATION_MATERIAL
     e29_big.create_break
     e29_big.create :title => 'The spread of enterprise Ruby at hot spot SHIMANE', :title_ja => 'Ruby業務システムの広がりとホットスポット島根', :speaker => 'Hiroshi Yoshioka (TechnoProject Ltd.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
 In Matsue City and SHIMANE prefecture of local government, many common business systems began to remake by Ruby/Rails since 2007. Now, the wave of Ruby/Rails spreads to enterprise system fields and prepheral regions. Based many experience and results, how to built up the enterprise systems by Ruby/Rails, how to built up the long term maintenance systems, challenging to high productivty and another Agile development.
@@ -684,7 +686,7 @@ PROFILE
 (株)テクノプロジェクト：代表取締役社長兼(株)マツケイ：代表取締役社長
 1953年生まれ。1976年からソフトウエア業界に身を置く。その間、ミドルウエアの開発から始まり、フィールドでの金融・公共など多くのＳＩやパッケージ開発・適用を第一線で指揮して来た。メインフレームからＣＳＳ・Webアプリまで、多くの環境を経験してきた。
 PROFILE_JA
-    e29_big.create :title => 'There Is No Spoon -- Think Global, Act Regional', :speaker => 'Shintaro Kakutani (rubykaigi.org, Nihon Ruby-no-kai)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_big.create :title => 'There Is No Spoon -- Think Global, Act Regional', :speaker => 'Shintaro Kakutani (rubykaigi.org, Nihon Ruby-no-kai)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 I have been a member of RubyKaigi organizer since 2006 and also am the founder of Regional RubyKaigi started in 2008. \"Kaigis\" have changed the landscape of the Ruby community in Japan. These 2 years mean a lot to me. I'd love to show you what happened is and tell you what I believe is going to happen in the Ruby community in Japan.
 ABSTRACT
 2008年につくばで(!)開催されたRejectKaigiで提案した地域Ruby会議プロジェクトは2周年を迎えます。この2年間に9都市で17の地域Ruby会議が実施され、私はその全てに参加しました。本セッションでは、過去2年間の地域Ruby会議をふりかえり、今後の地域Ruby会議のありかたについて私見を述べます。東京と東京以外の違いと地域のRubyユーザグループの重要性や地域Ruby会議とRubyKaigiの関係など、「RubyKaigi以後」のRuby コミュニティのあり方を考える材料を提供します。
@@ -693,6 +695,8 @@ Kakutani Shintaro is a just another strong Ruby proponent, chief programmer in E
 PROFILE
 ただのRuby厨。(株)永和システムマネジメントサービスプロバイディング事業部チーフプログラマ。日本Rubyの会理事。RubyKaigiの運営を2006年からやってます。著書は『アジャイルな見積りと計画づくり』(共同翻訳)、『インターフェイス指向設計』(監訳)、『アジャイルプラクティス』(共同監訳)、『JavaからRubyへ』(翻訳)。
 PROFILE_JA
+http://www.slideshare.net/kakutani/there-is-nospoon
+PRESENTATION_MATERIAL
     e29_big.create_break
     e29_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Chad Fowler', :length => 1.hour
     e29_big.create :title => 'Closing'
@@ -800,13 +804,15 @@ PROFILE
 サービスプロバイディング事業部プログラマ、品質管理学会 正会員
 Rails を使った業務システムや tDiary という Web 日記システムを作っています。
 PROFILE_JA
-    e29_medium.create :title => 'How To Create A Beautiful Template Engine Which Never Breaks HTML', :title_ja => 'HTMLデザインをまったく崩さない、美しいテンプレートエンジンの作り方', :speaker => 'Makoto Kuwata (programmer)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja'
+    e29_medium.create :title => 'How To Create A Beautiful Template Engine Which Never Breaks HTML', :title_ja => 'HTMLデザインをまったく崩さない、美しいテンプレートエンジンの作り方', :speaker => 'Makoto Kuwata (programmer)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :presentation_material => (<<PRESENTATION_MATERIAL)
 One of the biggest challenges in modern web application development is the difficulty of collaborating with web designers. For example, eRuby requires Ruby code to be embedded inside template files, often resulting in broken HTML designs, making life difficult for web designers. To solve this problem, various template engines which don't break HTML have been created. The trade off of these template engines, however, is that they sacrifice other features such as performance or usability.
 
 In this session, a template engine that doesn't break HTML while also  preserving performance and usability will be introduced. This session  will also explore a variety of problems relating to template engines, such as the problems with techniques used in existing template engines, and whether simple "not breaking" HTML designs is sufficient.  This will be definitive session about template engines for web application development. If you are interested in web design, you must attend this session.
 ABSTRACT
 Webアプリケーション開発における問題点のひとつに、Webデザイナと協業がしにくいことが挙げられます。たとえばeRubyだとテンプレートファイル中にRubyコードを埋め込むため、テンプレートファイルのHTMLデザインが崩れてしまい、デザイナが作業しにくくなってしまいます。この問題を解決するために、HTMLデザインを崩さないようなテンプレートエンジンがいくつか考案されています。しかしそれらはHTMLデザインの問題を解決したかわりに、パフォーマンスや使い勝手の悪さなど別の問題を引き起こしています。本セッションでは、HTMLデザインを一切崩さず、かつ使いやすくて高速なテンプレートエンジンの作り方を紹介します。また既存の方法は何が間違っていたのか、そもそもHTMLデザインを崩さないだけでいいのか、など、テンプレートエンジンにまつわる様々な問題について考察します。本セッションは、テンプレートエンジンについての「決定版」ともいうべき内容です。Webデザインに興味のある方は必見です。
 ABSTRACT_JA
+(ja)http://www.slideshare.net/kwatch/html-5079716, (en)http://www.slideshare.net/kwatch/how-to-make-designerfriendly-template-engine
+PRESENTATION_MATERIAL
     e29_medium.create_break
   end
 

@@ -1,7 +1,18 @@
 #content
   %h1 Photos
-  %script{ :src => "http://rubykaigi.tumblr.com/js", :type => "text/javascript" }
-  %h2 写真を集めています :-)
+  %script{ :src => "http://rubykaigi.tumblr.com/api/read/json?num=50", :type => "text/javascript" }
+  %script
+    for (i=0; i<tumblr_api_read['posts-total']; i+=2) {
+    if (tumblr_api_read['posts'][i]['type'] == "photo") {
+    document.write(
+    '<div class="photos clear"><p><img src="' + tumblr_api_read['posts'][i]['photo-url-250'] + '" alt ="" /></p>' + 
+    tumblr_api_read['posts'][i]['photo-caption'] + '</div>' +
+    '<div class="photos"><p><img src="' + tumblr_api_read['posts'][i+1]['photo-url-250'] + '" alt ="" /></p>' + 
+    tumblr_api_read['posts'][i+1]['photo-caption'] +'</div>'
+    );
+    }
+    }
+  %h2.clear 写真を集めています :-)
   %p rubykaigi.org では、日本Ruby会議2010の写真を集めています。
   %p
     Flickrで

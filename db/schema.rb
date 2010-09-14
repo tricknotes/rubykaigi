@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100731074536) do
+ActiveRecord::Schema.define(:version => 20100901030104) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20100731074536) do
     t.string   "presenter_name"
     t.text     "presenter_profile_ja"
     t.text     "presenter_profile_en"
+    t.string   "presentation_material"
   end
 
   create_table "headline_entries", :force => true do |t|

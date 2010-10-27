@@ -11,7 +11,7 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
   end
 
   manager.default_strategies :twitter_oauth, :openid
-  manager.failure_app = SessionsController
+  manager.failure_app = lambda{|env| SessionsController.call(env) }
 
   manager.serialize_from_session do |keys|
     klass, id = keys

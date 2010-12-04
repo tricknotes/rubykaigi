@@ -25,6 +25,9 @@ class PagesController < LocaleBaseController
         end
       end
       return
+    when "2011"
+      render :template => "pages/2011/index", :layout => "simple"
+      return
     end
 
     # params[:page_name] pass white list at `page_name_is_valid'
@@ -53,7 +56,7 @@ class PagesController < LocaleBaseController
   def redirect_to_past_kaigi
     if (year = params[:year].to_i) < 2009
       redirect_to "http://jp.rubyist.net/RubyKaigi#{year}"
-    elsif 2010 < year
+    elsif 2011 < year
       render :file => "public/404.html", :status => 404
     else
       true

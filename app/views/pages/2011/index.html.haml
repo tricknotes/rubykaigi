@@ -1,0 +1,30 @@
+-content_for :head do
+  :plain
+    <style type="text/css">
+      body {
+          margin: 0;
+          padding: 130px 0 0;
+          background-color: #f00;
+          text-align: center;
+      }
+      a, a:link, a:visited, a:hover {
+        color: #333;
+        text-decoration: none;
+        border:none;
+      }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="reset.js"></script>
+    <![endif]-->
+    </style>
+
+%h1
+  <img src="/2011/images/the_end_of_rubykaigi.png" alt="The End Of Rubykaigi - 2011/07/16-18 at ToKyo, Japan">
+
+%div{:style => 'margin-top:80px'}
+  %p
+    Follow us on twitter: <a href="http://twitter.com/rubykaigi">@rubykaigi</a>.
+  %p
+    Feel free to contact us via e-mail to: 2011 at rubykaigi dot org.
+  %p
+    RubyKaigi <a href="/2010/#{params[:locale]}">2010</a>, <a href="/2009/#{params[:locale]}">2009</a>, <a href="/2008">2008</a>, <a href="/2007">2007</a>, <a href="/2006">2006</a>

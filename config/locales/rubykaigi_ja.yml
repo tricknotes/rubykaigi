@@ -85,3 +85,6 @@ ja:
   at_multi_purpose_hall: "於 多目的ホール"
   official_party: "懇親会"
   registration_required: "要登録"
+  # --------------------------------------------------------------------------
+  rubykaigi2011: '日本Ruby会議2011'
+  rubykaigi2011_dates: '7月16日〜18日'

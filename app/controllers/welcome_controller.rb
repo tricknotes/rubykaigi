@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
 class WelcomeController < LocaleBaseController
   def index
-    redirect_to "/#{RubyKaigi.latest_year}"
+# latest_yearをイジるとPayPalまわりが壊れるので、決め打ち
+#    redirect_to "/#{RubyKaigi.latest_year}"
+    redirect_to "/2011"
   end
 end

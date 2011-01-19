@@ -26,7 +26,7 @@ class PagesController < LocaleBaseController
       end
       return
     when "2011"
-      render :template => "pages/2011/index", :layout => "simple"
+      render :template => "pages/2011/#{params[:page_name]}", :layout => "simple"
       return
     end
 

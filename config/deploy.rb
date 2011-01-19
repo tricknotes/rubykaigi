@@ -63,7 +63,7 @@ end
 after("deploy:symlink") do
   run "mkdir -p #{current_path}/public/tmp"
   setup_shared("public/tmp", "pamphlet-20090708.zip")
-  setup_shared("public", "rk11prospectus.pdf")
+  setup_shared("public/2011", "rk11prospectus.pdf")
   setup_shared("certs","app_cert.pem")
   setup_shared("certs","app_key.pem")
   setup_shared("certs","paypal_cert_sandbox.pem")

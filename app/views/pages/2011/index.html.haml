@@ -19,7 +19,7 @@
         float: left;
       }
       dd {
-        margin-left: 6em;
+        margin-left: 7em;
       }
     </style>
     <!--[if lt IE 9]>
@@ -33,6 +33,7 @@
   our brand new website design is coming soon :)
 
 %div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000'}
+  %h2 #{t('rubykaigi2011')}
   %dl
     %dt
       Date:
@@ -43,8 +44,12 @@
       Venue:
     %dd
       <strong>Nerima Culture Center (Tokyo, Japan)</strong><br />
-      » <a href="http://bit.ly/fBgMrP">MAP</a>, <a href="http://www.neribun.or.jp/">website(Japanese)</a>
-
+      &gt;&gt; <a href="http://bit.ly/fBgMrP">MAP</a>, <a href="http://www.neribun.or.jp/">website(Japanese)</a>
+  %dl
+    %dt
+      Registration:
+    %dd
+      (TBA)
   %dl
     %dt
       Keynotes:
@@ -52,12 +57,33 @@
       <strong>Yukihiro &quot;Matz&quot; Matsumoto</strong><br/>
       <strong>Dave Thomas</strong><br />
       and others???
-
   %dl
     %dt
-      <a href="/2011/prospectus"><strong>#{t('rubykaigi2011')} #{t('prospectus')}</strong></a>
+      &gt;&gt; <a href="/2011/prospectus"><strong>#{t('rubykaigi2011')} #{t('prospectus')}</strong></a>
     %dd
       &nbsp;
+
+%div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000'}
+  %h2 RubyKaigi 2011 Official Conference Party
+  %dl
+    %dt
+      Date:
+    %dd
+      <strong>July 17(Sun), 2011</strong>
+    %dt
+      Open At:
+    %dd
+      19:30
+    %dt
+      Velue:
+    %dd
+      Somewhere in Ikebukuro (TBA)
+  %dl
+    %dt
+      more details:
+    %dd
+      (TBA)
+
 
 %div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000;'}
   <strong style="padding: 8px 10px;color:#f00;background-color:#000">RubyKaigi 2011 is Looking for Sponsors!</strong>

@@ -5,7 +5,7 @@ EventLoader.with_options(:day => 29) do |e29|
     e29_big.create :title => 'Cloud management with Ruby', :title_ja => 'Rubyでクラウドを便利にする方法〜ニフティクラウドの事例〜', :speaker => 'Kei Hamanaka, Yuichi Saotome (NIFTY Corporation)', :from => '9:30',:abstract => (<<ABSTRACT), :lang => 'ja'
 We show the construction/operation methods for Cloud with Ruby. (ex. NIFTY Cloud)
 ABSTRACT
-    e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA)
+    e29_big.create :title => 'Distributed storage system with ruby', :title_ja => 'Rubyによる分散ストレージシステムの実装', :speaker => 'Toshiyuki Terashita (RICOH IT SOLUTIONS Co.,Ltd.)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 Castoro is a new scalable storage system implemented in Ruby. In this session, we talk about why we decided to develop a new storage system, Castoro. We will also compare Castoro against other distributed storage systems, such as MogileFS and kumoFS.
 ABSTRACT
 Castoroは、Rubyで実装されたスケーラブルなストレージシステムです。本発表では、開発に至った経緯と、MogileFSやkumoFS等、他の分散ストレージシステムとの違いについて紹介します。
@@ -21,7 +21,9 @@ Railsアプリコードを書いたら負けかなと思っているRuby使い�
 ストレージサービス「quanp」ではミドルウエアからOS寄りのコンポーネントを作っ
 ています。
 PROFILE_JA
-    e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI (druby.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA)
+http://www.slideshare.net/suzumura/castoro-rubykaigi2010
+PRESENTATION_MATERIAL
+    e29_big.create :title => 'The last decade of RWiki and lazy me', :title_ja => 'RWikiと怠惰な私の10年間', :speaker => 'Masatoshi SEKI (druby.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 On August 31st, 2000, A slightly unusual Wiki was introduced on ruby-list. It was [ruby-list:24661] The first practical dRuby application, RWiki.
 
 RWiki is strongly opinionated software. RWiki was introduced as an demonstration of the usage of various Ruby libraries, but its unique implementation also reflects the author's opinion. The most significant feature of RWiki is that it is an in-memory application that contains both the database and objects all in a single process. Which is rather reminiscent of some recent buzzwords: NoSQL and In-Memory.
@@ -37,7 +39,9 @@ ABSTRACT_JA
 関将俊（druby.org）
 プログラマ。dRuby、ERBの作者。代表作はhメソッド、著書『dRubyによる分散・Webプログラミング』。ポケモンWCS2010栃木県代表(カード部門)。
 PROFILE_JA
-    e29_big.create :title => 'Practical Ruby Projects with MongoDB', :speaker => 'Alex Sharp (Lead Developer, OptimisDev)', :length => 1.hour,:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
+http://www.slideshare.net/mseki/rk10trailer
+PRESENTATION_MATERIAL
+    e29_big.create :title => 'Practical Ruby Projects with MongoDB', :speaker => 'Alex Sharp (Lead Developer, OptimisDev)', :length => 1.hour,:abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL)
 While there is a lot of excitement surrounding MongoDB and the NoSQL movement, MongoDB is all about practicality, pragmatism and performance. MongoDB boasts a robust feature set that provides a pragmatic blend of rich functionality, performance and scalability that today's software developers need, and all at a relatively low barrier to entry.
 ABSTRACT
 Alex has been Lead Developer for OptimisDev since October 2009. Prior to joining OptimisDev, he co-founded Second Street Creative in 2006, a boutique web application development and design consultancy specializing in creative brand development and agile ruby application development. He is particularly interested in the NoSQL movement and mastering the art of refactoring.
@@ -46,6 +50,8 @@ Among other open source contributions, Alex is the author of Bunyan and Papermil
 
 In addition to hacking, Alex enjoys shredding fresh powder, gourmet coffee and being an amateur foodie. He does not enjoy referring to himself in third person, because it sounds weird. He currently lives in sunny Los Angeles, CA, blogs at alexjsharp.com and tweets as @ajsharp.
 PROFILE
+http://www.slideshare.net/drumwurzel/practical-ruby-projects-with-mongo-db-ruby-midwest-4777566
+PRESENTATION_MATERIAL
     e29_big.create_break :length => 90.minutes
     e29_big.create :title => "IronRuby - What's in it for Rubyists?", :speaker => 'Shay Friedman (Sela Group)', :length => 1.hour, :abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL)
 IronRuby is the new implementation of the Ruby language from Microsoft which opens the .NET world to Rubyists. This brings a whole set of new opportunities to Rubyists like using Ruby to write RIA applications, providing enhanced user interface to Ruby applications and more. Come and see the new possibilities that IronRuby brings to the Ruby world!
@@ -55,7 +61,7 @@ PROFILE
 http://www.slideshare.net/shayfriedman/ironruby-whats-in-it-for-rubyists-rubykaigi-2010
 PRESENTATION_MATERIAL
     e29_big.create_break
-    e29_big.create :title => 'The spread of enterprise Ruby at hot spot SHIMANE', :title_ja => 'Ruby業務システムの広がりとホットスポット島根', :speaker => 'Hiroshi Yoshioka (TechnoProject Ltd.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_big.create :title => 'The spread of enterprise Ruby at hot spot SHIMANE', :title_ja => 'Ruby業務システムの広がりとホットスポット島根', :speaker => 'Hiroshi Yoshioka (TechnoProject Ltd.)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 In Matsue City and SHIMANE prefecture of local government, many common business systems began to remake by Ruby/Rails since 2007. Now, the wave of Ruby/Rails spreads to enterprise system fields and prepheral regions. Based many experience and results, how to built up the enterprise systems by Ruby/Rails, how to built up the long term maintenance systems, challenging to high productivty and another Agile development.
 ABSTRACT
 地方自治体である松江市や島根県では、2007年から一般的な行政システムをRuby/Railsで再構築を行っている。今、Ruby/Railsの波が企業システムの分野や周辺の地域に広がり始めた。 多くの経験と実績に基づいて、Ruby/Railsの基幹業務システムの構築方法、長期間メンテナンスするシステムの構築方法、高生産性や別なアジャイル開発への挑戦について説明する。
@@ -68,6 +74,8 @@ PROFILE
 (株)テクノプロジェクト：代表取締役社長兼(株)マツケイ：代表取締役社長
 1953年生まれ。1976年からソフトウエア業界に身を置く。その間、ミドルウエアの開発から始まり、フィールドでの金融・公共など多くのＳＩやパッケージ開発・適用を第一線で指揮して来た。メインフレームからＣＳＳ・Webアプリまで、多くの環境を経験してきた。
 PROFILE_JA
+http://www.matsukei.co.jp/topics/pdf/100829_ruby_kaigi.pdf
+PRESENTATION_MATERIAL
     e29_big.create :title => 'There Is No Spoon -- Think Global, Act Regional', :speaker => 'Shintaro Kakutani (rubykaigi.org, Nihon Ruby-no-kai)', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 I have been a member of RubyKaigi organizer since 2006 and also am the founder of Regional RubyKaigi started in 2008. \"Kaigis\" have changed the landscape of the Ruby community in Japan. These 2 years mean a lot to me. I'd love to show you what happened is and tell you what I believe is going to happen in the Ruby community in Japan.
 ABSTRACT
@@ -85,7 +93,7 @@ PRESENTATION_MATERIAL
   end
 
   e29.with_options(:room => @medium) do |e29_medium|
-    e29_medium.create :title => 'The future of the bigdecimal library and the number system of Ruby', :title_ja => "bigdecimal ライブラリと Ruby の数値系の未来", :speaker => 'Kenta Murata (GeneticLab Co., Ltd. && Ruby Sapporo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :from => '9:30', :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_medium.create :title => 'The future of the bigdecimal library and the number system of Ruby', :title_ja => "bigdecimal ライブラリと Ruby の数値系の未来", :speaker => 'Kenta Murata (GeneticLab Co., Ltd. && Ruby Sapporo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :from => '9:30', :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 I taked over the maintainer of the bigdecimal standard library in the beginning of this year. Today, the bigdecimal library has some problems in its behaviors, such as interacting convention with any other number classes. In this presentation, I will demonstrate these problematic behaviors and express their appropriate characteristics in the next version of Ruby. Additionally, I will discuss the number system which the future version of Ruby, that is 2.0, should have.
 ABSTRACT
 私は今年の初めに bigdecimal 標準ライブラリのメンテナに採用されました。現在 bigdecimal ライブラリは、他の数値クラスとの相互作用規則など、その振る舞いについて幾つかの問題を抱えています。私はこのプレゼンテーションで、このような問題ある振る舞いを実演で示し、これらに対して Ruby の次のバージョンで実現されるべき適切な性質を説明します。加えて、私は Ruby の未来のバージョン（すなわち 2.0）が持っているべき数値系について議論します。
@@ -103,6 +111,8 @@ mrkn, 村田賢太 (株式会社ジェネティックラボ)
 著書は『Ruby逆引きレシピ』(共著)。情報処理学会、人工知能学会、各会員。
 Ruby札幌、日本Rubyの会、高専カンファレンス実行委員会に所属。
 PROFILE_JA
+http://www.slideshare.net/mrkn/rubykaigi2010mrkn-bigdecimal
+PRESENTATION_MATERIAL
     e29_medium.create :title => 'NArray and scientific computing with Ruby', :speaker => 'Masahiro Tanaka (University of Tsukuba)',:abstract => (<<ABSTRACT), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 NArray is an n-dimensional numerical array library developed for use in science fields, but it is usable for handling binary data efficiently. I talk about NArray for the first time after 10 years from the first release. I will also present topics including the next version of NArray, and distributed scientific computing using Ruby for multi-core era.
 ABSTRACT
@@ -117,7 +127,7 @@ PROFILE
 PROFILE_JA
 http://www.slideshare.net/masa16tanaka/narray-and-scientific-computing-with-ruby
 PRESENTATION_MATERIAL
-    e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura (CSNagoya)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_medium.create :title => 'How Did Yarv2llvm Fail', :title_ja => 'yarv2llvmはどう失敗したのか', :speaker => 'Hideki Miura (CSNagoya)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 Yarv2llvm is a translator which converts instruciton set of VM of CRuby (aka YARV) into llvm. The feature of yarv2llvm is to use the type inference for raising the execution efficiency of generated llvm. Yarv2llvm get a results. For example it executes the program for computing fibonacci number 40 times faster than Ruby1.9. But it was clarified to be able not to convert all Ruby programs into llvm well either though it had expected beforehand. I will show the example of programming Ruby that cannot be converted with yarv2llvm well and the settlement plan. In addition I will introduce the outline of the next generation translator (ytl) that I am developing to support all specification of Ruby.
 ABSTRACT
 yarv2llvmはCRubyのVMの命令列をllvmに変換するトランスレータである。生成するllvmの実行効率を上げるために、型推論を用いるのが特徴である。 yarv2llvmはフィボナッチ級数プログラムでRuby1.9の約40倍の実行速度を得るなど、一定の成果が得られた。一方で、事前に予想していたことではあるが、すべてのRubyプログラムがうまくllvmに変換できるわけではないことも明らかになった。 この発表ではyarv2llvmではうまく変換できないRubyプログラム例とその解決案を説明する。さらに、フルセットRubyをサポートすることを目的に現在開発中の次世代トランスレータ(ytl)の概要を紹介する。
@@ -128,6 +138,8 @@ PROFILE
 三浦 英樹　(CSNagoya)
 水道屋です。趣味でプログラムを書いています。書いたものはhttp://github.com/miura1729 にあります。
 PROFILE_JA
+http://www.slideshare.net/miura1729/how-did-yarv2llvm-fail-5085861
+PRESENTATION_MATERIAL
     e29_medium.create :title => 'AOT Compiler for Ruby', :title_ja => 'Ruby 用 AOT コンパイラ', :speaker => 'Satoshi Shiba (The University of Tokyo)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE)
 We developed a AOT Compiler, which translates Ruby script into native code to run Ruby script faster.
 
@@ -154,7 +166,7 @@ A graduate student in the Sasada Laboratory, The University of Tokyo.
 Developed a memory profiler for Ruby1.9.
 PROFILE
     e29_medium.create_break :length => 1.5.hours
-    e29_medium.create :title => 'How to create Ruby reference manual search Web application with Ruby 1.9  groonga and rroonga', :title_ja => 'るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索', :speaker => 'Kouhei Sutou (ClearCode Inc. / COZMIXNG)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_medium.create :title => 'How to create Ruby reference manual search Web application with Ruby 1.9  groonga and rroonga', :title_ja => 'るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索', :speaker => 'Kouhei Sutou (ClearCode Inc. / COZMIXNG)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 This talk explains about rurema-search, Ruby reference manual in Japanese search Web application, and how to create rurema-search. Rurema-search uses Ruby 1.9.1 (MRI) as a Ruby interpreter, groonga as a full-text search engine and data store and rroonga as a Ruby-groonga interface. Those technologies are particularly explained in 'how to create rurema-search' time.
 
   rurema-search (Japanese): http://rurema.clear-code.com/
@@ -169,11 +181,13 @@ PROFILE
 須藤 功平（株式会社クリアコード）
 株式会社クリアコード代表取締役。RSS ParserとRabbitとrcairoとRuby-GNOME2とActiveLdapとActiveSambaLdapとtest-unit 2.xとrroongaとるりまサーチとRuby/SubversionとRWikiとRubyなどの開発者。
 PROFILE_JA
+http://www.clear-code.com/blog/2010/9/1.html
+PRESENTATION_MATERIAL
     e29_medium.create :title => "Now you're thinking with virtual clocks", :title_ja => 'ゲームとバーチャルタイム', :speaker => 'Tom Lieber (SonicMule,Inc.)',:abstract => (<<ABSTRACT)
 Turn the multimedia render loop inside out. Cooperatively scheduling lightweight Ruby threads on a virtual clock allows you to reason about the concurrent code in your game and perform complex synchronization tasks without even realizing it. Ditch the nested trees of update() calls by making time a first class citizen!
 ABSTRACT
     e29_medium.create_break
-    e29_medium.create :title => "How to survive in a post-Rails world", :title_ja => 'before Rails 時代のプログラマが如何にして after Rails の世界にたどりついたか', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc. / asakusa.rb / tDiary.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e29_medium.create :title => "How to survive in a post-Rails world", :title_ja => 'before Rails 時代のプログラマが如何にして after Rails の世界にたどりついたか', :speaker => 'SHIBATA Hiroshi (Eiwa System Management,Inc. / asakusa.rb / tDiary.org)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
 Even before the release of Rails, we have created many useful tools and applications in Ruby. In this post-Rails world, however, the way we approach application development has changed. In this session, I will talk about my experiences in adapting my way of thinking to a post-Rails world.
 ABSTRACT
 Rails が登場する以前(before Rails)から私たちは多くのプロダクトやツールをRubyによって作ってきました。しかし、Rails が登場した現代(after Rails)のアプリケーション開発では、before Rails とは異なる考え方を持つ必要があります。このセッションでは、自分が経験したbefore Rails から after Rails に適応するための頭の切り替え方を話します。
@@ -186,6 +200,8 @@ PROFILE
 サービスプロバイディング事業部プログラマ、品質管理学会 正会員
 Rails を使った業務システムや tDiary という Web 日記システムを作っています。
 PROFILE_JA
+http://www.slideshare.net/hsbt/how-to-survive-in-post-rails-world
+PRESENTATION_MATERIAL
     e29_medium.create :title => 'How To Create A Beautiful Template Engine Which Never Breaks HTML', :title_ja => 'HTMLデザインをまったく崩さない、美しいテンプレートエンジンの作り方', :speaker => 'Makoto Kuwata (programmer)',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :presentation_material => (<<PRESENTATION_MATERIAL)
 One of the biggest challenges in modern web application development is the difficulty of collaborating with web designers. For example, eRuby requires Ruby code to be embedded inside template files, often resulting in broken HTML designs, making life difficult for web designers. To solve this problem, various template engines which don't break HTML have been created. The trade off of these template engines, however, is that they sacrifice other features such as performance or usability.
 

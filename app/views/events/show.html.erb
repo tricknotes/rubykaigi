@@ -50,7 +50,10 @@
   <%= auto_link(h(@event.presentation_material)) {|text| truncate(text, 50)} %>
   </p>
 
+  <%= presentation_movies @event %>
+
   <br />
+
 
   <p class="right">
   <% if @event.parent_event %>

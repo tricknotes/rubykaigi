@@ -3,12 +3,12 @@ class EventLoader
   # day: 27, 28 or 29
   # from, to: HH:MM
   def self.create(values)
-    title, title_ja, abstract, abstract_ja, speaker, room, day, is_break, length, lang, parent_event, profile, profile_ja, presentation_material = values[:title], values[:title_ja], values[:abstract], values[:abstract_ja], values[:speaker], values[:room], values[:day], (values[:break] || false), (values[:length] || 30.minutes), (values[:lang] || 'en'), values[:parent_event], values[:profile], values[:profile_ja], (values[:presentation_material] || "(Sorry, currently not available)")
+    title, title_ja, abstract, abstract_ja, speaker, room, day, is_break, length, lang, parent_event, profile, profile_ja, presentation_material, vimeo_id = values[:title], values[:title_ja], values[:abstract], values[:abstract_ja], values[:speaker], values[:room], values[:day], (values[:break] || false), (values[:length] || 30.minutes), (values[:lang] || 'en'), values[:parent_event], values[:profile], values[:profile_ja], (values[:presentation_material] || "(Sorry, currently not available)"), values[:vimeo_id]
     date = "2010/8/#{day}"
     from = values[:from] ? Time.zone.parse("#{date} #{values[:from]}") : Event.at(room).on(date).scoped(:order => 'start_at').last.to
     to = values[:to] ? Time.zone.parse("#{date} #{values[:to]}") : length.since(from)
 
-    event = Event.create :presenter_name => speaker, :presenter_profile_en => profile, :presenter_profile_ja => profile_ja || profile, :title_en => title, :title_ja => title_ja || title, :abstract_en => abstract, :abstract_ja => abstract_ja || abstract, :additional_info => 'あとでかく', :lang => lang, :break => is_break, :parent_event => parent_event, :presentation_material => presentation_material
+    event = Event.create :presenter_name => speaker, :presenter_profile_en => profile, :presenter_profile_ja => profile_ja || profile, :title_en => title, :title_ja => title_ja || title, :abstract_en => abstract, :abstract_ja => abstract_ja || abstract, :additional_info => 'あとでかく', :lang => lang, :break => is_break, :parent_event => parent_event, :presentation_material => presentation_material, :vimeo_id => vimeo_id
 #TODO Rubyistとの紐付けはあとで考える
 =begin
     if speaker

@@ -20,4 +20,10 @@ describe Event do
   it "should create a new instance given valid attributes" do
     Event.create!(@valid_attributes)
   end
+
+  describe '#has_movies?' do
+    context 'when there is no movie' do
+      it { Event.new(@valid_attributes).has_movies?.should be_false }
+    end
+  end
 end

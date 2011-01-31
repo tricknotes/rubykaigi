@@ -65,5 +65,9 @@ class Event < ActiveRecord::Base
     room.name
   end
 
+  def has_movies?
+    ! vimeo_id.blank?
+  end
+
   memoize :from, :to, :date, :time
 end

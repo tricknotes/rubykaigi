@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100901030104) do
+ActiveRecord::Schema.define(:version => 20110125140736) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20100901030104) do
     t.text     "presenter_profile_ja"
     t.text     "presenter_profile_en"
     t.string   "presentation_material"
+    t.integer  "vimeo_id"
   end
 
   create_table "headline_entries", :force => true do |t|
@@ -115,7 +116,7 @@ ActiveRecord::Schema.define(:version => 20100901030104) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "purchased_at"
-    t.integer  "price",                                             :null => false
+    t.integer  "price",                          :default => 0,     :null => false
     t.integer  "paypal_payment_notification_id"
     t.integer  "ruby_kaigi_id",                  :default => 5,     :null => false
     t.string   "invoice_code",                                      :null => false
@@ -166,11 +167,11 @@ ActiveRecord::Schema.define(:version => 20100901030104) do
   end
 
   create_table "ruby_kaigis", :force => true do |t|
-    t.integer  "year",                 :null => false
+    t.integer  "year",                                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "capacity",             :null => false
-    t.integer  "party_capacity",       :null => false
+    t.integer  "capacity",             :default => 0, :null => false
+    t.integer  "party_capacity",       :default => 0, :null => false
     t.datetime "registration_open_at"
   end
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 EventLoader.with_options(:day => 27) do |e27|
   e27.with_options(:room => @big) do |e27_big|
-    e27_big.create :title => 'Opening', :from => '12:30'
+    e27_big.create :title => 'Opening', :from => '12:30', :vimeo_id => 14548019
     e27_big.create :title => 'Conflicts and Resolutions in Ruby and Rails', :speaker => 'Akira Matsuda, Masayoshi Takahashi and others(TBA)', :from => '13:00', :to => '14:00', :profile => (<<PROFILE), :abstract => "To Be Announced (We're sorry, at Jeremy's request, his keynote has been cancelled)", :abstract_ja => "Jeremy Kemper氏の基調講演はご本人の都合により中止となりました。代替プログラムについては、追ってアナウンスいたします。悪しからずご了承ください", :lang => 'ja and/or en', :vimeo_id => 14548338
 To Be Announced
 PROFILE
@@ -49,7 +49,7 @@ PROFILE
 PROFILE_JA
 http://www.slideshare.net/inouemak/building-realtimewebslide
 PRESENTATION_MATERIAL
-    e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
+    e27_big.create :title => 'We can make the GC X times slower than the original', :title_ja => 'われわれは、GCをX倍遅くできる', :speaker => 'nari (Network Applied Communication Laboratory)', :from => '16:00', :to => '17:00', :abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL), :vimeo_id => 14549681
 The presentation introduces the technique and a result about Lazy Sweep GC for CRuby GC. In addition, I introduce the prospects of the future GC improvement.
 ABSTRACT
 CRubyに対するLazySweepGCの実装方法と結果を紹介する。また、今後のGC改善の展望を述べる。
@@ -66,7 +66,7 @@ PROFILE_JA
 http://www.slideshare.net/authorNari/gcx
 PRESENTATION_MATERIAL
     e27_big.create_break :from => '17:00'
-    e27_big.create :title => 'The basis of making DSL with Ruby', :title_ja => 'Rubyで作るDSLの基礎', :speaker => 'Yasuko Ohba (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL)
+    e27_big.create :title => 'The basis of making DSL with Ruby', :title_ja => 'Rubyで作るDSLの基礎', :speaker => 'Yasuko Ohba (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :presentation_material => (<<PRESENTATION_MATERIAL), :vimeo_id => 14549764
 Ruby is well known as a language with which you can create your own DSL easily. Making DSL with Ruby is really easy, but there seem to be many developers who have not tried to make DSL with Ruby by design. In my opinion, there is no clear boundary between 'Useful APIs' and DSL. However, we can always judge whether a code is like DSL or not, that means, we can create DSL by design. In this talk, I'll start by looking into what DSL is and when to use it. After that I'll talk what concepts, habits and techniques you need to make your own DSL, showing typical examples from famous DSL codes like Rails, RSpec and so on.
 ABSTRACT
 RubyはDSLを作りやすい言語として知られています。実際に、DSLを作るのは簡単です。しかし、Rubyで意識的にDSLを作ったことのある人は意外に少ないのかもしれません。 Rubyで実現するDSLは、「使いやすいAPI」の一形態であり、ここから先がDSLだという明確な境界はありませんが、結果として出来上がったコードがDSL的かどうかは歴然と判断できます。つまり、コードをDSL的にするかどうかは開発者が意図的に選択していける事柄なのです。 本セッションでは、DSLとは何か、どんなときにDSLが有効かからはじめて、RubyでDSLを書く際に必要となる考え方、習慣、そしてテクニックを、 Rails や RSpec といった良く知られたコードを例にして話していきます。
@@ -84,7 +84,7 @@ PROFILE
 PROFILE_JA
 http://www.slideshare.net/nay/the-basis-of-making-dsl-with-ruby
 PRESENTATION_MATERIAL
-    e27_big.create :title => 'Best Imitation of Your Class', :title_ja => '君のクラスの最高の偽物', :speaker => 'Shugo Maeda (Network Applied Communication Laboratory Ltd.)', :from => '18:00', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA)
+    e27_big.create :title => 'Best Imitation of Your Class', :title_ja => '君のクラスの最高の偽物', :speaker => 'Shugo Maeda (Network Applied Communication Laboratory Ltd.)', :from => '18:00', :to => '19:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile => (<<PROFILE), :profile_ja => (<<PROFILE_JA), :vimeo_id => 14549892
 Ruby's open classes contribute to extensibility of applications such as Ruby on Rails. However, they sometimes cause serious conflicts between class extensions. This talk illustrates problems of open classes, and propose a resolution by which classes can be refined locally.
 
   Keywords: selector namespace, classbox, context-oriented programming
@@ -102,7 +102,7 @@ PROFILE_JA
   end
 
   e27.with_options(:room => @medium) do |e27_medium|
-    e27_medium.create :title => 'Feels Like Ruby', :speaker => 'Sarah Mei (Pivotal Labs)', :from => '14:00',:abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL)
+    e27_medium.create :title => 'Feels Like Ruby', :speaker => 'Sarah Mei (Pivotal Labs)', :from => '14:00',:abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL), :vimeo_id => 14546877
 For a Rubyist, writing Javascript is the worst part of working on a Ruby web application. Those clean, modern UIs are often made possible by incredibly complex Javascript. The helpers inevitably get in the way, and you end up writing most of it by hand.
 
 It is painful.
@@ -117,13 +117,13 @@ showing people of all ages and backgrounds how awesome programming is
 PROFILE
 http://www.slideshare.net/sarahmei/feels-like-ruby-ruby-kaigi-2010
 PRESENTATION_MATERIAL
-    e27_medium.create :title => 'User Experience for Library Designers', :speaker => 'geemus (Wesley Beary)(Engine Yard)', :from => '14:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
+    e27_medium.create :title => 'User Experience for Library Designers', :speaker => 'geemus (Wesley Beary)(Engine Yard)', :from => '14:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE), :vimeo_id => 14547164
 I've written \"a lot of code\":http://github.com/geemus, both hobby and work, over the last year, and looking back I can't help but think that writing code for yourself is easy; it's writing code for others can be tough. In this session, I'll share some examples of good and bad practices gathered in my years writing code and libraries, and discuss how to get past being too close to the problem. I'll talk specifically about growing your work into something anybody (and hopefully everybody) will use.
 ABSTRACT
 geemus (Wesley Beary) [github.com/geemus] is an avid Rubyist and Open Source enthusiast. When not spending his spare time working on enumerable overly ambitious open source projects he spends his days developing the Engine Yard Cloud [http://www.engineyard.com/products/cloud].
 PROFILE
     e27_medium.create_break :from => '15:00'
-    e27_medium.create :title => 'Rubygems, Bundler, and the future', :speaker => 'Carl Lerche (Engine Yard)', :from => '15:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE)
+    e27_medium.create :title => 'Rubygems, Bundler, and the future', :speaker => 'Carl Lerche (Engine Yard)', :from => '15:30',:abstract => (<<ABSTRACT), :profile => (<<PROFILE), :vimeo_id => 14547561
 Rubygems has served the community well for many years. However, as applications become more and more complex, certain problems arise. Bundler was created to solve some of those problems and has been evolving rapidly based on community feedback. It's time to look at the current state of affairs and think about Rubygems 2.0. What parts of bundler could be moved upstream and what problems remain to be solved?
 ABSTRACT
 Until Carl Lerche discovered Ruby on Rails in 2005 he thought he would
@@ -132,10 +132,10 @@ programming and open source development. Currently, he spends much of
 his time at Engine Yard contributing to Rails, and in his free time,
 to many side projects.
 PROFILE
-    e27_medium.create :title => 'Truth and Consequences: Handling Ruby 1.9 Encodings in Rails', :speaker => 'Yehuda Katz (Engine Yard)', :from => '16:30',:abstract => (<<ABSTRACT)
+    e27_medium.create :title => 'Truth and Consequences: Handling Ruby 1.9 Encodings in Rails', :speaker => 'Yehuda Katz (Engine Yard)', :from => '16:30',:abstract => (<<ABSTRACT), :vimeo_id => 14547743
 Ruby 1.9 adds support for many different encodings, making it possible to write Ruby web programs that can handle non-English characters well. However, these changes have had many consequences. At the beginning, the new encoding support has introduced much confusion in simple, English-only Rails applications and applications relying heavily on Unicode. Yehuda will explain the common problems caused by the changes, talk about what Rails has done to eliminate many of them, and what the Ruby community can do to make writing internationalized programs easier.
 ABSTRACT
-    e27_medium.create :title => 'A frog in a well does not know the great sea', :title_ja => '井の中の蛙、大海を知らず', :speaker => 'Sarah Allen (Mightyverse)', :from => '16:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL)
+    e27_medium.create :title => 'A frog in a well does not know the great sea', :title_ja => '井の中の蛙、大海を知らず', :speaker => 'Sarah Allen (Mightyverse)', :from => '16:00',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL), :vimeo_id => 14547648
 When building an application it is easy to forget that most applications today are available globally and used by people who speak many languages. You may create user interface in English or Japanese, but people may choose to type their data in their native language. Web browsers will allow people to enter text in almost any script, and if you are lucky it will \"just work\" ... but often it needs a little more attention. Sarah will share anecdotes from her adventures building Mightyverse, a multi-lingual database of native language video recordings. She will highlight details of how to get unicode text in and out of a database well as how to handle multibyte text in Ruby.
 ABSTRACT
 アプリケーションを構築する時、ほとんどのアプリケーションが今日グローバル的に使用されること、多国語を話す人々に使用されること忘れがちになってしまいます。あなたは、英語や日本語のユーザーインターフェイスを制作するかもしれません。でも、人々は母国語でデーターを記入することを選ぶかもしれません。ウェブブラウザは、ほぼすべてのスクリプトを記入することを可能にします。もし、あなたがラッキーなら、それはなんとか機能するかもしれません。しかし、しばしば、それはもう少し注意を必要とします。サラは、ネイティブスピーカーのビデオを使用した多国語データーベースのMightyverseを構築する経験からの逸話を共有するでしょう。　サラは、どのようにしてUnicodeテキストをデータベースに出し入れするのかの詳細に重点をおきます。また、Rubyでどのようにマルチバイトテキストを扱うかにも重点をおきます。
@@ -145,7 +145,7 @@ PROFILE
 http://www.slideshare.net/sarah.allen/international-web-application-development
 PRESENTATION_MATERIAL
     e27_medium.create_break :from => '17:00'
-    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE)
+    e27_medium.create :title => 'My many failed products', :speaker => 'jugyo (Everyleaf Corporation)', :from => '17:30',:abstract => (<<ABSTRACT), :abstract_ja => (<<ABSTRACT_JA), :lang => 'ja', :profile_ja => (<<PROFILE_JA), :profile => (<<PROFILE), :vimeo_id => 14547828
 I will talk about my many failed products, and a few of my successful ones. My products can be found here: http://github.com/jugyo
 ABSTRACT
 私のたくさんの失敗プロダクトと少しの成功プロダクトについて話します。 私のプロダクトはここ => http://github.com/jugyo/
@@ -158,7 +158,7 @@ jugyo, Kazuyuki Kohno (Everyleaf Corporation)
 He is a Rails engineer, and author of Termtter and g.
 github.com/jugyo
 PROFILE
-    e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove (AT&T Interactive)', :from => '18:00', :to => '19:00', :abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL)
+    e27_medium.create :title => 'Coding for fun, and having fun coding', :title_ja => 'みんなが楽しくプログラミング出来る魔法', :speaker => 'tenderlove (AT&T Interactive)', :from => '18:00', :to => '19:00', :abstract => (<<ABSTRACT), :profile => (<<PROFILE), :presentation_material => (<<PRESENTATION_MATERIAL), :vimeo_id => 14547904
 Programming for fun, or having fun programming. Ruby is the best language for both! Let's talk about programming after we've punched out from work, the programming we can do while drinking a beer, and the programming we can do to make our friends laugh. We'll take a look at projects built for fun, as well as projects built to have fun! We'll dissect them to figure out what makes them tick, then
 extract techniques that we can use with our day to day tasks.
 ABSTRACT

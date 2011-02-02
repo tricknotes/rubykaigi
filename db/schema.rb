@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110125140736) do
+ActiveRecord::Schema.define(:version => 20110202151624) do
 
   create_table "contributions", :force => true do |t|
     t.integer  "rubyist_id",        :null => false
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20110125140736) do
     t.text     "presenter_profile_en"
     t.string   "presentation_material"
     t.integer  "vimeo_id"
+    t.string   "nicovideo_id"
   end
 
   create_table "headline_entries", :force => true do |t|

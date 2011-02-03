@@ -12,7 +12,7 @@ module EventsHelper
     res = ''
     _item_ids = item_ids.split(',')
     if _item_ids.size == 1
-      res = render(:partial => 'nicovideo_link', :locals => {:item_id => item_ids.first, :link_text => t(:nicovideo)})
+      res = render(:partial => 'nicovideo_link', :locals => {:item_id => _item_ids.first, :link_text => t(:nicovideo)})
     elsif _item_ids.size > 1
       _item_ids.each_with_index do |item_id, index|
         res << render(:partial => 'nicovideo_link', :locals => {:item_id => item_id, :link_text => t(:nicovideo) + " (Part #{index + 1})"})

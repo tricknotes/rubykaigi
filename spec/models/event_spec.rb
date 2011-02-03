@@ -22,8 +22,17 @@ describe Event do
   end
 
   describe '#has_movies?' do
-    context 'when there is no movie' do
+    context 'without movie' do
       it { Event.new(@valid_attributes).has_movies?.should be_false }
+    end
+    context 'with 1 Vimeo' do
+      it { Event.new(@valid_attributes.merge({:vimeo_id => 12345678})).has_movies?.should be_true }
+    end
+    context 'with 1 Nicovideo' do
+      it { Event.new(@valid_attributes.merge({:nicovideo_id => 'sm0000001'})).has_movies?.should be_true }
+    end
+    context 'with 1 Vimeo and 1 Nicovideo' do
+      it { Event.new(@valid_attributes.merge({:vimeo_id => 12345678, :nicovideo_id => 'sm0000001'})).has_movies?.should be_true }
     end
   end
 end

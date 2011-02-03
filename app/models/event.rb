@@ -66,7 +66,7 @@ class Event < ActiveRecord::Base
   end
 
   def has_movies?
-    ! vimeo_id.blank?
+    ! vimeo_id.blank? || ! nicovideo_id.blank?
   end
 
   memoize :from, :to, :date, :time

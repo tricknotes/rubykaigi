@@ -1,11 +1,13 @@
 require 'spec_helper'
 
 describe EventsHelper do
-
-  #Delete this example and add some real ones or delete this file
-  it "is included in the helper object" do
-    included_modules = (class << helper; self; end).send :included_modules
-    included_modules.should include(EventsHelper)
+  describe '#nicovideo_link' do
+    before do
+      stub(helper).render { '_nico_' }
+    end
+    it { helper.nicovideo_link('sm00000001').should == '_nico_' }
+    it { helper.nicovideo_link('sm00000001,sm0000002').should == '_nico__nico_' }
+    it { helper.nicovideo_link(nil).should == '' }
+    it { helper.nicovideo_link('').should == '' }
   end
-
 end

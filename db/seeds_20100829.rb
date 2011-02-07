@@ -88,8 +88,8 @@ PROFILE_JA
 http://www.slideshare.net/kakutani/there-is-nospoon
 PRESENTATION_MATERIAL
     e29_big.create_break
-    e29_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Chad Fowler', :length => 1.hour, :nicovideo_id => 'sm11930550,sm11930645'
-    e29_big.create :title => 'Closing', :nicovideo_id => 'sm11933775'
+    e29_big.create :title => 'Keynote', :title_ja => '基調講演', :speaker => 'Chad Fowler', :length => 1.hour, :vimeo_id => 14571560, :nicovideo_id => 'sm11930550,sm11930645'
+    e29_big.create :title => 'Closing', :vimeo_id => 14823657, :nicovideo_id => 'sm11933775'
   end
 
   e29.with_options(:room => @medium) do |e29_medium|

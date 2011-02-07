@@ -372,7 +372,10 @@
         <h2>
         発表動画
       </h2>
-      
+      <iframe frameborder='0' height='300' src='http://player.vimeo.com/video/14571560' width='400'></iframe> 
+      <p> 
+        <a href='http://vimeo.com/14571560'></a> 
+      </p> 
       <p>
         <a href="http://www.nicovideo.jp/watch/sm11930550" target="_blank">
           ニコニコ動画 (Part 1)

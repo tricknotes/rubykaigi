@@ -8,7 +8,7 @@ gem 'configatron'
 gem "ambethia-smtp-tls", :require => "smtp-tls"
 gem "fastercsv"
 gem "hoptoad_notifier"
-gem 'i18n_generators', :git => 'git://github.com/amatsuda/i18n_generators.git'
+gem 'i18n_generators'
 gem 'haml'
 gem 'fastercsv'
 gem 'whenever', '0.4.2'

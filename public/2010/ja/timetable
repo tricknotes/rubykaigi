@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang='ja' xml:lang='ja' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    
+
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <title>日本Ruby会議 2010, 8月27日〜29日</title>
     <link href='/2010/stylesheets/common.css' media='all' rel='stylesheet' type='text/css' />
@@ -363,7 +363,7 @@
           </p>
         </div>
       </div>
-      
+
       <div id='content'>
         <h1>
           タイムテーブル
@@ -469,7 +469,7 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -493,7 +493,7 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -517,7 +517,7 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -541,7 +541,7 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -563,7 +563,7 @@
                       </a>
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -629,7 +629,7 @@
                       </a>
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -638,7 +638,7 @@
                   <th>
                     13:30 | 14:00
                   </th>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -654,7 +654,7 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -680,9 +680,9 @@
                         Feels Like Ruby
                         <span>
                           For a Rubyist, writing Javascript is the worst part of working on a Ruby web application. Those clean, modern UIs are often made possible by incredibly complex Javascript. The helpers inevitably get in the way, and you end up writing most of it by hand.
-                          
+
                           It is painful.
-                          
+
                           But you can make writing Javascript code feel more like writing Ruby code. I will show techniques that go beyond &quot;unobtrusive&quot; and turn Javascript into a first-class citizen in your Ruby application. Make your Javascript more joyful!
                         </span>
                       </a>
@@ -701,7 +701,7 @@
                         出張版 toRuby勉強会
                         <span>
                           いつも那須方面で開催しているtoRuby勉強会が、つくばに出張してきて、いつものような勉強会を開催します。Rubyを使ったお題を用意するので、参加者みなさんにPCを持参してもらい、手を動かしながらRubyを楽しむ会になります。
-                          
+
                           toRubyは東京のちょっとだけ北、150kmくらいにある栃木県、那須塩原市で月に一度、勉強会を開催しています。toRubyのtoはとちぎの'と'です。現在は咳さんのdRubyの本を使って、写経やディスカッションをしています。詳細は http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=toRuby をご覧ください。またRubyKaigiでの内容についても、上記Webにて告知していきます。
                         </span>
                       </a>
@@ -717,9 +717,9 @@
                         rake:money 拡大版～Rubyエンジニアと企業の幸せな関係～
                         <span>
                           真剣にお金を稼ぐことを考えるIT系エンジニアの会。
-                          
+
                           お金に対する意識を高めて、自分の納得のいく収入を稼げるエンジニアになりたいと考える人たちの会合です。 自分のスキルをどうすれば効率よくマネタイズできるか、マーケティングやビジネストレンド、はたまた節税や資産運用についてなど、普通の技術系勉強会ではなかなか話題にできないお金に関する話題を取り上げます。
-                          
+
                           Ruby会議拡大版では、Ruby会議スポンサーの各社をパネラーに迎え、Rubyエンジニアに対するビジネスニーズや、企業の中のRubyist がどのようにビジネス価値を発揮していくかといったテーマについてパネルディスカッションを行います。
                         </span>
                       </a>
@@ -732,7 +732,7 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -769,12 +769,12 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -785,7 +785,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -794,19 +794,19 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -843,8 +843,8 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -897,7 +897,7 @@
                           この企画では、永和システムマネジメントが普段の受託開発プロジェクトでおこなっている、ふつうのシステム開発のすすめ方をライブ形式でお伝えします。
                           参加者の皆さまからの疑問・質問にお答えする時間も用意しております。
                           Railsの良さを活かしたプロジェクトの進め方に興味のある皆さまのご参加をお待ちしております。
-                          
+
                           キーワード: アジャイル開発、TDD、Scrum、Pivotal Tracker、Ruby on Rails、Bundler、RSpec、Steak、Git、Capistrano、など
                         </span>
                       </a>
@@ -932,7 +932,7 @@
                   <th>
                     16:30 | 17:00
                   </th>
-                  
+
                   <td class="room_hall" rowspan="1"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/15'>
@@ -950,8 +950,8 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -968,7 +968,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -977,15 +977,15 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1031,25 +1031,25 @@
                         世界の Ruby Conference から
                         <span>
                           世界中でたくさんのRuby会議、Ruby/Rails Conference、Ruby/Rails勉強会が行われています。私たちが参加できるのはそのうちのほんの一部です。この時間は世界中の勉強会を運営する方々にLT形式で紹介していただきます。次に行く勉強会を開拓したり、あなたが開催する勉強会の参考にするのはいかがでしょうか？
-                          
+
                           Speakers
-                          
+
                           Pat Allan
                           Rails Camps
                           http://railscamps.com/
-                          
+
                           Chad Fowler
                           Rubyconf
                           http://rubyconf.org/
-                          
+
                           Jiang Wu
                           Rubyconf China
                           http://rubyconfchina.org/
-                          
+
                           Daniel Bovensiepen
                           EuRuKo
                           http://euruko2011.org/
-                          
+
                           Masayoshi Takahashi
                           RubyKaigi
                           http://rubykaigi.org/
@@ -1061,8 +1061,8 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1080,7 +1080,7 @@
                         君のクラスの最高の偽物
                         <span>
                           Rubyのオープンクラスは、Ruby on Railsのようなアプリケーションの拡張性に 寄与している。しかし、オープンクラスはクラス拡張間の深刻な衝突を引き起こ すこともある。この発表では、オープンクラスの問題を説明し、クラスを局所的に 変更することができるような解決法を提案する。
-                          
+
                             キーワード: selector namespace, classbox, context-oriented programming
                         </span>
                       </a>
@@ -1105,7 +1105,7 @@
                     </p>
                   </div>
                   </td>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -1123,9 +1123,9 @@
                   <th>
                     18:30 | 19:00
                   </th>
-                  
-                  
-                  
+
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1179,7 +1179,7 @@
               <tfoot>
                 <tr>
                   <th>18:30 - 20:30</th>
-                  <td colspan='7' style='font-size:12px;text-align:center'>懇親会, 於 多目的ホール(<a href="/2010/ja/Registration/">要登録</a>)</td>
+                  <td colspan='7' style='font-size:12px;text-align:center'>懇親会, 於 多目的ホール(<a href="/2010/ja/Registration">要登録</a>)</td>
                 </tr>
               </tfoot>
               <tbody>
@@ -1257,7 +1257,7 @@
                   <th>
                     10:00 | 10:30
                   </th>
-                  
+
                   <td class="room_hall" rowspan="1"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/51'>
@@ -1275,8 +1275,8 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1288,7 +1288,7 @@
                   <th>
                     10:30 | 11:00
                   </th>
-                  
+
                   <td class="room_hall" rowspan="1"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/52'>
@@ -1306,8 +1306,8 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1353,7 +1353,7 @@
                   <th>
                     11:30 | 12:00
                   </th>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -1382,7 +1382,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -1391,7 +1391,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -1401,7 +1401,7 @@
                         JRuby会議 2010
                         <span>
                           JRuby コア開発者と日本のJRuby開発者によるJRubyが好きな人のためのJRubyKaigiを開催します。JRubyが好きな人はますます好きになり、そうでない人もJRubyが好きになる会議です。開催概要は次を予定しています。基調講演：Thomas E.Enebo(@tom_enebo) and Charles O.Nutter(@headus)、招致講演：Yoshiharu Hashimoto(@hasssie)、Hiroshi Nakamura(@nahi)、Takeru Sasaki(@urekat)、Koichi Fujikawa(@fujibee)、Yoko Harada(@yokolet)、他にライトニングトークスとして10枠を予定。詳しくはJRubyKaigi2010公式サイトを参照してください。。
-                          
+
                             サイト: http://j.rubykaigi.org/2010
                         </span>
                       </a>
@@ -1431,7 +1431,7 @@
                         キーサインパーティー 2010
                         <span>
                           公開会議を交換しましょう。キーサインパーティーは PGP 暗号化方式を利用する人たちが相互に公開鍵を署名しあう集まりです。キーサインパーティーに参加することで信頼の輪を広げることができます。
-                          
+
                           参加には若干の準備が必要ですので、ご興味のある方は以下のURLを御覧下さい。
                           http://qwik.atdot.net/rubykaigi2010keysignparty/FrontPageJa.html
                         </span>
@@ -1476,25 +1476,25 @@
                   <th>
                     12:30 | 13:00
                   </th>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
+
+
                 </tr>
                 <tr>
                   <th>
                     13:00 | 13:30
                   </th>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
+
+
                 </tr>
                 <tr>
                   <th>
@@ -1528,16 +1528,16 @@
                     </p>
                   </div>
                   </td>
-                  
+
                   <td class="room" rowspan="9"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/62'>
                         ペアプログラミング文化交流会
                         <span>
                           私たちが話す言葉は同じじゃないかもしれない。でも、私たちには一つの共通語がある。そう、だから私たちはいっしょにコードを書けるんだ！
-                          
+
                           この企画では、英語と日本語のペアプログラミング語録をひもときながら、あるRubyプロジェクトをいっしょにやってみましょう。いっしょにコードを書くことで、私たちの間の言語、文化、距離の壁を乗り越えて、Kaigiを越えた友情が生まれることでしょう。
-                          
+
                           ユニコーンとポニーをみんなに！
                         </span>
                       </a>
@@ -1554,7 +1554,7 @@
                         <span>
                           指のストレッチ！CtrlキーとMetaキーのウォーミングアップ！
                           みんなで自分のラップトップと.emacsファイルを持ち込んで、見せ合いっこしながらEmacsでRubyプログラミングをする技をシェアしましょう。
-                          
+
                           この企画は、初心者から達人まで、みんなでEmacsでのRubyプログラミングの技をシェアするワークショップです。
                         </span>
                       </a>
@@ -1570,7 +1570,7 @@
                         Vim
                         <span>
                           Rubyistの約半数が使用していると噂の統合開発環境Vimについて、使いこなすためのノウハウや快適にRubyコードを書くためのテクニックを交換しあう勉強会です。
-                          
+
                           当日は有志によるライトニングトーク、Q&amp;A、および会場内で得た知識を実践するためのfree hack時間を設け、参加者のVim戦闘力を向上させる予定です。
                         </span>
                       </a>
@@ -1580,7 +1580,7 @@
                     </p>
                   </div>
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -1600,12 +1600,12 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
+
                 </tr>
                 <tr>
                   <th>
@@ -1639,11 +1639,11 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
                 </tr>
                 <tr>
                   <th>
@@ -1654,7 +1654,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -1663,12 +1663,12 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
-                  
-                  
+
+
                   <td class="room" rowspan="3"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/66'>
@@ -1683,8 +1683,8 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
+
+
                 </tr>
                 <tr>
                   <th>
@@ -1710,9 +1710,9 @@
                         A Metaprogramming Spell Book
                         <span>
                           When I started to learn Ruby, I was awed by the code of experienced rubyists. That code was full of amazing magic tricks that I could barely understand. People called those tricks &quot;metaprogramming&quot;.
-                          
+
                           With time, I found that metaprogramming sits right at the core of Ruby. To think in Ruby, I had to understand all those scary tricks! Feeling like a sorcerer's apprentice, I set out to write a Spell Book of metaprogramming techniques. Once I'd finished the Spell Book, metaprogramming didn't seem like black magic anymore. Instead, it just felt like any other set of techniques.
-                          
+
                           In this talk, I'll show you the content of my Spell Book, so that you don't have to go through the trouble of writing one yourself.
                         </span>
                       </a>
@@ -1722,23 +1722,23 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
                 </tr>
                 <tr>
                   <th>
                     16:00 | 16:30
                   </th>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
+
+
                 </tr>
                 <tr>
                   <th>
@@ -1749,7 +1749,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -1758,17 +1758,17 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                 </tr>
                 <tr>
                   <th>
@@ -1784,15 +1784,15 @@
                       </a>
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1807,12 +1807,12 @@
                   <th>
                     17:30 | 18:00
                   </th>
-                  
+
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
@@ -1979,9 +1979,9 @@
                         Ruby で扱う LDAP のススメ - 選択肢とその事例
                         <span>
                           Ruby/LDAP, Net::LDAP, ActiveLdap など数々の実装がある中でLDAP自身のマイナーさも相まってか、各パッケージ間の特色やその利用事例について、まとまった情報が存在していません。
-                          
+
                           数種のパッケージが存在する以上、そこに多様性が存在するはずです。求めるオペレーションによって最適なものは何か、妥当性を選択するための判断基準が存在するはずと考えます。
-                          
+
                           この企画は各パッケージでの利用事例を公募し、それぞれがその利点を発表する事によって、 LDAP を扱おうとする Ruby コミュニティにパッケージ選択の指針を提供しようとする試みです。
                         </span>
                       </a>
@@ -2019,9 +2019,9 @@
                         RWikiと怠惰な私の10年間
                         <span>
                           2000-8-31、ruby-listにすこし変わったWikiが紹介されました。[ruby-list:24661] dRubyの最初の実用的なアプリケーション、RWikiです。
-                          
+
                           RWikiはメッセージ色の濃いソフトウェアです。RWikiはRuby周辺のさまざまなライブラリのサンプルとして紹介されましたが、特異な実装も作者のメッセージです。RWikiのもっとも大きな特徴はデータベース、オブジェクトを全て一つのプロセスの中に配置する、In-Memory のアプリケーションであることです。そういえば、NoSQL、In-Memoryは最近のバズワードでもありますね。
-                          
+
                           この発表の数日後、RWikiはちょうど10年を迎えます。 私はアクティブなRWikiサイトを複数運営していて、現在では3万ページ、プロセスサイズは1GBを超えています。本発表では、このサイトが「大きさ・量」を獲得していく過程で展開された、ちょっとした物語を報告します。
                         </span>
                       </a>
@@ -2045,13 +2045,13 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
+
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2077,7 +2077,7 @@
                         Ruby 用 AOT コンパイラ
                         <span>
                           Ruby スクリプトの実行をより高速にするために，Ruby スクリプトを機械語に変換する AOT（Ahead-Of-Time）コンパイラ を開発した．
-                          
+
                           本発表では，CRubyの構成を述べ，CRubyと完全互換なAOTコンパイラを開発するにあたっての課題を述べる．そして，我々のAOTコンパイラの設計と実装を示す． Ruby処理系に付属するテストプログラム，ベンチマークプログラムを用いて， その互換性，および得られた性能向上について述べる．
                         </span>
                       </a>
@@ -2087,26 +2087,26 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
+
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
                     11:30 | 12:00
                   </th>
-                  
+
                   <td class="room_hall" rowspan="1"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/86'>
                         Memory Profiler for Ruby
                         <span>
                           We developed a memory profiler for Ruby programming language that fulfills the requirement for measuring and analyzing the memory usage of Ruby applications.
-                          
+
                           In this presentation, we will describe the features, the design and the implementation of the memory profiler. We will also show the performance evaluation and demonstrate the memory profiler in action.
                         </span>
                       </a>
@@ -2116,13 +2116,13 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
+
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2133,7 +2133,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -2142,7 +2142,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -2171,22 +2171,22 @@
                           日本人女性30代の45％が利用するサイトをご存じですか？
                           クックパッド（cookpad.com）は月間989万人が利用し、80万品のレシピが集まる世界最大の料理レシピ投稿サイトです。そんなクックパッドが日本最大のRuby
                           on Rails製サイトとして成長を続けている理由とは何か。日々実践している技術や開発環境についてCTOの橋本健太がお話します。
-                          
+
                           以下の３つを中心にお話します。
-                          
+
                           ・価値を提供する手段としてのRuby
                           ・クックパッドのスケーリングと開発体制
                           ・クックパッドで働く外国人エンジニアから見たクックパッド
-                          
+
                           当日スライド資料は英語、講演は日本語で行いますので、外国人の方も是非ご参加ください。
-                          
+
                           ＜time table＞
                           12：00～12：50　'Ruby powering 9 million dining tables'
                           12：50～13：20　Q&amp;A and Lunch time（各自お弁当を持参ください）
-                          
+
                           ＜お知らせ＞
                           クックパッドは米国に支社を設けており、国籍問わず技術者の積極採用をしております。日本企業で働くことに興味がある外国人の方も、ぜひご参加ください。
-                          
+
                           ＜参考＞
                           クックパッド開発者ブログ
                           http://techlife.cookpad.com/
@@ -2201,39 +2201,39 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
                     12:30 | 13:00
                   </th>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
                     13:00 | 13:30
                   </th>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2259,7 +2259,7 @@
                         るりまサーチの作り方 - Ruby 1.9でgroonga使って全文検索
                         <span>
                           このトークではるりまサーチについてとるりまサーチの作り方について話します。るりまサーチはRubyリファレンスマニュアル刷新計画の成果物であるRubyのリファレンスマニュアルを高速に検索するWebアプリケーションです。るりまサーチはRubyインタプリタとしてRuby 1.9.1（MRI）、全文検索エンジンとデータストアとしてgroonga、Rubyとgroongaのインターフェイスとしてrroongaを使っています。作り方の説明では、特にこれらの技術の使い方について詳しく説明します。
-                          
+
                            るりまサーチ: http://rurema.clear-code.com/
                         </span>
                       </a>
@@ -2289,9 +2289,9 @@
                         TermtterKaigi
                         <span>
                           TermtterはRubyで実装されている、ターミナルやシェルから利用することができるTwitterクライアントです。
-                          
+
                           TermtterKaigiは以下の事をします:
-                          
+
                           * ハッカソン
                           * ライトニングトーク
                           * Termtter のリファクタリング
@@ -2322,13 +2322,13 @@
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
                     14:00 | 14:30
                   </th>
-                  
+
                   <td class="room_hall" rowspan="1"><div class='session'>
                     <p class='title'>
                       <a class='tip' href='/2010/ja/events/89'>
@@ -2343,13 +2343,13 @@
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
+
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2360,7 +2360,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -2369,17 +2369,17 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
-                  
-                  
-                  
+
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2416,12 +2416,12 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2458,12 +2458,12 @@
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2474,7 +2474,7 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
@@ -2483,19 +2483,19 @@
                       Break
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>
                   <td class='empty'>
                     -
                   </td>
-                  
-                  
+
+
                   <td class='empty'>
                     -
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <th>
@@ -2535,7 +2535,7 @@
                   <th>
                     17:00 | 17:30
                   </th>
-                  
+
                   <td class='empty'>
                     -
                   </td>
@@ -2566,7 +2566,7 @@
                       </a>
                     </p>
                     <p class='speaker'>
-                      
+
                     </p>
                   </div>
                   </td>

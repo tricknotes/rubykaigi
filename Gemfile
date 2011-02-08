@@ -17,7 +17,7 @@ gem 'rack-google-analytics', '0.6.1'
 gem 'will_paginate'
 gem 'redis-objects', :require => 'redis/objects'
 gem 'SystemTimer'
-gem 'twitter'
+gem 'twitter', '0.9.8'
 
 gem 'rails_warden'
 gem 'warden_oauth'

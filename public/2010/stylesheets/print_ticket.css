@@ -1,0 +1,11 @@
+@charset "utf-8";
+h1 {
+  font-size: 18px; }
+
+h2 {
+  margin-top: 1em;
+  font-size: 28px; }
+
+p {
+  font-size: 400%;
+  font-weight: bold; }

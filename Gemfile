@@ -8,7 +8,7 @@ gem 'configatron'
 gem "ambethia-smtp-tls", :require => "smtp-tls"
 gem "fastercsv"
 gem "hoptoad_notifier"
-gem 'i18n_generators', :git => 'git://github.com/amatsuda/i18n_generators.git'
+gem 'i18n_generators'
 gem 'haml'
 gem 'fastercsv'
 gem 'whenever', '0.4.2'
@@ -17,7 +17,7 @@ gem 'rack-google-analytics', '0.6.1'
 gem 'will_paginate'
 gem 'redis-objects', :require => 'redis/objects'
 gem 'SystemTimer'
-gem 'twitter'
+gem 'twitter', '0.9.8'
 
 gem 'rails_warden'
 gem 'warden_oauth'

@@ -113,10 +113,9 @@ require 'hoptoad_notifier/capistrano'
 require 'capistrano-notification'
 
 notification.irc do |irc|
-  find_and_execute_task("multistage:ensure")
   irc.host    'chat.freenode.net'
   irc.channel '#rubykaigi.org'
-  irc.message "#{local_user} deployed #{application} to #{stage}"
+  irc.message "#{local_user} deployed #{application} to (production or staging...hmm it doesn't work properly now)"
 end
 
 after 'deploy:finalize_update', 'bundler:bundle'

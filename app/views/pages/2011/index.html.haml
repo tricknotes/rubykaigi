@@ -64,7 +64,7 @@
       &nbsp;
 
 %div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000'}
-  %h2 RubyKaigi 2011 Official Conference Party
+  %h2 #{t('rubykaigi2011_party')}
   %dl
     %dt
       Date:
@@ -85,16 +85,22 @@
       (TBA)
 
 %div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000;'}
-  <strong style="padding: 8px 10px;color:#f00;background-color:#000">RubyKaigi 2011: Call For Presentation Proposals!</strong>
+  %h2
+    %a{:href => "/2011/#{current_locale}/call_for_presentations"}
+      #{t('rubykaigi2011_cfp')}
   %p
     We're open for talk proposals</a> until <strong>Mar 20th</strong>.<br/>
     <a href="/2011/#{current_locale}/call_for_presentations">http://rubykaigi.org/2011/#{current_locale}/call_for_presentations</a>
 
 %div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000;'}
-  <strong style="padding: 8px 10px;color:#f00;background-color:#000">RubyKaigi 2011 is Looking for Sponsors!</strong>
+  %h2
+    %a{:href => "/2011/#{current_locale}/call_for_sponsors"}
+      #{t('rubykaigi2011_call_for_sponsors')}
+
   %p
-    For details, Please refer to » <a href="/2011/rk11prospectus.pdf">sponsor prospects PDF</a> and<br /> contact us via E-mail, 2011 AT rubykaigi DOT org.<br />
-    If you have an interest in the sponsorship but you can not read Japanese,<br />feel free to contact us via E-mail. You're always welcome.
+    RubyKaigi 2011 is seeking organizations to sponsor the conference.
+  %p
+    For details, Please refer to:<br/><a href="/2011/#{current_locale}/call_for_sponsors">http://rubykaigi.org/2011/#{current_locale}/call_for_sponsors</a>
 
 %div{:style => 'margin: 10px; padding: 10px; border: 1px solid #000;'}
   %p
